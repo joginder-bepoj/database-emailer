@@ -1,0 +1,409 @@
+  /*  for the keyword table in footer   */
+#footerKeywords * {font-size:6pt; font-weight:400; text-align: left;}
+  /*  #footerKeywords
+{
+    background-color: #DB9B6B;
+}  */
+  /*  HAS HEADER MENU FUNCTIONS LINE 41   */
+/* reset */
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, blockquote, pre, form, fieldset, table, th, td
+{ margin: 0; padding: 0; }
+img
+{border:none;}
+/* End of reset */
+body
+{
+	background-color:#FFFFFF;
+	background-repeat:repeat-x;
+	width:100%;
+	text-align:center;
+	margin:0 auto;
+}
+.optGroupSCF
+{
+    /* background-color: #FF9999; */
+	font-size: 10pt;
+}
+#headerwrapper
+{
+  height:135px;
+}
+#header
+{
+  margin:0 auto;
+  width:960px;
+}
+#logo
+{
+  float:left;
+  width:184px;
+}
+#nav  /*  , #secnav  */
+{
+	float:right;
+	margin-top:43px;
+}
+#navigation a, #secnavigation a      /*  by jdf, to make top or header links disappear  */
+{
+   font-size: 11px;
+   font-weight: 600;
+   color: #FFFFFF;
+   text-decoration: none;
+   padding-top: 33px;
+}
+#navigation, #secnavigation
+{
+	list-style:none;
+	height:63px;
+	  /*  overflow:hidden;  */
+}
+ #navigation li ,  #secnavigation li    /*   li.navButton     li.navButton */
+{
+	float:right;
+	width:80px;
+	height:63px;
+	display:block;
+}
+#navigation li a,  #secnavigation li  a  /* , li.navButton  a   li.navButton  a */
+{
+	width:80px;
+	height:63px;
+	display:block;
+	margin-top:-30px;
+}
+#secnavigation li:hover ,   #navigation li:hover /*  li.navButton:hover  li.navButton:hover  */
+{
+  background-position:0 -63px;
+}
+
+/*Sec Navigation*/
+#secnav
+{
+	width:960px;
+	margin-top:0px;
+}
+#contentwrapper
+{
+width:960px;
+margin:0 auto;
+text-align:left;
+}
+#featuredlefttop
+{
+	margin-top:6px;
+	float:left;
+	border:1px solid #ccc;
+}
+#featuredleftbottom
+{
+	margin-top:18px;
+	clear:left;
+	float:left;
+	border:1px solid #ccc;
+}
+#featuredright
+{
+	margin-top:5px;
+	clear:both;
+	float:right;
+	width:499px;
+	height:258px;
+}
+#contentmainwrapper
+{
+  clear:both;
+}
+#column1, #column2
+{
+	float:left;
+	width:205px;
+	text-align:justify;
+	margin:10px 10px 10px 0;
+	padding:5px;
+
+	border:1px solid #e1e1e1;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#column3
+{
+	float:right;
+	width:490px;
+	margin:10px 0px 10px 0;
+	padding:5px;
+	border:1px solid #e1e1e1;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	text-align:justify;
+}
+#column4
+{
+	float:right;
+	width:490px;
+	margin:10px 0px 10px 0;
+	padding:5px;
+	border:1px solid #e1e1e1;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	text-align:justify;
+}
+#footerwrapper
+{
+	clear:both;
+	width:975px;
+	height:154px;;
+	background-repeat:repeat-x;
+	padding-top: 12px;
+	margin: auto;
+}
+#footer
+{
+	margin:0 auto;
+}
+.divider
+{
+	float:left;
+	width:2px;
+	height:29px;
+	background-repeat:no-repeat;
+}
+.links a{
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+color:#000000;
+text-align:center;
+text-decoration: none;
+line-height:1.2em;
+}
+.links a:hover
+{
+    color:red;
+	text-decoration: underline;
+}
+#links
+{
+	float:left;
+	height:29px;
+}
+.linkBox    /*  lhs index from old page  */
+{
+	  /*  border: solid 1px #667;  */
+	background-color:#CCC;
+	float:left;
+	border:#111111 solid 1px;
+	width:192px;
+	padding:3px;
+	font-size: 9pt;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+#links ul li
+{
+  display:inline;
+}
+.link
+{
+	float:left;
+	height:29px;
+	padding:0 5px;
+	line-height:25px;
+	color:#222222;
+}
+.link a:hover
+{
+   color:red;
+	font-size:9pt;
+	text-decoration: underline;
+}
+.link a
+{
+	color:#444444;
+	text-shadow:1px 1px #666;
+    text-transform:uppercase;
+	font-size: 9pt;
+	text-decoration: none;
+}
+#links img
+{
+ float:left;
+}
+#copyright
+{
+	margin-top:2px;
+	font-size: 10pt;
+	color: #FFF;
+}
+#copyright p, #copyright a
+{
+	color:#e1e1e1;
+	text-shadow:1px 1px #000;
+	line-height:10px;
+}
+#columnleft
+{
+	float:left;
+	width:300px;
+	margin:10px 10px 10px 0;
+	padding:5px;
+	background:#E5A372;
+	border:1px solid #CA8D5F;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	text-align:justify;
+}
+#columnleft ul
+{
+   left:10px;
+}
+.box-large
+{
+	float:right;
+	width:940px;
+	margin:10px 10px 10px 0;
+	padding:5px;
+	
+	border:1px solid #e1e1e1;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	text-align:justify;
+}
+.box-medium
+{
+	float:right;
+	width:610px;
+	margin:10px 10px 10px 0;
+	padding:5px;
+	border:1px solid #e1e1e1;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	text-align:justify;
+}
+.box-small
+{
+	float:right;
+	width:295px;
+	margin:10px 10px 10px 0;
+	padding:5px;
+	border:1px solid #e1e1e1;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	text-align:justify;
+}
+.search_div   /*  for the different search critria for the danny effect, JDF 12/7/2009  */
+{
+	margin:10px 10px 10px 0;
+	padding:5px;
+	border:1px solid #e1e1e1;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+/* fonts stylesheet */
+h1, h2, h3, h4, h5, h6 a, li, ul, p
+{font-family:Arial, Helvetica, sans-serif;}
+/*headers*/
+h2
+{
+	color: #56B7FF;
+	font-size: 17pt;
+	font-weight: bold;
+	padding-bottom:5px;
+	text-shadow:1px 1px #0099ff;
+}
+a
+{
+	color: #3300FF;
+	font-size: 10pt;
+	font-weight: 600;
+	text-decoration:underline;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+li
+{
+	color: #333;
+	font-size: 11px;
+	font-weight: normal;
+}
+ul
+{
+	color: #333;
+	font-size: 11px;
+	font-weight: normal;
+}
+  /*  FROM old style sheets, JDF 12/5/2009  */
+.text
+{
+	color:#333;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+}
+.text4
+{
+	color:#002553;
+	font-family:tahoma, arial,"Times New Roman", Times, serif;
+	font-size:14px;
+}
+legend
+{
+	 font-size:14px;
+	/* font-weight:600;	 */
+	 /* color: #330033; */
+	 /* background-color:#f2f2f2; */
+font-family: Arial, Helvetica, sans-serif;
+ font-size:14px;
+ font-weight:bold;
+}
+fieldset
+{
+	/* font-size:10pt;*/
+	 /*font-weight:600;	*/
+	 padding: 5px 5px;
+	 margin: 5px 0px;
+}
+.narrow
+{
+	float:left;
+	width:220px;
+	margin:10px 0;
+	padding:5px;
+	background:#E5A372;
+	border:1px solid #CA8D5F;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	text-align:justify;
+}
+.narrowNew
+{
+	float:left;
+	width:220px;
+	margin:10px 0;
+	background:#E5A372;
+	border:1px solid #D7D7D7;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	text-align:justify;
+	  /*  height:5200px;  */
+}
+.wide
+{
+	float:right;
+	margin:10px 0;
+	padding:0px;    /*  was 5, 5/21/2012  */
+	border:1px solid #e1e1e1;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	text-align:justify;
+}
+input[type=text], input[type=password], textarea
+{
+   background-color: #DDDDDD;
+   border: 1px solid #666633;
+}
+.warning
+{
+    color: red;
+	font-weight: 800;
+	font-size: 17pt;
+}

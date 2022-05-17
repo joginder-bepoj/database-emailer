@@ -1,0 +1,124 @@
+import React from "react";
+import SearchByCountry from "./form/SearchByCountry";
+import USstates from "./form/USstates";
+import TelephoneSearch from "./form/TelephoneSearch";
+import HouseholdIncome from "./form/HouseholdIncome";
+import Ethnicity from "./form/Ethnicity";
+import GenderSelect from "./form/GenderSelect";
+import RentingHome from "./form/RentingHome";
+import ResultButton from "./form/ResultButton";
+import CellCarriers from "./form/CellCarriers";
+import { useStateContext } from "./context/StateContext";
+
+const CellPhoneData = () => {
+    const {setCellData, cellData} = useStateContext()
+    const handleChange = (e) =>{
+        setCellData({ ...cellData,
+            [e.target.name]: e.target.value
+        })
+    }
+    return (
+        <>
+            <section className="section section-xs content">
+                <div className="container" id="searchContainer">
+                    <div
+                        className="row row-50 justify-content-center justify-content-lg-start align-items-center"
+                        id="row50"
+                    >
+                        <div className="col-md-12 wow fadeIn" data-wow-delay=".3s">
+                            <div className="wide" id="searchContent">
+                                <div id="divTopSearch">
+                                    <h3>Search for Cell Phone Numbers + Customer Data :</h3>
+                                </div>
+                                <form
+                                    method="post"
+                                    action=""
+                                    id="frmSearch"
+                                    name="frmSearch"
+                                    
+                                >
+                                    <div className="divImportant">
+                                        <h3>Cell Phone Numbers Search:</h3>
+                                        <div align="center">
+                                            <a
+                                                href="@"
+                                                style={{
+                                                    textDecoration: "none",
+                                                    color: "##F00",
+                                                    fontSize: "10pt",
+                                                    padding: "8px",
+                                                    width: "180px",
+                                                    backgroundColor: "#C1C1C1",
+                                                }}
+                                                title="Search Now or alt-s"
+                                            >
+                                                Check Record Count
+                                            </a>
+                                        </div>
+                                        <br />
+                                    </div>
+                                    <fieldset>
+                                        <legend>Geographic Search Parameters</legend>
+                                        <SearchByCountry />
+                                        {/* US states */}
+                                        <USstates />
+                                    </fieldset>
+                                    {/* telephone optional */}
+                                    <TelephoneSearch />
+                                    <hr />
+                                    {/* everything is optional */}
+                                    <div className="divImportant">
+                                        <h3>Choose Any or All of the following search options:</h3>
+                                        <b>Everything Below is Optional.</b>
+                                    </div>
+                                    <fieldset>
+                                        <legend>Name and Address</legend>
+                                        <label htmlFor="chkNameAddress">
+                                            Records Must Have Customer Name:
+                                        </label>
+                                        <input onChange={handleChange}
+                                            type="checkbox"
+                                            name="chkNameFL"
+                                            id="chkNameFL"
+                                            value="1"
+                                        />{" "}
+                                        |
+                                        <label htmlFor="chkNameAddress">
+                                            Records Must Have Customer Name &amp; Street Address:
+                                        </label>
+                                        <input onChange={handleChange}
+                                            type="checkbox"
+                                            name="chkNameAddress"
+                                            id="chkNameAddress"
+                                            value="1"
+                                        />
+                                    </fieldset>
+                                    <hr />
+                                    {/* HouseHold income */}
+                                    <HouseholdIncome />
+                                    <hr />
+                                    {/* select ethincy */}
+                                    <Ethnicity />
+                                    <hr />
+                                    {/* select gender */}
+                                    <GenderSelect />
+                                    <hr />
+                                    {/* Renting there home */}
+                                    <RentingHome />
+                                    <hr />
+                                    {/* cellpone carriers */}
+                                    <CellCarriers />
+                                    <hr />
+                                    {/* Result buttons */}
+                                    <ResultButton />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </>
+    );
+};
+
+export default CellPhoneData;

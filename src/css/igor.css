@@ -1,0 +1,333 @@
+/* MAIN */
+
+body {
+	padding: 0px;
+	background: #F4F4F4;
+	margin: 0px;
+}
+
+/* Containers */
+
+.contentWrapper {
+  width: 730px;
+  margin-left: auto ;
+  margin-right: auto ;
+  
+}
+
+.top-container {
+	width:730px;
+	height:81px;
+	
+	float:left;
+}
+
+	.top-container .logo {
+		width:230px;
+		_width:227px;
+		height:81px;
+		float:left;
+		padding:0px;
+	}
+
+
+.links-container {
+	width:730px;
+	height:30px;
+	
+	float:left;
+	background:#002553;
+}
+
+	/* main links in tab styles */
+
+	.links-container .linkleft
+	{
+		width:230px;
+		height:30px;
+		
+		text-align:center;
+		text-decoration:none;
+		
+		color:#002553;
+		
+		float:left;
+	}
+	
+	.links-container .linkleft a
+	{
+		width:230px;
+		height:24px;
+		
+		padding-top:6px;
+		
+		text-align:center;
+		text-decoration:none;
+		
+		color:#FFFFFF;
+				
+		float:left;
+	}
+	
+	.links-container .linkleft a:hover
+	{
+		width:230px;
+		height:24px;
+		
+		padding-top:6px;
+		
+		text-align:center;
+		text-decoration:none;
+		
+		color:#002553;
+		background:#e6a774;
+				
+		float:left;
+	}
+	
+
+	.links-container .link1 a:hover
+	{
+		color:#FFFFFF;
+	  	background-color:#002553;
+		cursor:pointer;
+	}
+
+	.links-container .link1
+	{
+		background-color:#8bbbd1;
+		width:125px;
+		height:30px;
+		float:left;
+	}
+
+	.links-container .link1 a
+	{
+		background-color:#8bbbd1;
+		width:100%;
+		height:24px;
+		
+		padding-top:6px;
+		
+		text-align:center;
+		text-decoration:none;
+		
+		color:#002553;
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+		font-size:13px;
+		
+		float:left;
+	}
+	
+
+.container-main {
+	width:730px;
+	background:#EBEBEB;
+	float: left;
+}
+
+.container-left
+{
+	width:230px;
+	float:left;
+	
+	background:#DDD;
+	
+}
+
+/* Sidebar on left containers */
+
+	.container-left .top-box
+	{
+		width:210px;
+		height:238px;
+		float:left;
+		padding:10px;
+		
+		_padding:5px;  /* IE6 only*/
+		_width:220px;  /* IE6 only*/
+		_height:248px; /* IE6 only*/
+		
+		background:#8bbbd1;
+		
+	}
+
+	.container-left .bottom-box
+	{
+		width:210px;
+		height:600px;
+		float:left;
+		padding:10px;
+	
+		background:#DDD;
+			
+	}
+
+/* Sidebar on left styles */
+
+	.container-left h1 {
+	
+		color:#002553;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:18px;
+		line-height: normal;	
+		
+		text-shadow:1px 1px #FFFFFF;
+	}
+
+	.container-left h2 {
+	
+		color:#002553;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:16px;
+		line-height: normal;	
+		
+		text-shadow:1px 1px #FFFFFF;
+	}
+	
+	.container-left h3 {
+	
+		color:#002553;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:14px;
+		line-height: normal;	
+		
+		text-shadow:1px 1px #FFFFFF;
+	}	
+
+
+/* right part where flash and text bellow are */
+
+.container-right
+{
+	width:500px;
+	float:left;
+		
+	background:#EBEBEB;
+	
+}
+	
+	.container-right h2
+	{
+		color:#333;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:normal;
+		font-size:16px;
+		line-height: normal;	
+	
+		text-shadow:1px 1px #FFFFFF;
+	}
+			
+	
+	/* Content bellow flash element */
+	.container-right .content {
+		
+		width:480px;
+		padding:10px;
+		float:left;
+		
+	}
+	
+
+/* default styles*/
+
+a:link 
+{
+	color: #1f4487;
+}
+
+a:hover 
+{
+	color: #000000;
+	text-decoration:underline;
+}
+
+a 
+{
+	color: #1f4487;
+	text-decoration: underline;
+}
+
+h1
+{
+	color:#333;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:20px;
+	line-height: normal;	
+	
+	text-shadow:1px 1px #FFFFFF;
+}
+
+h2
+{
+	color:#333;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:16px;
+	line-height: normal;	
+	
+	text-shadow:1px 1px #FFFFFF;
+}
+
+/* style for images*/
+
+.image {
+	
+	border: solid 1px #667;
+	padding: 5px;
+	margin:5px;
+	background-color:#CCC;
+	float:left;
+	
+}
+
+
+.image2 {
+	
+	border: solid 1px #667;
+		
+}
+
+.text
+{
+	color:#333;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	
+}
+	
+.text2
+{
+	color:#002553;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	
+}
+
+.text3 {
+	
+	color:#111;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	line-height: normal;	
+			
+}
+
+
+.text4 {
+	
+	color:#002553;
+	font-family:"Times New Roman", Times, serif;
+	font-size:16px;
+			
+}
+
+
+
+
+
+
+

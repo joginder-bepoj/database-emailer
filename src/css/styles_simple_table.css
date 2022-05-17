@@ -1,0 +1,108 @@
+body {
+	font: normal 12px auto Times New Roman;
+	color: black;
+	background: #E6EAE9;
+}
+/* a {
+	color: #c75f3e;
+}
+ */
+ 
+#mytable {
+	width: 700px;
+	padding: 0;
+	margin: 0;
+}
+
+/* caption {
+	padding: 0 0 5px 0;
+	width: 700px;	 
+	font: italic 11px Times New Roman;
+	text-align: right;
+}
+ */
+ 
+.api_head th {
+	font: bold 12px Times New Roman;
+	/*color: #4f6b72;*/
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	/*padding: 6px 6px 6px 12px;*/
+}
+
+.api_head th.nobg {
+	border-top: 0;
+	border-left: 0;
+	text-align: center;
+	border-right: 0;
+	background: none;
+}
+
+.api_head td {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #E6EAE9;
+	/*background: #fff;*/
+	padding: 1px 1px 1px 1px;
+	/*color: #4f6b72;*/
+}
+
+
+.api_head td.alt  {
+	background: #F5FAFA;
+	/*color: #797268;*/
+}
+
+.api_head th.spec {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	
+	/*font: bold 10px Times New Roman;*/
+}
+
+.api_head th.specalt {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	/*font: bold 10px Times New Roman;
+	color: #797268;*/
+}
+
+input[type="button"] {
+  color:black;
+  font: bold 12px auto Times New Roman;
+  background-color:#CAE8EA;
+  border:1px solid;
+  border-color: black;
+}
+
+button {
+  color:black;
+  font: bold 12px auto Times New Roman;
+  background-color:#CAE8EA;
+  border:1px solid;
+  border-color: black;
+}
+
+input[type="submit"] {
+  color:black;
+  font: bold 12px auto Times New Roman;
+  background-color:#CAE8EA;
+  border:1px solid;
+  border-color: black;
+}
+
+input[type="reset"] {
+  color:black;
+  font: bold 12px auto Times New Roman;
+  background-color:#CAE8EA;
+  border:1px solid;
+  border-color: black;
+}
+
+input.whiteBorder {
+	border-color: white;
+}
