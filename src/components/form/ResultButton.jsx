@@ -1,6 +1,11 @@
 import React from "react";
 
 const ResultButton = () => {
+    const refreshPage = () =>{
+        window.location.reload()
+    }
+   
+    
     return (
         <>
             <div
@@ -101,9 +106,7 @@ const ResultButton = () => {
                             className="MainButton"
                         />
                     </div>
-                    <a href="@">
-                        <h2 style={{textDecorationStyle: "none", color: "#333", fontWeight: "bold" }}>Clear Form</h2>
-                    </a>
+                        <h2 style={{textDecorationStyle: "none", color: "#333", fontWeight: "bold" }} onClick={refreshPage}>Clear Form</h2>
                 </fieldset>
             </div>
         </>

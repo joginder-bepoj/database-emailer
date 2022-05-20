@@ -10000,38 +10000,52 @@ const TableForm = () => {
                         <td>
                             <fieldset>
                                 <legend>Heating Fuel</legend>
+                                <div style={{display: 'flex', flexWrap:"wrap"}}>
+                                <div>
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="FUEL"
                                     id="FUEL_Electric"
                                     value="Electric"
-                                />
+                                    />
                                 <label htmlFor="FUEL_Electric">Electric</label> |
+                                    </div>
+                                    <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="FUEL"
                                     id="FUEL_Gas"
                                     value="Gas"
-                                />
+                                    />
                                 <label htmlFor="FUEL_Gas">Gas</label> |
+                                    </div>
+                                    <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="FUEL"
                                     id="FUEL_Gas Piped"
                                     value="Gas Piped"
-                                />
+                                    />
                                 <label htmlFor="FUEL_Gas Piped">Gas Piped</label> |
+                                    </div>
+                                    <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="FUEL"
                                     id="FUEL_Oil"
                                     value="Oil"
-                                />
+                                    />
                                 <label htmlFor="FUEL_Oil">Oil</label> |
+                                </div>
+                                <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
@@ -10039,8 +10053,10 @@ const TableForm = () => {
                                     id="FUEL_NULL"
                                     value=""
                                     defaultChecked
-                                />
+                                    />
                                 <label htmlFor="FUEL_NULL">Ignore</label>
+                                    </div>
+                                </div>
                                 <hr />
                                 <input
                                     onChange={handleChange}
@@ -10064,14 +10080,19 @@ const TableForm = () => {
                         <td>
                             <fieldset>
                                 <legend>Type of Air Conditioning</legend>
+                                <div style={{display: 'flex', flexWrap:"wrap"}}>
+                                    <div>
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC CENTRAL"
                                     value="AC CENTRAL"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC CENTRAL">Ac Central</label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10079,10 +10100,13 @@ const TableForm = () => {
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC CENTRAL & UNIT"
                                     value="AC CENTRAL & UNIT"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC CENTRAL & UNIT">
                                     Ac Central & Unit
                                 </label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10090,10 +10114,13 @@ const TableForm = () => {
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC DUAL UNIT"
                                     value="AC DUAL UNIT"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC DUAL UNIT">
                                     Ac Dual Unit
                                 </label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10101,10 +10128,13 @@ const TableForm = () => {
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC EVAPORATIVE"
                                     value="AC EVAPORATIVE"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC EVAPORATIVE">
                                     Ac Evaporative
                                 </label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10112,10 +10142,13 @@ const TableForm = () => {
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC HEAT PUMP"
                                     value="AC HEAT PUMP"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC HEAT PUMP">
                                     Ac Heat Pump
                                 </label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10123,10 +10156,13 @@ const TableForm = () => {
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC REFRIGERATION"
                                     value="AC REFRIGERATION"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC REFRIGERATION">
                                     Ac Refrigeration
                                 </label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10134,8 +10170,11 @@ const TableForm = () => {
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC PACKAGE"
                                     value="AC PACKAGE"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC PACKAGE">Ac Package</label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10143,10 +10182,13 @@ const TableForm = () => {
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC SEPARATE SYSTEM"
                                     value="AC SEPARATE SYSTEM"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC SEPARATE SYSTEM">
                                     Ac Separate System
                                 </label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10154,10 +10196,13 @@ const TableForm = () => {
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC SPLIT SYSTEM"
                                     value="AC SPLIT SYSTEM"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC SPLIT SYSTEM">
                                     Ac Split System
                                 </label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10165,10 +10210,13 @@ const TableForm = () => {
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC WALL UNIT"
                                     value="AC WALL UNIT"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC WALL UNIT">
                                     Ac Wall Unit
                                 </label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10176,10 +10224,13 @@ const TableForm = () => {
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC WINDOW UNIT"
                                     value="AC WINDOW UNIT"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC WINDOW UNIT">
                                     Ac Window Unit
                                 </label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10187,10 +10238,13 @@ const TableForm = () => {
                                     name="AIR_CONDITIONING"
                                     id="AIR_CONDITIONING_AC WALL/WINDOW UNIT"
                                     value="AC WALL/WINDOW UNIT"
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AC WALL/WINDOW UNIT">
                                     Ac Wall/window Unit
                                 </label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10199,9 +10253,13 @@ const TableForm = () => {
                                     id="AIR_CONDITIONING_NULL"
                                     value=""
                                     defaultChecked
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_NULL">Ignore</label>
+                                    </div>
+                                </div>
                                 <hr />
+                                
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
@@ -10209,15 +10267,16 @@ const TableForm = () => {
                                     id="AIR_CONDITIONING_AND"
                                     value="0"
                                     defaultChecked
-                                />
+                                    />
                                 <label htmlFor="AIR_CONDITIONING_AND">All Must Match</label> |
+                                    
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="AIR_CONDITIONING_AND_OR"
                                     id="AIR_CONDITIONING_OR"
                                     value="1"
-                                />{" "}
+                                    />{" "}
                                 <label htmlFor="AIR_CONDITIONING_OR">Any Match On This</label>
                             </fieldset>
                         </td>
@@ -10227,14 +10286,21 @@ const TableForm = () => {
                         <td>
                             <fieldset>
                                 <legend>Type of Water Service</legend>
+                                <div style={{display:'flex', flexWrap:"wrap"}}> 
+                                <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="WATER"
                                     id="WATER_Commercial Water"
                                     value="Commercial Water"
-                                />
+                                    />
                                 <label htmlFor="WATER_Commercial Water">Commercial Water</label>{" "}
+                                    </div>
+                                   
+                                        <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10242,24 +10308,33 @@ const TableForm = () => {
                                     name="WATER"
                                     id="WATER_Private Water"
                                     value="Private Water"
-                                />
+                                    />
                                 <label htmlFor="WATER_Private Water">Private Water</label> |
+                                    </div>
+                                    <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="WATER"
                                     id="WATER_Public Water"
                                     value="Public Water"
-                                />
+                                    />
                                 <label htmlFor="WATER_Public Water">Public Water</label> |
+                                </div>
+                                <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="WATER"
                                     id="WATER_Well"
                                     value="Well"
-                                />
+                                    />
                                 <label htmlFor="WATER_Well">Well</label> |
+                                    </div>
+                                    <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
@@ -10267,9 +10342,13 @@ const TableForm = () => {
                                     id="WATER_NULL"
                                     value=""
                                     defaultChecked
-                                />
+                                    />
                                 <label htmlFor="WATER_NULL">Ignore</label>
+                                    </div>
+                                </div>
                                 <hr />
+                               
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
@@ -10277,29 +10356,38 @@ const TableForm = () => {
                                     id="WATER_AND"
                                     value="0"
                                     defaultChecked
-                                />
+                                    />
                                 <label htmlFor="WATER_AND">All Must Match</label> |
+                                  
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="WATER_AND_OR"
                                     id="WATER_OR"
                                     value="1"
-                                />{" "}
+                                    />{" "}
                                 <label htmlFor="WATER_OR">Any Match On This</label>
                             </fieldset>
                         </td>
                         <td>
                             <fieldset>
                                 <legend>Type of Sewer Service</legend>
+                                <div style={{display: 'flex', flexWrap:"wrap"}}>
+                                    <div>
+
+                                  
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="SEWER"
                                     id="SEWER_Commercial Sewer"
                                     value="Commercial Sewer"
-                                />
+                                    />
                                 <label htmlFor="SEWER_Commercial Sewer">Commercial Sewer</label>{" "}
+                                    </div>
+                                    <div>
+
                                 |
                                 <input
                                     onChange={handleChange}
@@ -10307,24 +10395,33 @@ const TableForm = () => {
                                     name="SEWER"
                                     id="SEWER_Private Sewer"
                                     value="Private Sewer"
-                                />
+                                    />
                                 <label htmlFor="SEWER_Private Sewer">Private Sewer</label> |
+                                </div>
+                                <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="SEWER"
                                     id="SEWER_Public Sewer"
                                     value="Public Sewer"
-                                />
+                                    />
                                 <label htmlFor="SEWER_Public Sewer">Public Sewer</label> |
+                                    </div>
+                                    <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="SEWER"
                                     id="SEWER_Septic"
                                     value="Septic"
-                                />
+                                    />
                                 <label htmlFor="SEWER_Septic">Septic</label> |
+                                </div>
+                                <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
@@ -10332,9 +10429,13 @@ const TableForm = () => {
                                     id="SEWER_NULL"
                                     value=""
                                     defaultChecked
-                                />
+                                    />
                                 <label htmlFor="SEWER_NULL">Ignore</label>
+                                    </div>
+                                    </div>
                                 <hr />
+                              
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
@@ -10342,15 +10443,17 @@ const TableForm = () => {
                                     id="SEWER_AND"
                                     value="0"
                                     defaultChecked
-                                />
+                                    />
                                 <label htmlFor="SEWER_AND">All Must Match</label> |
+                                    
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="SEWER_AND_OR"
                                     id="SEWER_OR"
                                     value="1"
-                                />{" "}
+                                    />{" "}
                                 <label htmlFor="SEWER_OR">Any Match On This</label>
                             </fieldset>
                         </td>
@@ -11723,22 +11826,33 @@ const TableForm = () => {
                         <td>
                             <fieldset id="fsTRAVEL_CRUISE_VACATIONS">
                                 <legend>Travel: Cruise Vacations</legend>
+                                <div style={{display:"flex", flexWrap:"wrap"}}>
+                                    <div>
+
+                                  
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="TRAVEL_CRUISE_VACATIONS"
                                     id="TRAVEL_CRUISE_VACATIONS_Y"
                                     value="Y"
-                                />{" "}
+                                    />{" "}
                                 <label htmlFor="TRAVEL_CRUISE_VACATIONS_Y">Yes</label> |{" "}
+                                    </div>
+                                    <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="TRAVEL_CRUISE_VACATIONS"
                                     id="TRAVEL_CRUISE_VACATIONS_N"
                                     value="N"
-                                />{" "}
+                                    />{" "}
                                 <label htmlFor="TRAVEL_CRUISE_VACATIONS_N">No</label> |
+                                    </div>
+                                    <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
@@ -11746,8 +11860,11 @@ const TableForm = () => {
                                     id="TRAVEL_CRUISE_VACATIONS_NULL"
                                     value=""
                                     defaultChecked
-                                />{" "}
+                                    />{" "}
                                 <label htmlFor="TRAVEL_CRUISE_VACATIONS_NULL">Either</label>
+                                    </div>
+                                    <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
@@ -11755,21 +11872,26 @@ const TableForm = () => {
                                     id="TRAVEL_CRUISE_VACATIONS_AND"
                                     value="0"
                                     defaultChecked
-                                />
+                                    />
                                 <label htmlFor="TRAVEL_CRUISE_VACATIONS_AND">
                                     All Must Match
                                 </label>{" "}
                                 |
+                                    </div>
+                                    <div>
+
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="TRAVEL_CRUISE_VACATIONS_AND_OR"
                                     id="TRAVEL_CRUISE_VACATIONS_OR"
                                     value="1"
-                                />
+                                    />
                                 <label htmlFor="TRAVEL_CRUISE_VACATIONS_OR">
                                     Any Match On This
                                 </label>
+                                    </div>
+                                </div>
                             </fieldset>
                         </td>
                     </tr>
