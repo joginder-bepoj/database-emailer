@@ -20,8 +20,18 @@ table {
 	margin: auto !important;
 	width: auto !important;
 }
-
-
+.homeClick{
+   color: #333;
+}
+.homeClick:hover{
+   color: #3061ff;
+}
+.cellOptions{
+   width: 70%;
+   margin: auto;
+   display: flex;
+   justify-content: space-around;
+}
 option{
    font-size: 8.5pt !important;
    height: 22px !important;

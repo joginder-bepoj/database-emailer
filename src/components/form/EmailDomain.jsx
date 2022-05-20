@@ -700,11 +700,11 @@ const EmailDomain = () => {
                                 <br />
                                 <span style={{ fontSize: "13px" }} className="redtext">
                                     <b>Option Il</b>
-                                </span>
+                                </span>{" "}
                                 <label htmlFor="emailCondition_included" className="twefont">
                                     <b>INCLUDE ONLY</b> the Domains checked above and ALL the
                                     others will be excluded
-                                </label>{" "}
+                                </label>
                                 <input 
                                     type="radio"
                                     
@@ -717,7 +717,7 @@ const EmailDomain = () => {
                                 <br />
                                 <span style={{ fontSize: "13px" }} className="redtext">
                                     <b>Option Ill</b>
-                                </span>
+                                </span>{" "}
                                 <label htmlFor="emailCondition_excluded" className="twefont">
                                     <b>EXCLUDE ONLY</b> the Domains checked above and ALL the
                                     others will be included

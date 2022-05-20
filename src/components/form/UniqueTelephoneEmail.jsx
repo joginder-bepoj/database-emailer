@@ -97,8 +97,8 @@ const UniqueTelephoneEmail = () => {
                 <br />
                 <table width="100%" cellPadding="1" cellSpacing="1" className="tdBlock">
                     <tbody>
-                    <tr>
-                        <td>
+                    <tr style={{display:"flex", justifyContent:"space-between"}}>
+                        <td width="40%">
                             <label htmlFor="chkDoNotCallN" title="Flag = 'N'">
                                 The "Do Not Call" Flag = No:
                             </label>{" "}
@@ -112,7 +112,7 @@ const UniqueTelephoneEmail = () => {
                             the phone number <b>IS NOT ON</b> the "Do Not Call" List. This
                             means you can cold call them.
                         </td>
-                        <td width="43%">
+                        <td width="40%">
                             <label htmlFor="chkDoNotCallY" title="Flag = 'Y'">
                                 The "Do Not Call" Flag = Yes:
                             </label>{" "}

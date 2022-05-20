@@ -4,11 +4,12 @@ import { useStateContext } from "./context/StateContext";
 const BadData = () => {
     const {setBadData, badData} = useStateContext()
     const handleChange = (e) =>{
-        setBadData({
-            ...badData, [e.target.name] : e.target.value
-        })
+        setBadData(e.target.value)
     }
     console.log(badData)
+    const clearEmails = () => {
+        setBadData('')
+    }
     return (
         <>
             <section className="section section-xs content">
@@ -45,7 +46,7 @@ const BadData = () => {
                                         Spaces
                                     </b>{" "}
                                     <input
-                                        onChange
+                                        onClick={clearEmails}
                                         type="button"
                                         name="buttClearTA"
                                         id="buttClearTA"
@@ -54,6 +55,7 @@ const BadData = () => {
                                     />
                                     <br />
                                     <textarea
+                                        value={badData}
                                         onChange={handleChange}
                                         name="taEmails"
                                         id="taEmails"

@@ -2,37 +2,49 @@ import React from "react";
 import { useStateContext } from "../context/StateContext";
 
 const CellCarriers = () => {
-    const {setCellCarrier, cellCarrier} = useStateContext()
-    const handleChange = (e) =>{
+    const { setCellCarrier, cellCarrier } = useStateContext()
+    const handleChange = (e) => {
         setCellCarrier({
-            ...cellCarrier, [e.target.name] : e.target.value
+            ...cellCarrier, [e.target.name]: e.target.value
         })
     }
     return (
         <>
             <fieldset id="fsCarriers">
-                <legend>Cellphone Carriers</legend>
-                <span style={{ fontSize: "11pt", fontWeight: "700" }}>
-                    For Phone WITH OR WITHOUT a Carrier
-                </span>
+                <div style={{ display: "flex" }}>
+                    <div>
+                    <legend style={{ display: "inline" }}>Cellphone Carriers</legend>
+                    </div>
+                    <div>
+                    <span style={{ fontSize: "11pt", fontWeight: "700", display: "inline" }}>
+                        For Phone WITH OR WITHOUT a Carrier
+                    </span>
+                    </div>
+                </div>
                 <br />
-                <label htmlFor="optAnyCarrierY">For Cell Phones WITH any Carrier:</label>
+                <div className="cellOptions">
+                    <div>
+                    <label htmlFor="optAnyCarrierY" style={{textAlign:"center"}}>For Cell Phones WITH any Carrier:</label>
                 &nbsp;
                 <input onChange={handleChange}
                     type="radio"
                     name="optAnyCarrier"
                     id="optAnyCarrierY"
                     value="Y"
-                />{" "}
-                | <label htmlFor="optAnyCarrierN">For Cell Phones WITHOUT A Carrier:</label>
+                />
+                    </div> 
+                 <div>|
+                <label htmlFor="optAnyCarrierN">For Cell Phones WITHOUT A Carrier:</label>
                 &nbsp;
                 <input onChange={handleChange}
                     type="radio"
                     name="optAnyCarrier"
                     id="optAnyCarrierN"
                     value="N"
-                />{" "}
-                |<label htmlFor="optAnyCarrierNULL">Neither:</label>&nbsp;
+                />
+                </div>
+                <div>|
+                <label htmlFor="optAnyCarrierNULL">Neither:</label>&nbsp;
                 <input onChange={handleChange}
                     type="radio"
                     name="optAnyCarrier"
@@ -40,6 +52,11 @@ const CellCarriers = () => {
                     value=""
                     defaultChecked
                 />
+                </div>
+                
+                
+                </div>
+               
                 <br /> (Selecting WITH or WITHOUT Carrier Will Override the Selections
                 Below)
                 <br />

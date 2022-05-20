@@ -18,7 +18,6 @@ import TelephoneSearch from "./form/TelephoneSearch";
 import UniqueEmailFax from "./form/UniqueEmailFax";
 import URLdomain from "./form/URLdomain";
 import USstates from "./form/USstates";
-// import { useStateContext } from "./context/StateContext";
 
 const CheckBusiness = () => {
  
