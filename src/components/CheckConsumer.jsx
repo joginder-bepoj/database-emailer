@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import DOB from "./form/DOB";
 import EmailAddress from "./form/EmailAddress";
 import EmailDomain from "./form/EmailDomain";
@@ -44,14 +45,13 @@ const CheckConsumer = () => {
                             within its almost 200 million consumer records. You can specify
                             that all records queried from that database must have opt-in email
                             addresses. That consumer database is also a recently updated
-                            postal and phone database. <a href="@">Take me there! </a>
+                            postal and phone database. <Link to="/database-emailer/telemarketing">Take me there! </Link>
                         </div>
                         <form
                             method="post"
                             action=""
                             id="frmSearch"
                             name="frmSearch"
-                           
                         >
                             <div className="divImportant">
                                 <h3>Consumer Residential Opt-In Emails</h3>

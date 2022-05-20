@@ -25,6 +25,10 @@ export const states =[
         value: "CO"
     },
     {
+        name: "Connecticut ",
+        value: "CT"
+    },
+    {
         name: "Delaware",
         value: "DE"
     },

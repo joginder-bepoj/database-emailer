@@ -6,7 +6,6 @@ const BadData = () => {
     const handleChange = (e) =>{
         setBadData(e.target.value)
     }
-    console.log(badData)
     const clearEmails = () => {
         setBadData('')
     }

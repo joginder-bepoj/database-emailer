@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useStateContext } from "../context/StateContext";
 
 const TableForm = () => {
@@ -9,15 +9,15 @@ const TableForm = () => {
             [e.target.name]: e.target.value,
         });
     };
-    const [education, setEducation] = useState(false)
-    const [buisnessOwner, setBuisnessOwner] = useState(false)
-    const [occupation, setOccupation] = useState(false)
-    const [occupationDetails, setOccupationDetails] = useState(false)
-    const [langages, setLangages] = useState(false)
-    const [ethnicities, setEthnicities] = useState(false)
-    const [ethnic, setEthnic] = useState(false)
-    const [religion, setReligion] = useState(false)
-    const [houseHoldRange, setHouseHoldRange] = useState(false)
+    const [education, setEducation] = useState(false);
+    const [buisnessOwner, setBuisnessOwner] = useState(false);
+    const [occupation, setOccupation] = useState(false);
+    const [occupationDetails, setOccupationDetails] = useState(false);
+    const [langages, setLangages] = useState(false);
+    const [ethnicities, setEthnicities] = useState(false);
+    const [ethnic, setEthnic] = useState(false);
+    const [religion, setReligion] = useState(false);
+    const [houseHoldRange, setHouseHoldRange] = useState(false);
 
     return (
         <>
@@ -418,17 +418,17 @@ const TableForm = () => {
                                         <legend>Educational Levels</legend>
                                     </div>
                                     <div>
-                                        <small onClick={()=>setEducation(true)}>(click here to expand options)</small> |
-                                        <small onClick={()=> setEducation(false)}>(click here to hide options)</small>
+                                        <small onClick={() => setEducation(true)}>
+                                            (click here to expand options)
+                                        </small>{" "}
+                                        |
+                                        <small onClick={() => setEducation(false)}>
+                                            (click here to hide options)
+                                        </small>
                                     </div>
                                 </div>
-                                {
-                                    education ? (
-                                        <table
-                                        cellPadding="4"
-                                        cellSpacing="4"
-                                        id="tblEDUCATION"
-                                    >
+                                {education ? (
+                                    <table cellPadding="4" cellSpacing="4" id="tblEDUCATION">
                                         <tbody>
                                             <tr>
                                                 <td>
@@ -480,9 +480,9 @@ const TableForm = () => {
                                             </tr>
                                         </tbody>
                                     </table>
-                                    ) : ""
-                                }
-                                
+                                ) : (
+                                    ""
+                                )}
                                 <hr />
                                 <input
                                     onChange={handleChange}
@@ -512,136 +512,137 @@ const TableForm = () => {
                                         <legend>Types of Business Owners</legend>
                                     </div>
                                     <div>
-                                        <small onClick={()=> setBuisnessOwner(true)} >(click here to expand options)</small> |
-                                        <small onClick={()=> setBuisnessOwner(false)} >(click here to hide options)</small>
+                                        <small onClick={() => setBuisnessOwner(true)}>
+                                            (click here to expand options)
+                                        </small>{" "}
+                                        |
+                                        <small onClick={() => setBuisnessOwner(false)}>
+                                            (click here to hide options)
+                                        </small>
                                     </div>
                                 </div>
-                                {
-                                    buisnessOwner ? (
-                                        <table
-                                    cellPadding="4"
-                                    cellSpacing="4"
-                                    id="tblBUSINESS_OWNER"
-                                   
-                                >
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="BUSINESS_OWNER[0]"
-                                                    id="BUSINESS_OWNER-0"
-                                                    value="Accountant"
-                                                />{" "}
-                                                <label htmlFor="BUSINESS_OWNER-0">Accountant</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="BUSINESS_OWNER[1]"
-                                                    id="BUSINESS_OWNER-1"
-                                                    value="Builder"
-                                                />{" "}
-                                                <label htmlFor="BUSINESS_OWNER-1">Builder</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="BUSINESS_OWNER[2]"
-                                                    id="BUSINESS_OWNER-2"
-                                                    value="Contractor"
-                                                />{" "}
-                                                <label htmlFor="BUSINESS_OWNER-2">Contractor</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="BUSINESS_OWNER[3]"
-                                                    id="BUSINESS_OWNER-3"
-                                                    value="Dealer/Retailer/Storekeeper"
-                                                />{" "}
-                                                <label htmlFor="BUSINESS_OWNER-3">
-                                                    Dealer/Retailer/Storekeeper
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="BUSINESS_OWNER[4]"
-                                                    id="BUSINESS_OWNER-4"
-                                                    value="Distributor/Wholesaler"
-                                                />{" "}
-                                                <label htmlFor="BUSINESS_OWNER-4">
-                                                    Distributor/Wholesaler
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="BUSINESS_OWNER[5]"
-                                                    id="BUSINESS_OWNER-5"
-                                                    value="Funeral Director"
-                                                />{" "}
-                                                <label htmlFor="BUSINESS_OWNER-5">
-                                                    Funeral Director
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="BUSINESS_OWNER[6]"
-                                                    id="BUSINESS_OWNER-6"
-                                                    value="Maker/Manufacturer"
-                                                />{" "}
-                                                <label htmlFor="BUSINESS_OWNER-6">
-                                                    Maker/Manufacturer
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="BUSINESS_OWNER[7]"
-                                                    id="BUSINESS_OWNER-7"
-                                                    value="Owner"
-                                                />{" "}
-                                                <label htmlFor="BUSINESS_OWNER-7">Owner</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="BUSINESS_OWNER[8]"
-                                                    id="BUSINESS_OWNER-8"
-                                                    value="Partner"
-                                                />{" "}
-                                                <label htmlFor="BUSINESS_OWNER-8">Partner</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="BUSINESS_OWNER[9]"
-                                                    id="BUSINESS_OWNER-9"
-                                                    value="Self-Employed"
-                                                />{" "}
-                                                <label htmlFor="BUSINESS_OWNER-9">Self-Employed</label>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                    ) : ""
-                                }
-                                
+                                {buisnessOwner ? (
+                                    <table cellPadding="4" cellSpacing="4" id="tblBUSINESS_OWNER">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="BUSINESS_OWNER[0]"
+                                                        id="BUSINESS_OWNER-0"
+                                                        value="Accountant"
+                                                    />{" "}
+                                                    <label htmlFor="BUSINESS_OWNER-0">Accountant</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="BUSINESS_OWNER[1]"
+                                                        id="BUSINESS_OWNER-1"
+                                                        value="Builder"
+                                                    />{" "}
+                                                    <label htmlFor="BUSINESS_OWNER-1">Builder</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="BUSINESS_OWNER[2]"
+                                                        id="BUSINESS_OWNER-2"
+                                                        value="Contractor"
+                                                    />{" "}
+                                                    <label htmlFor="BUSINESS_OWNER-2">Contractor</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="BUSINESS_OWNER[3]"
+                                                        id="BUSINESS_OWNER-3"
+                                                        value="Dealer/Retailer/Storekeeper"
+                                                    />{" "}
+                                                    <label htmlFor="BUSINESS_OWNER-3">
+                                                        Dealer/Retailer/Storekeeper
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="BUSINESS_OWNER[4]"
+                                                        id="BUSINESS_OWNER-4"
+                                                        value="Distributor/Wholesaler"
+                                                    />{" "}
+                                                    <label htmlFor="BUSINESS_OWNER-4">
+                                                        Distributor/Wholesaler
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="BUSINESS_OWNER[5]"
+                                                        id="BUSINESS_OWNER-5"
+                                                        value="Funeral Director"
+                                                    />{" "}
+                                                    <label htmlFor="BUSINESS_OWNER-5">
+                                                        Funeral Director
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="BUSINESS_OWNER[6]"
+                                                        id="BUSINESS_OWNER-6"
+                                                        value="Maker/Manufacturer"
+                                                    />{" "}
+                                                    <label htmlFor="BUSINESS_OWNER-6">
+                                                        Maker/Manufacturer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="BUSINESS_OWNER[7]"
+                                                        id="BUSINESS_OWNER-7"
+                                                        value="Owner"
+                                                    />{" "}
+                                                    <label htmlFor="BUSINESS_OWNER-7">Owner</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="BUSINESS_OWNER[8]"
+                                                        id="BUSINESS_OWNER-8"
+                                                        value="Partner"
+                                                    />{" "}
+                                                    <label htmlFor="BUSINESS_OWNER-8">Partner</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="BUSINESS_OWNER[9]"
+                                                        id="BUSINESS_OWNER-9"
+                                                        value="Self-Employed"
+                                                    />{" "}
+                                                    <label htmlFor="BUSINESS_OWNER-9">
+                                                        Self-Employed
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                ) : (
+                                    ""
+                                )}
                                 <hr />
                                 <input
                                     onChange={handleChange}
@@ -671,331 +672,333 @@ const TableForm = () => {
                                         <legend>Occupations General</legend>
                                     </div>
                                     <div>
-                                        <small onClick={()=> setOccupation(true)}>(click here to expand options)</small> |
-                                        <small onClick={()=> setOccupation(false)}>(click here to hide options)</small>
+                                        <small onClick={() => setOccupation(true)}>
+                                            (click here to expand options)
+                                        </small>{" "}
+                                        |
+                                        <small onClick={() => setOccupation(false)}>
+                                            (click here to hide options)
+                                        </small>
                                     </div>
                                 </div>
-                                {
-                                    occupation ? (
-                                        <table
-                                    cellPadding="4"
-                                    cellSpacing="4"
-                                    id="tblOCCUPATION" 
-                                >
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[0]"
-                                                    id="OCCUPATION-0"
-                                                    value="Administration / Managerial"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-0">
-                                                    Administration / Managerial
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[1]"
-                                                    id="OCCUPATION-1"
-                                                    value="Clerical / White Collar"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-1">
-                                                    Clerical / White Collar
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[2]"
-                                                    id="OCCUPATION-2"
-                                                    value="Craftsman / Blue Collar"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-2">
-                                                    Craftsman / Blue Collar
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[3]"
-                                                    id="OCCUPATION-3"
-                                                    value="Educator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-3">Educator</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[4]"
-                                                    id="OCCUPATION-4"
-                                                    value="Farmer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-4">Farmer</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[5]"
-                                                    id="OCCUPATION-5"
-                                                    value="Financial Professional"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-5">
-                                                    Financial Professional
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[6]"
-                                                    id="OCCUPATION-6"
-                                                    value="Homemaker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-6">Homemaker</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[7]"
-                                                    id="OCCUPATION-7"
-                                                    value="Legal Professional"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-7">Legal Professional</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[8]"
-                                                    id="OCCUPATION-8"
-                                                    value="Medical Professional"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-8">
-                                                    Medical Professional
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[9]"
-                                                    id="OCCUPATION-9"
-                                                    value="Military"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-9">Military</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[10]"
-                                                    id="OCCUPATION-10"
-                                                    value="Other"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-10">Other</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[11]"
-                                                    id="OCCUPATION-11"
-                                                    value="Professional / Technical"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-11">
-                                                    Professional / Technical
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[12]"
-                                                    id="OCCUPATION-12"
-                                                    value="Religious"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-12">Religious</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[13]"
-                                                    id="OCCUPATION-13"
-                                                    value="Retired"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-13">Retired</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[14]"
-                                                    id="OCCUPATION-14"
-                                                    value="Sales / Service"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-14">Sales / Service</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[15]"
-                                                    id="OCCUPATION-15"
-                                                    value="Self Employed"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-15">Self Employed</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[16]"
-                                                    id="OCCUPATION-16"
-                                                    value="Self Employed - Administration / Managerial"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-16">
-                                                    Self Employed - Administration / Managerial
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[17]"
-                                                    id="OCCUPATION-17"
-                                                    value="Self Employed - Clerical / White Collar"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-17">
-                                                    Self Employed - Clerical / White Collar
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[18]"
-                                                    id="OCCUPATION-18"
-                                                    value="Self Employed - Craftsman / Blue Collar"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-18">
-                                                    Self Employed - Craftsman / Blue Collar
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[19]"
-                                                    id="OCCUPATION-19"
-                                                    value="Self Employed - Homemaker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-19">
-                                                    Self Employed - Homemaker
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[20]"
-                                                    id="OCCUPATION-20"
-                                                    value="Self Employed - Other"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-20">
-                                                    Self Employed - Other
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[21]"
-                                                    id="OCCUPATION-21"
-                                                    value="Self Employed - Professional / Technical"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-21">
-                                                    Self Employed - Professional / Technical
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[22]"
-                                                    id="OCCUPATION-22"
-                                                    value="Self Employed - Retired"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-22">
-                                                    Self Employed - Retired
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[23]"
-                                                    id="OCCUPATION-23"
-                                                    value="Self Employed - Sales / Service"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-23">
-                                                    Self Employed - Sales / Service
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[24]"
-                                                    id="OCCUPATION-24"
-                                                    value="Self Employed - Student"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-24">
-                                                    Self Employed - Student
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION[25]"
-                                                    id="OCCUPATION-25"
-                                                    value="Student"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION-25">Student</label>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                    ) : ""
-                                }
-                                
+                                {occupation ? (
+                                    <table cellPadding="4" cellSpacing="4" id="tblOCCUPATION">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[0]"
+                                                        id="OCCUPATION-0"
+                                                        value="Administration / Managerial"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-0">
+                                                        Administration / Managerial
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[1]"
+                                                        id="OCCUPATION-1"
+                                                        value="Clerical / White Collar"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-1">
+                                                        Clerical / White Collar
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[2]"
+                                                        id="OCCUPATION-2"
+                                                        value="Craftsman / Blue Collar"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-2">
+                                                        Craftsman / Blue Collar
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[3]"
+                                                        id="OCCUPATION-3"
+                                                        value="Educator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-3">Educator</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[4]"
+                                                        id="OCCUPATION-4"
+                                                        value="Farmer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-4">Farmer</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[5]"
+                                                        id="OCCUPATION-5"
+                                                        value="Financial Professional"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-5">
+                                                        Financial Professional
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[6]"
+                                                        id="OCCUPATION-6"
+                                                        value="Homemaker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-6">Homemaker</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[7]"
+                                                        id="OCCUPATION-7"
+                                                        value="Legal Professional"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-7">
+                                                        Legal Professional
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[8]"
+                                                        id="OCCUPATION-8"
+                                                        value="Medical Professional"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-8">
+                                                        Medical Professional
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[9]"
+                                                        id="OCCUPATION-9"
+                                                        value="Military"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-9">Military</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[10]"
+                                                        id="OCCUPATION-10"
+                                                        value="Other"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-10">Other</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[11]"
+                                                        id="OCCUPATION-11"
+                                                        value="Professional / Technical"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-11">
+                                                        Professional / Technical
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[12]"
+                                                        id="OCCUPATION-12"
+                                                        value="Religious"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-12">Religious</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[13]"
+                                                        id="OCCUPATION-13"
+                                                        value="Retired"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-13">Retired</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[14]"
+                                                        id="OCCUPATION-14"
+                                                        value="Sales / Service"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-14">Sales / Service</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[15]"
+                                                        id="OCCUPATION-15"
+                                                        value="Self Employed"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-15">Self Employed</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[16]"
+                                                        id="OCCUPATION-16"
+                                                        value="Self Employed - Administration / Managerial"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-16">
+                                                        Self Employed - Administration / Managerial
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[17]"
+                                                        id="OCCUPATION-17"
+                                                        value="Self Employed - Clerical / White Collar"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-17">
+                                                        Self Employed - Clerical / White Collar
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[18]"
+                                                        id="OCCUPATION-18"
+                                                        value="Self Employed - Craftsman / Blue Collar"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-18">
+                                                        Self Employed - Craftsman / Blue Collar
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[19]"
+                                                        id="OCCUPATION-19"
+                                                        value="Self Employed - Homemaker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-19">
+                                                        Self Employed - Homemaker
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[20]"
+                                                        id="OCCUPATION-20"
+                                                        value="Self Employed - Other"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-20">
+                                                        Self Employed - Other
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[21]"
+                                                        id="OCCUPATION-21"
+                                                        value="Self Employed - Professional / Technical"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-21">
+                                                        Self Employed - Professional / Technical
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[22]"
+                                                        id="OCCUPATION-22"
+                                                        value="Self Employed - Retired"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-22">
+                                                        Self Employed - Retired
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[23]"
+                                                        id="OCCUPATION-23"
+                                                        value="Self Employed - Sales / Service"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-23">
+                                                        Self Employed - Sales / Service
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[24]"
+                                                        id="OCCUPATION-24"
+                                                        value="Self Employed - Student"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-24">
+                                                        Self Employed - Student
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION[25]"
+                                                        id="OCCUPATION-25"
+                                                        value="Student"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION-25">Student</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                ) : (
+                                    ""
+                                )}
                                 <hr />
                                 <input
                                     onChange={handleChange}
@@ -1025,3753 +1028,3857 @@ const TableForm = () => {
                                         <legend>Occupations Detailed</legend>
                                     </div>
                                     <div>
-                                        <small onClick={()=>setOccupationDetails(true)}>(click here to expand options)</small> |
-                                        <small onClick={()=>setOccupationDetails(false)}>(click here to hide options)</small>
+                                        <small onClick={() => setOccupationDetails(true)}>
+                                            (click here to expand options)
+                                        </small>{" "}
+                                        |
+                                        <small onClick={() => setOccupationDetails(false)}>
+                                            (click here to hide options)
+                                        </small>
                                     </div>
                                 </div>
-                                {
-                                    occupationDetails ? (
-                                        <table
-                                    cellPadding="4"
-                                    cellSpacing="4"
-                                    id="tblOCCUPATION_DETAILED"
-                                >
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[0]"
-                                                    id="OCCUPATION_DETAILED-0"
-                                                    value="Account Executive"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-0">
-                                                    Account Executive
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[1]"
-                                                    id="OCCUPATION_DETAILED-1"
-                                                    value="Accounting/Biller/Billing clerk"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-1">
-                                                    Accounting/Biller/Billing clerk
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[2]"
-                                                    id="OCCUPATION_DETAILED-2"
-                                                    value="Actor/Entertainer/Announcer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-2">
-                                                    Actor/Entertainer/Announcer
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[3]"
-                                                    id="OCCUPATION_DETAILED-3"
-                                                    value="Adjuster"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-3">Adjuster</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[4]"
-                                                    id="OCCUPATION_DETAILED-4"
-                                                    value="Administration/Management"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-4">
-                                                    Administration/Management
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[5]"
-                                                    id="OCCUPATION_DETAILED-5"
-                                                    value="Advertising"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-5">
-                                                    Advertising
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[6]"
-                                                    id="OCCUPATION_DETAILED-6"
-                                                    value="Agent"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-6">Agent</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[7]"
-                                                    id="OCCUPATION_DETAILED-7"
-                                                    value="Aide/Assistant"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-7">
-                                                    Aide/Assistant
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[8]"
-                                                    id="OCCUPATION_DETAILED-8"
-                                                    value="Aide/Assistant/Executive"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-8">
-                                                    Aide/Assistant/Executive
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[9]"
-                                                    id="OCCUPATION_DETAILED-9"
-                                                    value="Aide/Assistant/Office"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-9">
-                                                    Aide/Assistant/Office
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[10]"
-                                                    id="OCCUPATION_DETAILED-10"
-                                                    value="Aide/Assistant/School"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-10">
-                                                    Aide/Assistant/School
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[11]"
-                                                    id="OCCUPATION_DETAILED-11"
-                                                    value="Aide/Assistant/Staff"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-11">
-                                                    Aide/Assistant/Staff
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[12]"
-                                                    id="OCCUPATION_DETAILED-12"
-                                                    value="Aide/Assistant/Technical"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-12">
-                                                    Aide/Assistant/Technical
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[13]"
-                                                    id="OCCUPATION_DETAILED-13"
-                                                    value="Air Force"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-13">
-                                                    Air Force
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[14]"
-                                                    id="OCCUPATION_DETAILED-14"
-                                                    value="Air Traffic Control"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-14">
-                                                    Air Traffic Control
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[15]"
-                                                    id="OCCUPATION_DETAILED-15"
-                                                    value="Analyst"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-15">Analyst</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[16]"
-                                                    id="OCCUPATION_DETAILED-16"
-                                                    value="Animal Technician/Groomer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-16">
-                                                    Animal Technician/Groomer
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[17]"
-                                                    id="OCCUPATION_DETAILED-17"
-                                                    value="Appraiser"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-17">
-                                                    Appraiser
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[18]"
-                                                    id="OCCUPATION_DETAILED-18"
-                                                    value="Apprentice"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-18">
-                                                    Apprentice
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[19]"
-                                                    id="OCCUPATION_DETAILED-19"
-                                                    value="Architect"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-19">
-                                                    Architect
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[20]"
-                                                    id="OCCUPATION_DETAILED-20"
-                                                    value="Armed Forces"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-20">
-                                                    Armed Forces
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[21]"
-                                                    id="OCCUPATION_DETAILED-21"
-                                                    value="Army Credit Union Trades"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-21">
-                                                    Army Credit Union Trades
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[22]"
-                                                    id="OCCUPATION_DETAILED-22"
-                                                    value="Artist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-22">Artist</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[23]"
-                                                    id="OCCUPATION_DETAILED-23"
-                                                    value="Assembler"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-23">
-                                                    Assembler
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[24]"
-                                                    id="OCCUPATION_DETAILED-24"
-                                                    value="Athlete/Professional"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-24">
-                                                    Athlete/Professional
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[25]"
-                                                    id="OCCUPATION_DETAILED-25"
-                                                    value="Attendant"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-25">
-                                                    Attendant
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[26]"
-                                                    id="OCCUPATION_DETAILED-26"
-                                                    value="Auctioneer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-26">
-                                                    Auctioneer
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[27]"
-                                                    id="OCCUPATION_DETAILED-27"
-                                                    value="Auditor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-27">Auditor</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[28]"
-                                                    id="OCCUPATION_DETAILED-28"
-                                                    value="Auto Mechanic"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-28">
-                                                    Auto Mechanic
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[29]"
-                                                    id="OCCUPATION_DETAILED-29"
-                                                    value="Baker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-29">Baker</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[30]"
-                                                    id="OCCUPATION_DETAILED-30"
-                                                    value="Banker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-30">Banker</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[31]"
-                                                    id="OCCUPATION_DETAILED-31"
-                                                    value="Banker/Loan Office"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-31">
-                                                    Banker/Loan Office
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[32]"
-                                                    id="OCCUPATION_DETAILED-32"
-                                                    value="Banker/Loan Processor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-32">
-                                                    Banker/Loan Processor
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[33]"
-                                                    id="OCCUPATION_DETAILED-33"
-                                                    value="Barber/Hairstylist/Beautician"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-33">
-                                                    Barber/Hairstylist/Beautician
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[34]"
-                                                    id="OCCUPATION_DETAILED-34"
-                                                    value="Bartender"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-34">
-                                                    Bartender
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[35]"
-                                                    id="OCCUPATION_DETAILED-35"
-                                                    value="Binder"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-35">Binder</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[36]"
-                                                    id="OCCUPATION_DETAILED-36"
-                                                    value="Blue Collar Worker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-36">
-                                                    Blue Collar Worker
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[37]"
-                                                    id="OCCUPATION_DETAILED-37"
-                                                    value="Bodyman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-37">Bodyman</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[38]"
-                                                    id="OCCUPATION_DETAILED-38"
-                                                    value="Bookkeeper"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-38">
-                                                    Bookkeeper
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[39]"
-                                                    id="OCCUPATION_DETAILED-39"
-                                                    value="Brakeman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-39">Brakeman</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[40]"
-                                                    id="OCCUPATION_DETAILED-40"
-                                                    value="Brewer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-40">Brewer</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[41]"
-                                                    id="OCCUPATION_DETAILED-41"
-                                                    value="Broker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-41">Broker</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[42]"
-                                                    id="OCCUPATION_DETAILED-42"
-                                                    value="Broker/Stock/Trader"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-42">
-                                                    Broker/Stock/Trader
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[43]"
-                                                    id="OCCUPATION_DETAILED-43"
-                                                    value="Butcher/Meat Cutter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-43">
-                                                    Butcher/Meat Cutter
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[44]"
-                                                    id="OCCUPATION_DETAILED-44"
-                                                    value="Buyer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-44">Buyer</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[45]"
-                                                    id="OCCUPATION_DETAILED-45"
-                                                    value="CEO/CFO/Chairman/Corp Officer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-45">
-                                                    CEO/CFO/Chairman/Corp Officer
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[46]"
-                                                    id="OCCUPATION_DETAILED-46"
-                                                    value="Carpenter/Furniture/Woodworking"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-46">
-                                                    Carpenter/Furniture/Woodworking
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[47]"
-                                                    id="OCCUPATION_DETAILED-47"
-                                                    value="Cashier"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-47">Cashier</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[48]"
-                                                    id="OCCUPATION_DETAILED-48"
-                                                    value="Caterer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-48">Caterer</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[49]"
-                                                    id="OCCUPATION_DETAILED-49"
-                                                    value="Checker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-49">Checker</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[50]"
-                                                    id="OCCUPATION_DETAILED-50"
-                                                    value="Chef/Butler"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-50">
-                                                    Chef/Butler
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[51]"
-                                                    id="OCCUPATION_DETAILED-51"
-                                                    value="Chemist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-51">Chemist</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[52]"
-                                                    id="OCCUPATION_DETAILED-52"
-                                                    value="Child Care/Day Care/Babysitter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-52">
-                                                    Child Care/Day Care/Babysitter
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[53]"
-                                                    id="OCCUPATION_DETAILED-53"
-                                                    value="Chiropractor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-53">
-                                                    Chiropractor
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[54]"
-                                                    id="OCCUPATION_DETAILED-54"
-                                                    value="Civil Service"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-54">
-                                                    Civil Service
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[55]"
-                                                    id="OCCUPATION_DETAILED-55"
-                                                    value="Civil Service/Government"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-55">
-                                                    Civil Service/Government
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[56]"
-                                                    id="OCCUPATION_DETAILED-56"
-                                                    value="Claims Examiner/Rep/Adjudicator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-56">
-                                                    Claims Examiner/Rep/Adjudicator
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[57]"
-                                                    id="OCCUPATION_DETAILED-57"
-                                                    value="Cleaner/Laundry"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-57">
-                                                    Cleaner/Laundry
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[58]"
-                                                    id="OCCUPATION_DETAILED-58"
-                                                    value="Clerk"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-58">Clerk</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[59]"
-                                                    id="OCCUPATION_DETAILED-59"
-                                                    value="Clerk/Deli"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-59">
-                                                    Clerk/Deli
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[60]"
-                                                    id="OCCUPATION_DETAILED-60"
-                                                    value="Clerk/File"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-60">
-                                                    Clerk/File
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[61]"
-                                                    id="OCCUPATION_DETAILED-61"
-                                                    value="Clerk/Produce"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-61">
-                                                    Clerk/Produce
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[62]"
-                                                    id="OCCUPATION_DETAILED-62"
-                                                    value="Clerk/Stock"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-62">
-                                                    Clerk/Stock
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[63]"
-                                                    id="OCCUPATION_DETAILED-63"
-                                                    value="Coach"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-63">Coach</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[64]"
-                                                    id="OCCUPATION_DETAILED-64"
-                                                    value="Coast Guard"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-64">
-                                                    Coast Guard
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[65]"
-                                                    id="OCCUPATION_DETAILED-65"
-                                                    value="Collector"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-65">
-                                                    Collector
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[66]"
-                                                    id="OCCUPATION_DETAILED-66"
-                                                    value="Communications"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-66">
-                                                    Communications
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[67]"
-                                                    id="OCCUPATION_DETAILED-67"
-                                                    value="Comptroller"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-67">
-                                                    Comptroller
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[68]"
-                                                    id="OCCUPATION_DETAILED-68"
-                                                    value="Computer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-68">Computer</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[69]"
-                                                    id="OCCUPATION_DETAILED-69"
-                                                    value="Computer Operator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-69">
-                                                    Computer Operator
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[70]"
-                                                    id="OCCUPATION_DETAILED-70"
-                                                    value="Computer Programmer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-70">
-                                                    Computer Programmer
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[71]"
-                                                    id="OCCUPATION_DETAILED-71"
-                                                    value="Computer/Systems Analyst"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-71">
-                                                    Computer/Systems Analyst
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[72]"
-                                                    id="OCCUPATION_DETAILED-72"
-                                                    value="Conductor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-72">
-                                                    Conductor
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[73]"
-                                                    id="OCCUPATION_DETAILED-73"
-                                                    value="Conservation/Environment"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-73">
-                                                    Conservation/Environment
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[74]"
-                                                    id="OCCUPATION_DETAILED-74"
-                                                    value="Construction"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-74">
-                                                    Construction
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[75]"
-                                                    id="OCCUPATION_DETAILED-75"
-                                                    value="Consultant/Advisor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-75">
-                                                    Consultant/Advisor
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[76]"
-                                                    id="OCCUPATION_DETAILED-76"
-                                                    value="Cook"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-76">Cook</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[77]"
-                                                    id="OCCUPATION_DETAILED-77"
-                                                    value="Coordinator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-77">
-                                                    Coordinator
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[78]"
-                                                    id="OCCUPATION_DETAILED-78"
-                                                    value="Corrections/Probation/Parole"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-78">
-                                                    Corrections/Probation/Parole
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[79]"
-                                                    id="OCCUPATION_DETAILED-79"
-                                                    value="Cosmetologist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-79">
-                                                    Cosmetologist
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[80]"
-                                                    id="OCCUPATION_DETAILED-80"
-                                                    value="Counselor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-80">
-                                                    Counselor
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[81]"
-                                                    id="OCCUPATION_DETAILED-81"
-                                                    value="Courier/Delivery/Messenger"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-81">
-                                                    Courier/Delivery/Messenger
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[82]"
-                                                    id="OCCUPATION_DETAILED-82"
-                                                    value="Court Reporter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-82">
-                                                    Court Reporter
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[83]"
-                                                    id="OCCUPATION_DETAILED-83"
-                                                    value="Crewman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-83">Crewman</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[84]"
-                                                    id="OCCUPATION_DETAILED-84"
-                                                    value="Curator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-84">Curator</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[85]"
-                                                    id="OCCUPATION_DETAILED-85"
-                                                    value="Custodian"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-85">
-                                                    Custodian
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[86]"
-                                                    id="OCCUPATION_DETAILED-86"
-                                                    value="Customer Service/Representative"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-86">
-                                                    Customer Service/Representative
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[87]"
-                                                    id="OCCUPATION_DETAILED-87"
-                                                    value="Cutter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-87">Cutter</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[88]"
-                                                    id="OCCUPATION_DETAILED-88"
-                                                    value="Data Entry/Key Punch"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-88">
-                                                    Data Entry/Key Punch
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[89]"
-                                                    id="OCCUPATION_DETAILED-89"
-                                                    value="Dental Assistant"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-89">
-                                                    Dental Assistant
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[90]"
-                                                    id="OCCUPATION_DETAILED-90"
-                                                    value="Dental Hygienist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-90">
-                                                    Dental Hygienist
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[91]"
-                                                    id="OCCUPATION_DETAILED-91"
-                                                    value="Dentist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-91">Dentist</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[92]"
-                                                    id="OCCUPATION_DETAILED-92"
-                                                    value="Designer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-92">Designer</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[93]"
-                                                    id="OCCUPATION_DETAILED-93"
-                                                    value="Detective/Investigator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-93">
-                                                    Detective/Investigator
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[94]"
-                                                    id="OCCUPATION_DETAILED-94"
-                                                    value="Dietician"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-94">
-                                                    Dietician
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[95]"
-                                                    id="OCCUPATION_DETAILED-95"
-                                                    value="Director/Art Director"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-95">
-                                                    Director/Art Director
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[96]"
-                                                    id="OCCUPATION_DETAILED-96"
-                                                    value="Director/Executive Director"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-96">
-                                                    Director/Executive Director
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[97]"
-                                                    id="OCCUPATION_DETAILED-97"
-                                                    value="Dispatcher"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-97">
-                                                    Dispatcher
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[98]"
-                                                    id="OCCUPATION_DETAILED-98"
-                                                    value="Dock Worker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-98">
-                                                    Dock Worker
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[99]"
-                                                    id="OCCUPATION_DETAILED-99"
-                                                    value="Draftsman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-99">
-                                                    Draftsman
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[100]"
-                                                    id="OCCUPATION_DETAILED-100"
-                                                    value="Driver"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-100">Driver</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[101]"
-                                                    id="OCCUPATION_DETAILED-101"
-                                                    value="Driver/Bus Driver"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-101">
-                                                    Driver/Bus Driver
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[102]"
-                                                    id="OCCUPATION_DETAILED-102"
-                                                    value="Driver/Truck Driver"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-102">
-                                                    Driver/Truck Driver
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[103]"
-                                                    id="OCCUPATION_DETAILED-103"
-                                                    value="Editor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-103">Editor</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[104]"
-                                                    id="OCCUPATION_DETAILED-104"
-                                                    value="Electrician"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-104">
-                                                    Electrician
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[105]"
-                                                    id="OCCUPATION_DETAILED-105"
-                                                    value="Engineer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-105">
-                                                    Engineer
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[106]"
-                                                    id="OCCUPATION_DETAILED-106"
-                                                    value="Engineer/Aerospace"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-106">
-                                                    Engineer/Aerospace
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[107]"
-                                                    id="OCCUPATION_DETAILED-107"
-                                                    value="Engineer/Chemical"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-107">
-                                                    Engineer/Chemical
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[108]"
-                                                    id="OCCUPATION_DETAILED-108"
-                                                    value="Engineer/Civil"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-108">
-                                                    Engineer/Civil
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[109]"
-                                                    id="OCCUPATION_DETAILED-109"
-                                                    value="Engineer/Electrical/Electronic"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-109">
-                                                    Engineer/Electrical/Electronic
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[110]"
-                                                    id="OCCUPATION_DETAILED-110"
-                                                    value="Engineer/Field"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-110">
-                                                    Engineer/Field
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[111]"
-                                                    id="OCCUPATION_DETAILED-111"
-                                                    value="Engineer/Industrial"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-111">
-                                                    Engineer/Industrial
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[112]"
-                                                    id="OCCUPATION_DETAILED-112"
-                                                    value="Engineer/Mechanical"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-112">
-                                                    Engineer/Mechanical
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[113]"
-                                                    id="OCCUPATION_DETAILED-113"
-                                                    value="Estimator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-113">
-                                                    Estimator
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[114]"
-                                                    id="OCCUPATION_DETAILED-114"
-                                                    value="Executive/Upper Management"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-114">
-                                                    Executive/Upper Management
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[115]"
-                                                    id="OCCUPATION_DETAILED-115"
-                                                    value="Expeditor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-115">
-                                                    Expeditor
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[116]"
-                                                    id="OCCUPATION_DETAILED-116"
-                                                    value="Fabricator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-116">
-                                                    Fabricator
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[117]"
-                                                    id="OCCUPATION_DETAILED-117"
-                                                    value="Factory Workman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-117">
-                                                    Factory Workman
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[118]"
-                                                    id="OCCUPATION_DETAILED-118"
-                                                    value="Farmer/Dairyman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-118">
-                                                    Farmer/Dairyman
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[119]"
-                                                    id="OCCUPATION_DETAILED-119"
-                                                    value="Finance"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-119">Finance</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[120]"
-                                                    id="OCCUPATION_DETAILED-120"
-                                                    value="Finisher"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-120">
-                                                    Finisher
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[121]"
-                                                    id="OCCUPATION_DETAILED-121"
-                                                    value="Firefighter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-121">
-                                                    Firefighter
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[122]"
-                                                    id="OCCUPATION_DETAILED-122"
-                                                    value="Fisherman/Seaman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-122">
-                                                    Fisherman/Seaman
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[123]"
-                                                    id="OCCUPATION_DETAILED-123"
-                                                    value="Fitter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-123">Fitter</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[124]"
-                                                    id="OCCUPATION_DETAILED-124"
-                                                    value="Flight Attendant/Steward"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-124">
-                                                    Flight Attendant/Steward
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[125]"
-                                                    id="OCCUPATION_DETAILED-125"
-                                                    value="Florist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-125">Florist</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[126]"
-                                                    id="OCCUPATION_DETAILED-126"
-                                                    value="Food Service"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-126">
-                                                    Food Service
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[127]"
-                                                    id="OCCUPATION_DETAILED-127"
-                                                    value="Foreman/Crew leader"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-127">
-                                                    Foreman/Crew leader
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[128]"
-                                                    id="OCCUPATION_DETAILED-128"
-                                                    value="Foreman/Shop Foreman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-128">
-                                                    Foreman/Shop Foreman
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[129]"
-                                                    id="OCCUPATION_DETAILED-129"
-                                                    value="Forestry"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-129">
-                                                    Forestry
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[130]"
-                                                    id="OCCUPATION_DETAILED-130"
-                                                    value="Foundry Worker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-130">
-                                                    Foundry Worker
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[131]"
-                                                    id="OCCUPATION_DETAILED-131"
-                                                    value="Furrier"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-131">Furrier</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[132]"
-                                                    id="OCCUPATION_DETAILED-132"
-                                                    value="Gardener/Landscaper"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-132">
-                                                    Gardener/Landscaper
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[133]"
-                                                    id="OCCUPATION_DETAILED-133"
-                                                    value="Geologist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-133">
-                                                    Geologist
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[134]"
-                                                    id="OCCUPATION_DETAILED-134"
-                                                    value="Glazier"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-134">Glazier</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[135]"
-                                                    id="OCCUPATION_DETAILED-135"
-                                                    value="Graphic Designer/Commercial Artist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-135">
-                                                    Graphic Designer/Commercial Artist
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[136]"
-                                                    id="OCCUPATION_DETAILED-136"
-                                                    value="Grinder"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-136">Grinder</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[137]"
-                                                    id="OCCUPATION_DETAILED-137"
-                                                    value="Grocer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-137">Grocer</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[138]"
-                                                    id="OCCUPATION_DETAILED-138"
-                                                    value="Health Care"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-138">
-                                                    Health Care
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[139]"
-                                                    id="OCCUPATION_DETAILED-139"
-                                                    value="Health Services"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-139">
-                                                    Health Services
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[140]"
-                                                    id="OCCUPATION_DETAILED-140"
-                                                    value="Helper"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-140">Helper</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[141]"
-                                                    id="OCCUPATION_DETAILED-141"
-                                                    value="Home Economist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-141">
-                                                    Home Economist
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[142]"
-                                                    id="OCCUPATION_DETAILED-142"
-                                                    value="Homemaker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-142">
-                                                    Homemaker
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[143]"
-                                                    id="OCCUPATION_DETAILED-143"
-                                                    value="Hostess/Host/Usher"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-143">
-                                                    Hostess/Host/Usher
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[144]"
-                                                    id="OCCUPATION_DETAILED-144"
-                                                    value="Housekeeper/Maid"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-144">
-                                                    Housekeeper/Maid
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[145]"
-                                                    id="OCCUPATION_DETAILED-145"
-                                                    value="Inspector"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-145">
-                                                    Inspector
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[146]"
-                                                    id="OCCUPATION_DETAILED-146"
-                                                    value="Installer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-146">
-                                                    Installer
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[147]"
-                                                    id="OCCUPATION_DETAILED-147"
-                                                    value="Instructor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-147">
-                                                    Instructor
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[148]"
-                                                    id="OCCUPATION_DETAILED-148"
-                                                    value="Insurance/Agent"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-148">
-                                                    Insurance/Agent
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[149]"
-                                                    id="OCCUPATION_DETAILED-149"
-                                                    value="Insurance/Underwriter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-149">
-                                                    Insurance/Underwriter
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[150]"
-                                                    id="OCCUPATION_DETAILED-150"
-                                                    value="Interior Designer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-150">
-                                                    Interior Designer
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[151]"
-                                                    id="OCCUPATION_DETAILED-151"
-                                                    value="Ironworker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-151">
-                                                    Ironworker
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[152]"
-                                                    id="OCCUPATION_DETAILED-152"
-                                                    value="Janitor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-152">Janitor</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[153]"
-                                                    id="OCCUPATION_DETAILED-153"
-                                                    value="Jeweler"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-153">Jeweler</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[154]"
-                                                    id="OCCUPATION_DETAILED-154"
-                                                    value="Journeyman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-154">
-                                                    Journeyman
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[155]"
-                                                    id="OCCUPATION_DETAILED-155"
-                                                    value="Judge/Referee"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-155">
-                                                    Judge/Referee
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[156]"
-                                                    id="OCCUPATION_DETAILED-156"
-                                                    value="Laborer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-156">Laborer</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[157]"
-                                                    id="OCCUPATION_DETAILED-157"
-                                                    value="Lecturer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-157">
-                                                    Lecturer
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[158]"
-                                                    id="OCCUPATION_DETAILED-158"
-                                                    value="Legal Secretary"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-158">
-                                                    Legal Secretary
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[159]"
-                                                    id="OCCUPATION_DETAILED-159"
-                                                    value="Legal/Attorney/Lawyer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-159">
-                                                    Legal/Attorney/Lawyer
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[160]"
-                                                    id="OCCUPATION_DETAILED-160"
-                                                    value="Legal/Paralegal/Assistant"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-160">
-                                                    Legal/Paralegal/Assistant
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[161]"
-                                                    id="OCCUPATION_DETAILED-161"
-                                                    value="Librarian/Archivist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-161">
-                                                    Librarian/Archivist
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[162]"
-                                                    id="OCCUPATION_DETAILED-162"
-                                                    value="Lineman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-162">Lineman</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[163]"
-                                                    id="OCCUPATION_DETAILED-163"
-                                                    value="Lithographer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-163">
-                                                    Lithographer
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[164]"
-                                                    id="OCCUPATION_DETAILED-164"
-                                                    value="Loader"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-164">Loader</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[165]"
-                                                    id="OCCUPATION_DETAILED-165"
-                                                    value="Locksmith"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-165">
-                                                    Locksmith
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[166]"
-                                                    id="OCCUPATION_DETAILED-166"
-                                                    value="Machinist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-166">
-                                                    Machinist
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[167]"
-                                                    id="OCCUPATION_DETAILED-167"
-                                                    value="Mail Carrier/Postal"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-167">
-                                                    Mail Carrier/Postal
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[168]"
-                                                    id="OCCUPATION_DETAILED-168"
-                                                    value="Mail/Postmaster"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-168">
-                                                    Mail/Postmaster
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[169]"
-                                                    id="OCCUPATION_DETAILED-169"
-                                                    value="Maintenance"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-169">
-                                                    Maintenance
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[170]"
-                                                    id="OCCUPATION_DETAILED-170"
-                                                    value="Maintenance/Supervisor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-170">
-                                                    Maintenance/Supervisor
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[171]"
-                                                    id="OCCUPATION_DETAILED-171"
-                                                    value="Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-171">Manager</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[172]"
-                                                    id="OCCUPATION_DETAILED-172"
-                                                    value="Manager/Assistant Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-172">
-                                                    Manager/Assistant Manager
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[173]"
-                                                    id="OCCUPATION_DETAILED-173"
-                                                    value="Manager/Branch Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-173">
-                                                    Manager/Branch Manager
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[174]"
-                                                    id="OCCUPATION_DETAILED-174"
-                                                    value="Manager/Credit Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-174">
-                                                    Manager/Credit Manager
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[175]"
-                                                    id="OCCUPATION_DETAILED-175"
-                                                    value="Manager/District Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-175">
-                                                    Manager/District Manager
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[176]"
-                                                    id="OCCUPATION_DETAILED-176"
-                                                    value="Manager/Division Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-176">
-                                                    Manager/Division Manager
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[177]"
-                                                    id="OCCUPATION_DETAILED-177"
-                                                    value="Manager/Marketing Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-177">
-                                                    Manager/Marketing Manager
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[178]"
-                                                    id="OCCUPATION_DETAILED-178"
-                                                    value="Manager/Office Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-178">
-                                                    Manager/Office Manager
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[179]"
-                                                    id="OCCUPATION_DETAILED-179"
-                                                    value="Manager/Plant Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-179">
-                                                    Manager/Plant Manager
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[180]"
-                                                    id="OCCUPATION_DETAILED-180"
-                                                    value="Manager/Product Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-180">
-                                                    Manager/Product Manager
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[181]"
-                                                    id="OCCUPATION_DETAILED-181"
-                                                    value="Manager/Project Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-181">
-                                                    Manager/Project Manager
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[182]"
-                                                    id="OCCUPATION_DETAILED-182"
-                                                    value="Manager/Property Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-182">
-                                                    Manager/Property Manager
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[183]"
-                                                    id="OCCUPATION_DETAILED-183"
-                                                    value="Manager/Regional Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-183">
-                                                    Manager/Regional Manager
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[184]"
-                                                    id="OCCUPATION_DETAILED-184"
-                                                    value="Manager/Sales Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-184">
-                                                    Manager/Sales Manager
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[185]"
-                                                    id="OCCUPATION_DETAILED-185"
-                                                    value="Manager/Store Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-185">
-                                                    Manager/Store Manager
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[186]"
-                                                    id="OCCUPATION_DETAILED-186"
-                                                    value="Manager/Traffic Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-186">
-                                                    Manager/Traffic Manager
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[187]"
-                                                    id="OCCUPATION_DETAILED-187"
-                                                    value="Manager/Warehouse Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-187">
-                                                    Manager/Warehouse Manager
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[188]"
-                                                    id="OCCUPATION_DETAILED-188"
-                                                    value="Manger/General Manager"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-188">
-                                                    Manger/General Manager
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[189]"
-                                                    id="OCCUPATION_DETAILED-189"
-                                                    value="Marines"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-189">Marines</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[190]"
-                                                    id="OCCUPATION_DETAILED-190"
-                                                    value="Marketing"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-190">
-                                                    Marketing
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[191]"
-                                                    id="OCCUPATION_DETAILED-191"
-                                                    value="Mason/Brick/Etc."
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-191">
-                                                    Mason/Brick/Etc.
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[192]"
-                                                    id="OCCUPATION_DETAILED-192"
-                                                    value="Material Handler"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-192">
-                                                    Material Handler
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[193]"
-                                                    id="OCCUPATION_DETAILED-193"
-                                                    value="Mechanic"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-193">
-                                                    Mechanic
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[194]"
-                                                    id="OCCUPATION_DETAILED-194"
-                                                    value="Medical Assistant"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-194">
-                                                    Medical Assistant
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[195]"
-                                                    id="OCCUPATION_DETAILED-195"
-                                                    value="Medical Doctor/Physician"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-195">
-                                                    Medical Doctor/Physician
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[196]"
-                                                    id="OCCUPATION_DETAILED-196"
-                                                    value="Medical Secretary"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-196">
-                                                    Medical Secretary
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[197]"
-                                                    id="OCCUPATION_DETAILED-197"
-                                                    value="Medical Technician"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-197">
-                                                    Medical Technician
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[198]"
-                                                    id="OCCUPATION_DETAILED-198"
-                                                    value="Medical/Paramedic"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-198">
-                                                    Medical/Paramedic
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[199]"
-                                                    id="OCCUPATION_DETAILED-199"
-                                                    value="Merchandiser"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-199">
-                                                    Merchandiser
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[200]"
-                                                    id="OCCUPATION_DETAILED-200"
-                                                    value="Meter Reader"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-200">
-                                                    Meter Reader
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[201]"
-                                                    id="OCCUPATION_DETAILED-201"
-                                                    value="Middle Management"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-201">
-                                                    Middle Management
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[202]"
-                                                    id="OCCUPATION_DETAILED-202"
-                                                    value="Mill worker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-202">
-                                                    Mill worker
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[203]"
-                                                    id="OCCUPATION_DETAILED-203"
-                                                    value="Millwright"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-203">
-                                                    Millwright
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[204]"
-                                                    id="OCCUPATION_DETAILED-204"
-                                                    value="Miner"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-204">Miner</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[205]"
-                                                    id="OCCUPATION_DETAILED-205"
-                                                    value="Model"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-205">Model</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[206]"
-                                                    id="OCCUPATION_DETAILED-206"
-                                                    value="Mold Maker/Molder/Injection Mold"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-206">
-                                                    Mold Maker/Molder/Injection Mold
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[207]"
-                                                    id="OCCUPATION_DETAILED-207"
-                                                    value="Musician/Music/Dance"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-207">
-                                                    Musician/Music/Dance
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[208]"
-                                                    id="OCCUPATION_DETAILED-208"
-                                                    value="National Guard"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-208">
-                                                    National Guard
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[209]"
-                                                    id="OCCUPATION_DETAILED-209"
-                                                    value="Navy Credit Union Trades"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-209">
-                                                    Navy Credit Union Trades
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[210]"
-                                                    id="OCCUPATION_DETAILED-210"
-                                                    value="Nurse"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-210">Nurse</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[211]"
-                                                    id="OCCUPATION_DETAILED-211"
-                                                    value="Nurse (Registered)"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-211">
-                                                    Nurse (Registered)
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[212]"
-                                                    id="OCCUPATION_DETAILED-212"
-                                                    value="Nurse/LPN"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-212">
-                                                    Nurse/LPN
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[213]"
-                                                    id="OCCUPATION_DETAILED-213"
-                                                    value="Nurses Aide/Orderly"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-213">
-                                                    Nurses Aide/Orderly
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[214]"
-                                                    id="OCCUPATION_DETAILED-214"
-                                                    value="Oil Industry/Driller"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-214">
-                                                    Oil Industry/Driller
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[215]"
-                                                    id="OCCUPATION_DETAILED-215"
-                                                    value="Operator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-215">
-                                                    Operator
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[216]"
-                                                    id="OCCUPATION_DETAILED-216"
-                                                    value="Operator/Boilermaker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-216">
-                                                    Operator/Boilermaker
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[217]"
-                                                    id="OCCUPATION_DETAILED-217"
-                                                    value="Operator/Crane Operator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-217">
-                                                    Operator/Crane Operator
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[218]"
-                                                    id="OCCUPATION_DETAILED-218"
-                                                    value="Operator/Forklift Operator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-218">
-                                                    Operator/Forklift Operator
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[219]"
-                                                    id="OCCUPATION_DETAILED-219"
-                                                    value="Operator/Machine Operator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-219">
-                                                    Operator/Machine Operator
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[220]"
-                                                    id="OCCUPATION_DETAILED-220"
-                                                    value="Optician"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-220">
-                                                    Optician
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[221]"
-                                                    id="OCCUPATION_DETAILED-221"
-                                                    value="Optometrist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-221">
-                                                    Optometrist
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[222]"
-                                                    id="OCCUPATION_DETAILED-222"
-                                                    value="Packer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-222">Packer</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[223]"
-                                                    id="OCCUPATION_DETAILED-223"
-                                                    value="Painter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-223">Painter</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[224]"
-                                                    id="OCCUPATION_DETAILED-224"
-                                                    value="Part Time"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-224">
-                                                    Part Time
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[225]"
-                                                    id="OCCUPATION_DETAILED-225"
-                                                    value="Parts (Auto Etc.)"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-225">
-                                                    Parts (Auto Etc.)
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[226]"
-                                                    id="OCCUPATION_DETAILED-226"
-                                                    value="Pastor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-226">Pastor</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[227]"
-                                                    id="OCCUPATION_DETAILED-227"
-                                                    value="Personnel/Recruiter/Interviewer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-227">
-                                                    Personnel/Recruiter/Interviewer
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[228]"
-                                                    id="OCCUPATION_DETAILED-228"
-                                                    value="Pharmacist/Pharmacy"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-228">
-                                                    Pharmacist/Pharmacy
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[229]"
-                                                    id="OCCUPATION_DETAILED-229"
-                                                    value="Photography"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-229">
-                                                    Photography
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[230]"
-                                                    id="OCCUPATION_DETAILED-230"
-                                                    value="Pilot"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-230">Pilot</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[231]"
-                                                    id="OCCUPATION_DETAILED-231"
-                                                    value="Pipe fitter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-231">
-                                                    Pipe fitter
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[232]"
-                                                    id="OCCUPATION_DETAILED-232"
-                                                    value="Planner"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-232">Planner</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[233]"
-                                                    id="OCCUPATION_DETAILED-233"
-                                                    value="Plumber"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-233">Plumber</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[234]"
-                                                    id="OCCUPATION_DETAILED-234"
-                                                    value="Police/Trooper"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-234">
-                                                    Police/Trooper
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[235]"
-                                                    id="OCCUPATION_DETAILED-235"
-                                                    value="Polisher"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-235">
-                                                    Polisher
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[236]"
-                                                    id="OCCUPATION_DETAILED-236"
-                                                    value="Politician/Legislator/Diplomat"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-236">
-                                                    Politician/Legislator/Diplomat
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[237]"
-                                                    id="OCCUPATION_DETAILED-237"
-                                                    value="Porter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-237">Porter</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[238]"
-                                                    id="OCCUPATION_DETAILED-238"
-                                                    value="President"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-238">
-                                                    President
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[239]"
-                                                    id="OCCUPATION_DETAILED-239"
-                                                    value="Press Operator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-239">
-                                                    Press Operator
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[240]"
-                                                    id="OCCUPATION_DETAILED-240"
-                                                    value="Presser"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-240">Presser</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[241]"
-                                                    id="OCCUPATION_DETAILED-241"
-                                                    value="Principal/Dean/Educator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-241">
-                                                    Principal/Dean/Educator
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[242]"
-                                                    id="OCCUPATION_DETAILED-242"
-                                                    value="Printer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-242">Printer</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[243]"
-                                                    id="OCCUPATION_DETAILED-243"
-                                                    value="Production"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-243">
-                                                    Production
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[244]"
-                                                    id="OCCUPATION_DETAILED-244"
-                                                    value="Professional"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-244">
-                                                    Professional
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[245]"
-                                                    id="OCCUPATION_DETAILED-245"
-                                                    value="Professor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-245">
-                                                    Professor
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[246]"
-                                                    id="OCCUPATION_DETAILED-246"
-                                                    value="Psychologist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-246">
-                                                    Psychologist
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[247]"
-                                                    id="OCCUPATION_DETAILED-247"
-                                                    value="Public Relations"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-247">
-                                                    Public Relations
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[248]"
-                                                    id="OCCUPATION_DETAILED-248"
-                                                    value="Publishing"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-248">
-                                                    Publishing
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[249]"
-                                                    id="OCCUPATION_DETAILED-249"
-                                                    value="Purchasing"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-249">
-                                                    Purchasing
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[250]"
-                                                    id="OCCUPATION_DETAILED-250"
-                                                    value="Quality Control"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-250">
-                                                    Quality Control
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[251]"
-                                                    id="OCCUPATION_DETAILED-251"
-                                                    value="Real Estate/Realtor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-251">
-                                                    Real Estate/Realtor
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[252]"
-                                                    id="OCCUPATION_DETAILED-252"
-                                                    value="Receptionist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-252">
-                                                    Receptionist
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[253]"
-                                                    id="OCCUPATION_DETAILED-253"
-                                                    value="Repairman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-253">
-                                                    Repairman
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[254]"
-                                                    id="OCCUPATION_DETAILED-254"
-                                                    value="Reporter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-254">
-                                                    Reporter
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[255]"
-                                                    id="OCCUPATION_DETAILED-255"
-                                                    value="Researcher"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-255">
-                                                    Researcher
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[256]"
-                                                    id="OCCUPATION_DETAILED-256"
-                                                    value="Retired"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-256">Retired</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[257]"
-                                                    id="OCCUPATION_DETAILED-257"
-                                                    value="Retired/Pensioner"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-257">
-                                                    Retired/Pensioner
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[258]"
-                                                    id="OCCUPATION_DETAILED-258"
-                                                    value="Roofer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-258">Roofer</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[259]"
-                                                    id="OCCUPATION_DETAILED-259"
-                                                    value="Sales"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-259">Sales</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[260]"
-                                                    id="OCCUPATION_DETAILED-260"
-                                                    value="Sales Clerk/Counterman"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-260">
-                                                    Sales Clerk/Counterman
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[261]"
-                                                    id="OCCUPATION_DETAILED-261"
-                                                    value="Sanitation/Exterminator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-261">
-                                                    Sanitation/Exterminator
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[262]"
-                                                    id="OCCUPATION_DETAILED-262"
-                                                    value="Scientist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-262">
-                                                    Scientist
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[263]"
-                                                    id="OCCUPATION_DETAILED-263"
-                                                    value="Seamstress/Tailor/Handicraft"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-263">
-                                                    Seamstress/Tailor/Handicraft
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[264]"
-                                                    id="OCCUPATION_DETAILED-264"
-                                                    value="Secretary"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-264">
-                                                    Secretary
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[265]"
-                                                    id="OCCUPATION_DETAILED-265"
-                                                    value="Security"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-265">
-                                                    Security
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[266]"
-                                                    id="OCCUPATION_DETAILED-266"
-                                                    value="Setup man"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-266">
-                                                    Setup man
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[267]"
-                                                    id="OCCUPATION_DETAILED-267"
-                                                    value="Sheet Metal Worker/Steel Worker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-267">
-                                                    Sheet Metal Worker/Steel Worker
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[268]"
-                                                    id="OCCUPATION_DETAILED-268"
-                                                    value="Shipping/Import/Export/Custom"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-268">
-                                                    Shipping/Import/Export/Custom
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[269]"
-                                                    id="OCCUPATION_DETAILED-269"
-                                                    value="Social Worker/Case Worker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-269">
-                                                    Social Worker/Case Worker
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[270]"
-                                                    id="OCCUPATION_DETAILED-270"
-                                                    value="Sorter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-270">Sorter</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[271]"
-                                                    id="OCCUPATION_DETAILED-271"
-                                                    value="Statistician/Actuary"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-271">
-                                                    Statistician/Actuary
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[272]"
-                                                    id="OCCUPATION_DETAILED-272"
-                                                    value="Student"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-272">Student</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[273]"
-                                                    id="OCCUPATION_DETAILED-273"
-                                                    value="Superintendent"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-273">
-                                                    Superintendent
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[274]"
-                                                    id="OCCUPATION_DETAILED-274"
-                                                    value="Supervisor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-274">
-                                                    Supervisor
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[275]"
-                                                    id="OCCUPATION_DETAILED-275"
-                                                    value="Surveyor"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-275">
-                                                    Surveyor
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[276]"
-                                                    id="OCCUPATION_DETAILED-276"
-                                                    value="Teacher"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-276">Teacher</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[277]"
-                                                    id="OCCUPATION_DETAILED-277"
-                                                    value="Technician"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-277">
-                                                    Technician
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[278]"
-                                                    id="OCCUPATION_DETAILED-278"
-                                                    value="Technician/Lab"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-278">
-                                                    Technician/Lab
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[279]"
-                                                    id="OCCUPATION_DETAILED-279"
-                                                    value="Technician/X-ray"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-279">
-                                                    Technician/X-ray
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[280]"
-                                                    id="OCCUPATION_DETAILED-280"
-                                                    value="Telemarketer/Telephone/Operator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-280">
-                                                    Telemarketer/Telephone/Operator
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[281]"
-                                                    id="OCCUPATION_DETAILED-281"
-                                                    value="Teller/Bank Teller"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-281">
-                                                    Teller/Bank Teller
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[282]"
-                                                    id="OCCUPATION_DETAILED-282"
-                                                    value="Tester"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-282">Tester</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[283]"
-                                                    id="OCCUPATION_DETAILED-283"
-                                                    value="Therapist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-283">
-                                                    Therapist
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[284]"
-                                                    id="OCCUPATION_DETAILED-284"
-                                                    value="Therapists/Physical"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-284">
-                                                    Therapists/Physical
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[285]"
-                                                    id="OCCUPATION_DETAILED-285"
-                                                    value="Toolmaker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-285">
-                                                    Toolmaker
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[286]"
-                                                    id="OCCUPATION_DETAILED-286"
-                                                    value="Trainer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-286">Trainer</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[287]"
-                                                    id="OCCUPATION_DETAILED-287"
-                                                    value="Transcripter/Translator"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-287">
-                                                    Transcripter/Translator
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[288]"
-                                                    id="OCCUPATION_DETAILED-288"
-                                                    value="Transportation"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-288">
-                                                    Transportation
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[289]"
-                                                    id="OCCUPATION_DETAILED-289"
-                                                    value="Travel Agent"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-289">
-                                                    Travel Agent
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[290]"
-                                                    id="OCCUPATION_DETAILED-290"
-                                                    value="Treasurer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-290">
-                                                    Treasurer
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[291]"
-                                                    id="OCCUPATION_DETAILED-291"
-                                                    value="Typesetter"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-291">
-                                                    Typesetter
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[292]"
-                                                    id="OCCUPATION_DETAILED-292"
-                                                    value="Typist"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-292">Typist</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[293]"
-                                                    id="OCCUPATION_DETAILED-293"
-                                                    value="Union Member/Rep."
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-293">
-                                                    Union Member/Rep.
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[294]"
-                                                    id="OCCUPATION_DETAILED-294"
-                                                    value="Upholstery"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-294">
-                                                    Upholstery
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[295]"
-                                                    id="OCCUPATION_DETAILED-295"
-                                                    value="Utility"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-295">Utility</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[296]"
-                                                    id="OCCUPATION_DETAILED-296"
-                                                    value="Veterinarian"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-296">
-                                                    Veterinarian
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[297]"
-                                                    id="OCCUPATION_DETAILED-297"
-                                                    value="Vice President"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-297">
-                                                    Vice President
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[298]"
-                                                    id="OCCUPATION_DETAILED-298"
-                                                    value="Volunteer"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-298">
-                                                    Volunteer
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[299]"
-                                                    id="OCCUPATION_DETAILED-299"
-                                                    value="Waiter/Waitress"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-299">
-                                                    Waiter/Waitress
-                                                </label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[300]"
-                                                    id="OCCUPATION_DETAILED-300"
-                                                    value="Ward Clerk"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-300">
-                                                    Ward Clerk
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[301]"
-                                                    id="OCCUPATION_DETAILED-301"
-                                                    value="Water Treatment"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-301">
-                                                    Water Treatment
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[302]"
-                                                    id="OCCUPATION_DETAILED-302"
-                                                    value="Welder"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-302">Welder</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[303]"
-                                                    id="OCCUPATION_DETAILED-303"
-                                                    value="White Collar Worker"
-                                                />{" "}
-                                                <label htmlFor="OCCUPATION_DETAILED-303">
-                                                    White Collar Worker
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="OCCUPATION_DETAILED[304]"
-                                                    id="OCCUPATION_DETAILED-304"
-                                                    value="Writer"
-                                                />
-                                                <label htmlFor="OCCUPATION_DETAILED-304">Writer</label>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                    ) : ""
-                                }
-                                
+                                {occupationDetails ? (
+                                    <table
+                                        cellPadding="4"
+                                        cellSpacing="4"
+                                        id="tblOCCUPATION_DETAILED"
+                                    >
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[0]"
+                                                        id="OCCUPATION_DETAILED-0"
+                                                        value="Account Executive"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-0">
+                                                        Account Executive
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[1]"
+                                                        id="OCCUPATION_DETAILED-1"
+                                                        value="Accounting/Biller/Billing clerk"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-1">
+                                                        Accounting/Biller/Billing clerk
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[2]"
+                                                        id="OCCUPATION_DETAILED-2"
+                                                        value="Actor/Entertainer/Announcer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-2">
+                                                        Actor/Entertainer/Announcer
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[3]"
+                                                        id="OCCUPATION_DETAILED-3"
+                                                        value="Adjuster"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-3">
+                                                        Adjuster
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[4]"
+                                                        id="OCCUPATION_DETAILED-4"
+                                                        value="Administration/Management"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-4">
+                                                        Administration/Management
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[5]"
+                                                        id="OCCUPATION_DETAILED-5"
+                                                        value="Advertising"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-5">
+                                                        Advertising
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[6]"
+                                                        id="OCCUPATION_DETAILED-6"
+                                                        value="Agent"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-6">Agent</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[7]"
+                                                        id="OCCUPATION_DETAILED-7"
+                                                        value="Aide/Assistant"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-7">
+                                                        Aide/Assistant
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[8]"
+                                                        id="OCCUPATION_DETAILED-8"
+                                                        value="Aide/Assistant/Executive"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-8">
+                                                        Aide/Assistant/Executive
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[9]"
+                                                        id="OCCUPATION_DETAILED-9"
+                                                        value="Aide/Assistant/Office"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-9">
+                                                        Aide/Assistant/Office
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[10]"
+                                                        id="OCCUPATION_DETAILED-10"
+                                                        value="Aide/Assistant/School"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-10">
+                                                        Aide/Assistant/School
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[11]"
+                                                        id="OCCUPATION_DETAILED-11"
+                                                        value="Aide/Assistant/Staff"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-11">
+                                                        Aide/Assistant/Staff
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[12]"
+                                                        id="OCCUPATION_DETAILED-12"
+                                                        value="Aide/Assistant/Technical"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-12">
+                                                        Aide/Assistant/Technical
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[13]"
+                                                        id="OCCUPATION_DETAILED-13"
+                                                        value="Air Force"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-13">
+                                                        Air Force
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[14]"
+                                                        id="OCCUPATION_DETAILED-14"
+                                                        value="Air Traffic Control"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-14">
+                                                        Air Traffic Control
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[15]"
+                                                        id="OCCUPATION_DETAILED-15"
+                                                        value="Analyst"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-15">
+                                                        Analyst
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[16]"
+                                                        id="OCCUPATION_DETAILED-16"
+                                                        value="Animal Technician/Groomer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-16">
+                                                        Animal Technician/Groomer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[17]"
+                                                        id="OCCUPATION_DETAILED-17"
+                                                        value="Appraiser"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-17">
+                                                        Appraiser
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[18]"
+                                                        id="OCCUPATION_DETAILED-18"
+                                                        value="Apprentice"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-18">
+                                                        Apprentice
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[19]"
+                                                        id="OCCUPATION_DETAILED-19"
+                                                        value="Architect"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-19">
+                                                        Architect
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[20]"
+                                                        id="OCCUPATION_DETAILED-20"
+                                                        value="Armed Forces"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-20">
+                                                        Armed Forces
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[21]"
+                                                        id="OCCUPATION_DETAILED-21"
+                                                        value="Army Credit Union Trades"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-21">
+                                                        Army Credit Union Trades
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[22]"
+                                                        id="OCCUPATION_DETAILED-22"
+                                                        value="Artist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-22">Artist</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[23]"
+                                                        id="OCCUPATION_DETAILED-23"
+                                                        value="Assembler"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-23">
+                                                        Assembler
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[24]"
+                                                        id="OCCUPATION_DETAILED-24"
+                                                        value="Athlete/Professional"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-24">
+                                                        Athlete/Professional
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[25]"
+                                                        id="OCCUPATION_DETAILED-25"
+                                                        value="Attendant"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-25">
+                                                        Attendant
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[26]"
+                                                        id="OCCUPATION_DETAILED-26"
+                                                        value="Auctioneer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-26">
+                                                        Auctioneer
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[27]"
+                                                        id="OCCUPATION_DETAILED-27"
+                                                        value="Auditor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-27">
+                                                        Auditor
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[28]"
+                                                        id="OCCUPATION_DETAILED-28"
+                                                        value="Auto Mechanic"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-28">
+                                                        Auto Mechanic
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[29]"
+                                                        id="OCCUPATION_DETAILED-29"
+                                                        value="Baker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-29">Baker</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[30]"
+                                                        id="OCCUPATION_DETAILED-30"
+                                                        value="Banker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-30">Banker</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[31]"
+                                                        id="OCCUPATION_DETAILED-31"
+                                                        value="Banker/Loan Office"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-31">
+                                                        Banker/Loan Office
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[32]"
+                                                        id="OCCUPATION_DETAILED-32"
+                                                        value="Banker/Loan Processor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-32">
+                                                        Banker/Loan Processor
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[33]"
+                                                        id="OCCUPATION_DETAILED-33"
+                                                        value="Barber/Hairstylist/Beautician"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-33">
+                                                        Barber/Hairstylist/Beautician
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[34]"
+                                                        id="OCCUPATION_DETAILED-34"
+                                                        value="Bartender"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-34">
+                                                        Bartender
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[35]"
+                                                        id="OCCUPATION_DETAILED-35"
+                                                        value="Binder"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-35">Binder</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[36]"
+                                                        id="OCCUPATION_DETAILED-36"
+                                                        value="Blue Collar Worker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-36">
+                                                        Blue Collar Worker
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[37]"
+                                                        id="OCCUPATION_DETAILED-37"
+                                                        value="Bodyman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-37">
+                                                        Bodyman
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[38]"
+                                                        id="OCCUPATION_DETAILED-38"
+                                                        value="Bookkeeper"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-38">
+                                                        Bookkeeper
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[39]"
+                                                        id="OCCUPATION_DETAILED-39"
+                                                        value="Brakeman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-39">
+                                                        Brakeman
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[40]"
+                                                        id="OCCUPATION_DETAILED-40"
+                                                        value="Brewer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-40">Brewer</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[41]"
+                                                        id="OCCUPATION_DETAILED-41"
+                                                        value="Broker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-41">Broker</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[42]"
+                                                        id="OCCUPATION_DETAILED-42"
+                                                        value="Broker/Stock/Trader"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-42">
+                                                        Broker/Stock/Trader
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[43]"
+                                                        id="OCCUPATION_DETAILED-43"
+                                                        value="Butcher/Meat Cutter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-43">
+                                                        Butcher/Meat Cutter
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[44]"
+                                                        id="OCCUPATION_DETAILED-44"
+                                                        value="Buyer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-44">Buyer</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[45]"
+                                                        id="OCCUPATION_DETAILED-45"
+                                                        value="CEO/CFO/Chairman/Corp Officer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-45">
+                                                        CEO/CFO/Chairman/Corp Officer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[46]"
+                                                        id="OCCUPATION_DETAILED-46"
+                                                        value="Carpenter/Furniture/Woodworking"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-46">
+                                                        Carpenter/Furniture/Woodworking
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[47]"
+                                                        id="OCCUPATION_DETAILED-47"
+                                                        value="Cashier"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-47">
+                                                        Cashier
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[48]"
+                                                        id="OCCUPATION_DETAILED-48"
+                                                        value="Caterer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-48">
+                                                        Caterer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[49]"
+                                                        id="OCCUPATION_DETAILED-49"
+                                                        value="Checker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-49">
+                                                        Checker
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[50]"
+                                                        id="OCCUPATION_DETAILED-50"
+                                                        value="Chef/Butler"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-50">
+                                                        Chef/Butler
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[51]"
+                                                        id="OCCUPATION_DETAILED-51"
+                                                        value="Chemist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-51">
+                                                        Chemist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[52]"
+                                                        id="OCCUPATION_DETAILED-52"
+                                                        value="Child Care/Day Care/Babysitter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-52">
+                                                        Child Care/Day Care/Babysitter
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[53]"
+                                                        id="OCCUPATION_DETAILED-53"
+                                                        value="Chiropractor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-53">
+                                                        Chiropractor
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[54]"
+                                                        id="OCCUPATION_DETAILED-54"
+                                                        value="Civil Service"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-54">
+                                                        Civil Service
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[55]"
+                                                        id="OCCUPATION_DETAILED-55"
+                                                        value="Civil Service/Government"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-55">
+                                                        Civil Service/Government
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[56]"
+                                                        id="OCCUPATION_DETAILED-56"
+                                                        value="Claims Examiner/Rep/Adjudicator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-56">
+                                                        Claims Examiner/Rep/Adjudicator
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[57]"
+                                                        id="OCCUPATION_DETAILED-57"
+                                                        value="Cleaner/Laundry"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-57">
+                                                        Cleaner/Laundry
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[58]"
+                                                        id="OCCUPATION_DETAILED-58"
+                                                        value="Clerk"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-58">Clerk</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[59]"
+                                                        id="OCCUPATION_DETAILED-59"
+                                                        value="Clerk/Deli"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-59">
+                                                        Clerk/Deli
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[60]"
+                                                        id="OCCUPATION_DETAILED-60"
+                                                        value="Clerk/File"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-60">
+                                                        Clerk/File
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[61]"
+                                                        id="OCCUPATION_DETAILED-61"
+                                                        value="Clerk/Produce"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-61">
+                                                        Clerk/Produce
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[62]"
+                                                        id="OCCUPATION_DETAILED-62"
+                                                        value="Clerk/Stock"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-62">
+                                                        Clerk/Stock
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[63]"
+                                                        id="OCCUPATION_DETAILED-63"
+                                                        value="Coach"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-63">Coach</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[64]"
+                                                        id="OCCUPATION_DETAILED-64"
+                                                        value="Coast Guard"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-64">
+                                                        Coast Guard
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[65]"
+                                                        id="OCCUPATION_DETAILED-65"
+                                                        value="Collector"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-65">
+                                                        Collector
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[66]"
+                                                        id="OCCUPATION_DETAILED-66"
+                                                        value="Communications"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-66">
+                                                        Communications
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[67]"
+                                                        id="OCCUPATION_DETAILED-67"
+                                                        value="Comptroller"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-67">
+                                                        Comptroller
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[68]"
+                                                        id="OCCUPATION_DETAILED-68"
+                                                        value="Computer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-68">
+                                                        Computer
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[69]"
+                                                        id="OCCUPATION_DETAILED-69"
+                                                        value="Computer Operator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-69">
+                                                        Computer Operator
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[70]"
+                                                        id="OCCUPATION_DETAILED-70"
+                                                        value="Computer Programmer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-70">
+                                                        Computer Programmer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[71]"
+                                                        id="OCCUPATION_DETAILED-71"
+                                                        value="Computer/Systems Analyst"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-71">
+                                                        Computer/Systems Analyst
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[72]"
+                                                        id="OCCUPATION_DETAILED-72"
+                                                        value="Conductor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-72">
+                                                        Conductor
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[73]"
+                                                        id="OCCUPATION_DETAILED-73"
+                                                        value="Conservation/Environment"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-73">
+                                                        Conservation/Environment
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[74]"
+                                                        id="OCCUPATION_DETAILED-74"
+                                                        value="Construction"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-74">
+                                                        Construction
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[75]"
+                                                        id="OCCUPATION_DETAILED-75"
+                                                        value="Consultant/Advisor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-75">
+                                                        Consultant/Advisor
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[76]"
+                                                        id="OCCUPATION_DETAILED-76"
+                                                        value="Cook"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-76">Cook</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[77]"
+                                                        id="OCCUPATION_DETAILED-77"
+                                                        value="Coordinator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-77">
+                                                        Coordinator
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[78]"
+                                                        id="OCCUPATION_DETAILED-78"
+                                                        value="Corrections/Probation/Parole"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-78">
+                                                        Corrections/Probation/Parole
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[79]"
+                                                        id="OCCUPATION_DETAILED-79"
+                                                        value="Cosmetologist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-79">
+                                                        Cosmetologist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[80]"
+                                                        id="OCCUPATION_DETAILED-80"
+                                                        value="Counselor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-80">
+                                                        Counselor
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[81]"
+                                                        id="OCCUPATION_DETAILED-81"
+                                                        value="Courier/Delivery/Messenger"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-81">
+                                                        Courier/Delivery/Messenger
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[82]"
+                                                        id="OCCUPATION_DETAILED-82"
+                                                        value="Court Reporter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-82">
+                                                        Court Reporter
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[83]"
+                                                        id="OCCUPATION_DETAILED-83"
+                                                        value="Crewman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-83">
+                                                        Crewman
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[84]"
+                                                        id="OCCUPATION_DETAILED-84"
+                                                        value="Curator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-84">
+                                                        Curator
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[85]"
+                                                        id="OCCUPATION_DETAILED-85"
+                                                        value="Custodian"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-85">
+                                                        Custodian
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[86]"
+                                                        id="OCCUPATION_DETAILED-86"
+                                                        value="Customer Service/Representative"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-86">
+                                                        Customer Service/Representative
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[87]"
+                                                        id="OCCUPATION_DETAILED-87"
+                                                        value="Cutter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-87">Cutter</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[88]"
+                                                        id="OCCUPATION_DETAILED-88"
+                                                        value="Data Entry/Key Punch"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-88">
+                                                        Data Entry/Key Punch
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[89]"
+                                                        id="OCCUPATION_DETAILED-89"
+                                                        value="Dental Assistant"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-89">
+                                                        Dental Assistant
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[90]"
+                                                        id="OCCUPATION_DETAILED-90"
+                                                        value="Dental Hygienist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-90">
+                                                        Dental Hygienist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[91]"
+                                                        id="OCCUPATION_DETAILED-91"
+                                                        value="Dentist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-91">
+                                                        Dentist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[92]"
+                                                        id="OCCUPATION_DETAILED-92"
+                                                        value="Designer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-92">
+                                                        Designer
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[93]"
+                                                        id="OCCUPATION_DETAILED-93"
+                                                        value="Detective/Investigator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-93">
+                                                        Detective/Investigator
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[94]"
+                                                        id="OCCUPATION_DETAILED-94"
+                                                        value="Dietician"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-94">
+                                                        Dietician
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[95]"
+                                                        id="OCCUPATION_DETAILED-95"
+                                                        value="Director/Art Director"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-95">
+                                                        Director/Art Director
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[96]"
+                                                        id="OCCUPATION_DETAILED-96"
+                                                        value="Director/Executive Director"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-96">
+                                                        Director/Executive Director
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[97]"
+                                                        id="OCCUPATION_DETAILED-97"
+                                                        value="Dispatcher"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-97">
+                                                        Dispatcher
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[98]"
+                                                        id="OCCUPATION_DETAILED-98"
+                                                        value="Dock Worker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-98">
+                                                        Dock Worker
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[99]"
+                                                        id="OCCUPATION_DETAILED-99"
+                                                        value="Draftsman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-99">
+                                                        Draftsman
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[100]"
+                                                        id="OCCUPATION_DETAILED-100"
+                                                        value="Driver"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-100">
+                                                        Driver
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[101]"
+                                                        id="OCCUPATION_DETAILED-101"
+                                                        value="Driver/Bus Driver"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-101">
+                                                        Driver/Bus Driver
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[102]"
+                                                        id="OCCUPATION_DETAILED-102"
+                                                        value="Driver/Truck Driver"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-102">
+                                                        Driver/Truck Driver
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[103]"
+                                                        id="OCCUPATION_DETAILED-103"
+                                                        value="Editor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-103">
+                                                        Editor
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[104]"
+                                                        id="OCCUPATION_DETAILED-104"
+                                                        value="Electrician"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-104">
+                                                        Electrician
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[105]"
+                                                        id="OCCUPATION_DETAILED-105"
+                                                        value="Engineer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-105">
+                                                        Engineer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[106]"
+                                                        id="OCCUPATION_DETAILED-106"
+                                                        value="Engineer/Aerospace"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-106">
+                                                        Engineer/Aerospace
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[107]"
+                                                        id="OCCUPATION_DETAILED-107"
+                                                        value="Engineer/Chemical"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-107">
+                                                        Engineer/Chemical
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[108]"
+                                                        id="OCCUPATION_DETAILED-108"
+                                                        value="Engineer/Civil"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-108">
+                                                        Engineer/Civil
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[109]"
+                                                        id="OCCUPATION_DETAILED-109"
+                                                        value="Engineer/Electrical/Electronic"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-109">
+                                                        Engineer/Electrical/Electronic
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[110]"
+                                                        id="OCCUPATION_DETAILED-110"
+                                                        value="Engineer/Field"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-110">
+                                                        Engineer/Field
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[111]"
+                                                        id="OCCUPATION_DETAILED-111"
+                                                        value="Engineer/Industrial"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-111">
+                                                        Engineer/Industrial
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[112]"
+                                                        id="OCCUPATION_DETAILED-112"
+                                                        value="Engineer/Mechanical"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-112">
+                                                        Engineer/Mechanical
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[113]"
+                                                        id="OCCUPATION_DETAILED-113"
+                                                        value="Estimator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-113">
+                                                        Estimator
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[114]"
+                                                        id="OCCUPATION_DETAILED-114"
+                                                        value="Executive/Upper Management"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-114">
+                                                        Executive/Upper Management
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[115]"
+                                                        id="OCCUPATION_DETAILED-115"
+                                                        value="Expeditor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-115">
+                                                        Expeditor
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[116]"
+                                                        id="OCCUPATION_DETAILED-116"
+                                                        value="Fabricator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-116">
+                                                        Fabricator
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[117]"
+                                                        id="OCCUPATION_DETAILED-117"
+                                                        value="Factory Workman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-117">
+                                                        Factory Workman
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[118]"
+                                                        id="OCCUPATION_DETAILED-118"
+                                                        value="Farmer/Dairyman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-118">
+                                                        Farmer/Dairyman
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[119]"
+                                                        id="OCCUPATION_DETAILED-119"
+                                                        value="Finance"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-119">
+                                                        Finance
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[120]"
+                                                        id="OCCUPATION_DETAILED-120"
+                                                        value="Finisher"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-120">
+                                                        Finisher
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[121]"
+                                                        id="OCCUPATION_DETAILED-121"
+                                                        value="Firefighter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-121">
+                                                        Firefighter
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[122]"
+                                                        id="OCCUPATION_DETAILED-122"
+                                                        value="Fisherman/Seaman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-122">
+                                                        Fisherman/Seaman
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[123]"
+                                                        id="OCCUPATION_DETAILED-123"
+                                                        value="Fitter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-123">
+                                                        Fitter
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[124]"
+                                                        id="OCCUPATION_DETAILED-124"
+                                                        value="Flight Attendant/Steward"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-124">
+                                                        Flight Attendant/Steward
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[125]"
+                                                        id="OCCUPATION_DETAILED-125"
+                                                        value="Florist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-125">
+                                                        Florist
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[126]"
+                                                        id="OCCUPATION_DETAILED-126"
+                                                        value="Food Service"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-126">
+                                                        Food Service
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[127]"
+                                                        id="OCCUPATION_DETAILED-127"
+                                                        value="Foreman/Crew leader"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-127">
+                                                        Foreman/Crew leader
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[128]"
+                                                        id="OCCUPATION_DETAILED-128"
+                                                        value="Foreman/Shop Foreman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-128">
+                                                        Foreman/Shop Foreman
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[129]"
+                                                        id="OCCUPATION_DETAILED-129"
+                                                        value="Forestry"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-129">
+                                                        Forestry
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[130]"
+                                                        id="OCCUPATION_DETAILED-130"
+                                                        value="Foundry Worker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-130">
+                                                        Foundry Worker
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[131]"
+                                                        id="OCCUPATION_DETAILED-131"
+                                                        value="Furrier"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-131">
+                                                        Furrier
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[132]"
+                                                        id="OCCUPATION_DETAILED-132"
+                                                        value="Gardener/Landscaper"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-132">
+                                                        Gardener/Landscaper
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[133]"
+                                                        id="OCCUPATION_DETAILED-133"
+                                                        value="Geologist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-133">
+                                                        Geologist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[134]"
+                                                        id="OCCUPATION_DETAILED-134"
+                                                        value="Glazier"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-134">
+                                                        Glazier
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[135]"
+                                                        id="OCCUPATION_DETAILED-135"
+                                                        value="Graphic Designer/Commercial Artist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-135">
+                                                        Graphic Designer/Commercial Artist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[136]"
+                                                        id="OCCUPATION_DETAILED-136"
+                                                        value="Grinder"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-136">
+                                                        Grinder
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[137]"
+                                                        id="OCCUPATION_DETAILED-137"
+                                                        value="Grocer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-137">
+                                                        Grocer
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[138]"
+                                                        id="OCCUPATION_DETAILED-138"
+                                                        value="Health Care"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-138">
+                                                        Health Care
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[139]"
+                                                        id="OCCUPATION_DETAILED-139"
+                                                        value="Health Services"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-139">
+                                                        Health Services
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[140]"
+                                                        id="OCCUPATION_DETAILED-140"
+                                                        value="Helper"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-140">
+                                                        Helper
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[141]"
+                                                        id="OCCUPATION_DETAILED-141"
+                                                        value="Home Economist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-141">
+                                                        Home Economist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[142]"
+                                                        id="OCCUPATION_DETAILED-142"
+                                                        value="Homemaker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-142">
+                                                        Homemaker
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[143]"
+                                                        id="OCCUPATION_DETAILED-143"
+                                                        value="Hostess/Host/Usher"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-143">
+                                                        Hostess/Host/Usher
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[144]"
+                                                        id="OCCUPATION_DETAILED-144"
+                                                        value="Housekeeper/Maid"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-144">
+                                                        Housekeeper/Maid
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[145]"
+                                                        id="OCCUPATION_DETAILED-145"
+                                                        value="Inspector"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-145">
+                                                        Inspector
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[146]"
+                                                        id="OCCUPATION_DETAILED-146"
+                                                        value="Installer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-146">
+                                                        Installer
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[147]"
+                                                        id="OCCUPATION_DETAILED-147"
+                                                        value="Instructor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-147">
+                                                        Instructor
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[148]"
+                                                        id="OCCUPATION_DETAILED-148"
+                                                        value="Insurance/Agent"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-148">
+                                                        Insurance/Agent
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[149]"
+                                                        id="OCCUPATION_DETAILED-149"
+                                                        value="Insurance/Underwriter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-149">
+                                                        Insurance/Underwriter
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[150]"
+                                                        id="OCCUPATION_DETAILED-150"
+                                                        value="Interior Designer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-150">
+                                                        Interior Designer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[151]"
+                                                        id="OCCUPATION_DETAILED-151"
+                                                        value="Ironworker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-151">
+                                                        Ironworker
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[152]"
+                                                        id="OCCUPATION_DETAILED-152"
+                                                        value="Janitor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-152">
+                                                        Janitor
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[153]"
+                                                        id="OCCUPATION_DETAILED-153"
+                                                        value="Jeweler"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-153">
+                                                        Jeweler
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[154]"
+                                                        id="OCCUPATION_DETAILED-154"
+                                                        value="Journeyman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-154">
+                                                        Journeyman
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[155]"
+                                                        id="OCCUPATION_DETAILED-155"
+                                                        value="Judge/Referee"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-155">
+                                                        Judge/Referee
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[156]"
+                                                        id="OCCUPATION_DETAILED-156"
+                                                        value="Laborer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-156">
+                                                        Laborer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[157]"
+                                                        id="OCCUPATION_DETAILED-157"
+                                                        value="Lecturer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-157">
+                                                        Lecturer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[158]"
+                                                        id="OCCUPATION_DETAILED-158"
+                                                        value="Legal Secretary"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-158">
+                                                        Legal Secretary
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[159]"
+                                                        id="OCCUPATION_DETAILED-159"
+                                                        value="Legal/Attorney/Lawyer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-159">
+                                                        Legal/Attorney/Lawyer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[160]"
+                                                        id="OCCUPATION_DETAILED-160"
+                                                        value="Legal/Paralegal/Assistant"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-160">
+                                                        Legal/Paralegal/Assistant
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[161]"
+                                                        id="OCCUPATION_DETAILED-161"
+                                                        value="Librarian/Archivist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-161">
+                                                        Librarian/Archivist
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[162]"
+                                                        id="OCCUPATION_DETAILED-162"
+                                                        value="Lineman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-162">
+                                                        Lineman
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[163]"
+                                                        id="OCCUPATION_DETAILED-163"
+                                                        value="Lithographer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-163">
+                                                        Lithographer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[164]"
+                                                        id="OCCUPATION_DETAILED-164"
+                                                        value="Loader"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-164">
+                                                        Loader
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[165]"
+                                                        id="OCCUPATION_DETAILED-165"
+                                                        value="Locksmith"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-165">
+                                                        Locksmith
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[166]"
+                                                        id="OCCUPATION_DETAILED-166"
+                                                        value="Machinist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-166">
+                                                        Machinist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[167]"
+                                                        id="OCCUPATION_DETAILED-167"
+                                                        value="Mail Carrier/Postal"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-167">
+                                                        Mail Carrier/Postal
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[168]"
+                                                        id="OCCUPATION_DETAILED-168"
+                                                        value="Mail/Postmaster"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-168">
+                                                        Mail/Postmaster
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[169]"
+                                                        id="OCCUPATION_DETAILED-169"
+                                                        value="Maintenance"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-169">
+                                                        Maintenance
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[170]"
+                                                        id="OCCUPATION_DETAILED-170"
+                                                        value="Maintenance/Supervisor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-170">
+                                                        Maintenance/Supervisor
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[171]"
+                                                        id="OCCUPATION_DETAILED-171"
+                                                        value="Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-171">
+                                                        Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[172]"
+                                                        id="OCCUPATION_DETAILED-172"
+                                                        value="Manager/Assistant Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-172">
+                                                        Manager/Assistant Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[173]"
+                                                        id="OCCUPATION_DETAILED-173"
+                                                        value="Manager/Branch Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-173">
+                                                        Manager/Branch Manager
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[174]"
+                                                        id="OCCUPATION_DETAILED-174"
+                                                        value="Manager/Credit Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-174">
+                                                        Manager/Credit Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[175]"
+                                                        id="OCCUPATION_DETAILED-175"
+                                                        value="Manager/District Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-175">
+                                                        Manager/District Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[176]"
+                                                        id="OCCUPATION_DETAILED-176"
+                                                        value="Manager/Division Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-176">
+                                                        Manager/Division Manager
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[177]"
+                                                        id="OCCUPATION_DETAILED-177"
+                                                        value="Manager/Marketing Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-177">
+                                                        Manager/Marketing Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[178]"
+                                                        id="OCCUPATION_DETAILED-178"
+                                                        value="Manager/Office Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-178">
+                                                        Manager/Office Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[179]"
+                                                        id="OCCUPATION_DETAILED-179"
+                                                        value="Manager/Plant Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-179">
+                                                        Manager/Plant Manager
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[180]"
+                                                        id="OCCUPATION_DETAILED-180"
+                                                        value="Manager/Product Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-180">
+                                                        Manager/Product Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[181]"
+                                                        id="OCCUPATION_DETAILED-181"
+                                                        value="Manager/Project Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-181">
+                                                        Manager/Project Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[182]"
+                                                        id="OCCUPATION_DETAILED-182"
+                                                        value="Manager/Property Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-182">
+                                                        Manager/Property Manager
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[183]"
+                                                        id="OCCUPATION_DETAILED-183"
+                                                        value="Manager/Regional Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-183">
+                                                        Manager/Regional Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[184]"
+                                                        id="OCCUPATION_DETAILED-184"
+                                                        value="Manager/Sales Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-184">
+                                                        Manager/Sales Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[185]"
+                                                        id="OCCUPATION_DETAILED-185"
+                                                        value="Manager/Store Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-185">
+                                                        Manager/Store Manager
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[186]"
+                                                        id="OCCUPATION_DETAILED-186"
+                                                        value="Manager/Traffic Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-186">
+                                                        Manager/Traffic Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[187]"
+                                                        id="OCCUPATION_DETAILED-187"
+                                                        value="Manager/Warehouse Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-187">
+                                                        Manager/Warehouse Manager
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[188]"
+                                                        id="OCCUPATION_DETAILED-188"
+                                                        value="Manger/General Manager"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-188">
+                                                        Manger/General Manager
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[189]"
+                                                        id="OCCUPATION_DETAILED-189"
+                                                        value="Marines"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-189">
+                                                        Marines
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[190]"
+                                                        id="OCCUPATION_DETAILED-190"
+                                                        value="Marketing"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-190">
+                                                        Marketing
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[191]"
+                                                        id="OCCUPATION_DETAILED-191"
+                                                        value="Mason/Brick/Etc."
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-191">
+                                                        Mason/Brick/Etc.
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[192]"
+                                                        id="OCCUPATION_DETAILED-192"
+                                                        value="Material Handler"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-192">
+                                                        Material Handler
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[193]"
+                                                        id="OCCUPATION_DETAILED-193"
+                                                        value="Mechanic"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-193">
+                                                        Mechanic
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[194]"
+                                                        id="OCCUPATION_DETAILED-194"
+                                                        value="Medical Assistant"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-194">
+                                                        Medical Assistant
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[195]"
+                                                        id="OCCUPATION_DETAILED-195"
+                                                        value="Medical Doctor/Physician"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-195">
+                                                        Medical Doctor/Physician
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[196]"
+                                                        id="OCCUPATION_DETAILED-196"
+                                                        value="Medical Secretary"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-196">
+                                                        Medical Secretary
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[197]"
+                                                        id="OCCUPATION_DETAILED-197"
+                                                        value="Medical Technician"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-197">
+                                                        Medical Technician
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[198]"
+                                                        id="OCCUPATION_DETAILED-198"
+                                                        value="Medical/Paramedic"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-198">
+                                                        Medical/Paramedic
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[199]"
+                                                        id="OCCUPATION_DETAILED-199"
+                                                        value="Merchandiser"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-199">
+                                                        Merchandiser
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[200]"
+                                                        id="OCCUPATION_DETAILED-200"
+                                                        value="Meter Reader"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-200">
+                                                        Meter Reader
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[201]"
+                                                        id="OCCUPATION_DETAILED-201"
+                                                        value="Middle Management"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-201">
+                                                        Middle Management
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[202]"
+                                                        id="OCCUPATION_DETAILED-202"
+                                                        value="Mill worker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-202">
+                                                        Mill worker
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[203]"
+                                                        id="OCCUPATION_DETAILED-203"
+                                                        value="Millwright"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-203">
+                                                        Millwright
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[204]"
+                                                        id="OCCUPATION_DETAILED-204"
+                                                        value="Miner"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-204">Miner</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[205]"
+                                                        id="OCCUPATION_DETAILED-205"
+                                                        value="Model"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-205">Model</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[206]"
+                                                        id="OCCUPATION_DETAILED-206"
+                                                        value="Mold Maker/Molder/Injection Mold"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-206">
+                                                        Mold Maker/Molder/Injection Mold
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[207]"
+                                                        id="OCCUPATION_DETAILED-207"
+                                                        value="Musician/Music/Dance"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-207">
+                                                        Musician/Music/Dance
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[208]"
+                                                        id="OCCUPATION_DETAILED-208"
+                                                        value="National Guard"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-208">
+                                                        National Guard
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[209]"
+                                                        id="OCCUPATION_DETAILED-209"
+                                                        value="Navy Credit Union Trades"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-209">
+                                                        Navy Credit Union Trades
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[210]"
+                                                        id="OCCUPATION_DETAILED-210"
+                                                        value="Nurse"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-210">Nurse</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[211]"
+                                                        id="OCCUPATION_DETAILED-211"
+                                                        value="Nurse (Registered)"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-211">
+                                                        Nurse (Registered)
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[212]"
+                                                        id="OCCUPATION_DETAILED-212"
+                                                        value="Nurse/LPN"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-212">
+                                                        Nurse/LPN
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[213]"
+                                                        id="OCCUPATION_DETAILED-213"
+                                                        value="Nurses Aide/Orderly"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-213">
+                                                        Nurses Aide/Orderly
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[214]"
+                                                        id="OCCUPATION_DETAILED-214"
+                                                        value="Oil Industry/Driller"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-214">
+                                                        Oil Industry/Driller
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[215]"
+                                                        id="OCCUPATION_DETAILED-215"
+                                                        value="Operator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-215">
+                                                        Operator
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[216]"
+                                                        id="OCCUPATION_DETAILED-216"
+                                                        value="Operator/Boilermaker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-216">
+                                                        Operator/Boilermaker
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[217]"
+                                                        id="OCCUPATION_DETAILED-217"
+                                                        value="Operator/Crane Operator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-217">
+                                                        Operator/Crane Operator
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[218]"
+                                                        id="OCCUPATION_DETAILED-218"
+                                                        value="Operator/Forklift Operator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-218">
+                                                        Operator/Forklift Operator
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[219]"
+                                                        id="OCCUPATION_DETAILED-219"
+                                                        value="Operator/Machine Operator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-219">
+                                                        Operator/Machine Operator
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[220]"
+                                                        id="OCCUPATION_DETAILED-220"
+                                                        value="Optician"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-220">
+                                                        Optician
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[221]"
+                                                        id="OCCUPATION_DETAILED-221"
+                                                        value="Optometrist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-221">
+                                                        Optometrist
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[222]"
+                                                        id="OCCUPATION_DETAILED-222"
+                                                        value="Packer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-222">
+                                                        Packer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[223]"
+                                                        id="OCCUPATION_DETAILED-223"
+                                                        value="Painter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-223">
+                                                        Painter
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[224]"
+                                                        id="OCCUPATION_DETAILED-224"
+                                                        value="Part Time"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-224">
+                                                        Part Time
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[225]"
+                                                        id="OCCUPATION_DETAILED-225"
+                                                        value="Parts (Auto Etc.)"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-225">
+                                                        Parts (Auto Etc.)
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[226]"
+                                                        id="OCCUPATION_DETAILED-226"
+                                                        value="Pastor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-226">
+                                                        Pastor
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[227]"
+                                                        id="OCCUPATION_DETAILED-227"
+                                                        value="Personnel/Recruiter/Interviewer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-227">
+                                                        Personnel/Recruiter/Interviewer
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[228]"
+                                                        id="OCCUPATION_DETAILED-228"
+                                                        value="Pharmacist/Pharmacy"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-228">
+                                                        Pharmacist/Pharmacy
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[229]"
+                                                        id="OCCUPATION_DETAILED-229"
+                                                        value="Photography"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-229">
+                                                        Photography
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[230]"
+                                                        id="OCCUPATION_DETAILED-230"
+                                                        value="Pilot"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-230">Pilot</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[231]"
+                                                        id="OCCUPATION_DETAILED-231"
+                                                        value="Pipe fitter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-231">
+                                                        Pipe fitter
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[232]"
+                                                        id="OCCUPATION_DETAILED-232"
+                                                        value="Planner"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-232">
+                                                        Planner
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[233]"
+                                                        id="OCCUPATION_DETAILED-233"
+                                                        value="Plumber"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-233">
+                                                        Plumber
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[234]"
+                                                        id="OCCUPATION_DETAILED-234"
+                                                        value="Police/Trooper"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-234">
+                                                        Police/Trooper
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[235]"
+                                                        id="OCCUPATION_DETAILED-235"
+                                                        value="Polisher"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-235">
+                                                        Polisher
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[236]"
+                                                        id="OCCUPATION_DETAILED-236"
+                                                        value="Politician/Legislator/Diplomat"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-236">
+                                                        Politician/Legislator/Diplomat
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[237]"
+                                                        id="OCCUPATION_DETAILED-237"
+                                                        value="Porter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-237">
+                                                        Porter
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[238]"
+                                                        id="OCCUPATION_DETAILED-238"
+                                                        value="President"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-238">
+                                                        President
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[239]"
+                                                        id="OCCUPATION_DETAILED-239"
+                                                        value="Press Operator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-239">
+                                                        Press Operator
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[240]"
+                                                        id="OCCUPATION_DETAILED-240"
+                                                        value="Presser"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-240">
+                                                        Presser
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[241]"
+                                                        id="OCCUPATION_DETAILED-241"
+                                                        value="Principal/Dean/Educator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-241">
+                                                        Principal/Dean/Educator
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[242]"
+                                                        id="OCCUPATION_DETAILED-242"
+                                                        value="Printer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-242">
+                                                        Printer
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[243]"
+                                                        id="OCCUPATION_DETAILED-243"
+                                                        value="Production"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-243">
+                                                        Production
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[244]"
+                                                        id="OCCUPATION_DETAILED-244"
+                                                        value="Professional"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-244">
+                                                        Professional
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[245]"
+                                                        id="OCCUPATION_DETAILED-245"
+                                                        value="Professor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-245">
+                                                        Professor
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[246]"
+                                                        id="OCCUPATION_DETAILED-246"
+                                                        value="Psychologist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-246">
+                                                        Psychologist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[247]"
+                                                        id="OCCUPATION_DETAILED-247"
+                                                        value="Public Relations"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-247">
+                                                        Public Relations
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[248]"
+                                                        id="OCCUPATION_DETAILED-248"
+                                                        value="Publishing"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-248">
+                                                        Publishing
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[249]"
+                                                        id="OCCUPATION_DETAILED-249"
+                                                        value="Purchasing"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-249">
+                                                        Purchasing
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[250]"
+                                                        id="OCCUPATION_DETAILED-250"
+                                                        value="Quality Control"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-250">
+                                                        Quality Control
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[251]"
+                                                        id="OCCUPATION_DETAILED-251"
+                                                        value="Real Estate/Realtor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-251">
+                                                        Real Estate/Realtor
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[252]"
+                                                        id="OCCUPATION_DETAILED-252"
+                                                        value="Receptionist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-252">
+                                                        Receptionist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[253]"
+                                                        id="OCCUPATION_DETAILED-253"
+                                                        value="Repairman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-253">
+                                                        Repairman
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[254]"
+                                                        id="OCCUPATION_DETAILED-254"
+                                                        value="Reporter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-254">
+                                                        Reporter
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[255]"
+                                                        id="OCCUPATION_DETAILED-255"
+                                                        value="Researcher"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-255">
+                                                        Researcher
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[256]"
+                                                        id="OCCUPATION_DETAILED-256"
+                                                        value="Retired"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-256">
+                                                        Retired
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[257]"
+                                                        id="OCCUPATION_DETAILED-257"
+                                                        value="Retired/Pensioner"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-257">
+                                                        Retired/Pensioner
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[258]"
+                                                        id="OCCUPATION_DETAILED-258"
+                                                        value="Roofer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-258">
+                                                        Roofer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[259]"
+                                                        id="OCCUPATION_DETAILED-259"
+                                                        value="Sales"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-259">Sales</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[260]"
+                                                        id="OCCUPATION_DETAILED-260"
+                                                        value="Sales Clerk/Counterman"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-260">
+                                                        Sales Clerk/Counterman
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[261]"
+                                                        id="OCCUPATION_DETAILED-261"
+                                                        value="Sanitation/Exterminator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-261">
+                                                        Sanitation/Exterminator
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[262]"
+                                                        id="OCCUPATION_DETAILED-262"
+                                                        value="Scientist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-262">
+                                                        Scientist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[263]"
+                                                        id="OCCUPATION_DETAILED-263"
+                                                        value="Seamstress/Tailor/Handicraft"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-263">
+                                                        Seamstress/Tailor/Handicraft
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[264]"
+                                                        id="OCCUPATION_DETAILED-264"
+                                                        value="Secretary"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-264">
+                                                        Secretary
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[265]"
+                                                        id="OCCUPATION_DETAILED-265"
+                                                        value="Security"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-265">
+                                                        Security
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[266]"
+                                                        id="OCCUPATION_DETAILED-266"
+                                                        value="Setup man"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-266">
+                                                        Setup man
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[267]"
+                                                        id="OCCUPATION_DETAILED-267"
+                                                        value="Sheet Metal Worker/Steel Worker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-267">
+                                                        Sheet Metal Worker/Steel Worker
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[268]"
+                                                        id="OCCUPATION_DETAILED-268"
+                                                        value="Shipping/Import/Export/Custom"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-268">
+                                                        Shipping/Import/Export/Custom
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[269]"
+                                                        id="OCCUPATION_DETAILED-269"
+                                                        value="Social Worker/Case Worker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-269">
+                                                        Social Worker/Case Worker
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[270]"
+                                                        id="OCCUPATION_DETAILED-270"
+                                                        value="Sorter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-270">
+                                                        Sorter
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[271]"
+                                                        id="OCCUPATION_DETAILED-271"
+                                                        value="Statistician/Actuary"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-271">
+                                                        Statistician/Actuary
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[272]"
+                                                        id="OCCUPATION_DETAILED-272"
+                                                        value="Student"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-272">
+                                                        Student
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[273]"
+                                                        id="OCCUPATION_DETAILED-273"
+                                                        value="Superintendent"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-273">
+                                                        Superintendent
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[274]"
+                                                        id="OCCUPATION_DETAILED-274"
+                                                        value="Supervisor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-274">
+                                                        Supervisor
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[275]"
+                                                        id="OCCUPATION_DETAILED-275"
+                                                        value="Surveyor"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-275">
+                                                        Surveyor
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[276]"
+                                                        id="OCCUPATION_DETAILED-276"
+                                                        value="Teacher"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-276">
+                                                        Teacher
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[277]"
+                                                        id="OCCUPATION_DETAILED-277"
+                                                        value="Technician"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-277">
+                                                        Technician
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[278]"
+                                                        id="OCCUPATION_DETAILED-278"
+                                                        value="Technician/Lab"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-278">
+                                                        Technician/Lab
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[279]"
+                                                        id="OCCUPATION_DETAILED-279"
+                                                        value="Technician/X-ray"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-279">
+                                                        Technician/X-ray
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[280]"
+                                                        id="OCCUPATION_DETAILED-280"
+                                                        value="Telemarketer/Telephone/Operator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-280">
+                                                        Telemarketer/Telephone/Operator
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[281]"
+                                                        id="OCCUPATION_DETAILED-281"
+                                                        value="Teller/Bank Teller"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-281">
+                                                        Teller/Bank Teller
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[282]"
+                                                        id="OCCUPATION_DETAILED-282"
+                                                        value="Tester"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-282">
+                                                        Tester
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[283]"
+                                                        id="OCCUPATION_DETAILED-283"
+                                                        value="Therapist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-283">
+                                                        Therapist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[284]"
+                                                        id="OCCUPATION_DETAILED-284"
+                                                        value="Therapists/Physical"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-284">
+                                                        Therapists/Physical
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[285]"
+                                                        id="OCCUPATION_DETAILED-285"
+                                                        value="Toolmaker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-285">
+                                                        Toolmaker
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[286]"
+                                                        id="OCCUPATION_DETAILED-286"
+                                                        value="Trainer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-286">
+                                                        Trainer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[287]"
+                                                        id="OCCUPATION_DETAILED-287"
+                                                        value="Transcripter/Translator"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-287">
+                                                        Transcripter/Translator
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[288]"
+                                                        id="OCCUPATION_DETAILED-288"
+                                                        value="Transportation"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-288">
+                                                        Transportation
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[289]"
+                                                        id="OCCUPATION_DETAILED-289"
+                                                        value="Travel Agent"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-289">
+                                                        Travel Agent
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[290]"
+                                                        id="OCCUPATION_DETAILED-290"
+                                                        value="Treasurer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-290">
+                                                        Treasurer
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[291]"
+                                                        id="OCCUPATION_DETAILED-291"
+                                                        value="Typesetter"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-291">
+                                                        Typesetter
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[292]"
+                                                        id="OCCUPATION_DETAILED-292"
+                                                        value="Typist"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-292">
+                                                        Typist
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[293]"
+                                                        id="OCCUPATION_DETAILED-293"
+                                                        value="Union Member/Rep."
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-293">
+                                                        Union Member/Rep.
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[294]"
+                                                        id="OCCUPATION_DETAILED-294"
+                                                        value="Upholstery"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-294">
+                                                        Upholstery
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[295]"
+                                                        id="OCCUPATION_DETAILED-295"
+                                                        value="Utility"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-295">
+                                                        Utility
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[296]"
+                                                        id="OCCUPATION_DETAILED-296"
+                                                        value="Veterinarian"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-296">
+                                                        Veterinarian
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[297]"
+                                                        id="OCCUPATION_DETAILED-297"
+                                                        value="Vice President"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-297">
+                                                        Vice President
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[298]"
+                                                        id="OCCUPATION_DETAILED-298"
+                                                        value="Volunteer"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-298">
+                                                        Volunteer
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[299]"
+                                                        id="OCCUPATION_DETAILED-299"
+                                                        value="Waiter/Waitress"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-299">
+                                                        Waiter/Waitress
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[300]"
+                                                        id="OCCUPATION_DETAILED-300"
+                                                        value="Ward Clerk"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-300">
+                                                        Ward Clerk
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[301]"
+                                                        id="OCCUPATION_DETAILED-301"
+                                                        value="Water Treatment"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-301">
+                                                        Water Treatment
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[302]"
+                                                        id="OCCUPATION_DETAILED-302"
+                                                        value="Welder"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-302">
+                                                        Welder
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[303]"
+                                                        id="OCCUPATION_DETAILED-303"
+                                                        value="White Collar Worker"
+                                                    />{" "}
+                                                    <label htmlFor="OCCUPATION_DETAILED-303">
+                                                        White Collar Worker
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="OCCUPATION_DETAILED[304]"
+                                                        id="OCCUPATION_DETAILED-304"
+                                                        value="Writer"
+                                                    />
+                                                    <label htmlFor="OCCUPATION_DETAILED-304">
+                                                        Writer
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                ) : (
+                                    ""
+                                )}
                                 <hr />
                                 <input
                                     onChange={handleChange}
@@ -4806,853 +4913,853 @@ const TableForm = () => {
                                         <legend>Languages</legend>
                                     </div>
                                     <div>
-                                        <small onClick={()=>setLangages(true)}>(click here to expand options)</small> |
-                                        <small onClick={()=>setLangages(false)}>(click here to hide options)</small>
+                                        <small onClick={() => setLangages(true)}>
+                                            (click here to expand options)
+                                        </small>{" "}
+                                        |
+                                        <small onClick={() => setLangages(false)}>
+                                            (click here to hide options)
+                                        </small>
                                     </div>
                                 </div>
-                                {
-                                    langages ? (
-                                        <table
-                                    cellPadding="4"
-                                    cellSpacing="4"
-                                    id="tblLANGUAGE"
-                                >
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[0]"
-                                                    id="LANGUAGE-0"
-                                                    value="Afrikaans"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-0">Afrikaans</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[1]"
-                                                    id="LANGUAGE-1"
-                                                    value="Albanian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-1">Albanian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[2]"
-                                                    id="LANGUAGE-2"
-                                                    value="Amharic"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-2">Amharic</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[3]"
-                                                    id="LANGUAGE-3"
-                                                    value="Arabic"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-3">Arabic</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[4]"
-                                                    id="LANGUAGE-4"
-                                                    value="Armenian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-4">Armenian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[5]"
-                                                    id="LANGUAGE-5"
-                                                    value="Ashanti"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-5">Ashanti</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[6]"
-                                                    id="LANGUAGE-6"
-                                                    value="Azeri"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-6">Azeri</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[7]"
-                                                    id="LANGUAGE-7"
-                                                    value="Bantu"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-7">Bantu</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[8]"
-                                                    id="LANGUAGE-8"
-                                                    value="Basque"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-8">Basque</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[9]"
-                                                    id="LANGUAGE-9"
-                                                    value="Bengali"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-9">Bengali</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[10]"
-                                                    id="LANGUAGE-10"
-                                                    value="Bulgarian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-10">Bulgarian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[11]"
-                                                    id="LANGUAGE-11"
-                                                    value="Burmese"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-11">Burmese</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[12]"
-                                                    id="LANGUAGE-12"
-                                                    value="Chinese"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-12">Chinese</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[13]"
-                                                    id="LANGUAGE-13"
-                                                    value="Comorian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-13">Comorian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[14]"
-                                                    id="LANGUAGE-14"
-                                                    value="Czech"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-14">Czech</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[15]"
-                                                    id="LANGUAGE-15"
-                                                    value="Danish"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-15">Danish</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[16]"
-                                                    id="LANGUAGE-16"
-                                                    value="Dutch"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-16">Dutch</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[17]"
-                                                    id="LANGUAGE-17"
-                                                    value="Dzongha"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-17">Dzongha</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[18]"
-                                                    id="LANGUAGE-18"
-                                                    value="English"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-18">English</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[19]"
-                                                    id="LANGUAGE-19"
-                                                    value="Estonian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-19">Estonian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[20]"
-                                                    id="LANGUAGE-20"
-                                                    value="Farsi"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-20">Farsi</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[21]"
-                                                    id="LANGUAGE-21"
-                                                    value="Finnish"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-21">Finnish</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[22]"
-                                                    id="LANGUAGE-22"
-                                                    value="French"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-22">French</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[23]"
-                                                    id="LANGUAGE-23"
-                                                    value="Ga"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-23">Ga</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[24]"
-                                                    id="LANGUAGE-24"
-                                                    value="Georgian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-24">Georgian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[25]"
-                                                    id="LANGUAGE-25"
-                                                    value="German"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-25">German</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[26]"
-                                                    id="LANGUAGE-26"
-                                                    value="Greek"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-26">Greek</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[27]"
-                                                    id="LANGUAGE-27"
-                                                    value="Hausa"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-27">Hausa</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[28]"
-                                                    id="LANGUAGE-28"
-                                                    value="Hebrew"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-28">Hebrew</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[29]"
-                                                    id="LANGUAGE-29"
-                                                    value="Hindi"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-29">Hindi</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[30]"
-                                                    id="LANGUAGE-30"
-                                                    value="Hungarian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-30">Hungarian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[31]"
-                                                    id="LANGUAGE-31"
-                                                    value="Icelandic"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-31">Icelandic</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[32]"
-                                                    id="LANGUAGE-32"
-                                                    value="Indonesian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-32">Indonesian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[33]"
-                                                    id="LANGUAGE-33"
-                                                    value="Italian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-33">Italian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[34]"
-                                                    id="LANGUAGE-34"
-                                                    value="Japanese"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-34">Japanese</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[35]"
-                                                    id="LANGUAGE-35"
-                                                    value="Kazakh"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-35">Kazakh</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[36]"
-                                                    id="LANGUAGE-36"
-                                                    value="Khmer"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-36">Khmer</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[37]"
-                                                    id="LANGUAGE-37"
-                                                    value="Kirghiz"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-37">Kirghiz</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[38]"
-                                                    id="LANGUAGE-38"
-                                                    value="Korean"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-38">Korean</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[39]"
-                                                    id="LANGUAGE-39"
-                                                    value="Laotian (Include Hmong)"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-39">
-                                                    Laotian (Include Hmong)
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[40]"
-                                                    id="LANGUAGE-40"
-                                                    value="Latvian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-40">Latvian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[41]"
-                                                    id="LANGUAGE-41"
-                                                    value="Lithuanian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-41">Lithuanian</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[42]"
-                                                    id="LANGUAGE-42"
-                                                    value="Macedonian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-42">Macedonian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[43]"
-                                                    id="LANGUAGE-43"
-                                                    value="Malagasy"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-43">Malagasy</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[44]"
-                                                    id="LANGUAGE-44"
-                                                    value="Malay"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-44">Malay</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[45]"
-                                                    id="LANGUAGE-45"
-                                                    value="Moldavian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-45">Moldavian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[46]"
-                                                    id="LANGUAGE-46"
-                                                    value="Mongolian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-46">Mongolian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[47]"
-                                                    id="LANGUAGE-47"
-                                                    value="Nepali"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-47">Nepali</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[48]"
-                                                    id="LANGUAGE-48"
-                                                    value="Norwegian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-48">Norwegian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[49]"
-                                                    id="LANGUAGE-49"
-                                                    value="Oromo"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-49">Oromo</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[50]"
-                                                    id="LANGUAGE-50"
-                                                    value="Pashto"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-50">Pashto</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[51]"
-                                                    id="LANGUAGE-51"
-                                                    value="Polish"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-51">Polish</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[52]"
-                                                    id="LANGUAGE-52"
-                                                    value="Portuguese"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-52">Portuguese</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[53]"
-                                                    id="LANGUAGE-53"
-                                                    value="Romanian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-53">Romanian</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[54]"
-                                                    id="LANGUAGE-54"
-                                                    value="Russian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-54">Russian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[55]"
-                                                    id="LANGUAGE-55"
-                                                    value="Samoan"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-55">Samoan</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[56]"
-                                                    id="LANGUAGE-56"
-                                                    value="Serbo-Croatian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-56">Serbo-Croatian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[57]"
-                                                    id="LANGUAGE-57"
-                                                    value="Sinhalese"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-57">Sinhalese</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[58]"
-                                                    id="LANGUAGE-58"
-                                                    value="Slovakian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-58">Slovakian</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[59]"
-                                                    id="LANGUAGE-59"
-                                                    value="Slovenian"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-59">Slovenian</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[60]"
-                                                    id="LANGUAGE-60"
-                                                    value="Somali"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-60">Somali</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[61]"
-                                                    id="LANGUAGE-61"
-                                                    value="Sotho"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-61">Sotho</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[62]"
-                                                    id="LANGUAGE-62"
-                                                    value="Spanish"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-62">Spanish</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[63]"
-                                                    id="LANGUAGE-63"
-                                                    value="Swahili"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-63">Swahili</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[64]"
-                                                    id="LANGUAGE-64"
-                                                    value="Swazi"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-64">Swazi</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[65]"
-                                                    id="LANGUAGE-65"
-                                                    value="Swedish"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-65">Swedish</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[66]"
-                                                    id="LANGUAGE-66"
-                                                    value="Tagalog"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-66">Tagalog</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[67]"
-                                                    id="LANGUAGE-67"
-                                                    value="Tajik"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-67">Tajik</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[68]"
-                                                    id="LANGUAGE-68"
-                                                    value="Thai"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-68">Thai</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[69]"
-                                                    id="LANGUAGE-69"
-                                                    value="Tibetan"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-69">Tibetan</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[70]"
-                                                    id="LANGUAGE-70"
-                                                    value="Tongan"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-70">Tongan</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[71]"
-                                                    id="LANGUAGE-71"
-                                                    value="Tswana"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-71">Tswana</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[72]"
-                                                    id="LANGUAGE-72"
-                                                    value="Turkish"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-72">Turkish</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[73]"
-                                                    id="LANGUAGE-73"
-                                                    value="Turkmeni"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-73">Turkmeni</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[74]"
-                                                    id="LANGUAGE-74"
-                                                    value="Unknown"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-74">Unknown</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[75]"
-                                                    id="LANGUAGE-75"
-                                                    value="Urdu"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-75">Urdu</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[76]"
-                                                    id="LANGUAGE-76"
-                                                    value="Uzbeki"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-76">Uzbeki</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[77]"
-                                                    id="LANGUAGE-77"
-                                                    value="Vietnamese"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-77">Vietnamese</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[78]"
-                                                    id="LANGUAGE-78"
-                                                    value="Xhosa"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-78">Xhosa</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="LANGUAGE[79]"
-                                                    id="LANGUAGE-79"
-                                                    value="Zulu"
-                                                />{" "}
-                                                <label htmlFor="LANGUAGE-79">Zulu</label>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                    ) : ""
-                                }
-                                
+                                {langages ? (
+                                    <table cellPadding="4" cellSpacing="4" id="tblLANGUAGE">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[0]"
+                                                        id="LANGUAGE-0"
+                                                        value="Afrikaans"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-0">Afrikaans</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[1]"
+                                                        id="LANGUAGE-1"
+                                                        value="Albanian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-1">Albanian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[2]"
+                                                        id="LANGUAGE-2"
+                                                        value="Amharic"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-2">Amharic</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[3]"
+                                                        id="LANGUAGE-3"
+                                                        value="Arabic"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-3">Arabic</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[4]"
+                                                        id="LANGUAGE-4"
+                                                        value="Armenian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-4">Armenian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[5]"
+                                                        id="LANGUAGE-5"
+                                                        value="Ashanti"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-5">Ashanti</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[6]"
+                                                        id="LANGUAGE-6"
+                                                        value="Azeri"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-6">Azeri</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[7]"
+                                                        id="LANGUAGE-7"
+                                                        value="Bantu"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-7">Bantu</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[8]"
+                                                        id="LANGUAGE-8"
+                                                        value="Basque"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-8">Basque</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[9]"
+                                                        id="LANGUAGE-9"
+                                                        value="Bengali"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-9">Bengali</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[10]"
+                                                        id="LANGUAGE-10"
+                                                        value="Bulgarian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-10">Bulgarian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[11]"
+                                                        id="LANGUAGE-11"
+                                                        value="Burmese"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-11">Burmese</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[12]"
+                                                        id="LANGUAGE-12"
+                                                        value="Chinese"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-12">Chinese</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[13]"
+                                                        id="LANGUAGE-13"
+                                                        value="Comorian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-13">Comorian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[14]"
+                                                        id="LANGUAGE-14"
+                                                        value="Czech"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-14">Czech</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[15]"
+                                                        id="LANGUAGE-15"
+                                                        value="Danish"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-15">Danish</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[16]"
+                                                        id="LANGUAGE-16"
+                                                        value="Dutch"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-16">Dutch</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[17]"
+                                                        id="LANGUAGE-17"
+                                                        value="Dzongha"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-17">Dzongha</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[18]"
+                                                        id="LANGUAGE-18"
+                                                        value="English"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-18">English</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[19]"
+                                                        id="LANGUAGE-19"
+                                                        value="Estonian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-19">Estonian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[20]"
+                                                        id="LANGUAGE-20"
+                                                        value="Farsi"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-20">Farsi</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[21]"
+                                                        id="LANGUAGE-21"
+                                                        value="Finnish"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-21">Finnish</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[22]"
+                                                        id="LANGUAGE-22"
+                                                        value="French"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-22">French</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[23]"
+                                                        id="LANGUAGE-23"
+                                                        value="Ga"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-23">Ga</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[24]"
+                                                        id="LANGUAGE-24"
+                                                        value="Georgian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-24">Georgian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[25]"
+                                                        id="LANGUAGE-25"
+                                                        value="German"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-25">German</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[26]"
+                                                        id="LANGUAGE-26"
+                                                        value="Greek"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-26">Greek</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[27]"
+                                                        id="LANGUAGE-27"
+                                                        value="Hausa"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-27">Hausa</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[28]"
+                                                        id="LANGUAGE-28"
+                                                        value="Hebrew"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-28">Hebrew</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[29]"
+                                                        id="LANGUAGE-29"
+                                                        value="Hindi"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-29">Hindi</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[30]"
+                                                        id="LANGUAGE-30"
+                                                        value="Hungarian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-30">Hungarian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[31]"
+                                                        id="LANGUAGE-31"
+                                                        value="Icelandic"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-31">Icelandic</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[32]"
+                                                        id="LANGUAGE-32"
+                                                        value="Indonesian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-32">Indonesian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[33]"
+                                                        id="LANGUAGE-33"
+                                                        value="Italian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-33">Italian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[34]"
+                                                        id="LANGUAGE-34"
+                                                        value="Japanese"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-34">Japanese</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[35]"
+                                                        id="LANGUAGE-35"
+                                                        value="Kazakh"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-35">Kazakh</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[36]"
+                                                        id="LANGUAGE-36"
+                                                        value="Khmer"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-36">Khmer</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[37]"
+                                                        id="LANGUAGE-37"
+                                                        value="Kirghiz"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-37">Kirghiz</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[38]"
+                                                        id="LANGUAGE-38"
+                                                        value="Korean"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-38">Korean</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[39]"
+                                                        id="LANGUAGE-39"
+                                                        value="Laotian (Include Hmong)"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-39">
+                                                        Laotian (Include Hmong)
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[40]"
+                                                        id="LANGUAGE-40"
+                                                        value="Latvian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-40">Latvian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[41]"
+                                                        id="LANGUAGE-41"
+                                                        value="Lithuanian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-41">Lithuanian</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[42]"
+                                                        id="LANGUAGE-42"
+                                                        value="Macedonian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-42">Macedonian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[43]"
+                                                        id="LANGUAGE-43"
+                                                        value="Malagasy"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-43">Malagasy</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[44]"
+                                                        id="LANGUAGE-44"
+                                                        value="Malay"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-44">Malay</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[45]"
+                                                        id="LANGUAGE-45"
+                                                        value="Moldavian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-45">Moldavian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[46]"
+                                                        id="LANGUAGE-46"
+                                                        value="Mongolian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-46">Mongolian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[47]"
+                                                        id="LANGUAGE-47"
+                                                        value="Nepali"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-47">Nepali</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[48]"
+                                                        id="LANGUAGE-48"
+                                                        value="Norwegian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-48">Norwegian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[49]"
+                                                        id="LANGUAGE-49"
+                                                        value="Oromo"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-49">Oromo</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[50]"
+                                                        id="LANGUAGE-50"
+                                                        value="Pashto"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-50">Pashto</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[51]"
+                                                        id="LANGUAGE-51"
+                                                        value="Polish"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-51">Polish</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[52]"
+                                                        id="LANGUAGE-52"
+                                                        value="Portuguese"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-52">Portuguese</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[53]"
+                                                        id="LANGUAGE-53"
+                                                        value="Romanian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-53">Romanian</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[54]"
+                                                        id="LANGUAGE-54"
+                                                        value="Russian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-54">Russian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[55]"
+                                                        id="LANGUAGE-55"
+                                                        value="Samoan"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-55">Samoan</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[56]"
+                                                        id="LANGUAGE-56"
+                                                        value="Serbo-Croatian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-56">Serbo-Croatian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[57]"
+                                                        id="LANGUAGE-57"
+                                                        value="Sinhalese"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-57">Sinhalese</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[58]"
+                                                        id="LANGUAGE-58"
+                                                        value="Slovakian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-58">Slovakian</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[59]"
+                                                        id="LANGUAGE-59"
+                                                        value="Slovenian"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-59">Slovenian</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[60]"
+                                                        id="LANGUAGE-60"
+                                                        value="Somali"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-60">Somali</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[61]"
+                                                        id="LANGUAGE-61"
+                                                        value="Sotho"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-61">Sotho</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[62]"
+                                                        id="LANGUAGE-62"
+                                                        value="Spanish"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-62">Spanish</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[63]"
+                                                        id="LANGUAGE-63"
+                                                        value="Swahili"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-63">Swahili</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[64]"
+                                                        id="LANGUAGE-64"
+                                                        value="Swazi"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-64">Swazi</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[65]"
+                                                        id="LANGUAGE-65"
+                                                        value="Swedish"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-65">Swedish</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[66]"
+                                                        id="LANGUAGE-66"
+                                                        value="Tagalog"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-66">Tagalog</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[67]"
+                                                        id="LANGUAGE-67"
+                                                        value="Tajik"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-67">Tajik</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[68]"
+                                                        id="LANGUAGE-68"
+                                                        value="Thai"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-68">Thai</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[69]"
+                                                        id="LANGUAGE-69"
+                                                        value="Tibetan"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-69">Tibetan</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[70]"
+                                                        id="LANGUAGE-70"
+                                                        value="Tongan"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-70">Tongan</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[71]"
+                                                        id="LANGUAGE-71"
+                                                        value="Tswana"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-71">Tswana</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[72]"
+                                                        id="LANGUAGE-72"
+                                                        value="Turkish"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-72">Turkish</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[73]"
+                                                        id="LANGUAGE-73"
+                                                        value="Turkmeni"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-73">Turkmeni</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[74]"
+                                                        id="LANGUAGE-74"
+                                                        value="Unknown"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-74">Unknown</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[75]"
+                                                        id="LANGUAGE-75"
+                                                        value="Urdu"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-75">Urdu</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[76]"
+                                                        id="LANGUAGE-76"
+                                                        value="Uzbeki"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-76">Uzbeki</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[77]"
+                                                        id="LANGUAGE-77"
+                                                        value="Vietnamese"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-77">Vietnamese</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[78]"
+                                                        id="LANGUAGE-78"
+                                                        value="Xhosa"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-78">Xhosa</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="LANGUAGE[79]"
+                                                        id="LANGUAGE-79"
+                                                        value="Zulu"
+                                                    />{" "}
+                                                    <label htmlFor="LANGUAGE-79">Zulu</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                ) : (
+                                    ""
+                                )}
                                 <hr />
                                 <input
                                     onChange={handleChange}
@@ -5682,16 +5789,17 @@ const TableForm = () => {
                                         <legend>Ethnicities</legend>
                                     </div>
                                     <div>
-                                        <small onClick={()=> setEthnicities(true)}>(click here to expand options)</small> |
-                                        <small onClick={()=> setEthnicities(false)}>(click here to hide options)</small>
+                                        <small onClick={() => setEthnicities(true)}>
+                                            (click here to expand options)
+                                        </small>{" "}
+                                        |
+                                        <small onClick={() => setEthnicities(false)}>
+                                            (click here to hide options)
+                                        </small>
                                     </div>
                                 </div>
-                                {
-                                    ethnicities ? (<table
-                                        cellPadding="4"
-                                        cellSpacing="4"
-                                        id="tblETHNIC_CODE"
-                                    >
+                                {ethnicities ? (
+                                    <table cellPadding="4" cellSpacing="4" id="tblETHNIC_CODE">
                                         <tbody>
                                             <tr>
                                                 <td>
@@ -6762,7 +6870,9 @@ const TableForm = () => {
                                                         id="ETHNIC_CODE-102"
                                                         value="Native American"
                                                     />{" "}
-                                                    <label htmlFor="ETHNIC_CODE-102">Native American</label>
+                                                    <label htmlFor="ETHNIC_CODE-102">
+                                                        Native American
+                                                    </label>
                                                 </td>
                                                 <td>
                                                     <input
@@ -7388,8 +7498,10 @@ const TableForm = () => {
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    </table>) :""
-                                }
+                                    </table>
+                                ) : (
+                                    ""
+                                )}
                                 <hr />
                                 <input
                                     onChange={handleChange}
@@ -7419,16 +7531,17 @@ const TableForm = () => {
                                         <legend>Ethnic Groups</legend>
                                     </div>
                                     <div>
-                                        <small onClick={()=> setEthnic(true)}>(click here to expand options)</small> |
-                                        <small onClick={()=> setEthnic(false)}>(click here to hide options)</small>
+                                        <small onClick={() => setEthnic(true)}>
+                                            (click here to expand options)
+                                        </small>{" "}
+                                        |
+                                        <small onClick={() => setEthnic(false)}>
+                                            (click here to hide options)
+                                        </small>
                                     </div>
                                 </div>
-                                {
-                                    ethnic ? (<table
-                                        cellPadding="4"
-                                        cellSpacing="4"
-                                        id="tblETHNIC_GROUP"
-                                    >
+                                {ethnic ? (
+                                    <table cellPadding="4" cellSpacing="4" id="tblETHNIC_GROUP">
                                         <tbody>
                                             <tr>
                                                 <td>
@@ -7439,7 +7552,9 @@ const TableForm = () => {
                                                         id="ETHNIC_GROUP-0"
                                                         value="African American"
                                                     />{" "}
-                                                    <label htmlFor="ETHNIC_GROUP-0">African American</label>
+                                                    <label htmlFor="ETHNIC_GROUP-0">
+                                                        African American
+                                                    </label>
                                                 </td>
                                                 <td>
                                                     <input
@@ -7461,7 +7576,9 @@ const TableForm = () => {
                                                         id="ETHNIC_GROUP-2"
                                                         value="Eastern European"
                                                     />{" "}
-                                                    <label htmlFor="ETHNIC_GROUP-2">Eastern European</label>
+                                                    <label htmlFor="ETHNIC_GROUP-2">
+                                                        Eastern European
+                                                    </label>
                                                 </td>
                                                 <td>
                                                     <input
@@ -7537,7 +7654,9 @@ const TableForm = () => {
                                                         id="ETHNIC_GROUP-9"
                                                         value="Native American"
                                                     />{" "}
-                                                    <label htmlFor="ETHNIC_GROUP-9">Native American</label>
+                                                    <label htmlFor="ETHNIC_GROUP-9">
+                                                        Native American
+                                                    </label>
                                                 </td>
                                                 <td>
                                                     <input
@@ -7579,7 +7698,9 @@ const TableForm = () => {
                                                         id="ETHNIC_GROUP-13"
                                                         value="Southeast Asian"
                                                     />{" "}
-                                                    <label htmlFor="ETHNIC_GROUP-13">Southeast Asian</label>
+                                                    <label htmlFor="ETHNIC_GROUP-13">
+                                                        Southeast Asian
+                                                    </label>
                                                 </td>
                                                 <td>
                                                     <input
@@ -7605,9 +7726,10 @@ const TableForm = () => {
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    </table>) : ""
-                                }
-                                
+                                    </table>
+                                ) : (
+                                    ""
+                                )}
                                 <hr />
                                 <input
                                     onChange={handleChange}
@@ -7637,167 +7759,167 @@ const TableForm = () => {
                                         <legend>Religions</legend>
                                     </div>
                                     <div>
-                                        <small onClick={()=>setReligion(true)}>(click here to expand options)</small> |
-                                        <small onClick={()=>setReligion(false)}>(click here to hide options)</small>
+                                        <small onClick={() => setReligion(true)}>
+                                            (click here to expand options)
+                                        </small>{" "}
+                                        |
+                                        <small onClick={() => setReligion(false)}>
+                                            (click here to hide options)
+                                        </small>
                                     </div>
                                 </div>
-                                {
-                                    religion ? (
-                                        <table
-                                    cellPadding="4"
-                                    cellSpacing="4"
-                                    id="tblRELIGION"
-                                >
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[A]"
-                                                    id="RELIGION-A"
-                                                    value="All Christians"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-A">All Christians</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[B]"
-                                                    id="RELIGION-B"
-                                                    value="Buddhist"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-B">Buddhist</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[C]"
-                                                    id="RELIGION-C"
-                                                    value="Catholic"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-C">Catholic</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[G]"
-                                                    id="RELIGION-G"
-                                                    value="Greek Orthodox"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-G">Greek Orthodox</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[H]"
-                                                    id="RELIGION-H"
-                                                    value="Hindu"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-H">Hindu</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[I]"
-                                                    id="RELIGION-I"
-                                                    value="Islamic"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-I">Islamic</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[J]"
-                                                    id="RELIGION-J"
-                                                    value="Jewish"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-J">Jewish</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[K]"
-                                                    id="RELIGION-K"
-                                                    value="Sikh"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-K">Sikh</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[L]"
-                                                    id="RELIGION-L"
-                                                    value="Lutheran"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-L">Lutheran</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[M]"
-                                                    id="RELIGION-M"
-                                                    value="Mormon"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-M">Mormon</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[O]"
-                                                    id="RELIGION-O"
-                                                    value="Eastern Orthodox"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-O">Eastern Orthodox</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[P]"
-                                                    id="RELIGION-P"
-                                                    value="Protestant"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-P">Protestant</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[S]"
-                                                    id="RELIGION-S"
-                                                    value="Shinto"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-S">Shinto</label>
-                                            </td>
-                                            <td>
-                                                <input
-                                                    onChange={handleChange}
-                                                    type="checkbox"
-                                                    name="RELIGION[X]"
-                                                    id="RELIGION-X"
-                                                    value="Not Known"
-                                                />{" "}
-                                                <label htmlFor="RELIGION-X">Not Known</label>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                    ) : ""
-                                }
-                                
+                                {religion ? (
+                                    <table cellPadding="4" cellSpacing="4" id="tblRELIGION">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[A]"
+                                                        id="RELIGION-A"
+                                                        value="All Christians"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-A">All Christians</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[B]"
+                                                        id="RELIGION-B"
+                                                        value="Buddhist"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-B">Buddhist</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[C]"
+                                                        id="RELIGION-C"
+                                                        value="Catholic"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-C">Catholic</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[G]"
+                                                        id="RELIGION-G"
+                                                        value="Greek Orthodox"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-G">Greek Orthodox</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[H]"
+                                                        id="RELIGION-H"
+                                                        value="Hindu"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-H">Hindu</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[I]"
+                                                        id="RELIGION-I"
+                                                        value="Islamic"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-I">Islamic</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[J]"
+                                                        id="RELIGION-J"
+                                                        value="Jewish"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-J">Jewish</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[K]"
+                                                        id="RELIGION-K"
+                                                        value="Sikh"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-K">Sikh</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[L]"
+                                                        id="RELIGION-L"
+                                                        value="Lutheran"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-L">Lutheran</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[M]"
+                                                        id="RELIGION-M"
+                                                        value="Mormon"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-M">Mormon</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[O]"
+                                                        id="RELIGION-O"
+                                                        value="Eastern Orthodox"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-O">Eastern Orthodox</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[P]"
+                                                        id="RELIGION-P"
+                                                        value="Protestant"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-P">Protestant</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[S]"
+                                                        id="RELIGION-S"
+                                                        value="Shinto"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-S">Shinto</label>
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        onChange={handleChange}
+                                                        type="checkbox"
+                                                        name="RELIGION[X]"
+                                                        id="RELIGION-X"
+                                                        value="Not Known"
+                                                    />{" "}
+                                                    <label htmlFor="RELIGION-X">Not Known</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                ) : (
+                                    ""
+                                )}
                                 <hr />
                                 <input
                                     onChange={handleChange}
@@ -8023,16 +8145,17 @@ const TableForm = () => {
                                         </legend>
                                     </div>
                                     <div>
-                                        <small onClick={()=>setHouseHoldRange(true)}>(click here to expand options)</small> |
-                                        <small onClick={()=>setHouseHoldRange(false)}>(click here to hide options)</small>
+                                        <small onClick={() => setHouseHoldRange(true)}>
+                                            (click here to expand options)
+                                        </small>{" "}
+                                        |
+                                        <small onClick={() => setHouseHoldRange(false)}>
+                                            (click here to hide options)
+                                        </small>
                                     </div>
                                 </div>
-                                {
-                                    houseHoldRange ? (<table
-                                        cellPadding="4"
-                                        cellSpacing="4"
-                                        id="tblAGEINHH"
-                                    >
+                                {houseHoldRange ? (
+                                    <table cellPadding="4" cellSpacing="4" id="tblAGEINHH">
                                         <tbody>
                                             <tr>
                                                 <td>
@@ -8159,9 +8282,10 @@ const TableForm = () => {
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    </table>) : ''
-                                }
-                                
+                                    </table>
+                                ) : (
+                                    ""
+                                )}
                                 <hr />
                                 <input
                                     onChange={handleChange}
@@ -10000,61 +10124,57 @@ const TableForm = () => {
                         <td>
                             <fieldset>
                                 <legend>Heating Fuel</legend>
-                                <div style={{display: 'flex', flexWrap:"wrap"}}>
-                                <div>
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="FUEL"
-                                    id="FUEL_Electric"
-                                    value="Electric"
-                                    />
-                                <label htmlFor="FUEL_Electric">Electric</label> |
+                                <div style={{ display: "flex", flexWrap: "wrap" }}>
+                                    <div>
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="FUEL"
+                                            id="FUEL_Electric"
+                                            value="Electric"
+                                        />
+                                        <label htmlFor="FUEL_Electric">Electric</label> |
                                     </div>
                                     <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="FUEL"
-                                    id="FUEL_Gas"
-                                    value="Gas"
-                                    />
-                                <label htmlFor="FUEL_Gas">Gas</label> |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="FUEL"
+                                            id="FUEL_Gas"
+                                            value="Gas"
+                                        />
+                                        <label htmlFor="FUEL_Gas">Gas</label> |
                                     </div>
                                     <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="FUEL"
-                                    id="FUEL_Gas Piped"
-                                    value="Gas Piped"
-                                    />
-                                <label htmlFor="FUEL_Gas Piped">Gas Piped</label> |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="FUEL"
+                                            id="FUEL_Gas Piped"
+                                            value="Gas Piped"
+                                        />
+                                        <label htmlFor="FUEL_Gas Piped">Gas Piped</label> |
                                     </div>
                                     <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="FUEL"
-                                    id="FUEL_Oil"
-                                    value="Oil"
-                                    />
-                                <label htmlFor="FUEL_Oil">Oil</label> |
-                                </div>
-                                <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="FUEL"
-                                    id="FUEL_NULL"
-                                    value=""
-                                    defaultChecked
-                                    />
-                                <label htmlFor="FUEL_NULL">Ignore</label>
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="FUEL"
+                                            id="FUEL_Oil"
+                                            value="Oil"
+                                        />
+                                        <label htmlFor="FUEL_Oil">Oil</label> |
+                                    </div>
+                                    <div>
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="FUEL"
+                                            id="FUEL_NULL"
+                                            value=""
+                                            defaultChecked
+                                        />
+                                        <label htmlFor="FUEL_NULL">Ignore</label>
                                     </div>
                                 </div>
                                 <hr />
@@ -10080,186 +10200,176 @@ const TableForm = () => {
                         <td>
                             <fieldset>
                                 <legend>Type of Air Conditioning</legend>
-                                <div style={{display: 'flex', flexWrap:"wrap"}}>
+                                <div style={{ display: "flex", flexWrap: "wrap" }}>
                                     <div>
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC CENTRAL"
-                                    value="AC CENTRAL"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC CENTRAL">Ac Central</label>{" "}
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC CENTRAL"
+                                            value="AC CENTRAL"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC CENTRAL">
+                                            Ac Central
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC CENTRAL & UNIT"
-                                    value="AC CENTRAL & UNIT"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC CENTRAL & UNIT">
-                                    Ac Central & Unit
-                                </label>{" "}
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC CENTRAL & UNIT"
+                                            value="AC CENTRAL & UNIT"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC CENTRAL & UNIT">
+                                            Ac Central & Unit
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC DUAL UNIT"
-                                    value="AC DUAL UNIT"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC DUAL UNIT">
-                                    Ac Dual Unit
-                                </label>{" "}
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC DUAL UNIT"
+                                            value="AC DUAL UNIT"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC DUAL UNIT">
+                                            Ac Dual Unit
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC EVAPORATIVE"
-                                    value="AC EVAPORATIVE"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC EVAPORATIVE">
-                                    Ac Evaporative
-                                </label>{" "}
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC EVAPORATIVE"
+                                            value="AC EVAPORATIVE"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC EVAPORATIVE">
+                                            Ac Evaporative
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC HEAT PUMP"
-                                    value="AC HEAT PUMP"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC HEAT PUMP">
-                                    Ac Heat Pump
-                                </label>{" "}
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC HEAT PUMP"
+                                            value="AC HEAT PUMP"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC HEAT PUMP">
+                                            Ac Heat Pump
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC REFRIGERATION"
-                                    value="AC REFRIGERATION"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC REFRIGERATION">
-                                    Ac Refrigeration
-                                </label>{" "}
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC REFRIGERATION"
+                                            value="AC REFRIGERATION"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC REFRIGERATION">
+                                            Ac Refrigeration
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC PACKAGE"
-                                    value="AC PACKAGE"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC PACKAGE">Ac Package</label>{" "}
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC PACKAGE"
+                                            value="AC PACKAGE"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC PACKAGE">
+                                            Ac Package
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC SEPARATE SYSTEM"
-                                    value="AC SEPARATE SYSTEM"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC SEPARATE SYSTEM">
-                                    Ac Separate System
-                                </label>{" "}
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC SEPARATE SYSTEM"
+                                            value="AC SEPARATE SYSTEM"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC SEPARATE SYSTEM">
+                                            Ac Separate System
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC SPLIT SYSTEM"
-                                    value="AC SPLIT SYSTEM"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC SPLIT SYSTEM">
-                                    Ac Split System
-                                </label>{" "}
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC SPLIT SYSTEM"
+                                            value="AC SPLIT SYSTEM"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC SPLIT SYSTEM">
+                                            Ac Split System
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC WALL UNIT"
-                                    value="AC WALL UNIT"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC WALL UNIT">
-                                    Ac Wall Unit
-                                </label>{" "}
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC WALL UNIT"
+                                            value="AC WALL UNIT"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC WALL UNIT">
+                                            Ac Wall Unit
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC WINDOW UNIT"
-                                    value="AC WINDOW UNIT"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC WINDOW UNIT">
-                                    Ac Window Unit
-                                </label>{" "}
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC WINDOW UNIT"
+                                            value="AC WINDOW UNIT"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC WINDOW UNIT">
+                                            Ac Window Unit
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_AC WALL/WINDOW UNIT"
-                                    value="AC WALL/WINDOW UNIT"
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_AC WALL/WINDOW UNIT">
-                                    Ac Wall/window Unit
-                                </label>{" "}
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_AC WALL/WINDOW UNIT"
+                                            value="AC WALL/WINDOW UNIT"
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_AC WALL/WINDOW UNIT">
+                                            Ac Wall/window Unit
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="AIR_CONDITIONING"
-                                    id="AIR_CONDITIONING_NULL"
-                                    value=""
-                                    defaultChecked
-                                    />
-                                <label htmlFor="AIR_CONDITIONING_NULL">Ignore</label>
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="AIR_CONDITIONING"
+                                            id="AIR_CONDITIONING_NULL"
+                                            value=""
+                                            defaultChecked
+                                        />
+                                        <label htmlFor="AIR_CONDITIONING_NULL">Ignore</label>
                                     </div>
                                 </div>
                                 <hr />
-                                
-
                                 <input
                                     onChange={handleChange}
                                     type="radio"
@@ -10267,16 +10377,15 @@ const TableForm = () => {
                                     id="AIR_CONDITIONING_AND"
                                     value="0"
                                     defaultChecked
-                                    />
+                                />
                                 <label htmlFor="AIR_CONDITIONING_AND">All Must Match</label> |
-                                    
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="AIR_CONDITIONING_AND_OR"
                                     id="AIR_CONDITIONING_OR"
                                     value="1"
-                                    />{" "}
+                                />{" "}
                                 <label htmlFor="AIR_CONDITIONING_OR">Any Match On This</label>
                             </fieldset>
                         </td>
@@ -10286,69 +10395,64 @@ const TableForm = () => {
                         <td>
                             <fieldset>
                                 <legend>Type of Water Service</legend>
-                                <div style={{display:'flex', flexWrap:"wrap"}}> 
-                                <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="WATER"
-                                    id="WATER_Commercial Water"
-                                    value="Commercial Water"
-                                    />
-                                <label htmlFor="WATER_Commercial Water">Commercial Water</label>{" "}
+                                <div style={{ display: "flex", flexWrap: "wrap" }}>
+                                    <div>
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="WATER"
+                                            id="WATER_Commercial Water"
+                                            value="Commercial Water"
+                                        />
+                                        <label htmlFor="WATER_Commercial Water">
+                                            Commercial Water
+                                        </label>{" "}
                                     </div>
-                                   
-                                        <div>
 
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="WATER"
-                                    id="WATER_Private Water"
-                                    value="Private Water"
-                                    />
-                                <label htmlFor="WATER_Private Water">Private Water</label> |
+                                    <div>
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="WATER"
+                                            id="WATER_Private Water"
+                                            value="Private Water"
+                                        />
+                                        <label htmlFor="WATER_Private Water">Private Water</label> |
                                     </div>
                                     <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="WATER"
-                                    id="WATER_Public Water"
-                                    value="Public Water"
-                                    />
-                                <label htmlFor="WATER_Public Water">Public Water</label> |
-                                </div>
-                                <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="WATER"
-                                    id="WATER_Well"
-                                    value="Well"
-                                    />
-                                <label htmlFor="WATER_Well">Well</label> |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="WATER"
+                                            id="WATER_Public Water"
+                                            value="Public Water"
+                                        />
+                                        <label htmlFor="WATER_Public Water">Public Water</label> |
                                     </div>
                                     <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="WATER"
-                                    id="WATER_NULL"
-                                    value=""
-                                    defaultChecked
-                                    />
-                                <label htmlFor="WATER_NULL">Ignore</label>
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="WATER"
+                                            id="WATER_Well"
+                                            value="Well"
+                                        />
+                                        <label htmlFor="WATER_Well">Well</label> |
+                                    </div>
+                                    <div>
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="WATER"
+                                            id="WATER_NULL"
+                                            value=""
+                                            defaultChecked
+                                        />
+                                        <label htmlFor="WATER_NULL">Ignore</label>
                                     </div>
                                 </div>
                                 <hr />
-                               
-
                                 <input
                                     onChange={handleChange}
                                     type="radio"
@@ -10356,86 +10460,78 @@ const TableForm = () => {
                                     id="WATER_AND"
                                     value="0"
                                     defaultChecked
-                                    />
+                                />
                                 <label htmlFor="WATER_AND">All Must Match</label> |
-                                  
-
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="WATER_AND_OR"
                                     id="WATER_OR"
                                     value="1"
-                                    />{" "}
+                                />{" "}
                                 <label htmlFor="WATER_OR">Any Match On This</label>
                             </fieldset>
                         </td>
                         <td>
                             <fieldset>
                                 <legend>Type of Sewer Service</legend>
-                                <div style={{display: 'flex', flexWrap:"wrap"}}>
+                                <div style={{ display: "flex", flexWrap: "wrap" }}>
                                     <div>
-
-                                  
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="SEWER"
-                                    id="SEWER_Commercial Sewer"
-                                    value="Commercial Sewer"
-                                    />
-                                <label htmlFor="SEWER_Commercial Sewer">Commercial Sewer</label>{" "}
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="SEWER"
+                                            id="SEWER_Commercial Sewer"
+                                            value="Commercial Sewer"
+                                        />
+                                        <label htmlFor="SEWER_Commercial Sewer">
+                                            Commercial Sewer
+                                        </label>{" "}
                                     </div>
                                     <div>
-
-                                |
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="SEWER"
-                                    id="SEWER_Private Sewer"
-                                    value="Private Sewer"
-                                    />
-                                <label htmlFor="SEWER_Private Sewer">Private Sewer</label> |
+                                        |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="SEWER"
+                                            id="SEWER_Private Sewer"
+                                            value="Private Sewer"
+                                        />
+                                        <label htmlFor="SEWER_Private Sewer">Private Sewer</label> |
+                                    </div>
+                                    <div>
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="SEWER"
+                                            id="SEWER_Public Sewer"
+                                            value="Public Sewer"
+                                        />
+                                        <label htmlFor="SEWER_Public Sewer">Public Sewer</label> |
+                                    </div>
+                                    <div>
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="SEWER"
+                                            id="SEWER_Septic"
+                                            value="Septic"
+                                        />
+                                        <label htmlFor="SEWER_Septic">Septic</label> |
+                                    </div>
+                                    <div>
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="SEWER"
+                                            id="SEWER_NULL"
+                                            value=""
+                                            defaultChecked
+                                        />
+                                        <label htmlFor="SEWER_NULL">Ignore</label>
+                                    </div>
                                 </div>
-                                <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="SEWER"
-                                    id="SEWER_Public Sewer"
-                                    value="Public Sewer"
-                                    />
-                                <label htmlFor="SEWER_Public Sewer">Public Sewer</label> |
-                                    </div>
-                                    <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="SEWER"
-                                    id="SEWER_Septic"
-                                    value="Septic"
-                                    />
-                                <label htmlFor="SEWER_Septic">Septic</label> |
-                                </div>
-                                <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="SEWER"
-                                    id="SEWER_NULL"
-                                    value=""
-                                    defaultChecked
-                                    />
-                                <label htmlFor="SEWER_NULL">Ignore</label>
-                                    </div>
-                                    </div>
                                 <hr />
-                              
-
                                 <input
                                     onChange={handleChange}
                                     type="radio"
@@ -10443,17 +10539,15 @@ const TableForm = () => {
                                     id="SEWER_AND"
                                     value="0"
                                     defaultChecked
-                                    />
+                                />
                                 <label htmlFor="SEWER_AND">All Must Match</label> |
-                                    
-
                                 <input
                                     onChange={handleChange}
                                     type="radio"
                                     name="SEWER_AND_OR"
                                     id="SEWER_OR"
                                     value="1"
-                                    />{" "}
+                                />{" "}
                                 <label htmlFor="SEWER_OR">Any Match On This</label>
                             </fieldset>
                         </td>
@@ -11826,70 +11920,63 @@ const TableForm = () => {
                         <td>
                             <fieldset id="fsTRAVEL_CRUISE_VACATIONS">
                                 <legend>Travel: Cruise Vacations</legend>
-                                <div style={{display:"flex", flexWrap:"wrap"}}>
+                                <div style={{ display: "flex", flexWrap: "wrap" }}>
                                     <div>
-
-                                  
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="TRAVEL_CRUISE_VACATIONS"
-                                    id="TRAVEL_CRUISE_VACATIONS_Y"
-                                    value="Y"
-                                    />{" "}
-                                <label htmlFor="TRAVEL_CRUISE_VACATIONS_Y">Yes</label> |{" "}
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="TRAVEL_CRUISE_VACATIONS"
+                                            id="TRAVEL_CRUISE_VACATIONS_Y"
+                                            value="Y"
+                                        />{" "}
+                                        <label htmlFor="TRAVEL_CRUISE_VACATIONS_Y">Yes</label> |{" "}
                                     </div>
                                     <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="TRAVEL_CRUISE_VACATIONS"
-                                    id="TRAVEL_CRUISE_VACATIONS_N"
-                                    value="N"
-                                    />{" "}
-                                <label htmlFor="TRAVEL_CRUISE_VACATIONS_N">No</label> |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="TRAVEL_CRUISE_VACATIONS"
+                                            id="TRAVEL_CRUISE_VACATIONS_N"
+                                            value="N"
+                                        />{" "}
+                                        <label htmlFor="TRAVEL_CRUISE_VACATIONS_N">No</label> |
                                     </div>
                                     <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="TRAVEL_CRUISE_VACATIONS"
-                                    id="TRAVEL_CRUISE_VACATIONS_NULL"
-                                    value=""
-                                    defaultChecked
-                                    />{" "}
-                                <label htmlFor="TRAVEL_CRUISE_VACATIONS_NULL">Either</label>
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="TRAVEL_CRUISE_VACATIONS"
+                                            id="TRAVEL_CRUISE_VACATIONS_NULL"
+                                            value=""
+                                            defaultChecked
+                                        />{" "}
+                                        <label htmlFor="TRAVEL_CRUISE_VACATIONS_NULL">Either</label>
                                     </div>
                                     <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="TRAVEL_CRUISE_VACATIONS_AND_OR"
-                                    id="TRAVEL_CRUISE_VACATIONS_AND"
-                                    value="0"
-                                    defaultChecked
-                                    />
-                                <label htmlFor="TRAVEL_CRUISE_VACATIONS_AND">
-                                    All Must Match
-                                </label>{" "}
-                                |
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="TRAVEL_CRUISE_VACATIONS_AND_OR"
+                                            id="TRAVEL_CRUISE_VACATIONS_AND"
+                                            value="0"
+                                            defaultChecked
+                                        />
+                                        <label htmlFor="TRAVEL_CRUISE_VACATIONS_AND">
+                                            All Must Match
+                                        </label>{" "}
+                                        |
                                     </div>
                                     <div>
-
-                                <input
-                                    onChange={handleChange}
-                                    type="radio"
-                                    name="TRAVEL_CRUISE_VACATIONS_AND_OR"
-                                    id="TRAVEL_CRUISE_VACATIONS_OR"
-                                    value="1"
-                                    />
-                                <label htmlFor="TRAVEL_CRUISE_VACATIONS_OR">
-                                    Any Match On This
-                                </label>
+                                        <input
+                                            onChange={handleChange}
+                                            type="radio"
+                                            name="TRAVEL_CRUISE_VACATIONS_AND_OR"
+                                            id="TRAVEL_CRUISE_VACATIONS_OR"
+                                            value="1"
+                                        />
+                                        <label htmlFor="TRAVEL_CRUISE_VACATIONS_OR">
+                                            Any Match On This
+                                        </label>
                                     </div>
                                 </div>
                             </fieldset>
