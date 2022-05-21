@@ -3,7 +3,7 @@ import { states, provinces, countiesAR, countiesAZ } from "./usStatesvalue";
 import { useStateContext } from "../context/StateContext";
 
 const USstates = () => {
-    const { selectCountry, setSelectCounty, setTextData, textData, setSCF } =
+    const { selectCountry, setSelectCounty, setTextData, textData, setSCF, zipCodeSelect, setZipCodeSelect, setSelectState } =
         useStateContext();
     const [show, setShow] = useState(true);
 
@@ -16,6 +16,16 @@ const USstates = () => {
     const selectSCF = (e) => {
         setSCF(e.target.value);
     };
+    const selectStates = (e) => {
+        setSelectState(e.target.value)
+    }
+    const handleZIP = (e) => {
+        setZipCodeSelect({...zipCodeSelect, [e.target.name]: e.target.value})
+    }
+    const disabledStyle = {
+        backgroundColor: "red",
+        color: "black"
+    }
 
     return (
         <>
@@ -31,6 +41,7 @@ const USstates = () => {
                         <div key={states.value}>
                             <label htmlFor={states.name}>{states.name}</label>
                             <input
+                                onChange={selectStates}
                                 type="checkbox"
                                 name={states.name}
                                 id={states.name}
@@ -52,6 +63,7 @@ const USstates = () => {
                         <div key={provinces.value}>
                             <label htmlFor={provinces.name}>{provinces.name}</label>
                             <input
+                                onChange={selectStates}
                                 type="checkbox"
                                 name={provinces.name}
                                 id={provinces.name}
@@ -97,6 +109,8 @@ const USstates = () => {
                                         name="SelectCounties"
                                         id="SelectCounties"
                                         className="sc"
+                                        style={selectCountry !== 'none' ? disabledStyle : {color: "black"}}
+                                        disabled={selectCountry !== "none"}
                                         onClick={(prev) => setShow(!prev)}
                                         value="Search By Counties"
                                         title="Brings Up Counties in a State or states, But select at least one state first! Or alt-v"
@@ -233,6 +247,7 @@ const USstates = () => {
                             will be EXCLUDED
                         </label>{" "}
                         <input
+                            onChange={handleZIP}
                             type="radio"
                             name="zipCondition"
                             title="Do you want only these zips to be included"
@@ -241,7 +256,10 @@ const USstates = () => {
                             defaultChecked
                         />
                         <br />
+                        {console.log(zipCodeSelect)}
                         <input
+                            onChange={handleZIP}
+                            disabled={zipCodeSelect.zipCondition === "1"}
                             type="checkbox"
                             name="chkGroupBy"
                             id="chkGroupBy"
@@ -265,6 +283,7 @@ const USstates = () => {
                             will be INCLUDED
                         </label>{" "}
                         <input
+                            onChange={handleZIP}
                             type="radio"
                             title="Do you want only these zips to be excluded "
                             name="zipCondition"

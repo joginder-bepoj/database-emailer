@@ -147,7 +147,7 @@ width: 100%;
 	text-shadow:1px 1px #666;
 	line-height:10px;
 }
-input:focus{background-color: #FF8;}
+input:focus{background-color: #FF8 !important;}
 textarea:focus{background-color: #FF8;}
 option:focus{background-color: #EE8;}
 /* option:nth-child(odd){background-color: #FFC;} */

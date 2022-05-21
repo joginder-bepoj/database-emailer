@@ -8,7 +8,6 @@ const JobSearchs = () => {
             ...jobSearch, [e.target.name] : e.target.value
         })
     } 
-    console.log(jobSearch)
     return (
         <>
             <fieldset id="jobtitles">
@@ -133,13 +132,14 @@ const JobSearchs = () => {
                             </td>
 
                             <td valign="middle">
-                                <input onChange={handleChange}
+                                {console.log(jobSearch.titleCondition)}
+                                <input 
                                     type="button"
                                     name="butCheckAllTitles"
                                     id="butCheckAllTitles"
+                                    style={jobSearch.titleCondition === "IN" ? {backgroundColor: "rgb(128 128 128 / 20%)", color: "rgb(128 128 128 / 60%)"} : {color: "black"} }
                                     value="Check All Titles"
-                                    disabled="disabled"
-
+                                    disabled={jobSearch.titleCondition === "IN"}
                                     title="Checks all the title boxes, or alt-o"
                                 />
                             </td>
