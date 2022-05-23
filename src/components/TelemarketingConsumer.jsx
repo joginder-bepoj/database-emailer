@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import EmailAddress from "./form/EmailAddress";
 import EmailDomain from "./form/EmailDomain";
 import ImportantNote from "./form/ImportantNote";
@@ -6,7 +7,9 @@ import SearchByCountry from "./form/SearchByCountry";
 import TableForm from "./form/TableForm";
 import TelephoneSearch from "./form/TelephoneSearch";
 import UniqueTelephoneEmail from "./form/UniqueTelephoneEmail";
+import SearchByLastName from "./form/SearchByLastName";
 import USstates from "./form/USstates";
+import ResultButton from "./form/ResultButton";
 
 const TelemarketingConsumer = () => {
     return (
@@ -28,7 +31,7 @@ const TelemarketingConsumer = () => {
                                     Consumer Database has 23 basic columns of demographics per
                                     record and over 70 categories of interests and the entire
                                     database has opt-in email addresses.{" "}
-                                    <a href="@">Take me there!</a>
+                                    <Link to="/database-emailer/">Take me there!</Link>
                                 </div>
                                 <form
                                     method="post"
@@ -92,6 +95,14 @@ const TelemarketingConsumer = () => {
                                     <hr />
                                     {/* table from comes here */}
                                     <TableForm />
+                                    <hr />
+                                    {/* Search By last name */}
+                                    <SearchByLastName />
+                                    <hr />
+                                    <hr />
+                                    <hr />
+                                    {/* Result button */}
+                                    <ResultButton />
                                 </form>
                             </div>
                         </div>

@@ -19,11 +19,13 @@ import SearchURL from "./form/SearchURL";
 import TelephoneSearch from "./form/TelephoneSearch";
 import USstates from "./form/USstates";
 import { useStateContext } from "./context/StateContext";
+import ScrollToTop from "react-scroll-to-top"
 
 const CheckConsumer = () => {
     const {setFilter} = useStateContext()
     return (
         <section className="section section-xs content">
+         <ScrollToTop smooth />
             <div className="container" id="searchContainer">
                 <div
                     className="row row-50 justify-content-center justify-content-lg-start align-items-center"

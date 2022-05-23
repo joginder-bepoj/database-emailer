@@ -11,8 +11,12 @@ const UniqueTelephoneEmail = () => {
     return (
         <>
             <fieldset id="fsUniques">
-                <legend>Unique Telephone, Emails &amp; Postal Mail Addresses</legend>
-                Over 25 Million of these records have valid emails Check Here For Unique
+                <div style={{display: "flex", justifyContent: "flex-start"}}>
+                    <div>
+                    <legend >Unique Telephone, Emails &amp; Postal Mail Addresses</legend>
+                    </div>
+                <span style={{display:"inline"}}> Over 25 Million of these records have valid emails Check Here For Unique</span>
+                </div>
                 <table width="100%" cellPadding="1" cellSpacing="1" className="tdBlock">
                     <tbody>
                     <tr>

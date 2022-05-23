@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { states, provinces, countiesAR, countiesAZ } from "./usStatesvalue";
 import { useStateContext } from "../context/StateContext";
+import { useLocation } from "react-router-dom";
 
 const USstates = () => {
-    const { selectCountry, setSelectCounty, setTextData, textData, setSCF, zipCodeSelect, setZipCodeSelect, setSelectState } =
+    const location = useLocation()
+    const { selectCountry, setSelectCounty, setTextData, textData, setSCF, zipCodeSelect, setZipCodeSelect, setSelectState, selectState, selectCanStates, setSelectCanStates } =
         useStateContext();
     const [show, setShow] = useState(true);
 
@@ -17,8 +19,14 @@ const USstates = () => {
         setSCF(e.target.value);
     };
     const selectStates = (e) => {
-        setSelectState(e.target.value)
+        setSelectState({...selectState, [e.target.name] : e.target.value})
     }
+    const selectCanState = (e) => {
+        setSelectCanStates({
+            ...selectCanStates, [e.target.name] : e.target.value
+        })
+    }
+    console.log(selectCanStates)
     const handleZIP = (e) => {
         setZipCodeSelect({...zipCodeSelect, [e.target.name]: e.target.value})
     }
@@ -26,11 +34,18 @@ const USstates = () => {
         backgroundColor: "red",
         color: "black"
     }
+    const searchByCounties = (prev) =>{
+        prev.preventDefault()
+        if(Object.keys(selectState).length === 0) {
+            alert("Please select atleast one US state ")
+        }else{
+        setShow(!prev)}
+    }
 
     return (
         <>
             <fieldset>
-                <legend>Search By US States and/or Canadian Provinces</legend>
+                <legend>{ location.pathname !== "/database-emailer/newmovers" ? "Search By US States and/or Canadian Provinces" : "Search By US States"}</legend>
                 <h5>US States</h5>
                 <div
                     className="stateLabel flex-row"
@@ -53,7 +68,10 @@ const USstates = () => {
                     ))}
                 </div>
                 <hr />
-                <h5>Canadian Provinces</h5>
+                {
+                    location.pathname !== "/database-emailer/newmovers" && (
+                        <>
+                            <h5>Canadian Provinces</h5>
                 <div
                     className="stateLabel flex-row"
                     id="CanProv"
@@ -63,7 +81,7 @@ const USstates = () => {
                         <div key={provinces.value}>
                             <label htmlFor={provinces.name}>{provinces.name}</label>
                             <input
-                                onChange={selectStates}
+                                onChange={selectCanState}
                                 type="checkbox"
                                 name={provinces.name}
                                 id={provinces.name}
@@ -74,6 +92,10 @@ const USstates = () => {
                         </div>
                     ))}
                 </div>
+                        </>
+                    )
+                }
+                
             </fieldset>
             <fieldset id="counties">
                 <legend>Search By US Counties</legend>
@@ -105,13 +127,13 @@ const USstates = () => {
                                     <span id="St"></span>
                                     <br />
                                     <input
-                                        type="submit"
+                                        type={Object.keys(selectState).length !== 0 ? "submit" : "button" }
                                         name="SelectCounties"
                                         id="SelectCounties"
                                         className="sc"
                                         style={selectCountry !== 'none' ? disabledStyle : {color: "black"}}
                                         disabled={selectCountry !== "none"}
-                                        onClick={(prev) => setShow(!prev)}
+                                        onClick={searchByCounties}
                                         value="Search By Counties"
                                         title="Brings Up Counties in a State or states, But select at least one state first! Or alt-v"
                                     />
@@ -125,16 +147,17 @@ const USstates = () => {
                         <div style={{ fontSize: "13pt" }} align="center">
                             Select a County
                         </div>
-                        <span style={{ fontSize: "11pt", verticalAlign: "top" }}>
+                        <span style={{ fontSize: "11pt", verticalAlign: "top", marginLeft: "150px" }}>
                             All Counties in <span id="St">AZ, AR, NB, YT</span>:
                         </span>
+                        <div align="center">
                         <select
                             name="Counties[]"
                             id="Counties"
-                            onchange="LockoutBoxes(this.value);"
                             size="10"
                             multiple="multiple"
                             onChange={selectCountyChange}
+                           
                         >
                             <option
                                 value=""
@@ -151,12 +174,14 @@ const USstates = () => {
                             </optgroup>
                             <optgroup label="Counties in AR">
                                 {countiesAR.map((counties) => (
-                                    <option value={counties.value} key={counties.name}>
+                                    <option vsearch by counonchangealue={counties.value} key={counties.name}>
                                         {counties.name}
                                     </option>
                                 ))}
                             </optgroup>
                         </select>
+                        </div>
+                        
                     </>
                 )}
                 <br />
@@ -215,12 +240,12 @@ const USstates = () => {
             <hr />
             <fieldset>
                 <legend>Search By US Zip Codes</legend>
-                <div id="divZip">
-                    <span style={{ fontSize: "13pt" }}>
+                <div id="divZip" style={{ textAlign:"center" }}>
+                    <span style={{ fontSize: "13pt",}}>
                         <b>Choose Only One Zip Code Option from Below:</b>
                     </span>
                     <hr />
-                    <b className="redtextbold2">Zip Code Options l &amp; ll:</b>
+                    <b className="redtextbold2" style={{textAlign:"center"}}>Zip Code Options l &amp; ll:</b>
                     <div align="center" style={{ fontSize: "15pt", fontWeight: "600" }}>
                         Input Individual 5-digit US Zip Codes
                     </div>

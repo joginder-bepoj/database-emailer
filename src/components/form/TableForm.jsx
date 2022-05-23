@@ -8319,7 +8319,6 @@ const TableForm = () => {
                                         <small>Lower Range or Exact Value</small>
                                     </div>
                                 </div>
-                                <br />
                                 <select
                                     onChange={handleChange}
                                     name="INCOME_ESTIMATED_HH"
@@ -8358,7 +8357,6 @@ const TableForm = () => {
                                         <small>(optional)</small>
                                     </div>
                                 </div>
-                                <br />
                                 <select
                                     onChange={handleChange}
                                     name="INCOME_ESTIMATED_HH_UPPER"
@@ -8427,7 +8425,6 @@ const TableForm = () => {
                                         <small>Lower Range or Exact Values</small>
                                     </div>
                                 </div>
-                                <br />
                                 <select onChange={handleChange} name="NET_WORTH" id="NET_WORTH">
                                     <option value="">Select Estimated Net Worth</option>
                                     <option value="1 - 5K">1 - 5K</option>
@@ -8451,7 +8448,6 @@ const TableForm = () => {
                                         <small>(optional)</small>
                                     </div>
                                 </div>
-                                <br />
                                 <select
                                     onChange={handleChange}
                                     name="NET_WORTH_UPPER"
@@ -8506,7 +8502,6 @@ const TableForm = () => {
                                         <small>Lower Range or Exact Value</small>
                                     </div>
                                 </div>
-                                <br />
                                 <select
                                     onChange={handleChange}
                                     name="CREDIT_RATING"
@@ -8534,7 +8529,6 @@ const TableForm = () => {
                                         <small>(optional)</small>
                                     </div>
                                 </div>
-                                <br />
                                 <select
                                     onChange={handleChange}
                                     name="CREDIT_RATING_UPPER"
@@ -10024,7 +10018,6 @@ const TableForm = () => {
                                         <small>Lower Range or Exact Values</small>
                                     </div>
                                 </div>
-                                <br />
                                 <select
                                     onChange={handleChange}
                                     name="HOME_MARKET_VALUE"
@@ -10064,7 +10057,6 @@ const TableForm = () => {
                                         <small>(optional)</small>
                                     </div>
                                 </div>
-                                <br />
                                 <select
                                     onChange={handleChange}
                                     name="HOME_MARKET_VALUE_UPPER"

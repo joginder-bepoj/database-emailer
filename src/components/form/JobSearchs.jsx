@@ -36,8 +36,8 @@ const JobSearchs = () => {
                         className="tdBlock"
                     >
                         <tbody>
-                        <tr valign="top">
-                            <td style={{ width: "33%" }}>
+                        <tr valign="top" style={{display: "flex",justifyContent: "space-around"}}>
+                            <td  width= "30%" >
                                 <span style={{ fontSize: "13px" }} className="redtext">
                                     <b>Option I</b>
                                 </span>
@@ -47,6 +47,7 @@ const JobSearchs = () => {
                                     <b>INCLUDE ALL titles, with blank too, in the database </b>
                                 </label>{" "}
                                 <input onChange={handleChange}
+                                    defaultChecked
                                     type="radio"
                                     name="titleCondition"
                                     title="include all "
@@ -54,7 +55,7 @@ const JobSearchs = () => {
                                     id="titleCondition_none"
                                 />
                             </td>
-                            <td style={{ width: "34%" }}>
+                            <td width="30%" >
                                 <span style={{ fontSize: "13px" }} className="redtext">
                                     <b>Option Il</b>
                                 </span>
@@ -73,7 +74,7 @@ const JobSearchs = () => {
                                     value="IN"
                                 />
                             </td>
-                            <td>
+                            <td width="30%" style={{ fontSize: "13px" }}>
                                 <span style={{ fontSize: "13px" }} className="redtext">
                                     <b>Option IIl</b>
                                 </span>
@@ -93,8 +94,8 @@ const JobSearchs = () => {
                                 />
                             </td>
                         </tr>
-                        <tr valign="top">
-                            <td>
+                        <tr valign="top" style={{display: "flex",justifyContent: "space-around"}}>
+                            <td width="30%">
                                 <span style={{ fontSize: "13px" }} className="redtext">
                                     <b>Option IV</b>
                                 </span>
@@ -112,7 +113,7 @@ const JobSearchs = () => {
                                     value="NONE"
                                 />
                             </td>
-                            <td>
+                            <td width="30%">
                                 <span style={{ fontSize: "13px" }} className="redtext">
                                     <b>Option V</b>
                                 </span>
@@ -130,16 +131,14 @@ const JobSearchs = () => {
                                     value="ALL"
                                 />
                             </td>
-
-                            <td valign="middle">
-                                {console.log(jobSearch.titleCondition)}
+                            <td valign="middle" width="30%">
                                 <input 
                                     type="button"
                                     name="butCheckAllTitles"
                                     id="butCheckAllTitles"
-                                    style={jobSearch.titleCondition === "IN" ? {backgroundColor: "rgb(128 128 128 / 20%)", color: "rgb(128 128 128 / 60%)"} : {color: "black"} }
+                                    style={jobSearch?.titleCondition === "IN" ? {backgroundColor: "rgb(128 128 128 / 20%)", color: "rgb(128 128 128 / 60%)"} : {color: "black"} }
                                     value="Check All Titles"
-                                    disabled={jobSearch.titleCondition === "IN"}
+                                    disabled={jobSearch?.titleCondition === "IN"}
                                     title="Checks all the title boxes, or alt-o"
                                 />
                             </td>

@@ -19,25 +19,21 @@ const ExecutiveContact = () => {
                 Name" column and C) Some data records will have all three columns.
                 <table width="100%">
                     <tbody>
-                    <tr>
-                        <td>
+                    <tr style={{display: "flex",justifyContent: "space-around"}}>
+                        <td width="45%">
                             <input onChange={handleChange}
                                 type="radio"
                                 name="chkName"
                                 id="chkNameNone"
                                 value="0"
                             />
-                        </td>
-                        <td width="45%">
                             <label htmlFor="chkNameNone">
                                 Check here if you do not need anyone's name. This will give you
                                 the most results:
                             </label>
                         </td>
-                        <td>
-                            <input onChange={handleChange} type="radio" name="chkName" id="chkNameSome" value="1" />
-                        </td>
                         <td width="45%">
+                            <input onChange={handleChange} type="radio" name="chkName" id="chkNameSome" value="1" />
                             <label htmlFor="chkNameSome">
                                 Check here if you require executives full name either under
                                 "First Name and Last Name" OR "Contact Name".{" "}

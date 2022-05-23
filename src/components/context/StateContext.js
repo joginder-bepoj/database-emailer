@@ -4,7 +4,8 @@ const Context = createContext()
 
 export const StateContext = ({children}) => {
   const [selectCountry, setSelectCountry] = useState("none")
-  const [selectState, setSelectState] = useState("")
+  const [selectState, setSelectState] = useState({})
+  const [selectCanStates, setSelectCanStates] = useState({})
   const [zipCodeSelect, setZipCodeSelect] = useState("")
   const [selectCounty, setSelectCounty] = useState("")
   const [textData, setTextData] = useState('')
@@ -32,7 +33,12 @@ export const StateContext = ({children}) => {
   const [obtainRecords, setObtainRecords] = useState()
   const [executiveContact, setExecutiveContact] = useState()
   const [searchCompany, setSearchCompany] = useState()
-  const [jobSearch, setJobSearch] = useState()
+  const [jobSearch, setJobSearch] = useState({
+    chkFilter : "",
+    titleCondition: "IN",
+    txtTitle: "",
+    optTxtTitle: "",
+  })
   const [companyRevenue, setCompanyRevenue] = useState()
   const [searchEmployee, setSearchEmployee] = useState()
   const [NACIcode, setNACIcode] = useState()
@@ -49,7 +55,7 @@ export const StateContext = ({children}) => {
   const [registrantContact, setRegistrantContact] = useState()
   const [badData, setBadData] = useState()
   return (
-    <Context.Provider value={{selectCountry,selectState, setSelectState, zipCodeSelect, setZipCodeSelect, setSelectCountry, setSelectCounty, selectCounty, textData, setTextData, setSCF, SCF, setEmail, setUniqueValue, setTelSearch, telSearch, setGender, setHouseHoldIncome, houseHoldIncome, setUrl, url, setFilter, setEthnicity, ethnicity, setSearchLastName, searchLastName, setEnterAge, enterAge, setDob, dob, setrentingHome, rentingHome, setOptIn, optIn, setRepeated, repeated, setIntrestedGroup, intrestedGroup, setEmailDomain, emailDomain, setUniqueEmail, uniqueEmail, setExcludeEmail, excludeEmail, setUrlDomain, setFaxNumber, faxNumber, setObtainRecords, obtainRecords, setExecutiveContact, setSearchCompany, searchCompany, jobSearch, setJobSearch, setCompanyRevenue, companyRevenue, setSearchEmployee, searchEmployee, setNACIcode, NACIcode, setSICcode, SICcode, setUniqueTelephoneEmail, uniqueTelephoneEmail, setTeleMarketingForm, teleMarketingForm, setNewMovers, newMovers, setSelectRecords, selectRecords, setCellData, cellData, setCellCarrier, cellCarrier, setUrlData, urlData, setRegDates, regDates, setUniqValues, uniqValues, setRegistrantContact, registrantContact, setBadData, badData}}>
+    <Context.Provider value={{selectCountry,selectState, setSelectState,selectCanStates, setSelectCanStates, zipCodeSelect, setZipCodeSelect, setSelectCountry, setSelectCounty, selectCounty, textData, setTextData, setSCF, SCF, setEmail, setUniqueValue, setTelSearch, telSearch, setGender, setHouseHoldIncome, houseHoldIncome, setUrl, url, setFilter, setEthnicity, ethnicity, setSearchLastName, searchLastName, setEnterAge, enterAge, setDob, dob, setrentingHome, rentingHome, setOptIn, optIn, setRepeated, repeated, setIntrestedGroup, intrestedGroup, setEmailDomain, emailDomain, setUniqueEmail, uniqueEmail, setExcludeEmail, excludeEmail, setUrlDomain, setFaxNumber, faxNumber, setObtainRecords, obtainRecords, setExecutiveContact, setSearchCompany, searchCompany, jobSearch, setJobSearch, setCompanyRevenue, companyRevenue, setSearchEmployee, searchEmployee, setNACIcode, NACIcode, setSICcode, SICcode, setUniqueTelephoneEmail, uniqueTelephoneEmail, setTeleMarketingForm, teleMarketingForm, setNewMovers, newMovers, setSelectRecords, selectRecords, setCellData, cellData, setCellCarrier, cellCarrier, setUrlData, urlData, setRegDates, regDates, setUniqValues, uniqValues, setRegistrantContact, registrantContact, setBadData, badData}}>
       {children}
     </Context.Provider>
   )
