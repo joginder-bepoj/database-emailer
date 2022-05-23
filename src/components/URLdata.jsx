@@ -12,6 +12,7 @@ import SearchCompanyName from "./form/SearchCompanyName";
 import RegistrantContact from "./form/RegistrantContact";
 import URLdataResult from "./form/URLdataResult";
 import { useStateContext } from "./context/StateContext";
+import ScrollToTop from "react-scroll-to-top";
 
 const URLdata = () => {
     const {setUrlData, urlData} = useStateContext()
@@ -24,6 +25,7 @@ const URLdata = () => {
     return (
         <>
             <section className="section section-xs content">
+            <ScrollToTop smooth />
                 <div className="container" id="searchContainer">
                     <div
                         className="row row-50 justify-content-center justify-content-lg-start align-items-center"

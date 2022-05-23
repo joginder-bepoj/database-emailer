@@ -18,6 +18,7 @@ import TelephoneSearch from "./form/TelephoneSearch";
 import UniqueEmailFax from "./form/UniqueEmailFax";
 import URLdomain from "./form/URLdomain";
 import USstates from "./form/USstates";
+import ScrollToTop from "react-scroll-to-top";
 
 const CheckBusiness = () => {
  
@@ -25,6 +26,7 @@ const CheckBusiness = () => {
     return (
         <>
             <section className="section section-xs content">
+            <ScrollToTop smooth />
                 <div className="container" id="searchContainer">
                     <div
                         className="row row-50 justify-content-center justify-content-lg-start align-items-center"

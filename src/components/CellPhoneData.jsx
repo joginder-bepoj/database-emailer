@@ -9,6 +9,8 @@ import RentingHome from "./form/RentingHome";
 import ResultButton from "./form/ResultButton";
 import CellCarriers from "./form/CellCarriers";
 import { useStateContext } from "./context/StateContext";
+import ScrollToTop from "react-scroll-to-top"
+
 
 const CellPhoneData = () => {
     const {setCellData, cellData} = useStateContext()
@@ -20,6 +22,7 @@ const CellPhoneData = () => {
     return (
         <>
             <section className="section section-xs content">
+            <ScrollToTop smooth />
                 <div className="container" id="searchContainer">
                     <div
                         className="row row-50 justify-content-center justify-content-lg-start align-items-center"

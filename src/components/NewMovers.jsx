@@ -5,6 +5,7 @@ import SearchByCountry from "./form/SearchByCountry";
 import SelectRecords from "./form/SelectRecords";
 import USstates from "./form/USstates";
 import { useStateContext } from "./context/StateContext";
+import ScrollToTop from "react-scroll-to-top";
 
 const NewMovers = () => {
     const {setNewMovers, newMovers} = useStateContext()
@@ -16,6 +17,7 @@ const NewMovers = () => {
     return (
         <>
             <section className="section section-xs content">
+            <ScrollToTop smooth />
                 <div className="container" id="searchContainer">
                     <div
                         className="row row-50 justify-content-center justify-content-lg-start align-items-center"

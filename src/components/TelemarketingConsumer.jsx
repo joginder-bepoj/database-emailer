@@ -10,11 +10,13 @@ import UniqueTelephoneEmail from "./form/UniqueTelephoneEmail";
 import SearchByLastName from "./form/SearchByLastName";
 import USstates from "./form/USstates";
 import ResultButton from "./form/ResultButton";
+import ScrollToTop from "react-scroll-to-top";
 
 const TelemarketingConsumer = () => {
     return (
         <>
             <section className="section section-xs content">
+            <ScrollToTop smooth />
                 <div className="container" id="searchContainer">
                     <div
                         className="row row-50 justify-content-center justify-content-lg-start align-items-center"
