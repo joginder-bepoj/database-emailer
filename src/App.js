@@ -31,6 +31,8 @@ import NewMovers from './components/NewMovers';
 import URLdata from './components/URLdata';
 import TelemarketingConsumer from './components/TelemarketingConsumer';
 import Navbar from './components/home/Navbar'
+import MailMerge from './components/MailMerge'
+import SICtoNAICScodes from './components/SICtoNAICScodes'
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
           <Route path="/database-emailer/newmovers" element={<NewMovers />} />
           <Route path="/database-emailer/urldata" element={<URLdata />} />
           <Route path="/database-emailer/telemarketing" element={<TelemarketingConsumer />} />
+          <Route path="/database-emailer/mailmerge" element={<MailMerge />} />
+          <Route path="/database-emailer/sictonaciscodes" element={<SICtoNAICScodes />} />
         </Routes>
     </>
   );

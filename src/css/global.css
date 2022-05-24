@@ -1563,3 +1563,11 @@ a.CTC{
   }
 a.CTC:hover{color:blue; text-decoration: underline;}
 
+#NAICS_SIC tr:nth-child(even) {
+    background-color: #FFCCCC !important;
+}
+#tblHeader td {
+    font-size: 10pt;
+    font-weight: 700;
+    color: blue;
+}

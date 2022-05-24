@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useStateContext } from "../context/StateContext";
 
 
@@ -2982,12 +2983,9 @@ const NACIScodes = () => {
                                     to select another range.
                                 </b>
                                 <br />
-                                <a
-                                    href="@"
-                                    target="_blank"
-                                >
+                                <Link to="/database-emailer/sictonaciscodes">
                                     SIC to NAICS Code Relations
-                                </a>
+                                </Link>
                             </td>
                             <td align="center">
                                 <b>Select a Range(s) of NAICS Codes:</b>

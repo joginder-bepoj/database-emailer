@@ -6,13 +6,20 @@ const EmailDomain = () => {
     const {setEmailDomain, emailDomain} = useStateContext()
     const [isChecked, setIsChecked] = useState(false)
     const handleChange = (e) =>{
-        setEmailDomain({
-            ...emailDomain, [e.target.name]: e.target.value
-        })
+        if(e.target.name === "butCheckAll"){
+            setIsChecked(!isChecked);
+        }else{
+            if(e.target.name ===  emailDomainData.name){
+                setIsChecked(!isChecked)
+                setEmailDomain({
+                    ...emailDomain, [e.target.name]: e.target.value
+                })
+            }
+        }
     }
-    const selectAllCheckBox = () =>{
-        setIsChecked(!isChecked);
-    }
+    
+        
+
 
     return (
         <>
@@ -42,7 +49,7 @@ const EmailDomain = () => {
                         {
                             emailDomainData.map(({name, id, value}) =>(
                                 <div key={id}>
-                            <label htmlFor="email_0">{value}</label>{" "}
+                            <label htmlFor={name}>{value}</label>{" "}
                             <input onChange={handleChange}
                                 type="checkbox"
                                 name={name}
@@ -125,7 +132,7 @@ const EmailDomain = () => {
                                 <button
                                     type="button"
                                     name="butCheckAll"
-                                    onClick={selectAllCheckBox}
+                                    onClick={handleChange}
                                 >Check all emails</button>
                             </td>
                         </tr>

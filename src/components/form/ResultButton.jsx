@@ -99,6 +99,7 @@ const ResultButton = () => {
                         />
                         <input
                             type="submit"
+                            onClick={(e)=>e.preventDefault()}
                             value="Check Record Count!"
                             name="cmdSearch"
                             id="cmdSearch"

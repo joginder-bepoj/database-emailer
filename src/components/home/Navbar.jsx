@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useNavigate} from "react-router-dom"
+import {useStateContext  } from "../context/StateContext";
 
 const Navbar = () => {
+    const {isLoggedIn, setIsLoggedIn} = useStateContext()
     const navigate = useNavigate()
     const handleChange = (e) =>{
         let value = e.target.value
@@ -13,9 +15,17 @@ const Navbar = () => {
         if(value === "cellphonedata") return navigate("/database-emailer/cellphonedata")
         if(value === "urldata") return navigate("/database-emailer/urldata")
         if(value === "badadata") return navigate("/database-emailer/baddata")
+    } 
+    const handleLoggedIn = () =>{
+      setIsLoggedIn(!isLoggedIn)
     }
   return (
     <>
+    <div style={{display:"flex", justifyContent:"space-between"}}>
+        <div>
+
+       
+
         <select name="goto" id="" onChange={handleChange} style={{background: "blue", height:"30px", textAlign: "center"}} >
             <option style={{background: "none"}} value="">Free data search here</option>
             <option style={{backgroundColor: "none"}} value="checkConsumer">Consumer Opt-in Email 400+ Million 23 Data Fields</option>
@@ -27,6 +37,11 @@ const Navbar = () => {
             <option value="urldata">Website URL Data: USA &amp; Canada 72 Million</option>
             <option value="badadata">Bad Data 300 Million Spam Traps &amp; Bounces</option>
         </select>
+        </div>
+        <div>
+          <button type='button' onClick={handleLoggedIn}>{ isLoggedIn ? 'Log Out' : 'Log In'}</button>
+        </div>
+        </div>
     </>
   )
 }

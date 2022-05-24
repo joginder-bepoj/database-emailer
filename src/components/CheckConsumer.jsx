@@ -20,9 +20,10 @@ import TelephoneSearch from "./form/TelephoneSearch";
 import USstates from "./form/USstates";
 import { useStateContext } from "./context/StateContext";
 import ScrollToTop from "react-scroll-to-top"
+import URLdataResult from "./form/URLdataResult";
 
 const CheckConsumer = () => {
-    const {setFilter} = useStateContext()
+    const {setFilter, isLoggedIn} = useStateContext()
     return (
         <section className="section section-xs content">
          <ScrollToTop smooth />
@@ -162,7 +163,9 @@ const CheckConsumer = () => {
                                 <EmailDomain />
                                 <hr />
                                 {/* Result and buttons */}
-                                <ResultButton />
+                                {
+                                        isLoggedIn ? <URLdataResult /> : <ResultButton />
+                                }
                             </div>
                         </form>
                     </div>

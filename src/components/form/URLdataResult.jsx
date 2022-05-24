@@ -1,6 +1,9 @@
 import React from "react";
 
 const URLdataResult = () => {
+    const refreshPage = () =>{
+        window.location.reload()
+    }
     return (
         <>
             <fieldset
@@ -85,6 +88,7 @@ const URLdataResult = () => {
                         />
                         <input
                             type="submit"
+                            onClick={(e)=> e.preventDefault()}
                             value="Check Record Count!"
                             name="cmdSearch"
                             id="cmdSearch"
@@ -92,9 +96,8 @@ const URLdataResult = () => {
                             className="MainButton"
                         />
                     </div>
-                    <a href="@">
-                        <h2>Clear Form</h2>
-                    </a>
+                    
+                    <h2 style={{textDecorationStyle: "none", color: "#333", fontWeight: "bold" }} onClick={refreshPage}>Clear Form</h2>
                 </fieldset>
             </div>
         </>

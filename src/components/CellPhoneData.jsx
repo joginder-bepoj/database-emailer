@@ -8,12 +8,13 @@ import GenderSelect from "./form/GenderSelect";
 import RentingHome from "./form/RentingHome";
 import ResultButton from "./form/ResultButton";
 import CellCarriers from "./form/CellCarriers";
+import URLdataResult from "./form/URLdataResult"
 import { useStateContext } from "./context/StateContext";
 import ScrollToTop from "react-scroll-to-top"
 
 
 const CellPhoneData = () => {
-    const {setCellData, cellData} = useStateContext()
+    const {setCellData, cellData, isLoggedIn} = useStateContext()
     const handleChange = (e) =>{
         setCellData({ ...cellData,
             [e.target.name]: e.target.value
@@ -113,7 +114,10 @@ const CellPhoneData = () => {
                                     <CellCarriers />
                                     <hr />
                                     {/* Result buttons */}
-                                    <ResultButton />
+                                    {
+                                        isLoggedIn ? <URLdataResult /> : <ResultButton />
+                                    }
+                                    
                                 </form>
                             </div>
                         </div>

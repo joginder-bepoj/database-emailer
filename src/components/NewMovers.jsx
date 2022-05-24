@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import RepeatedQueries from "./form/RepeatedQueries";
 import ResultButton from "./form/ResultButton";
 import SearchByCountry from "./form/SearchByCountry";
@@ -6,9 +7,10 @@ import SelectRecords from "./form/SelectRecords";
 import USstates from "./form/USstates";
 import { useStateContext } from "./context/StateContext";
 import ScrollToTop from "react-scroll-to-top";
+import URLdataResult from "./form/URLdataResult";
 
 const NewMovers = () => {
-    const {setNewMovers, newMovers} = useStateContext()
+    const {setNewMovers, newMovers, isLoggedIn} = useStateContext()
     const handleChange = (e)=>{
         setNewMovers({ 
             ...newMovers, [e.target.name]:e.target.value
@@ -139,9 +141,13 @@ const NewMovers = () => {
                                         <small>(leave blank for no upper limit)</small>
                                     </fieldset>
                                     {/* Result and the button  */}
-                                    <ResultButton />
+                                    {
+                                        isLoggedIn ? <URLdataResult /> : <ResultButton />
+                                    }
                                 </form>
                             </div>
+                            {/* New home movers mail merge */}
+                            <p>Go Here to Run a mail merge on your completed movers files <Link to="/database-emailer/mailmerge"> New Home Movers Mail Merge </Link></p>
                         </div>
                     </div>
                 </div>

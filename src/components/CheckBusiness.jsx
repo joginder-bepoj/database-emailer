@@ -19,9 +19,11 @@ import UniqueEmailFax from "./form/UniqueEmailFax";
 import URLdomain from "./form/URLdomain";
 import USstates from "./form/USstates";
 import ScrollToTop from "react-scroll-to-top";
+import URLdataResult from "./form/URLdataResult";
+import { useStateContext } from "./context/StateContext";
 
 const CheckBusiness = () => {
- 
+    const {isLoggedIn} = useStateContext()
 
     return (
         <>
@@ -160,7 +162,9 @@ const CheckBusiness = () => {
                                     {/* Executive contact */}
                                     <ExecutiveContact />
                                     <hr />
-                                    <ResultButton />
+                                    {
+                                        isLoggedIn ? <URLdataResult /> : <ResultButton />
+                                    }
                                 </div>
                             </form>
                         </div>

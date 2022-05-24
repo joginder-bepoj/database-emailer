@@ -1,6 +1,6 @@
 import React from "react";
 import { useStateContext } from "../context/StateContext";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SICcodes = () => {
     const location = useLocation()
@@ -81,12 +81,9 @@ const SICcodes = () => {
                         </a>
                         <br />
                         Compare Codes &amp; Search:
-                        <a
-                            href="@"
-                            target="_blank"
-                        >
+                        <Link to="/database-emailer/sictonaciscodes" >
                             SIC to NAICS Code Relations
-                        </a>
+                        </Link>
                     </b>
                     <br />
                     <hr />
@@ -7835,12 +7832,9 @@ const SICcodes = () => {
                                     </b>
                                     <br />
                                     <br />
-                                    <a
-                                        href="@"
-                                        target="_blank"
-                                    >
+                                    <Link to="/database-emailer/sictonaciscodes">
                                         SIC to NAICS Code Relations
-                                    </a>
+                                    </Link>
                                 </td>
                                 <td align="center">
                                     <b> Select a Range(s) of SIC Codes:</b>
@@ -8090,9 +8084,9 @@ const SICcodes = () => {
                             </tbody>
                         </table>
                         <hr />
-                        <a href="@" target="_blank">
+                        <Link to="/database-emailer/sictonaciscodes">
                             SIC to NAICS Code Relations
-                        </a>
+                        </Link>
                     </fieldset>
                 </div>
             </fieldset>

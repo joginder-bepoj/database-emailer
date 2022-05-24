@@ -17,8 +17,11 @@ import UniqueEmailFax from "./form/UniqueEmailFax";
 import URLdomain from "./form/URLdomain";
 import USstates from "./form/USstates";
 import ScrollToTop from "react-scroll-to-top";
+import URLdataResult from "./form/URLdataResult";
+import { useStateContext } from "./context/StateContext";
 
 const CheckLinkedIn = () => {
+    const {isLoggedIn} = useStateContext()
     return (
         <>
             <section className="section section-xs content">
@@ -116,7 +119,9 @@ const CheckLinkedIn = () => {
                                         {/* serach last name */}
                                         <SearchLastName />
                                         <hr />
-                                        <ResultButton />
+                                        {
+                                        isLoggedIn ? <URLdataResult /> : <ResultButton />
+                                        }
                                     </div>
                                 </form>
                             </div>

@@ -8,11 +8,14 @@ import TableForm from "./form/TableForm";
 import TelephoneSearch from "./form/TelephoneSearch";
 import UniqueTelephoneEmail from "./form/UniqueTelephoneEmail";
 import SearchByLastName from "./form/SearchByLastName";
-import USstates from "./form/USstates";
 import ResultButton from "./form/ResultButton";
 import ScrollToTop from "react-scroll-to-top";
+import TelSearchParameters from "./form/TelSearchParameters";
+import URLdataResult from "./form/URLdataResult";
+import { useStateContext } from "./context/StateContext";
 
 const TelemarketingConsumer = () => {
+    const {isLoggedIn} = useStateContext()
     return (
         <>
             <section className="section section-xs content">
@@ -73,7 +76,7 @@ const TelemarketingConsumer = () => {
                                         {/* search by country */}
                                         <SearchByCountry />
                                         {/* US states */}
-                                        <USstates />
+                                        <TelSearchParameters />
                                     </fieldset>
                                     {/* email address search */}
                                     <EmailAddress />
@@ -104,7 +107,9 @@ const TelemarketingConsumer = () => {
                                     <hr />
                                     <hr />
                                     {/* Result button */}
-                                    <ResultButton />
+                                    {
+                                        isLoggedIn ? <URLdataResult /> : <ResultButton />
+                                    }
                                 </form>
                             </div>
                         </div>
