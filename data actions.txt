@@ -1,3 +1,56 @@
 on click in check record count => Consumer Record count for All USA and Canada is 404,323,151:
 SIC_to_NAICS_Codes_Descriptions_Correlation on check business page
 on subit buttons on all the pages in form tags to submit data
+
+
+import { emailDomainData } from "./mapData";
+import { useEffect, useState } from "react";
+
+export default function App() {
+  const [emailData, setEmailData] = useState([]);
+  useEffect(() => {
+    let tempArr = [];
+    emailDomainData.map((item) => tempArr.push({ ...item, checked: false }));
+    setEmailData([...tempArr]);
+  }, []);
+
+  const handleChange = (e, value, index) => {
+    let { name } = e.target;
+
+    if (name === "butCheckAll") {
+      let tempArr = [];
+      emailData.map((item) =>
+        tempArr.push({ ...item, checked: !item.checked })
+      );
+      setEmailData([...tempArr]);
+    } else {
+      let temp = emailData;
+      if (temp[index].checked) {
+        temp[index].checked = false;
+      } else {
+        temp[index].checked = true;
+      }
+      setEmailData([...temp]);
+    }
+  };
+  return (
+    <div className="App">
+      {emailData?.map((item, index) => (
+        <div key={item.id}>
+          <label htmlFor={item.name}>{item.value}</label>{" "}
+          <input
+            onChange={(e) => handleChange(e, item.checked, index)}
+            type="checkbox"
+            name={item.name}
+            id={item.id}
+            // value={item.checked}
+            checked={item.checked}
+          />
+        </div>
+      ))}
+      <button type="button" name="butCheckAll" onClick={handleChange}>
+        Check all emails
+      </button>
+    </div>
+  );
+}

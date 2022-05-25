@@ -13,6 +13,7 @@ import RegistrantContact from "./form/RegistrantContact";
 import URLdataResult from "./form/URLdataResult";
 import { useStateContext } from "./context/StateContext";
 import ScrollToTop from "react-scroll-to-top";
+import RestWorld from "./form/RestWorld";
 
 const URLdata = () => {
     const {setUrlData, urlData} = useStateContext()
@@ -21,7 +22,7 @@ const URLdata = () => {
             ...urlData, [e.target.name] : e.target.value
         })
     }
-    console.log(urlData)
+    console.log(urlData.optWorld)
     return (
         <>
             <section className="section section-xs content">
@@ -116,7 +117,10 @@ const URLdata = () => {
                                         the default.
                                     </fieldset>
                                     <div id="USCAN" className="world">
-                                        <h2 style={{color: "black", textShadow: "none"}}>USA and Canada Only</h2>
+                                        {
+                                            urlData.optWorld === "USCAN" ? (
+                                                <>
+                                                     <h2 style={{color: "black", textShadow: "none"}}>USA and Canada Only</h2>
                                         <fieldset>
                                             <legend>Geographic Search Parameters</legend>
                                             {/* search by country */}
@@ -124,11 +128,17 @@ const URLdata = () => {
                                             {/* US states */}
                                             <USstates />
                                         </fieldset>
+                                                </>
+                                            ) : <RestWorld />
+                                        }
+                                       
                                         {/* email address serach */}
-                                        <EmailAddress />
-                                        <hr />
+                                        {
+                                            urlData.optWorld === "USCAN" && (<><EmailAddress />
                                         {/* telphone search */}
-                                        <TelephoneSearch />
+                                        <TelephoneSearch /></>)
+                                        }
+                                        <hr />
                                         <hr />
                                         <div id="divCountries" align="center">
                                             <hr />
@@ -137,6 +147,8 @@ const URLdata = () => {
                                             <a href="@">The Rest of world</a>
                                             <hr />
                                         </div>
+                                        {/* Email address search */}
+                                        <EmailAddress />
                                         {/* Registration date */}
                                         <RegistrationDates />
                                         <hr />

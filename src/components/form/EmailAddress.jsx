@@ -9,8 +9,11 @@ const EmailAddress = () => {
     return (
         <>
             <fieldset>
+                <div style={{display:"flex", alignItems:"center", flexWrap: "wrap"}}>
+                <div>
                 <legend>Email Address Search</legend>
-                Search Email Addresses for This Word or Phrase:&nbsp;&nbsp;&nbsp;
+                </div>
+                <div> Search Email Addresses for This Word or Phrase:&nbsp;&nbsp;&nbsp;</div>
                 <input
                     type="text"
                     name="txtEmailString"
@@ -19,8 +22,8 @@ const EmailAddress = () => {
                     size="30"
                     onChange={emailChange}
                 />
-                <br />
-                <small>&nbsp;</small>
+                </div>
+                <small style={{paddingLeft: "150px"}}>(This insures that all your results will have an email address)</small>
                 <br /> Example: if you enter "piano" in the box, it will find all emails
                 addresses with "piano" embedded in it somewhere. There are no spaces or
                 commas in an email address. Just enter letters, numbers, '@', '_', '-'

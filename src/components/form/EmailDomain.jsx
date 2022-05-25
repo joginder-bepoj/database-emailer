@@ -1,25 +1,35 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useStateContext } from "../context/StateContext";
 import { emailDomainData } from "./emailDomainData";
 
 const EmailDomain = () => {
     const {setEmailDomain, emailDomain} = useStateContext()
-    const [isChecked, setIsChecked] = useState(false)
-    const handleChange = (e) =>{
-        if(e.target.name === "butCheckAll"){
-            setIsChecked(!isChecked);
-        }else{
-            if(e.target.name ===  emailDomainData.name){
-                setIsChecked(!isChecked)
-                setEmailDomain({
-                    ...emailDomain, [e.target.name]: e.target.value
-                })
-            }
-        }
-    }
-    
-        
+    const [isCheckedAll, setIsCheckedAll] = useState(false)
+    const [isChecked, setIsChecked] = useState([])
+    const [tempArr, setTempArr] = useState([])
+    const [check, setCheck] = useState(false)
 
+    useEffect(() => {
+        setTempArr(emailDomainData);
+      }, [tempArr]);
+
+
+    const handleChange = e => {
+        const { id, checked } = e.target;
+        setIsChecked([...isChecked, id]);
+        if (!checked) {
+          setIsChecked(isChecked.filter(item => item !== id));
+        }
+    };
+
+    const handleSelectAll = e =>{
+        setIsCheckedAll(!isCheckedAll);
+        setIsChecked(tempArr.map(li => li.id));
+        if (isCheckedAll) {
+        setIsChecked([]);
+        }
+        setCheck(!check)
+    }
 
     return (
         <>
@@ -47,15 +57,15 @@ const EmailDomain = () => {
                         style={{ width: "100%" }}
                     >
                         {
-                            emailDomainData.map(({name, id, value}) =>(
-                                <div key={id}>
-                            <label htmlFor={name}>{value}</label>{" "}
+                            tempArr.map((item, index) =>(
+                                <div key={item.id}>
+                            <label htmlFor={item.name}>{item.value}</label>{" "}
                             <input onChange={handleChange}
                                 type="checkbox"
-                                name={name}
-                                id= {id}
-                                value={value}
-                                checked={isChecked}
+                                name={item.name}
+                                id= {item.id}
+                                value={item.value}
+                                checked={isChecked.includes(item.id)}
                             />
                             </div>
                             ))
@@ -89,7 +99,7 @@ const EmailDomain = () => {
                                     title="the same as ignore this section"
                                     id="emailCondition_NOT"
                                     value=""
-                                    defaultChecked
+                                    checked={isChecked.length === 0 || isChecked.length === 62}
                                     
                                 />
                                 <br />
@@ -103,7 +113,7 @@ const EmailDomain = () => {
                                 </label>
                                 <input 
                                     type="radio"
-                                    
+                                    checked={isChecked.length > 0 && isChecked.length <62}
                                     name="emailCondition"
                                     title="Do you want some or all of these most common 100 INCLUDED and you understand thousands of other domains not listed here will be excluded from search"
                                     id="emailCondition_included"
@@ -123,8 +133,9 @@ const EmailDomain = () => {
                                     title="Do you want some or all of these most common 100 email domains to be Excluded from search "
                                     name="emailCondition"
                                     id="emailCondition_excluded"
-                                    
                                     value="NOT IN"
+                                    checked={isChecked.length > 0 && isChecked.length <62}
+ 
                                 />
                             </td>
 
@@ -132,8 +143,8 @@ const EmailDomain = () => {
                                 <button
                                     type="button"
                                     name="butCheckAll"
-                                    onClick={handleChange}
-                                >Check all emails</button>
+                                    onClick={handleSelectAll}
+                                >{ check ?  "Uncheck all emails" : "Check all emails"}</button>
                             </td>
                         </tr>
                         </tbody>

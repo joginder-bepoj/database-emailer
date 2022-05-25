@@ -50,7 +50,12 @@ export const StateContext = ({children}) => {
   const [selectRecords, setSelectRecords] = useState()
   const [cellData, setCellData] = useState()
   const [cellCarrier, setCellCarrier] = useState()
-  const [urlData, setUrlData] = useState()
+  const [urlData, setUrlData] = useState({
+    optWorld: "USCAN",
+    optSET : "",
+    selTLD: "",
+    txtTLD: ""
+  })
   const [regDates, setRegDates] = useState()
   const [uniqValues, setUniqValues] = useState()
   const [registrantContact, setRegistrantContact] = useState()
