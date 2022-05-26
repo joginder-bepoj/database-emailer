@@ -8,7 +8,7 @@ const SelectRecords = () => {
             ...selectRecords, [e.target.name] : e.target.value
         })
     }
-    console.log(selectRecords)
+
     return (
         <>
             <fieldset id="fsEntryDate">

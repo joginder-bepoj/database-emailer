@@ -450,11 +450,6 @@ export const jobTitles = [
         value:"Sheriff",
     },
     {
-        name:"chkTitleDisplay[89]",
-        id:"chkTitle_89",
-        value:"Sheriff",
-    },
-    {
         name:"chkTitleDisplay[90]",
         id:"chkTitle_90",
         value:"Solicitor",

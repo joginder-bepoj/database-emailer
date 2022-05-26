@@ -8,7 +8,7 @@ const ExcludeGeneralEmail = () => {
             ...excludeEmail, [e.target.name] : e.target.value
         })
     }
-    console.log(excludeEmail)
+
     return (
         <>
             <fieldset>

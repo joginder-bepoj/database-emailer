@@ -22,7 +22,6 @@ const URLdata = () => {
             ...urlData, [e.target.name] : e.target.value
         })
     }
-    console.log(urlData.optWorld)
     return (
         <>
             <section className="section section-xs content">

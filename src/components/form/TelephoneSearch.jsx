@@ -5,7 +5,6 @@ const TelephoneSearch = () => {
     const {setTelSearch, telSearch} = useStateContext()
     const handleChange = (e) =>{
         setTelSearch({ ...telSearch,[e.target.name] : e.target.value})
-        console.log(telSearch)
     }
     return (
         <>

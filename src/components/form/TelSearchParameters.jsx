@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { states, provinces, countiesAR, countiesAZ } from "./usStatesvalue";
+import { states,  countiesAR, countiesAZ } from "./usStatesvalue";
 import { useStateContext } from "../context/StateContext";
-import { useLocation } from "react-router-dom";
 
 const TelSearchParameters = () => {
-    const location = useLocation();
     const {
         selectCountry,
         setSelectCounty,
@@ -15,8 +13,6 @@ const TelSearchParameters = () => {
         setZipCodeSelect,
         setSelectState,
         selectState,
-        selectCanStates,
-        setSelectCanStates,
     } = useStateContext();
     const [show, setShow] = useState(true);
 
@@ -32,13 +28,6 @@ const TelSearchParameters = () => {
     const selectStates = (e) => {
         setSelectState({ ...selectState, [e.target.name]: e.target.value });
     };
-    const selectCanState = (e) => {
-        setSelectCanStates({
-            ...selectCanStates,
-            [e.target.name]: e.target.value,
-        });
-    };
-    console.log(selectCanStates);
     const handleZIP = (e) => {
         setZipCodeSelect({ ...zipCodeSelect, [e.target.name]: e.target.value });
     };

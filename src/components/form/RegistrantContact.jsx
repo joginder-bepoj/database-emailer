@@ -8,7 +8,6 @@ const RegistrantContact = () => {
             ...registrantContact, [e.target.name] : e.target.value
         })
     }
-    console.log(registrantContact)
     return (
         <>
             <fieldset>

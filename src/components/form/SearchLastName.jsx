@@ -9,7 +9,7 @@ const SearchLastName = () => {
       [e.target.name]: e.target.value,
     });
   };
-  console.log(searchLastName);
+
   return (
     <>
       <fieldset id="fsLastName">

@@ -8,7 +8,7 @@ const FaxNumber = () => {
             ...faxNumber, [e.target.name] : e.target.value
         })
     }
-    console.log(faxNumber)
+
 
     return (
         <>

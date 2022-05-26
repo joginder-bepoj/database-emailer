@@ -79,6 +79,7 @@ const JobSearchs = () => {
                                     <b>INCLUDE ALL titles, with blank too, in the database </b>
                                 </label>{" "}
                                 <input onChange={handleChange}
+                                    onClick={()=>setIsChecked([tempArr.map(li => li.id)])}
                                     defaultChecked
                                     type="radio"
                                     name="titleCondition"
@@ -99,7 +100,7 @@ const JobSearchs = () => {
                                 </label>{" "}
                                 <input onChange={handleChange}
                                     type="radio"
-                                    
+                                    onClick={()=>setIsChecked([tempArr.map(li => li.id)])}
                                     name="titleCondition"
                                     title="Do you want some or all of these most common 100 INCLUDED and you understand thousands of other titles not listed here will be excluded from search"
                                     id="titleCondition_included"

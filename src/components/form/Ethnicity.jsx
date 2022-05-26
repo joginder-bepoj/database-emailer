@@ -6,7 +6,7 @@ const Ethnicity = () => {
     const handleChange = (e) =>{
         setEthnicity({...ethnicity, [e.target.name] : e.target.value })
     }
-    console.log(ethnicity)
+
     return (
         <>
             <fieldset>

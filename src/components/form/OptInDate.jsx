@@ -8,7 +8,7 @@ const OptInDate = () => {
                 ...optIn, [e.target.name] : e.target.value
             })
     }
-    console.log(optIn)
+
     return (
         <>
             <fieldset>

@@ -8,7 +8,7 @@ const SearchByCountry = () => {
     const handleChange = (event) =>{
         setSelectCountry(event.target.value)
     }
-    console.log(selectCountry)
+
     switch (location.pathname) {
         case"/database-emailer/newmovers":
             return (

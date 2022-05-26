@@ -8,7 +8,6 @@ const UniqueValue = () => {
             ...uniqValues, [e.target.name] : e.target.value
         })
     }
-    console.log(uniqValues)
     return (
         <>
             <fieldset id="fsUnique">

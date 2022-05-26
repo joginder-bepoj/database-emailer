@@ -26,7 +26,6 @@ const USstates = () => {
             ...selectCanStates, [e.target.name] : e.target.value
         })
     }
-    console.log(selectCanStates)
     const handleZIP = (e) => {
         setZipCodeSelect({...zipCodeSelect, [e.target.name]: e.target.value})
     }
@@ -281,7 +280,6 @@ const USstates = () => {
                             defaultChecked
                         />
                         <br />
-                        {console.log(zipCodeSelect)}
                         <input
                             onChange={handleZIP}
                             disabled={zipCodeSelect.zipCondition === "1"}

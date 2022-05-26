@@ -8,7 +8,7 @@ const ObtainRecords = () => {
             ...obtainRecords, [e.target.name] : e.target.value
         })
     }
-    console.log(obtainRecords)
+
     return (
         <>
             <fieldset align="center" id="upload_date">
