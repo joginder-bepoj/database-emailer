@@ -17,9 +17,10 @@ const CellPhoneData = () => {
     const {setCellData, cellData, isLoggedIn} = useStateContext()
     const handleChange = (e) =>{
         setCellData({ ...cellData,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.checked
         })
     }
+    console.log(cellData)
     return (
         <>
             <section className="section section-xs content">
@@ -44,8 +45,8 @@ const CellPhoneData = () => {
                                     <div className="divImportant">
                                         <h3>Cell Phone Numbers Search:</h3>
                                         <div align="center">
-                                            <a
-                                                href="@"
+                                            <button
+                                                type="button"
                                                 style={{
                                                     textDecoration: "none",
                                                     color: "##F00",
@@ -57,7 +58,7 @@ const CellPhoneData = () => {
                                                 title="Search Now or alt-s"
                                             >
                                                 Check Record Count
-                                            </a>
+                                            </button>
                                         </div>
                                         <br />
                                     </div>

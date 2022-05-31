@@ -9,6 +9,12 @@ const TableForm = () => {
             [e.target.name]: e.target.value,
         });
     };
+    const handleCheckChange = (e) =>{
+        setTeleMarketingForm({
+            ...teleMarketingForm,
+            [e.target.name] : e.target.checked
+        })
+    }
     const [education, setEducation] = useState(false);
     const [buisnessOwner, setBuisnessOwner] = useState(false);
     const [occupation, setOccupation] = useState(false);
@@ -433,11 +439,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="EDUCATION[0]"
+                                                        name="EDUCATION_0"
                                                         id="EDUCATION-0"
                                                         value="Attended Vocational/Technical"
+                                                        checked={teleMarketingForm.EDUCATION_0}
                                                     />{" "}
                                                     <label htmlFor="EDUCATION-0">
                                                         Attended Vocational/Technical
@@ -445,21 +452,23 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="EDUCATION[1]"
+                                                        name="EDUCATION_1"
                                                         id="EDUCATION-1"
                                                         value="Completed College"
+                                                        checked={teleMarketingForm.EDUCATION_1}
                                                     />{" "}
                                                     <label htmlFor="EDUCATION-1">Completed College</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="EDUCATION[2]"
+                                                        name="EDUCATION_2"
                                                         id="EDUCATION-2"
                                                         value="Completed Graduate School"
+                                                        checked={teleMarketingForm.EDUCATION_2}
                                                     />{" "}
                                                     <label htmlFor="EDUCATION-2">
                                                         Completed Graduate School
@@ -467,11 +476,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="EDUCATION[3]"
+                                                        name="EDUCATION_3"
                                                         id="EDUCATION-3"
                                                         value="Completed High School"
+                                                        checked={teleMarketingForm.EDUCATION_3}
                                                     />{" "}
                                                     <label htmlFor="EDUCATION-3">
                                                         Completed High School
@@ -527,41 +537,45 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="BUSINESS_OWNER[0]"
+                                                        name="BUSINESS_OWNER_0"
                                                         id="BUSINESS_OWNER-0"
                                                         value="Accountant"
+                                                        checked={teleMarketingForm.BUSINESS_OWNER_0}
                                                     />{" "}
                                                     <label htmlFor="BUSINESS_OWNER-0">Accountant</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="BUSINESS_OWNER[1]"
+                                                        name="BUSINESS_OWNER_1"
                                                         id="BUSINESS_OWNER-1"
                                                         value="Builder"
+                                                        checked={teleMarketingForm.BUSINESS_OWNER_1}
                                                     />{" "}
                                                     <label htmlFor="BUSINESS_OWNER-1">Builder</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="BUSINESS_OWNER[2]"
+                                                        name="BUSINESS_OWNER_2"
                                                         id="BUSINESS_OWNER-2"
                                                         value="Contractor"
+                                                        checked={teleMarketingForm.BUSINESS_OWNER_2}
                                                     />{" "}
                                                     <label htmlFor="BUSINESS_OWNER-2">Contractor</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="BUSINESS_OWNER[3]"
+                                                        name="BUSINESS_OWNER_3"
                                                         id="BUSINESS_OWNER-3"
                                                         value="Dealer/Retailer/Storekeeper"
+                                                        checked={teleMarketingForm.BUSINESS_OWNER_3}
                                                     />{" "}
                                                     <label htmlFor="BUSINESS_OWNER-3">
                                                         Dealer/Retailer/Storekeeper
@@ -569,11 +583,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="BUSINESS_OWNER[4]"
+                                                        name="BUSINESS_OWNER_4"
                                                         id="BUSINESS_OWNER-4"
                                                         value="Distributor/Wholesaler"
+                                                        checked={teleMarketingForm.BUSINESS_OWNER_4}
                                                     />{" "}
                                                     <label htmlFor="BUSINESS_OWNER-4">
                                                         Distributor/Wholesaler
@@ -583,11 +598,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="BUSINESS_OWNER[5]"
+                                                        name="BUSINESS_OWNER_5"
                                                         id="BUSINESS_OWNER-5"
                                                         value="Funeral Director"
+                                                        checked={teleMarketingForm.BUSINESS_OWNER_5}
                                                     />{" "}
                                                     <label htmlFor="BUSINESS_OWNER-5">
                                                         Funeral Director
@@ -595,11 +611,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="BUSINESS_OWNER[6]"
+                                                        name="BUSINESS_OWNER_6"
                                                         id="BUSINESS_OWNER-6"
                                                         value="Maker/Manufacturer"
+                                                        checked={teleMarketingForm.BUSINESS_OWNER_6}
                                                     />{" "}
                                                     <label htmlFor="BUSINESS_OWNER-6">
                                                         Maker/Manufacturer
@@ -607,31 +624,34 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="BUSINESS_OWNER[7]"
+                                                        name="BUSINESS_OWNER_7"
                                                         id="BUSINESS_OWNER-7"
                                                         value="Owner"
+                                                        checked={teleMarketingForm.BUSINESS_OWNER_7}
                                                     />{" "}
                                                     <label htmlFor="BUSINESS_OWNER-7">Owner</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="BUSINESS_OWNER[8]"
+                                                        name="BUSINESS_OWNER_8"
                                                         id="BUSINESS_OWNER-8"
                                                         value="Partner"
+                                                        checked={teleMarketingForm.BUSINESS_OWNER_8}
                                                     />{" "}
                                                     <label htmlFor="BUSINESS_OWNER-8">Partner</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="BUSINESS_OWNER[9]"
+                                                        name="BUSINESS_OWNER_9"
                                                         id="BUSINESS_OWNER-9"
                                                         value="Self-Employed"
+                                                        checked={teleMarketingForm.BUSINESS_OWNER_9}
                                                     />{" "}
                                                     <label htmlFor="BUSINESS_OWNER-9">
                                                         Self-Employed
@@ -687,11 +707,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[0]"
+                                                        name="OCCUPATION_0"
                                                         id="OCCUPATION-0"
                                                         value="Administration / Managerial"
+                                                        checked={teleMarketingForm.OCCUPATION_0}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-0">
                                                         Administration / Managerial
@@ -699,11 +720,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[1]"
+                                                        name="OCCUPATION_1"
                                                         id="OCCUPATION-1"
                                                         value="Clerical / White Collar"
+                                                        checked={teleMarketingForm.OCCUPATION_1}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-1">
                                                         Clerical / White Collar
@@ -711,11 +733,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[2]"
+                                                        name="OCCUPATION_2"
                                                         id="OCCUPATION-2"
                                                         value="Craftsman / Blue Collar"
+                                                        checked={teleMarketingForm.OCCUPATION_2}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-2">
                                                         Craftsman / Blue Collar
@@ -725,31 +748,34 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[3]"
+                                                        name="OCCUPATION_3"
                                                         id="OCCUPATION-3"
                                                         value="Educator"
+                                                        checked={teleMarketingForm.OCCUPATION_3}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-3">Educator</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[4]"
+                                                        name="OCCUPATION_4"
                                                         id="OCCUPATION-4"
                                                         value="Farmer"
+                                                        checked={teleMarketingForm.OCCUPATION_4}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-4">Farmer</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[5]"
+                                                        name="OCCUPATION_5"
                                                         id="OCCUPATION-5"
                                                         value="Financial Professional"
+                                                        checked={teleMarketingForm.OCCUPATION_5}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-5">
                                                         Financial Professional
@@ -759,21 +785,23 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[6]"
+                                                        name="OCCUPATION_6"
                                                         id="OCCUPATION-6"
                                                         value="Homemaker"
+                                                        checked={teleMarketingForm.OCCUPATION_6}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-6">Homemaker</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[7]"
+                                                        name="OCCUPATION_7"
                                                         id="OCCUPATION-7"
                                                         value="Legal Professional"
+                                                        checked={teleMarketingForm.OCCUPATION_7}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-7">
                                                         Legal Professional
@@ -781,11 +809,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[8]"
+                                                        name="OCCUPATION_8"
                                                         id="OCCUPATION-8"
                                                         value="Medical Professional"
+                                                        checked={teleMarketingForm.OCCUPATION_8}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-8">
                                                         Medical Professional
@@ -795,31 +824,34 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[9]"
+                                                        name="OCCUPATION_9"
                                                         id="OCCUPATION-9"
                                                         value="Military"
+                                                        checked={teleMarketingForm.OCCUPATION_9}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-9">Military</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[10]"
+                                                        name="OCCUPATION_10"
                                                         id="OCCUPATION-10"
                                                         value="Other"
+                                                        checked={teleMarketingForm.OCCUPATION_10}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-10">Other</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[11]"
+                                                        name="OCCUPATION_11"
                                                         id="OCCUPATION-11"
                                                         value="Professional / Technical"
+                                                        checked={teleMarketingForm.OCCUPATION_11}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-11">
                                                         Professional / Technical
@@ -829,31 +861,34 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[12]"
+                                                        name="OCCUPATION_12"
                                                         id="OCCUPATION-12"
                                                         value="Religious"
+                                                        checked={teleMarketingForm.OCCUPATION_12}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-12">Religious</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[13]"
+                                                        name="OCCUPATION_13"
                                                         id="OCCUPATION-13"
                                                         value="Retired"
+                                                        checked={teleMarketingForm.OCCUPATION_13}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-13">Retired</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[14]"
+                                                        name="OCCUPATION_14"
                                                         id="OCCUPATION-14"
                                                         value="Sales / Service"
+                                                        checked={teleMarketingForm.OCCUPATION_14}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-14">Sales / Service</label>
                                                 </td>
@@ -861,21 +896,23 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[15]"
+                                                        name="OCCUPATION_15"
                                                         id="OCCUPATION-15"
                                                         value="Self Employed"
+                                                        checked={teleMarketingForm.OCCUPATION_15}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-15">Self Employed</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[16]"
+                                                        name="OCCUPATION_16"
                                                         id="OCCUPATION-16"
                                                         value="Self Employed - Administration / Managerial"
+                                                        checked={teleMarketingForm.OCCUPATION_16}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-16">
                                                         Self Employed - Administration / Managerial
@@ -883,11 +920,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[17]"
+                                                        name="OCCUPATION_17"
                                                         id="OCCUPATION-17"
                                                         value="Self Employed - Clerical / White Collar"
+                                                        checked={teleMarketingForm.OCCUPATION_17}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-17">
                                                         Self Employed - Clerical / White Collar
@@ -897,11 +935,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[18]"
+                                                        name="OCCUPATION_18"
                                                         id="OCCUPATION-18"
                                                         value="Self Employed - Craftsman / Blue Collar"
+                                                        checked={teleMarketingForm.OCCUPATION_18}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-18">
                                                         Self Employed - Craftsman / Blue Collar
@@ -909,11 +948,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[19]"
+                                                        name="OCCUPATION_19"
                                                         id="OCCUPATION-19"
                                                         value="Self Employed - Homemaker"
+                                                        checked={teleMarketingForm.OCCUPATION_19}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-19">
                                                         Self Employed - Homemaker
@@ -921,11 +961,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[20]"
+                                                        name="OCCUPATION_20"
                                                         id="OCCUPATION-20"
                                                         value="Self Employed - Other"
+                                                        checked={teleMarketingForm.OCCUPATION_20}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-20">
                                                         Self Employed - Other
@@ -935,11 +976,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[21]"
+                                                        name="OCCUPATION_21"
                                                         id="OCCUPATION-21"
                                                         value="Self Employed - Professional / Technical"
+                                                        checked={teleMarketingForm.OCCUPATION_21}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-21">
                                                         Self Employed - Professional / Technical
@@ -947,11 +989,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[22]"
+                                                        name="OCCUPATION_22"
                                                         id="OCCUPATION-22"
                                                         value="Self Employed - Retired"
+                                                        checked={teleMarketingForm.OCCUPATION_22}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-22">
                                                         Self Employed - Retired
@@ -959,11 +1002,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[23]"
+                                                        name="OCCUPATION_23"
                                                         id="OCCUPATION-23"
                                                         value="Self Employed - Sales / Service"
+                                                        checked={teleMarketingForm.OCCUPATION_23}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-23">
                                                         Self Employed - Sales / Service
@@ -973,11 +1017,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[24]"
+                                                        name="OCCUPATION_24"
                                                         id="OCCUPATION-24"
                                                         value="Self Employed - Student"
+                                                        checked={teleMarketingForm.OCCUPATION_24}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-24">
                                                         Self Employed - Student
@@ -985,11 +1030,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION[25]"
+                                                        name="OCCUPATION_25"
                                                         id="OCCUPATION-25"
                                                         value="Student"
+                                                        checked={teleMarketingForm.OCCUPATION_25}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION-25">Student</label>
                                                 </td>
@@ -1047,11 +1093,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[0]"
+                                                        name="OCCUPATION_DETAILED_0"
                                                         id="OCCUPATION_DETAILED-0"
                                                         value="Account Executive"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_0}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-0">
                                                         Account Executive
@@ -1059,11 +1106,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[1]"
+                                                        name="OCCUPATION_DETAILED_1"
                                                         id="OCCUPATION_DETAILED-1"
                                                         value="Accounting/Biller/Billing clerk"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_1}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-1">
                                                         Accounting/Biller/Billing clerk
@@ -1071,11 +1119,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[2]"
+                                                        name="OCCUPATION_DETAILED_2"
                                                         id="OCCUPATION_DETAILED-2"
                                                         value="Actor/Entertainer/Announcer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_2}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-2">
                                                         Actor/Entertainer/Announcer
@@ -1085,11 +1134,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[3]"
+                                                        name="OCCUPATION_DETAILED_3"
                                                         id="OCCUPATION_DETAILED-3"
                                                         value="Adjuster"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_3}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-3">
                                                         Adjuster
@@ -1097,11 +1147,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[4]"
+                                                        name="OCCUPATION_DETAILED_4"
                                                         id="OCCUPATION_DETAILED-4"
                                                         value="Administration/Management"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_4}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-4">
                                                         Administration/Management
@@ -1109,11 +1160,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[5]"
+                                                        name="OCCUPATION_DETAILED_5"
                                                         id="OCCUPATION_DETAILED-5"
                                                         value="Advertising"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_5}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-5">
                                                         Advertising
@@ -1123,21 +1175,23 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[6]"
+                                                        name="OCCUPATION_DETAILED_6"
                                                         id="OCCUPATION_DETAILED-6"
                                                         value="Agent"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_6}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-6">Agent</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[7]"
+                                                        name="OCCUPATION_DETAILED_7"
                                                         id="OCCUPATION_DETAILED-7"
                                                         value="Aide/Assistant"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_7}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-7">
                                                         Aide/Assistant
@@ -1145,11 +1199,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[8]"
+                                                        name="OCCUPATION_DETAILED_8"
                                                         id="OCCUPATION_DETAILED-8"
                                                         value="Aide/Assistant/Executive"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_8}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-8">
                                                         Aide/Assistant/Executive
@@ -1159,11 +1214,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[9]"
+                                                        name="OCCUPATION_DETAILED_9"
                                                         id="OCCUPATION_DETAILED-9"
                                                         value="Aide/Assistant/Office"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_9}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-9">
                                                         Aide/Assistant/Office
@@ -1171,11 +1227,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[10]"
+                                                        name="OCCUPATION_DETAILED_10"
                                                         id="OCCUPATION_DETAILED-10"
                                                         value="Aide/Assistant/School"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_10}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-10">
                                                         Aide/Assistant/School
@@ -1183,11 +1240,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[11]"
+                                                        name="OCCUPATION_DETAILED_11"
                                                         id="OCCUPATION_DETAILED-11"
                                                         value="Aide/Assistant/Staff"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_11}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-11">
                                                         Aide/Assistant/Staff
@@ -1197,11 +1255,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[12]"
+                                                        name="OCCUPATION_DETAILED_12"
                                                         id="OCCUPATION_DETAILED-12"
                                                         value="Aide/Assistant/Technical"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_12}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-12">
                                                         Aide/Assistant/Technical
@@ -1209,11 +1268,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[13]"
+                                                        name="OCCUPATION_DETAILED_13"
                                                         id="OCCUPATION_DETAILED-13"
                                                         value="Air Force"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_13}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-13">
                                                         Air Force
@@ -1221,11 +1281,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[14]"
+                                                        name="OCCUPATION_DETAILED_14"
                                                         id="OCCUPATION_DETAILED-14"
                                                         value="Air Traffic Control"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_14}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-14">
                                                         Air Traffic Control
@@ -1235,11 +1296,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[15]"
+                                                        name="OCCUPATION_DETAILED_15"
                                                         id="OCCUPATION_DETAILED-15"
                                                         value="Analyst"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_15}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-15">
                                                         Analyst
@@ -1247,11 +1309,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[16]"
+                                                        name="OCCUPATION_DETAILED_16"
                                                         id="OCCUPATION_DETAILED-16"
                                                         value="Animal Technician/Groomer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_16}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-16">
                                                         Animal Technician/Groomer
@@ -1259,11 +1322,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[17]"
+                                                        name="OCCUPATION_DETAILED_17"
                                                         id="OCCUPATION_DETAILED-17"
                                                         value="Appraiser"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_17}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-17">
                                                         Appraiser
@@ -1273,11 +1337,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[18]"
+                                                        name="OCCUPATION_DETAILED_18"
                                                         id="OCCUPATION_DETAILED-18"
                                                         value="Apprentice"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_18}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-18">
                                                         Apprentice
@@ -1285,11 +1350,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[19]"
+                                                        name="OCCUPATION_DETAILED_19"
                                                         id="OCCUPATION_DETAILED-19"
                                                         value="Architect"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_19}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-19">
                                                         Architect
@@ -1297,11 +1363,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[20]"
+                                                        name="OCCUPATION_DETAILED_20"
                                                         id="OCCUPATION_DETAILED-20"
                                                         value="Armed Forces"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_20}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-20">
                                                         Armed Forces
@@ -1311,11 +1378,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[21]"
+                                                        name="OCCUPATION_DETAILED_21"
                                                         id="OCCUPATION_DETAILED-21"
                                                         value="Army Credit Union Trades"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_21}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-21">
                                                         Army Credit Union Trades
@@ -1323,21 +1391,23 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[22]"
+                                                        name="OCCUPATION_DETAILED_22"
                                                         id="OCCUPATION_DETAILED-22"
                                                         value="Artist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_22}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-22">Artist</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[23]"
+                                                        name="OCCUPATION_DETAILED_23"
                                                         id="OCCUPATION_DETAILED-23"
                                                         value="Assembler"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_23}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-23">
                                                         Assembler
@@ -1347,11 +1417,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[24]"
+                                                        name="OCCUPATION_DETAILED_24"
                                                         id="OCCUPATION_DETAILED-24"
                                                         value="Athlete/Professional"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_24}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-24">
                                                         Athlete/Professional
@@ -1359,11 +1430,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[25]"
+                                                        name="OCCUPATION_DETAILED_25"
                                                         id="OCCUPATION_DETAILED-25"
                                                         value="Attendant"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_25}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-25">
                                                         Attendant
@@ -1371,11 +1443,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[26]"
+                                                        name="OCCUPATION_DETAILED_26"
                                                         id="OCCUPATION_DETAILED-26"
                                                         value="Auctioneer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_26}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-26">
                                                         Auctioneer
@@ -1385,11 +1458,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[27]"
+                                                        name="OCCUPATION_DETAILED_27"
                                                         id="OCCUPATION_DETAILED-27"
                                                         value="Auditor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_27}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-27">
                                                         Auditor
@@ -1397,11 +1471,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[28]"
+                                                        name="OCCUPATION_DETAILED_28"
                                                         id="OCCUPATION_DETAILED-28"
                                                         value="Auto Mechanic"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_28}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-28">
                                                         Auto Mechanic
@@ -1409,11 +1484,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[29]"
+                                                        name="OCCUPATION_DETAILED_29"
                                                         id="OCCUPATION_DETAILED-29"
                                                         value="Baker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_29}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-29">Baker</label>
                                                 </td>
@@ -1421,21 +1497,23 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[30]"
+                                                        name="OCCUPATION_DETAILED_30"
                                                         id="OCCUPATION_DETAILED-30"
                                                         value="Banker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_30}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-30">Banker</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[31]"
+                                                        name="OCCUPATION_DETAILED_31"
                                                         id="OCCUPATION_DETAILED-31"
                                                         value="Banker/Loan Office"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_31}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-31">
                                                         Banker/Loan Office
@@ -1443,11 +1521,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[32]"
+                                                        name="OCCUPATION_DETAILED_32"
                                                         id="OCCUPATION_DETAILED-32"
                                                         value="Banker/Loan Processor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_32}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-32">
                                                         Banker/Loan Processor
@@ -1457,11 +1536,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[33]"
+                                                        name="OCCUPATION_DETAILED_33"
                                                         id="OCCUPATION_DETAILED-33"
                                                         value="Barber/Hairstylist/Beautician"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_33}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-33">
                                                         Barber/Hairstylist/Beautician
@@ -1469,11 +1549,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[34]"
+                                                        name="OCCUPATION_DETAILED_34"
                                                         id="OCCUPATION_DETAILED-34"
                                                         value="Bartender"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_34}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-34">
                                                         Bartender
@@ -1481,11 +1562,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[35]"
+                                                        name="OCCUPATION_DETAILED_35"
                                                         id="OCCUPATION_DETAILED-35"
                                                         value="Binder"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_35}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-35">Binder</label>
                                                 </td>
@@ -1493,11 +1575,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[36]"
+                                                        name="OCCUPATION_DETAILED_36"
                                                         id="OCCUPATION_DETAILED-36"
                                                         value="Blue Collar Worker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_36}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-36">
                                                         Blue Collar Worker
@@ -1505,11 +1588,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[37]"
+                                                        name="OCCUPATION_DETAILED_37"
                                                         id="OCCUPATION_DETAILED-37"
                                                         value="Bodyman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_37}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-37">
                                                         Bodyman
@@ -1517,11 +1601,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[38]"
+                                                        name="OCCUPATION_DETAILED_38"
                                                         id="OCCUPATION_DETAILED-38"
                                                         value="Bookkeeper"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_38}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-38">
                                                         Bookkeeper
@@ -1531,11 +1616,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[39]"
+                                                        name="OCCUPATION_DETAILED_39"
                                                         id="OCCUPATION_DETAILED-39"
                                                         value="Brakeman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_39}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-39">
                                                         Brakeman
@@ -1543,21 +1629,23 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[40]"
+                                                        name="OCCUPATION_DETAILED_40"
                                                         id="OCCUPATION_DETAILED-40"
                                                         value="Brewer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_40}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-40">Brewer</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[41]"
+                                                        name="OCCUPATION_DETAILED_41"
                                                         id="OCCUPATION_DETAILED-41"
                                                         value="Broker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_41}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-41">Broker</label>
                                                 </td>
@@ -1565,11 +1653,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[42]"
+                                                        name="OCCUPATION_DETAILED_42"
                                                         id="OCCUPATION_DETAILED-42"
                                                         value="Broker/Stock/Trader"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_42}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-42">
                                                         Broker/Stock/Trader
@@ -1577,11 +1666,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[43]"
+                                                        name="OCCUPATION_DETAILED_43"
                                                         id="OCCUPATION_DETAILED-43"
                                                         value="Butcher/Meat Cutter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_43}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-43">
                                                         Butcher/Meat Cutter
@@ -1589,11 +1679,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[44]"
+                                                        name="OCCUPATION_DETAILED_44"
                                                         id="OCCUPATION_DETAILED-44"
                                                         value="Buyer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_44}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-44">Buyer</label>
                                                 </td>
@@ -1601,11 +1692,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[45]"
+                                                        name="OCCUPATION_DETAILED_45"
                                                         id="OCCUPATION_DETAILED-45"
                                                         value="CEO/CFO/Chairman/Corp Officer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_45}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-45">
                                                         CEO/CFO/Chairman/Corp Officer
@@ -1613,11 +1705,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[46]"
+                                                        name="OCCUPATION_DETAILED_46"
                                                         id="OCCUPATION_DETAILED-46"
                                                         value="Carpenter/Furniture/Woodworking"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_46}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-46">
                                                         Carpenter/Furniture/Woodworking
@@ -1625,11 +1718,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[47]"
+                                                        name="OCCUPATION_DETAILED_47"
                                                         id="OCCUPATION_DETAILED-47"
                                                         value="Cashier"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_47}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-47">
                                                         Cashier
@@ -1639,11 +1733,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[48]"
+                                                        name="OCCUPATION_DETAILED_48"
                                                         id="OCCUPATION_DETAILED-48"
                                                         value="Caterer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_48}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-48">
                                                         Caterer
@@ -1651,11 +1746,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[49]"
+                                                        name="OCCUPATION_DETAILED_49"
                                                         id="OCCUPATION_DETAILED-49"
                                                         value="Checker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_49}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-49">
                                                         Checker
@@ -1663,11 +1759,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[50]"
+                                                        name="OCCUPATION_DETAILED_50"
                                                         id="OCCUPATION_DETAILED-50"
                                                         value="Chef/Butler"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_50}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-50">
                                                         Chef/Butler
@@ -1677,11 +1774,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[51]"
+                                                        name="OCCUPATION_DETAILED_51"
                                                         id="OCCUPATION_DETAILED-51"
                                                         value="Chemist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_51}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-51">
                                                         Chemist
@@ -1689,11 +1787,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[52]"
+                                                        name="OCCUPATION_DETAILED_52"
                                                         id="OCCUPATION_DETAILED-52"
                                                         value="Child Care/Day Care/Babysitter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_52}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-52">
                                                         Child Care/Day Care/Babysitter
@@ -1701,11 +1800,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[53]"
+                                                        name="OCCUPATION_DETAILED_53"
                                                         id="OCCUPATION_DETAILED-53"
                                                         value="Chiropractor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_53}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-53">
                                                         Chiropractor
@@ -1715,11 +1815,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[54]"
+                                                        name="OCCUPATION_DETAILED_54"
                                                         id="OCCUPATION_DETAILED-54"
                                                         value="Civil Service"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_54}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-54">
                                                         Civil Service
@@ -1727,11 +1828,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[55]"
+                                                        name="OCCUPATION_DETAILED-55"
                                                         id="OCCUPATION_DETAILED-55"
                                                         value="Civil Service/Government"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_55}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-55">
                                                         Civil Service/Government
@@ -1739,11 +1841,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[56]"
+                                                        name="OCCUPATION_DETAILED_56"
                                                         id="OCCUPATION_DETAILED-56"
                                                         value="Claims Examiner/Rep/Adjudicator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_56}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-56">
                                                         Claims Examiner/Rep/Adjudicator
@@ -1753,11 +1856,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[57]"
+                                                        name="OCCUPATION_DETAILED_57"
                                                         id="OCCUPATION_DETAILED-57"
                                                         value="Cleaner/Laundry"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_57}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-57">
                                                         Cleaner/Laundry
@@ -1765,21 +1869,23 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[58]"
+                                                        name="OCCUPATION_DETAILED_58"
                                                         id="OCCUPATION_DETAILED-58"
                                                         value="Clerk"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_58}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-58">Clerk</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[59]"
+                                                        name="OCCUPATION_DETAILED_59"
                                                         id="OCCUPATION_DETAILED-59"
                                                         value="Clerk/Deli"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_59}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-59">
                                                         Clerk/Deli
@@ -1789,11 +1895,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[60]"
+                                                        name="OCCUPATION_DETAILED_60"
                                                         id="OCCUPATION_DETAILED-60"
                                                         value="Clerk/File"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_60}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-60">
                                                         Clerk/File
@@ -1801,11 +1908,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[61]"
+                                                        name="OCCUPATION_DETAILED_61"
                                                         id="OCCUPATION_DETAILED-61"
                                                         value="Clerk/Produce"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_61}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-61">
                                                         Clerk/Produce
@@ -1813,11 +1921,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[62]"
+                                                        name="OCCUPATION_DETAILED_62"
                                                         id="OCCUPATION_DETAILED-62"
                                                         value="Clerk/Stock"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_62}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-62">
                                                         Clerk/Stock
@@ -1827,21 +1936,23 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[63]"
+                                                        name="OCCUPATION_DETAILED_63"
                                                         id="OCCUPATION_DETAILED-63"
                                                         value="Coach"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_63}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-63">Coach</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[64]"
+                                                        name="OCCUPATION_DETAILED_64"
                                                         id="OCCUPATION_DETAILED-64"
                                                         value="Coast Guard"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_64}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-64">
                                                         Coast Guard
@@ -1849,11 +1960,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[65]"
+                                                        name="OCCUPATION_DETAILED_65"
                                                         id="OCCUPATION_DETAILED-65"
                                                         value="Collector"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_65}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-65">
                                                         Collector
@@ -1863,11 +1975,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[66]"
+                                                        name="OCCUPATION_DETAILED_66"
                                                         id="OCCUPATION_DETAILED-66"
                                                         value="Communications"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_66}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-66">
                                                         Communications
@@ -1875,11 +1988,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[67]"
+                                                        name="OCCUPATION_DETAILED_67"
                                                         id="OCCUPATION_DETAILED-67"
                                                         value="Comptroller"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_67}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-67">
                                                         Comptroller
@@ -1887,11 +2001,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[68]"
+                                                        name="OCCUPATION_DETAILED_68"
                                                         id="OCCUPATION_DETAILED-68"
                                                         value="Computer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_68}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-68">
                                                         Computer
@@ -1901,11 +2016,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[69]"
+                                                        name="OCCUPATION_DETAILED_69"
                                                         id="OCCUPATION_DETAILED-69"
                                                         value="Computer Operator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_69}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-69">
                                                         Computer Operator
@@ -1913,11 +2029,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[70]"
+                                                        name="OCCUPATION_DETAILED_70"
                                                         id="OCCUPATION_DETAILED-70"
                                                         value="Computer Programmer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_70}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-70">
                                                         Computer Programmer
@@ -1925,11 +2042,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[71]"
+                                                        name="OCCUPATION_DETAILED_71"
                                                         id="OCCUPATION_DETAILED-71"
                                                         value="Computer/Systems Analyst"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_71}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-71">
                                                         Computer/Systems Analyst
@@ -1939,11 +2057,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[72]"
+                                                        name="OCCUPATION_DETAILED_72"
                                                         id="OCCUPATION_DETAILED-72"
                                                         value="Conductor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_72}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-72">
                                                         Conductor
@@ -1951,11 +2070,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[73]"
+                                                        name="OCCUPATION_DETAILED_73"
                                                         id="OCCUPATION_DETAILED-73"
                                                         value="Conservation/Environment"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_73}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-73">
                                                         Conservation/Environment
@@ -1963,11 +2083,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[74]"
+                                                        name="OCCUPATION_DETAILED_74"
                                                         id="OCCUPATION_DETAILED-74"
                                                         value="Construction"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_74}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-74">
                                                         Construction
@@ -1979,9 +2100,10 @@ const TableForm = () => {
                                                     <input
                                                         onChange={handleChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[75]"
+                                                        name="OCCUPATION_DETAILED_75"
                                                         id="OCCUPATION_DETAILED-75"
                                                         value="Consultant/Advisor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_75}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-75">
                                                         Consultant/Advisor
@@ -1989,21 +2111,23 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[76]"
+                                                        name="OCCUPATION_DETAILED_76"
                                                         id="OCCUPATION_DETAILED-76"
                                                         value="Cook"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_76}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-76">Cook</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[77]"
+                                                        name="OCCUPATION_DETAILED_77"
                                                         id="OCCUPATION_DETAILED-77"
                                                         value="Coordinator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_77}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-77">
                                                         Coordinator
@@ -2013,11 +2137,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[78]"
+                                                        name="OCCUPATION_DETAILED_78"
                                                         id="OCCUPATION_DETAILED-78"
                                                         value="Corrections/Probation/Parole"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_78}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-78">
                                                         Corrections/Probation/Parole
@@ -2025,11 +2150,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[79]"
+                                                        name="OCCUPATION_DETAILED_79"
                                                         id="OCCUPATION_DETAILED-79"
                                                         value="Cosmetologist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_79}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-79">
                                                         Cosmetologist
@@ -2037,11 +2163,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[80]"
+                                                        name="OCCUPATION_DETAILED_80"
                                                         id="OCCUPATION_DETAILED-80"
                                                         value="Counselor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_80}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-80">
                                                         Counselor
@@ -2051,11 +2178,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[81]"
+                                                        name="OCCUPATION_DETAILED_81"
                                                         id="OCCUPATION_DETAILED-81"
                                                         value="Courier/Delivery/Messenger"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_81}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-81">
                                                         Courier/Delivery/Messenger
@@ -2063,11 +2191,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[82]"
+                                                        name="OCCUPATION_DETAILED_82"
                                                         id="OCCUPATION_DETAILED-82"
                                                         value="Court Reporter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_82}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-82">
                                                         Court Reporter
@@ -2075,11 +2204,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[83]"
+                                                        name="OCCUPATION_DETAILED_83"
                                                         id="OCCUPATION_DETAILED-83"
                                                         value="Crewman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_83}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-83">
                                                         Crewman
@@ -2089,11 +2219,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[84]"
+                                                        name="OCCUPATION_DETAILED_84"
                                                         id="OCCUPATION_DETAILED-84"
                                                         value="Curator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_84}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-84">
                                                         Curator
@@ -2101,11 +2232,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[85]"
+                                                        name="OCCUPATION_DETAILED_85"
                                                         id="OCCUPATION_DETAILED-85"
                                                         value="Custodian"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_85}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-85">
                                                         Custodian
@@ -2113,11 +2245,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[86]"
+                                                        name="OCCUPATION_DETAILED_86"
                                                         id="OCCUPATION_DETAILED-86"
                                                         value="Customer Service/Representative"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_86}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-86">
                                                         Customer Service/Representative
@@ -2127,21 +2260,23 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[87]"
+                                                        name="OCCUPATION_DETAILED_87"
                                                         id="OCCUPATION_DETAILED-87"
                                                         value="Cutter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_87}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-87">Cutter</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[88]"
+                                                        name="OCCUPATION_DETAILED_88"
                                                         id="OCCUPATION_DETAILED-88"
                                                         value="Data Entry/Key Punch"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_88}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-88">
                                                         Data Entry/Key Punch
@@ -2149,11 +2284,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[89]"
+                                                        name="OCCUPATION_DETAILED_89"
                                                         id="OCCUPATION_DETAILED-89"
                                                         value="Dental Assistant"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_89}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-89">
                                                         Dental Assistant
@@ -2163,11 +2299,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[90]"
+                                                        name="OCCUPATION_DETAILED_90"
                                                         id="OCCUPATION_DETAILED-90"
                                                         value="Dental Hygienist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_90}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-90">
                                                         Dental Hygienist
@@ -2175,11 +2312,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[91]"
+                                                        name="OCCUPATION_DETAILED_91"
                                                         id="OCCUPATION_DETAILED-91"
                                                         value="Dentist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_91}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-91">
                                                         Dentist
@@ -2187,11 +2325,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[92]"
+                                                        name="OCCUPATION_DETAILED_92"
                                                         id="OCCUPATION_DETAILED-92"
                                                         value="Designer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_92}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-92">
                                                         Designer
@@ -2201,11 +2340,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[93]"
+                                                        name="OCCUPATION_DETAILED_93"
                                                         id="OCCUPATION_DETAILED-93"
                                                         value="Detective/Investigator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_93}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-93">
                                                         Detective/Investigator
@@ -2213,11 +2353,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[94]"
+                                                        name="OCCUPATION_DETAILED_94"
                                                         id="OCCUPATION_DETAILED-94"
                                                         value="Dietician"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_94}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-94">
                                                         Dietician
@@ -2225,11 +2366,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[95]"
+                                                        name="OCCUPATION_DETAILED_95"
                                                         id="OCCUPATION_DETAILED-95"
                                                         value="Director/Art Director"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_95}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-95">
                                                         Director/Art Director
@@ -2239,11 +2381,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[96]"
+                                                        name="OCCUPATION_DETAILED_96"
                                                         id="OCCUPATION_DETAILED-96"
                                                         value="Director/Executive Director"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_96}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-96">
                                                         Director/Executive Director
@@ -2251,11 +2394,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[97]"
+                                                        name="OCCUPATION_DETAILED_97"
                                                         id="OCCUPATION_DETAILED-97"
                                                         value="Dispatcher"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_97}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-97">
                                                         Dispatcher
@@ -2263,11 +2407,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[98]"
+                                                        name="OCCUPATION_DETAILED_98"
                                                         id="OCCUPATION_DETAILED-98"
                                                         value="Dock Worker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_98}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-98">
                                                         Dock Worker
@@ -2277,11 +2422,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[99]"
+                                                        name="OCCUPATION_DETAILED_99"
                                                         id="OCCUPATION_DETAILED-99"
                                                         value="Draftsman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_99}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-99">
                                                         Draftsman
@@ -2289,11 +2435,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[100]"
+                                                        name="OCCUPATION_DETAILED_100"
                                                         id="OCCUPATION_DETAILED-100"
                                                         value="Driver"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_100}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-100">
                                                         Driver
@@ -2301,11 +2448,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[101]"
+                                                        name="OCCUPATION_DETAILED_101"
                                                         id="OCCUPATION_DETAILED-101"
                                                         value="Driver/Bus Driver"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_101}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-101">
                                                         Driver/Bus Driver
@@ -2315,11 +2463,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[102]"
+                                                        name="OCCUPATION_DETAILED_102"
                                                         id="OCCUPATION_DETAILED-102"
                                                         value="Driver/Truck Driver"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_102}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-102">
                                                         Driver/Truck Driver
@@ -2327,11 +2476,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[103]"
+                                                        name="OCCUPATION_DETAILED_103"
                                                         id="OCCUPATION_DETAILED-103"
                                                         value="Editor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_103}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-103">
                                                         Editor
@@ -2339,11 +2489,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[104]"
+                                                        name="OCCUPATION_DETAILED_104"
                                                         id="OCCUPATION_DETAILED-104"
                                                         value="Electrician"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_104}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-104">
                                                         Electrician
@@ -2353,11 +2504,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[105]"
+                                                        name="OCCUPATION_DETAILED_105"
                                                         id="OCCUPATION_DETAILED-105"
                                                         value="Engineer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_105}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-105">
                                                         Engineer
@@ -2365,11 +2517,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[106]"
+                                                        name="OCCUPATION_DETAILED_106"
                                                         id="OCCUPATION_DETAILED-106"
                                                         value="Engineer/Aerospace"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_106}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-106">
                                                         Engineer/Aerospace
@@ -2377,11 +2530,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[107]"
+                                                        name="OCCUPATION_DETAILED_107"
                                                         id="OCCUPATION_DETAILED-107"
                                                         value="Engineer/Chemical"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_107}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-107">
                                                         Engineer/Chemical
@@ -2391,11 +2545,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[108]"
+                                                        name="OCCUPATION_DETAILED_108"
                                                         id="OCCUPATION_DETAILED-108"
                                                         value="Engineer/Civil"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_108}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-108">
                                                         Engineer/Civil
@@ -2403,11 +2558,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[109]"
+                                                        name="OCCUPATION_DETAILED_109"
                                                         id="OCCUPATION_DETAILED-109"
                                                         value="Engineer/Electrical/Electronic"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_109}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-109">
                                                         Engineer/Electrical/Electronic
@@ -2415,11 +2571,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[110]"
+                                                        name="OCCUPATION_DETAILED_110"
                                                         id="OCCUPATION_DETAILED-110"
                                                         value="Engineer/Field"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_110}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-110">
                                                         Engineer/Field
@@ -2429,11 +2586,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[111]"
+                                                        name="OCCUPATION_DETAILED_111"
                                                         id="OCCUPATION_DETAILED-111"
                                                         value="Engineer/Industrial"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_111}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-111">
                                                         Engineer/Industrial
@@ -2441,11 +2599,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[112]"
+                                                        name="OCCUPATION_DETAILED_112"
                                                         id="OCCUPATION_DETAILED-112"
                                                         value="Engineer/Mechanical"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_112}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-112">
                                                         Engineer/Mechanical
@@ -2453,11 +2612,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[113]"
+                                                        name="OCCUPATION_DETAILED_113"
                                                         id="OCCUPATION_DETAILED-113"
                                                         value="Estimator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_113}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-113">
                                                         Estimator
@@ -2467,11 +2627,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[114]"
+                                                        name="OCCUPATION_DETAILED_114"
                                                         id="OCCUPATION_DETAILED-114"
                                                         value="Executive/Upper Management"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_114}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-114">
                                                         Executive/Upper Management
@@ -2479,11 +2640,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[115]"
+                                                        name="OCCUPATION_DETAILED_115"
                                                         id="OCCUPATION_DETAILED-115"
                                                         value="Expeditor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_115}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-115">
                                                         Expeditor
@@ -2491,11 +2653,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[116]"
+                                                        name="OCCUPATION_DETAILED_116"
                                                         id="OCCUPATION_DETAILED-116"
                                                         value="Fabricator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_116}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-116">
                                                         Fabricator
@@ -2505,11 +2668,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[117]"
+                                                        name="OCCUPATION_DETAILED_117"
                                                         id="OCCUPATION_DETAILED-117"
                                                         value="Factory Workman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_117}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-117">
                                                         Factory Workman
@@ -2517,11 +2681,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[118]"
+                                                        name="OCCUPATION_DETAILED_118"
                                                         id="OCCUPATION_DETAILED-118"
                                                         value="Farmer/Dairyman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_118}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-118">
                                                         Farmer/Dairyman
@@ -2529,11 +2694,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[119]"
+                                                        name="OCCUPATION_DETAILED_119"
                                                         id="OCCUPATION_DETAILED-119"
                                                         value="Finance"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_119}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-119">
                                                         Finance
@@ -2543,11 +2709,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[120]"
+                                                        name="OCCUPATION_DETAILED_120"
                                                         id="OCCUPATION_DETAILED-120"
                                                         value="Finisher"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_120}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-120">
                                                         Finisher
@@ -2555,11 +2722,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[121]"
+                                                        name="OCCUPATION_DETAILED_121"
                                                         id="OCCUPATION_DETAILED-121"
                                                         value="Firefighter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_121}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-121">
                                                         Firefighter
@@ -2567,11 +2735,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[122]"
+                                                        name="OCCUPATION_DETAILED_122"
                                                         id="OCCUPATION_DETAILED-122"
                                                         value="Fisherman/Seaman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_122}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-122">
                                                         Fisherman/Seaman
@@ -2581,11 +2750,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[123]"
+                                                        name="OCCUPATION_DETAILED_123"
                                                         id="OCCUPATION_DETAILED-123"
                                                         value="Fitter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_123}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-123">
                                                         Fitter
@@ -2593,11 +2763,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[124]"
+                                                        name="OCCUPATION_DETAILED_124"
                                                         id="OCCUPATION_DETAILED-124"
                                                         value="Flight Attendant/Steward"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_124}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-124">
                                                         Flight Attendant/Steward
@@ -2605,11 +2776,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[125]"
+                                                        name="OCCUPATION_DETAILED_125"
                                                         id="OCCUPATION_DETAILED-125"
                                                         value="Florist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_125}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-125">
                                                         Florist
@@ -2619,11 +2791,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[126]"
+                                                        name="OCCUPATION_DETAILED_126"
                                                         id="OCCUPATION_DETAILED-126"
                                                         value="Food Service"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_126}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-126">
                                                         Food Service
@@ -2631,11 +2804,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[127]"
+                                                        name="OCCUPATION_DETAILED_127"
                                                         id="OCCUPATION_DETAILED-127"
                                                         value="Foreman/Crew leader"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_127}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-127">
                                                         Foreman/Crew leader
@@ -2643,11 +2817,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[128]"
+                                                        name="OCCUPATION_DETAILED_128"
                                                         id="OCCUPATION_DETAILED-128"
                                                         value="Foreman/Shop Foreman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_128}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-128">
                                                         Foreman/Shop Foreman
@@ -2657,11 +2832,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[129]"
+                                                        name="OCCUPATION_DETAILED_129"
                                                         id="OCCUPATION_DETAILED-129"
                                                         value="Forestry"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_129}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-129">
                                                         Forestry
@@ -2669,11 +2845,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[130]"
+                                                        name="OCCUPATION_DETAILED_130"
                                                         id="OCCUPATION_DETAILED-130"
                                                         value="Foundry Worker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_130}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-130">
                                                         Foundry Worker
@@ -2681,11 +2858,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[131]"
+                                                        name="OCCUPATION_DETAILED_131"
                                                         id="OCCUPATION_DETAILED-131"
                                                         value="Furrier"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_131}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-131">
                                                         Furrier
@@ -2695,11 +2873,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[132]"
+                                                        name="OCCUPATION_DETAILED_132"
                                                         id="OCCUPATION_DETAILED-132"
                                                         value="Gardener/Landscaper"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_132}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-132">
                                                         Gardener/Landscaper
@@ -2707,11 +2886,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[133]"
+                                                        name="OCCUPATION_DETAILED_133"
                                                         id="OCCUPATION_DETAILED-133"
                                                         value="Geologist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_133}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-133">
                                                         Geologist
@@ -2719,11 +2899,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[134]"
+                                                        name="OCCUPATION_DETAILED_134"
                                                         id="OCCUPATION_DETAILED-134"
                                                         value="Glazier"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_134}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-134">
                                                         Glazier
@@ -2733,11 +2914,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[135]"
+                                                        name="OCCUPATION_DETAILED_135"
                                                         id="OCCUPATION_DETAILED-135"
                                                         value="Graphic Designer/Commercial Artist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_135}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-135">
                                                         Graphic Designer/Commercial Artist
@@ -2745,11 +2927,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[136]"
+                                                        name="OCCUPATION_DETAILED_136"
                                                         id="OCCUPATION_DETAILED-136"
                                                         value="Grinder"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_136}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-136">
                                                         Grinder
@@ -2757,11 +2940,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[137]"
+                                                        name="OCCUPATION_DETAILED_137"
                                                         id="OCCUPATION_DETAILED-137"
                                                         value="Grocer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_137}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-137">
                                                         Grocer
@@ -2771,11 +2955,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[138]"
+                                                        name="OCCUPATION_DETAILED_138"
                                                         id="OCCUPATION_DETAILED-138"
                                                         value="Health Care"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_138}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-138">
                                                         Health Care
@@ -2783,11 +2968,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[139]"
+                                                        name="OCCUPATION_DETAILED_139"
                                                         id="OCCUPATION_DETAILED-139"
                                                         value="Health Services"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_139}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-139">
                                                         Health Services
@@ -2795,11 +2981,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[140]"
+                                                        name="OCCUPATION_DETAILED_140"
                                                         id="OCCUPATION_DETAILED-140"
                                                         value="Helper"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_140}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-140">
                                                         Helper
@@ -2809,11 +2996,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[141]"
+                                                        name="OCCUPATION_DETAILED_141"
                                                         id="OCCUPATION_DETAILED-141"
                                                         value="Home Economist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_141}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-141">
                                                         Home Economist
@@ -2821,11 +3009,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[142]"
+                                                        name="OCCUPATION_DETAILED_142"
                                                         id="OCCUPATION_DETAILED-142"
                                                         value="Homemaker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_142}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-142">
                                                         Homemaker
@@ -2833,11 +3022,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[143]"
+                                                        name="OCCUPATION_DETAILED_143"
                                                         id="OCCUPATION_DETAILED-143"
                                                         value="Hostess/Host/Usher"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_143}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-143">
                                                         Hostess/Host/Usher
@@ -2847,11 +3037,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[144]"
+                                                        name="OCCUPATION_DETAILED_144"
                                                         id="OCCUPATION_DETAILED-144"
                                                         value="Housekeeper/Maid"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_144}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-144">
                                                         Housekeeper/Maid
@@ -2859,11 +3050,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[145]"
+                                                        name="OCCUPATION_DETAILED_145"
                                                         id="OCCUPATION_DETAILED-145"
                                                         value="Inspector"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_145}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-145">
                                                         Inspector
@@ -2871,11 +3063,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[146]"
+                                                        name="OCCUPATION_DETAILED_146"
                                                         id="OCCUPATION_DETAILED-146"
                                                         value="Installer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_146}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-146">
                                                         Installer
@@ -2885,11 +3078,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[147]"
+                                                        name="OCCUPATION_DETAILED_147"
                                                         id="OCCUPATION_DETAILED-147"
                                                         value="Instructor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_147}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-147">
                                                         Instructor
@@ -2897,11 +3091,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[148]"
+                                                        name="OCCUPATION_DETAILED_148"
                                                         id="OCCUPATION_DETAILED-148"
                                                         value="Insurance/Agent"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_148}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-148">
                                                         Insurance/Agent
@@ -2909,11 +3104,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[149]"
+                                                        name="OCCUPATION_DETAILED_149"
                                                         id="OCCUPATION_DETAILED-149"
                                                         value="Insurance/Underwriter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_149}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-149">
                                                         Insurance/Underwriter
@@ -2923,11 +3119,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[150]"
+                                                        name="OCCUPATION_DETAILED_150"
                                                         id="OCCUPATION_DETAILED-150"
                                                         value="Interior Designer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_150}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-150">
                                                         Interior Designer
@@ -2935,11 +3132,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[151]"
+                                                        name="OCCUPATION_DETAILED_151"
                                                         id="OCCUPATION_DETAILED-151"
                                                         value="Ironworker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_151}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-151">
                                                         Ironworker
@@ -2947,11 +3145,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[152]"
+                                                        name="OCCUPATION_DETAILED_152"
                                                         id="OCCUPATION_DETAILED-152"
                                                         value="Janitor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_152}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-152">
                                                         Janitor
@@ -2961,11 +3160,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[153]"
+                                                        name="OCCUPATION_DETAILED_153"
                                                         id="OCCUPATION_DETAILED-153"
                                                         value="Jeweler"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_153}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-153">
                                                         Jeweler
@@ -2973,11 +3173,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[154]"
+                                                        name="OCCUPATION_DETAILED_154"
                                                         id="OCCUPATION_DETAILED-154"
                                                         value="Journeyman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_154}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-154">
                                                         Journeyman
@@ -2985,11 +3186,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[155]"
+                                                        name="OCCUPATION_DETAILED_155"
                                                         id="OCCUPATION_DETAILED-155"
                                                         value="Judge/Referee"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_155}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-155">
                                                         Judge/Referee
@@ -2999,11 +3201,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[156]"
+                                                        name="OCCUPATION_DETAILED_156"
                                                         id="OCCUPATION_DETAILED-156"
                                                         value="Laborer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_156}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-156">
                                                         Laborer
@@ -3011,11 +3214,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[157]"
+                                                        name="OCCUPATION_DETAILED_157"
                                                         id="OCCUPATION_DETAILED-157"
                                                         value="Lecturer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_157}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-157">
                                                         Lecturer
@@ -3023,11 +3227,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[158]"
+                                                        name="OCCUPATION_DETAILED_158"
                                                         id="OCCUPATION_DETAILED-158"
                                                         value="Legal Secretary"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_158}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-158">
                                                         Legal Secretary
@@ -3037,11 +3242,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[159]"
+                                                        name="OCCUPATION_DETAILED_159"
                                                         id="OCCUPATION_DETAILED-159"
                                                         value="Legal/Attorney/Lawyer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_159}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-159">
                                                         Legal/Attorney/Lawyer
@@ -3049,11 +3255,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[160]"
+                                                        name="OCCUPATION_DETAILED_160"
                                                         id="OCCUPATION_DETAILED-160"
                                                         value="Legal/Paralegal/Assistant"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_160}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-160">
                                                         Legal/Paralegal/Assistant
@@ -3061,11 +3268,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[161]"
+                                                        name="OCCUPATION_DETAILED_161"
                                                         id="OCCUPATION_DETAILED-161"
                                                         value="Librarian/Archivist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_161}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-161">
                                                         Librarian/Archivist
@@ -3075,11 +3283,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[162]"
+                                                        name="OCCUPATION_DETAILED_162"
                                                         id="OCCUPATION_DETAILED-162"
                                                         value="Lineman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_162}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-162">
                                                         Lineman
@@ -3087,11 +3296,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[163]"
+                                                        name="OCCUPATION_DETAILED_163"
                                                         id="OCCUPATION_DETAILED-163"
                                                         value="Lithographer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_163}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-163">
                                                         Lithographer
@@ -3099,11 +3309,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[164]"
+                                                        name="OCCUPATION_DETAILED_164"
                                                         id="OCCUPATION_DETAILED-164"
                                                         value="Loader"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_164}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-164">
                                                         Loader
@@ -3113,11 +3324,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[165]"
+                                                        name="OCCUPATION_DETAILED_165"
                                                         id="OCCUPATION_DETAILED-165"
                                                         value="Locksmith"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_165}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-165">
                                                         Locksmith
@@ -3125,11 +3337,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[166]"
+                                                        name="OCCUPATION_DETAILED_166"
                                                         id="OCCUPATION_DETAILED-166"
                                                         value="Machinist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_166}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-166">
                                                         Machinist
@@ -3137,11 +3350,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[167]"
+                                                        name="OCCUPATION_DETAILED_167"
                                                         id="OCCUPATION_DETAILED-167"
                                                         value="Mail Carrier/Postal"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_167}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-167">
                                                         Mail Carrier/Postal
@@ -3151,11 +3365,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[168]"
+                                                        name="OCCUPATION_DETAILED_168"
                                                         id="OCCUPATION_DETAILED-168"
                                                         value="Mail/Postmaster"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_168}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-168">
                                                         Mail/Postmaster
@@ -3163,11 +3378,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[169]"
+                                                        name="OCCUPATION_DETAILED_169"
                                                         id="OCCUPATION_DETAILED-169"
                                                         value="Maintenance"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_169}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-169">
                                                         Maintenance
@@ -3175,11 +3391,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[170]"
+                                                        name="OCCUPATION_DETAILED_170"
                                                         id="OCCUPATION_DETAILED-170"
                                                         value="Maintenance/Supervisor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_170}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-170">
                                                         Maintenance/Supervisor
@@ -3189,11 +3406,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[171]"
+                                                        name="OCCUPATION_DETAILED_171"
                                                         id="OCCUPATION_DETAILED-171"
                                                         value="Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_171}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-171">
                                                         Manager
@@ -3201,11 +3419,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[172]"
+                                                        name="OCCUPATION_DETAILED_172"
                                                         id="OCCUPATION_DETAILED-172"
                                                         value="Manager/Assistant Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_172}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-172">
                                                         Manager/Assistant Manager
@@ -3213,11 +3432,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[173]"
+                                                        name="OCCUPATION_DETAILED_173"
                                                         id="OCCUPATION_DETAILED-173"
                                                         value="Manager/Branch Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_173}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-173">
                                                         Manager/Branch Manager
@@ -3227,11 +3447,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[174]"
+                                                        name="OCCUPATION_DETAILED_174"
                                                         id="OCCUPATION_DETAILED-174"
                                                         value="Manager/Credit Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_174}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-174">
                                                         Manager/Credit Manager
@@ -3239,11 +3460,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[175]"
+                                                        name="OCCUPATION_DETAILED_175"
                                                         id="OCCUPATION_DETAILED-175"
                                                         value="Manager/District Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_175}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-175">
                                                         Manager/District Manager
@@ -3251,11 +3473,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[176]"
+                                                        name="OCCUPATION_DETAILED_176"
                                                         id="OCCUPATION_DETAILED-176"
                                                         value="Manager/Division Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_176}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-176">
                                                         Manager/Division Manager
@@ -3265,11 +3488,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[177]"
+                                                        name="OCCUPATION_DETAILED_177"
                                                         id="OCCUPATION_DETAILED-177"
                                                         value="Manager/Marketing Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_177}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-177">
                                                         Manager/Marketing Manager
@@ -3277,11 +3501,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[178]"
+                                                        name="OCCUPATION_DETAILED_178"
                                                         id="OCCUPATION_DETAILED-178"
                                                         value="Manager/Office Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_178}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-178">
                                                         Manager/Office Manager
@@ -3289,11 +3514,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[179]"
+                                                        name="OCCUPATION_DETAILED_179"
                                                         id="OCCUPATION_DETAILED-179"
                                                         value="Manager/Plant Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_179}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-179">
                                                         Manager/Plant Manager
@@ -3303,11 +3529,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[180]"
+                                                        name="OCCUPATION_DETAILED_180"
                                                         id="OCCUPATION_DETAILED-180"
                                                         value="Manager/Product Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_180}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-180">
                                                         Manager/Product Manager
@@ -3315,11 +3542,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[181]"
+                                                        name="OCCUPATION_DETAILED_181"
                                                         id="OCCUPATION_DETAILED-181"
                                                         value="Manager/Project Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_181}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-181">
                                                         Manager/Project Manager
@@ -3327,11 +3555,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[182]"
+                                                        name="OCCUPATION_DETAILED_182"
                                                         id="OCCUPATION_DETAILED-182"
                                                         value="Manager/Property Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_182}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-182">
                                                         Manager/Property Manager
@@ -3341,11 +3570,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[183]"
+                                                        name="OCCUPATION_DETAILED_183"
                                                         id="OCCUPATION_DETAILED-183"
                                                         value="Manager/Regional Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_183}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-183">
                                                         Manager/Regional Manager
@@ -3353,11 +3583,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[184]"
+                                                        name="OCCUPATION_DETAILED_184"
                                                         id="OCCUPATION_DETAILED-184"
                                                         value="Manager/Sales Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_184}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-184">
                                                         Manager/Sales Manager
@@ -3365,11 +3596,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[185]"
+                                                        name="OCCUPATION_DETAILED_185"
                                                         id="OCCUPATION_DETAILED-185"
                                                         value="Manager/Store Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_185}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-185">
                                                         Manager/Store Manager
@@ -3379,11 +3611,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[186]"
+                                                        name="OCCUPATION_DETAILED_186"
                                                         id="OCCUPATION_DETAILED-186"
                                                         value="Manager/Traffic Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_186}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-186">
                                                         Manager/Traffic Manager
@@ -3391,11 +3624,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[187]"
+                                                        name="OCCUPATION_DETAILED_187"
                                                         id="OCCUPATION_DETAILED-187"
                                                         value="Manager/Warehouse Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_187}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-187">
                                                         Manager/Warehouse Manager
@@ -3403,11 +3637,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[188]"
+                                                        name="OCCUPATION_DETAILED_188"
                                                         id="OCCUPATION_DETAILED-188"
                                                         value="Manger/General Manager"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_188}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-188">
                                                         Manger/General Manager
@@ -3417,11 +3652,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[189]"
+                                                        name="OCCUPATION_DETAILED_189"
                                                         id="OCCUPATION_DETAILED-189"
                                                         value="Marines"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_189}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-189">
                                                         Marines
@@ -3429,11 +3665,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[190]"
+                                                        name="OCCUPATION_DETAILED_190"
                                                         id="OCCUPATION_DETAILED-190"
                                                         value="Marketing"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_190}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-190">
                                                         Marketing
@@ -3441,11 +3678,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[191]"
+                                                        name="OCCUPATION_DETAILED_191"
                                                         id="OCCUPATION_DETAILED-191"
                                                         value="Mason/Brick/Etc."
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_191}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-191">
                                                         Mason/Brick/Etc.
@@ -3455,11 +3693,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[192]"
+                                                        name="OCCUPATION_DETAILED_192"
                                                         id="OCCUPATION_DETAILED-192"
                                                         value="Material Handler"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_192}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-192">
                                                         Material Handler
@@ -3467,11 +3706,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[193]"
+                                                        name="OCCUPATION_DETAILED_193"
                                                         id="OCCUPATION_DETAILED-193"
                                                         value="Mechanic"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_193}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-193">
                                                         Mechanic
@@ -3479,11 +3719,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[194]"
+                                                        name="OCCUPATION_DETAILED_194"
                                                         id="OCCUPATION_DETAILED-194"
                                                         value="Medical Assistant"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_194}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-194">
                                                         Medical Assistant
@@ -3493,11 +3734,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[195]"
+                                                        name="OCCUPATION_DETAILED_195"
                                                         id="OCCUPATION_DETAILED-195"
                                                         value="Medical Doctor/Physician"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_195}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-195">
                                                         Medical Doctor/Physician
@@ -3505,11 +3747,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[196]"
+                                                        name="OCCUPATION_DETAILED_196"
                                                         id="OCCUPATION_DETAILED-196"
                                                         value="Medical Secretary"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_196}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-196">
                                                         Medical Secretary
@@ -3517,11 +3760,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[197]"
+                                                        name="OCCUPATION_DETAILED_197"
                                                         id="OCCUPATION_DETAILED-197"
                                                         value="Medical Technician"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_197}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-197">
                                                         Medical Technician
@@ -3531,11 +3775,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[198]"
+                                                        name="OCCUPATION_DETAILED_198"
                                                         id="OCCUPATION_DETAILED-198"
                                                         value="Medical/Paramedic"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_198}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-198">
                                                         Medical/Paramedic
@@ -3543,11 +3788,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[199]"
+                                                        name="OCCUPATION_DETAILED_199"
                                                         id="OCCUPATION_DETAILED-199"
                                                         value="Merchandiser"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_199}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-199">
                                                         Merchandiser
@@ -3555,11 +3801,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[200]"
+                                                        name="OCCUPATION_DETAILED_200"
                                                         id="OCCUPATION_DETAILED-200"
                                                         value="Meter Reader"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_200}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-200">
                                                         Meter Reader
@@ -3569,11 +3816,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[201]"
+                                                        name="OCCUPATION_DETAILED_201"
                                                         id="OCCUPATION_DETAILED-201"
                                                         value="Middle Management"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_201}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-201">
                                                         Middle Management
@@ -3581,11 +3829,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[202]"
+                                                        name="OCCUPATION_DETAILED_202"
                                                         id="OCCUPATION_DETAILED-202"
                                                         value="Mill worker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_202}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-202">
                                                         Mill worker
@@ -3593,11 +3842,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[203]"
+                                                        name="OCCUPATION_DETAILED_203"
                                                         id="OCCUPATION_DETAILED-203"
                                                         value="Millwright"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_203}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-203">
                                                         Millwright
@@ -3607,31 +3857,34 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[204]"
+                                                        name="OCCUPATION_DETAILED_204"
                                                         id="OCCUPATION_DETAILED-204"
                                                         value="Miner"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_204}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-204">Miner</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[205]"
+                                                        name="OCCUPATION_DETAILED_205"
                                                         id="OCCUPATION_DETAILED-205"
                                                         value="Model"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_205}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-205">Model</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[206]"
+                                                        name="OCCUPATION_DETAILED_206"
                                                         id="OCCUPATION_DETAILED-206"
                                                         value="Mold Maker/Molder/Injection Mold"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_206}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-206">
                                                         Mold Maker/Molder/Injection Mold
@@ -3641,11 +3894,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[207]"
+                                                        name="OCCUPATION_DETAILED_207"
                                                         id="OCCUPATION_DETAILED-207"
                                                         value="Musician/Music/Dance"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_207}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-207">
                                                         Musician/Music/Dance
@@ -3653,11 +3907,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[208]"
+                                                        name="OCCUPATION_DETAILED_208"
                                                         id="OCCUPATION_DETAILED-208"
                                                         value="National Guard"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_208}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-208">
                                                         National Guard
@@ -3665,11 +3920,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[209]"
+                                                        name="OCCUPATION_DETAILED_209"
                                                         id="OCCUPATION_DETAILED-209"
                                                         value="Navy Credit Union Trades"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_209}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-209">
                                                         Navy Credit Union Trades
@@ -3679,21 +3935,23 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[210]"
+                                                        name="OCCUPATION_DETAILED_210"
                                                         id="OCCUPATION_DETAILED-210"
                                                         value="Nurse"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_210}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-210">Nurse</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[211]"
+                                                        name="OCCUPATION_DETAILED_211"
                                                         id="OCCUPATION_DETAILED-211"
                                                         value="Nurse (Registered)"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_211}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-211">
                                                         Nurse (Registered)
@@ -3701,11 +3959,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[212]"
+                                                        name="OCCUPATION_DETAILED_212"
                                                         id="OCCUPATION_DETAILED-212"
                                                         value="Nurse/LPN"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_212}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-212">
                                                         Nurse/LPN
@@ -3715,11 +3974,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[213]"
+                                                        name="OCCUPATION_DETAILED_213"
                                                         id="OCCUPATION_DETAILED-213"
                                                         value="Nurses Aide/Orderly"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_213}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-213">
                                                         Nurses Aide/Orderly
@@ -3727,11 +3987,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[214]"
+                                                        name="OCCUPATION_DETAILED_214"
                                                         id="OCCUPATION_DETAILED-214"
                                                         value="Oil Industry/Driller"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_214}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-214">
                                                         Oil Industry/Driller
@@ -3739,11 +4000,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[215]"
+                                                        name="OCCUPATION_DETAILED_215"
                                                         id="OCCUPATION_DETAILED-215"
                                                         value="Operator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_215}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-215">
                                                         Operator
@@ -3753,11 +4015,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[216]"
+                                                        name="OCCUPATION_DETAILED_216"
                                                         id="OCCUPATION_DETAILED-216"
                                                         value="Operator/Boilermaker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_216}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-216">
                                                         Operator/Boilermaker
@@ -3765,11 +4028,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[217]"
+                                                        name="OCCUPATION_DETAILED_217"
                                                         id="OCCUPATION_DETAILED-217"
                                                         value="Operator/Crane Operator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_217}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-217">
                                                         Operator/Crane Operator
@@ -3777,11 +4041,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[218]"
+                                                        name="OCCUPATION_DETAILED_218"
                                                         id="OCCUPATION_DETAILED-218"
                                                         value="Operator/Forklift Operator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_218}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-218">
                                                         Operator/Forklift Operator
@@ -3791,11 +4056,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[219]"
+                                                        name="OCCUPATION_DETAILED_219"
                                                         id="OCCUPATION_DETAILED-219"
                                                         value="Operator/Machine Operator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_219}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-219">
                                                         Operator/Machine Operator
@@ -3803,11 +4069,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[220]"
+                                                        name="OCCUPATION_DETAILED_220"
                                                         id="OCCUPATION_DETAILED-220"
                                                         value="Optician"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_220}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-220">
                                                         Optician
@@ -3815,11 +4082,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[221]"
+                                                        name="OCCUPATION_DETAILED_221"
                                                         id="OCCUPATION_DETAILED-221"
                                                         value="Optometrist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_221}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-221">
                                                         Optometrist
@@ -3829,11 +4097,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[222]"
+                                                        name="OCCUPATION_DETAILED_222"
                                                         id="OCCUPATION_DETAILED-222"
                                                         value="Packer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_222}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-222">
                                                         Packer
@@ -3841,11 +4110,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[223]"
+                                                        name="OCCUPATION_DETAILED_223"
                                                         id="OCCUPATION_DETAILED-223"
                                                         value="Painter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_223}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-223">
                                                         Painter
@@ -3853,11 +4123,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[224]"
+                                                        name="OCCUPATION_DETAILED_224"
                                                         id="OCCUPATION_DETAILED-224"
                                                         value="Part Time"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_224}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-224">
                                                         Part Time
@@ -3867,11 +4138,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[225]"
+                                                        name="OCCUPATION_DETAILED_225"
                                                         id="OCCUPATION_DETAILED-225"
                                                         value="Parts (Auto Etc.)"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_225}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-225">
                                                         Parts (Auto Etc.)
@@ -3879,11 +4151,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[226]"
+                                                        name="OCCUPATION_DETAILED_226"
                                                         id="OCCUPATION_DETAILED-226"
                                                         value="Pastor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_226}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-226">
                                                         Pastor
@@ -3891,11 +4164,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[227]"
+                                                        name="OCCUPATION_DETAILED_227"
                                                         id="OCCUPATION_DETAILED-227"
                                                         value="Personnel/Recruiter/Interviewer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_227}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-227">
                                                         Personnel/Recruiter/Interviewer
@@ -3905,11 +4179,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[228]"
+                                                        name="OCCUPATION_DETAILED_228"
                                                         id="OCCUPATION_DETAILED-228"
                                                         value="Pharmacist/Pharmacy"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_228}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-228">
                                                         Pharmacist/Pharmacy
@@ -3917,11 +4192,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[229]"
+                                                        name="OCCUPATION_DETAILED_229"
                                                         id="OCCUPATION_DETAILED-229"
                                                         value="Photography"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_229}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-229">
                                                         Photography
@@ -3929,11 +4205,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[230]"
+                                                        name="OCCUPATION_DETAILED_230"
                                                         id="OCCUPATION_DETAILED-230"
                                                         value="Pilot"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_230}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-230">Pilot</label>
                                                 </td>
@@ -3941,11 +4218,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[231]"
+                                                        name="OCCUPATION_DETAILED_231"
                                                         id="OCCUPATION_DETAILED-231"
                                                         value="Pipe fitter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_231}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-231">
                                                         Pipe fitter
@@ -3953,11 +4231,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[232]"
+                                                        name="OCCUPATION_DETAILED_232"
                                                         id="OCCUPATION_DETAILED-232"
                                                         value="Planner"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_232}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-232">
                                                         Planner
@@ -3965,11 +4244,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[233]"
+                                                        name="OCCUPATION_DETAILED_233"
                                                         id="OCCUPATION_DETAILED-233"
                                                         value="Plumber"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_233}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-233">
                                                         Plumber
@@ -3979,11 +4259,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[234]"
+                                                        name="OCCUPATION_DETAILED_234"
                                                         id="OCCUPATION_DETAILED-234"
                                                         value="Police/Trooper"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_234}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-234">
                                                         Police/Trooper
@@ -3991,11 +4272,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[235]"
+                                                        name="OCCUPATION_DETAILED_235"
                                                         id="OCCUPATION_DETAILED-235"
                                                         value="Polisher"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_235}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-235">
                                                         Polisher
@@ -4003,11 +4285,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[236]"
+                                                        name="OCCUPATION_DETAILED_236"
                                                         id="OCCUPATION_DETAILED-236"
                                                         value="Politician/Legislator/Diplomat"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_236}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-236">
                                                         Politician/Legislator/Diplomat
@@ -4017,11 +4300,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[237]"
+                                                        name="OCCUPATION_DETAILED_237"
                                                         id="OCCUPATION_DETAILED-237"
                                                         value="Porter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_237}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-237">
                                                         Porter
@@ -4029,11 +4313,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[238]"
+                                                        name="OCCUPATION_DETAILED_238"
                                                         id="OCCUPATION_DETAILED-238"
                                                         value="President"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_238}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-238">
                                                         President
@@ -4041,11 +4326,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[239]"
+                                                        name="OCCUPATION_DETAILED_239"
                                                         id="OCCUPATION_DETAILED-239"
                                                         value="Press Operator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_239}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-239">
                                                         Press Operator
@@ -4055,11 +4341,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[240]"
+                                                        name="OCCUPATION_DETAILED_240"
                                                         id="OCCUPATION_DETAILED-240"
                                                         value="Presser"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_240}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-240">
                                                         Presser
@@ -4067,11 +4354,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[241]"
+                                                        name="OCCUPATION_DETAILED_241"
                                                         id="OCCUPATION_DETAILED-241"
                                                         value="Principal/Dean/Educator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_241}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-241">
                                                         Principal/Dean/Educator
@@ -4079,11 +4367,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[242]"
+                                                        name="OCCUPATION_DETAILED_242"
                                                         id="OCCUPATION_DETAILED-242"
                                                         value="Printer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_242}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-242">
                                                         Printer
@@ -4093,11 +4382,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[243]"
+                                                        name="OCCUPATION_DETAILED_243"
                                                         id="OCCUPATION_DETAILED-243"
                                                         value="Production"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_243}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-243">
                                                         Production
@@ -4105,11 +4395,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[244]"
+                                                        name="OCCUPATION_DETAILED_244"
                                                         id="OCCUPATION_DETAILED-244"
                                                         value="Professional"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_244}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-244">
                                                         Professional
@@ -4117,11 +4408,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[245]"
+                                                        name="OCCUPATION_DETAILED_245"
                                                         id="OCCUPATION_DETAILED-245"
                                                         value="Professor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_245}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-245">
                                                         Professor
@@ -4131,11 +4423,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[246]"
+                                                        name="OCCUPATION_DETAILED_246"
                                                         id="OCCUPATION_DETAILED-246"
                                                         value="Psychologist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_246}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-246">
                                                         Psychologist
@@ -4143,11 +4436,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[247]"
+                                                        name="OCCUPATION_DETAILED_247"
                                                         id="OCCUPATION_DETAILED-247"
                                                         value="Public Relations"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_247}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-247">
                                                         Public Relations
@@ -4155,11 +4449,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[248]"
+                                                        name="OCCUPATION_DETAILED_248"
                                                         id="OCCUPATION_DETAILED-248"
                                                         value="Publishing"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_248}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-248">
                                                         Publishing
@@ -4169,11 +4464,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[249]"
+                                                        name="OCCUPATION_DETAILED_249"
                                                         id="OCCUPATION_DETAILED-249"
                                                         value="Purchasing"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_249}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-249">
                                                         Purchasing
@@ -4181,11 +4477,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[250]"
+                                                        name="OCCUPATION_DETAILED_250"
                                                         id="OCCUPATION_DETAILED-250"
                                                         value="Quality Control"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_250}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-250">
                                                         Quality Control
@@ -4193,11 +4490,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[251]"
+                                                        name="OCCUPATION_DETAILED_251"
                                                         id="OCCUPATION_DETAILED-251"
                                                         value="Real Estate/Realtor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_251}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-251">
                                                         Real Estate/Realtor
@@ -4207,11 +4505,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[252]"
+                                                        name="OCCUPATION_DETAILED_252"
                                                         id="OCCUPATION_DETAILED-252"
                                                         value="Receptionist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_252}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-252">
                                                         Receptionist
@@ -4219,11 +4518,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[253]"
+                                                        name="OCCUPATION_DETAILED_253"
                                                         id="OCCUPATION_DETAILED-253"
                                                         value="Repairman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_253}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-253">
                                                         Repairman
@@ -4231,11 +4531,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[254]"
+                                                        name="OCCUPATION_DETAILED_254"
                                                         id="OCCUPATION_DETAILED-254"
                                                         value="Reporter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_254}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-254">
                                                         Reporter
@@ -4245,11 +4546,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[255]"
+                                                        name="OCCUPATION_DETAILED_255"
                                                         id="OCCUPATION_DETAILED-255"
                                                         value="Researcher"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_255}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-255">
                                                         Researcher
@@ -4257,11 +4559,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[256]"
+                                                        name="OCCUPATION_DETAILED_256"
                                                         id="OCCUPATION_DETAILED-256"
                                                         value="Retired"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_256}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-256">
                                                         Retired
@@ -4269,11 +4572,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[257]"
+                                                        name="OCCUPATION_DETAILED_257"
                                                         id="OCCUPATION_DETAILED-257"
                                                         value="Retired/Pensioner"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_257}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-257">
                                                         Retired/Pensioner
@@ -4283,11 +4587,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[258]"
+                                                        name="OCCUPATION_DETAILED_258"
                                                         id="OCCUPATION_DETAILED-258"
                                                         value="Roofer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_258}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-258">
                                                         Roofer
@@ -4295,21 +4600,23 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[259]"
+                                                        name="OCCUPATION_DETAILED_259"
                                                         id="OCCUPATION_DETAILED-259"
                                                         value="Sales"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_259}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-259">Sales</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[260]"
+                                                        name="OCCUPATION_DETAILED_260"
                                                         id="OCCUPATION_DETAILED-260"
                                                         value="Sales Clerk/Counterman"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_260}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-260">
                                                         Sales Clerk/Counterman
@@ -4319,11 +4626,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[261]"
+                                                        name="OCCUPATION_DETAILED_261"
                                                         id="OCCUPATION_DETAILED-261"
                                                         value="Sanitation/Exterminator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_261}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-261">
                                                         Sanitation/Exterminator
@@ -4331,11 +4639,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[262]"
+                                                        name="OCCUPATION_DETAILED_262"
                                                         id="OCCUPATION_DETAILED-262"
                                                         value="Scientist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_262}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-262">
                                                         Scientist
@@ -4343,11 +4652,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[263]"
+                                                        name="OCCUPATION_DETAILED_263"
                                                         id="OCCUPATION_DETAILED-263"
                                                         value="Seamstress/Tailor/Handicraft"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_263}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-263">
                                                         Seamstress/Tailor/Handicraft
@@ -4357,11 +4667,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[264]"
+                                                        name="OCCUPATION_DETAILED_264"
                                                         id="OCCUPATION_DETAILED-264"
                                                         value="Secretary"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_264}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-264">
                                                         Secretary
@@ -4369,11 +4680,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[265]"
+                                                        name="OCCUPATION_DETAILED_265"
                                                         id="OCCUPATION_DETAILED-265"
                                                         value="Security"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_265}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-265">
                                                         Security
@@ -4381,11 +4693,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[266]"
+                                                        name="OCCUPATION_DETAILED_266"
                                                         id="OCCUPATION_DETAILED-266"
                                                         value="Setup man"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_266}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-266">
                                                         Setup man
@@ -4395,11 +4708,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[267]"
+                                                        name="OCCUPATION_DETAILED_267"
                                                         id="OCCUPATION_DETAILED-267"
                                                         value="Sheet Metal Worker/Steel Worker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_267}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-267">
                                                         Sheet Metal Worker/Steel Worker
@@ -4407,11 +4721,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[268]"
+                                                        name="OCCUPATION_DETAILED_268"
                                                         id="OCCUPATION_DETAILED-268"
                                                         value="Shipping/Import/Export/Custom"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_268}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-268">
                                                         Shipping/Import/Export/Custom
@@ -4419,11 +4734,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[269]"
+                                                        name="OCCUPATION_DETAILED_269"
                                                         id="OCCUPATION_DETAILED-269"
                                                         value="Social Worker/Case Worker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_269}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-269">
                                                         Social Worker/Case Worker
@@ -4433,11 +4749,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[270]"
+                                                        name="OCCUPATION_DETAILED_270"
                                                         id="OCCUPATION_DETAILED-270"
                                                         value="Sorter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_270}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-270">
                                                         Sorter
@@ -4445,11 +4762,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[271]"
+                                                        name="OCCUPATION_DETAILED_271"
                                                         id="OCCUPATION_DETAILED-271"
                                                         value="Statistician/Actuary"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_271}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-271">
                                                         Statistician/Actuary
@@ -4457,11 +4775,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[272]"
+                                                        name="OCCUPATION_DETAILED_272"
                                                         id="OCCUPATION_DETAILED-272"
                                                         value="Student"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_272}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-272">
                                                         Student
@@ -4471,11 +4790,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[273]"
+                                                        name="OCCUPATION_DETAILED_273"
                                                         id="OCCUPATION_DETAILED-273"
                                                         value="Superintendent"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_273}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-273">
                                                         Superintendent
@@ -4483,11 +4803,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[274]"
+                                                        name="OCCUPATION_DETAILED_274"
                                                         id="OCCUPATION_DETAILED-274"
                                                         value="Supervisor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_274}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-274">
                                                         Supervisor
@@ -4495,11 +4816,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[275]"
+                                                        name="OCCUPATION_DETAILED_275"
                                                         id="OCCUPATION_DETAILED-275"
                                                         value="Surveyor"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_275}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-275">
                                                         Surveyor
@@ -4509,11 +4831,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[276]"
+                                                        name="OCCUPATION_DETAILED_276"
                                                         id="OCCUPATION_DETAILED-276"
                                                         value="Teacher"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_276}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-276">
                                                         Teacher
@@ -4521,11 +4844,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[277]"
+                                                        name="OCCUPATION_DETAILED_277"
                                                         id="OCCUPATION_DETAILED-277"
                                                         value="Technician"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_277}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-277">
                                                         Technician
@@ -4533,11 +4857,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[278]"
+                                                        name="OCCUPATION_DETAILED_278"
                                                         id="OCCUPATION_DETAILED-278"
                                                         value="Technician/Lab"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_278}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-278">
                                                         Technician/Lab
@@ -4547,11 +4872,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[279]"
+                                                        name="OCCUPATION_DETAILED_279"
                                                         id="OCCUPATION_DETAILED-279"
                                                         value="Technician/X-ray"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_279}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-279">
                                                         Technician/X-ray
@@ -4559,11 +4885,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[280]"
+                                                        name="OCCUPATION_DETAILED_280"
                                                         id="OCCUPATION_DETAILED-280"
                                                         value="Telemarketer/Telephone/Operator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_280}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-280">
                                                         Telemarketer/Telephone/Operator
@@ -4571,11 +4898,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[281]"
+                                                        name="OCCUPATION_DETAILED_281"
                                                         id="OCCUPATION_DETAILED-281"
                                                         value="Teller/Bank Teller"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_281}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-281">
                                                         Teller/Bank Teller
@@ -4585,11 +4913,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[282]"
+                                                        name="OCCUPATION_DETAILED_282"
                                                         id="OCCUPATION_DETAILED-282"
                                                         value="Tester"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_282}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-282">
                                                         Tester
@@ -4597,11 +4926,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[283]"
+                                                        name="OCCUPATION_DETAILED_283"
                                                         id="OCCUPATION_DETAILED-283"
                                                         value="Therapist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_283}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-283">
                                                         Therapist
@@ -4609,11 +4939,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[284]"
+                                                        name="OCCUPATION_DETAILED_284"
                                                         id="OCCUPATION_DETAILED-284"
                                                         value="Therapists/Physical"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_284}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-284">
                                                         Therapists/Physical
@@ -4623,11 +4954,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[285]"
+                                                        name="OCCUPATION_DETAILED_285"
                                                         id="OCCUPATION_DETAILED-285"
                                                         value="Toolmaker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_285}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-285">
                                                         Toolmaker
@@ -4635,11 +4967,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[286]"
+                                                        name="OCCUPATION_DETAILED_286"
                                                         id="OCCUPATION_DETAILED-286"
                                                         value="Trainer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_286}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-286">
                                                         Trainer
@@ -4647,11 +4980,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[287]"
+                                                        name="OCCUPATION_DETAILED_287"
                                                         id="OCCUPATION_DETAILED-287"
                                                         value="Transcripter/Translator"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_287}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-287">
                                                         Transcripter/Translator
@@ -4661,11 +4995,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[288]"
+                                                        name="OCCUPATION_DETAILED_288"
                                                         id="OCCUPATION_DETAILED-288"
                                                         value="Transportation"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_288}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-288">
                                                         Transportation
@@ -4673,11 +5008,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[289]"
+                                                        name="OCCUPATION_DETAILED_289"
                                                         id="OCCUPATION_DETAILED-289"
                                                         value="Travel Agent"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_289}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-289">
                                                         Travel Agent
@@ -4685,11 +5021,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[290]"
+                                                        name="OCCUPATION_DETAILED_290"
                                                         id="OCCUPATION_DETAILED-290"
                                                         value="Treasurer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_290}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-290">
                                                         Treasurer
@@ -4699,11 +5036,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[291]"
+                                                        name="OCCUPATION_DETAILED_291"
                                                         id="OCCUPATION_DETAILED-291"
                                                         value="Typesetter"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_291}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-291">
                                                         Typesetter
@@ -4711,11 +5049,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[292]"
+                                                        name="OCCUPATION_DETAILED_292"
                                                         id="OCCUPATION_DETAILED-292"
                                                         value="Typist"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_292}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-292">
                                                         Typist
@@ -4723,11 +5062,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[293]"
+                                                        name="OCCUPATION_DETAILED_293"
                                                         id="OCCUPATION_DETAILED-293"
                                                         value="Union Member/Rep."
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_293}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-293">
                                                         Union Member/Rep.
@@ -4737,11 +5077,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[294]"
+                                                        name="OCCUPATION_DETAILED_294"
                                                         id="OCCUPATION_DETAILED-294"
                                                         value="Upholstery"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_294}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-294">
                                                         Upholstery
@@ -4749,11 +5090,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[295]"
+                                                        name="OCCUPATION_DETAILED_295"
                                                         id="OCCUPATION_DETAILED-295"
                                                         value="Utility"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_295}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-295">
                                                         Utility
@@ -4761,11 +5103,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[296]"
+                                                        name="OCCUPATION_DETAILED_296"
                                                         id="OCCUPATION_DETAILED-296"
                                                         value="Veterinarian"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_296}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-296">
                                                         Veterinarian
@@ -4775,11 +5118,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[297]"
+                                                        name="OCCUPATION_DETAILED_297"
                                                         id="OCCUPATION_DETAILED-297"
                                                         value="Vice President"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_297}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-297">
                                                         Vice President
@@ -4787,11 +5131,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[298]"
+                                                        name="OCCUPATION_DETAILED_298"
                                                         id="OCCUPATION_DETAILED-298"
                                                         value="Volunteer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_298}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-298">
                                                         Volunteer
@@ -4799,11 +5144,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[299]"
+                                                        name="OCCUPATION_DETAILED_299"
                                                         id="OCCUPATION_DETAILED-299"
                                                         value="Waiter/Waitress"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_299}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-299">
                                                         Waiter/Waitress
@@ -4813,11 +5159,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[300]"
+                                                        name="OCCUPATION_DETAILED_300"
                                                         id="OCCUPATION_DETAILED-300"
                                                         value="Ward Clerk"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_300}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-300">
                                                         Ward Clerk
@@ -4825,11 +5172,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[301]"
+                                                        name="OCCUPATION_DETAILED_301"
                                                         id="OCCUPATION_DETAILED-301"
                                                         value="Water Treatment"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_301}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-301">
                                                         Water Treatment
@@ -4837,11 +5185,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[302]"
+                                                        name="OCCUPATION_DETAILED_302"
                                                         id="OCCUPATION_DETAILED-302"
                                                         value="Welder"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_302}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-302">
                                                         Welder
@@ -4851,11 +5200,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[303]"
+                                                        name="OCCUPATION_DETAILED_303"
                                                         id="OCCUPATION_DETAILED-303"
                                                         value="White Collar Worker"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_303}
                                                     />{" "}
                                                     <label htmlFor="OCCUPATION_DETAILED-303">
                                                         White Collar Worker
@@ -4863,11 +5213,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="OCCUPATION_DETAILED[304]"
+                                                        name="OCCUPATION_DETAILED_304"
                                                         id="OCCUPATION_DETAILED-304"
                                                         value="Writer"
+                                                        checked={teleMarketingForm.OCCUPATION_DETAILED_304}
                                                     />
                                                     <label htmlFor="OCCUPATION_DETAILED-304">
                                                         Writer
@@ -4901,7 +5252,6 @@ const TableForm = () => {
                                     Any Match On These
                                 </label>
                             </fieldset>
-                            /
                         </td>
                     </tr>
 
@@ -4928,61 +5278,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[0]"
+                                                        name="LANGUAGE_0"
                                                         id="LANGUAGE-0"
                                                         value="Afrikaans"
+                                                        checked={teleMarketingForm.LANGUAGE_0}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-0">Afrikaans</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[1]"
+                                                        name="LANGUAGE_1"
                                                         id="LANGUAGE-1"
                                                         value="Albanian"
+                                                        checked={teleMarketingForm.LANGUAGE_1}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-1">Albanian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[2]"
+                                                        name="LANGUAGE_2"
                                                         id="LANGUAGE-2"
                                                         value="Amharic"
+                                                        checked={teleMarketingForm.LANGUAGE_2}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-2">Amharic</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[3]"
+                                                        name="LANGUAGE_3"
                                                         id="LANGUAGE-3"
                                                         value="Arabic"
+                                                        checked={teleMarketingForm.LANGUAGE_3}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-3">Arabic</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[4]"
+                                                        name="LANGUAGE_4"
                                                         id="LANGUAGE-4"
                                                         value="Armenian"
+                                                        checked={teleMarketingForm.LANGUAGE_4}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-4">Armenian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[5]"
+                                                        name="LANGUAGE_5"
                                                         id="LANGUAGE-5"
                                                         value="Ashanti"
+                                                        checked={teleMarketingForm.LANGUAGE_5}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-5">Ashanti</label>
                                                 </td>
@@ -4990,61 +5346,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[6]"
+                                                        name="LANGUAGE_6"
                                                         id="LANGUAGE-6"
                                                         value="Azeri"
+                                                        checked={teleMarketingForm.LANGUAGE_6}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-6">Azeri</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[7]"
+                                                        name="LANGUAGE_7"
                                                         id="LANGUAGE-7"
                                                         value="Bantu"
+                                                        checked={teleMarketingForm.LANGUAGE_7}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-7">Bantu</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[8]"
+                                                        name="LANGUAGE_8"
                                                         id="LANGUAGE-8"
                                                         value="Basque"
+                                                        checked={teleMarketingForm.LANGUAGE_8}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-8">Basque</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[9]"
+                                                        name="LANGUAGE_9"
                                                         id="LANGUAGE-9"
                                                         value="Bengali"
+                                                        checked={teleMarketingForm.LANGUAGE_9}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-9">Bengali</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[10]"
+                                                        name="LANGUAGE_10"
                                                         id="LANGUAGE-10"
                                                         value="Bulgarian"
+                                                        checked={teleMarketingForm.LANGUAGE_10}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-10">Bulgarian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[11]"
+                                                        name="LANGUAGE_11"
                                                         id="LANGUAGE-11"
                                                         value="Burmese"
+                                                        checked={teleMarketingForm.LANGUAGE_11}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-11">Burmese</label>
                                                 </td>
@@ -5052,61 +5414,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[12]"
+                                                        name="LANGUAGE_12"
                                                         id="LANGUAGE-12"
                                                         value="Chinese"
+                                                        checked={teleMarketingForm.LANGUAGE_12}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-12">Chinese</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[13]"
+                                                        name="LANGUAGE_13"
                                                         id="LANGUAGE-13"
                                                         value="Comorian"
+                                                        checked={teleMarketingForm.LANGUAGE_13}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-13">Comorian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[14]"
+                                                        name="LANGUAGE_14"
                                                         id="LANGUAGE-14"
                                                         value="Czech"
+                                                        checked={teleMarketingForm.LANGUAGE_14}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-14">Czech</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[15]"
+                                                        name="LANGUAGE_15"
                                                         id="LANGUAGE-15"
                                                         value="Danish"
+                                                        checked={teleMarketingForm.LANGUAGE_15}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-15">Danish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[16]"
+                                                        name="LANGUAGE_16"
                                                         id="LANGUAGE-16"
                                                         value="Dutch"
+                                                        checked={teleMarketingForm.LANGUAGE_16}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-16">Dutch</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[17]"
+                                                        name="LANGUAGE_17"
                                                         id="LANGUAGE-17"
                                                         value="Dzongha"
+                                                        checked={teleMarketingForm.LANGUAGE_17}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-17">Dzongha</label>
                                                 </td>
@@ -5114,61 +5482,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[18]"
+                                                        name="LANGUAGE_18"
                                                         id="LANGUAGE-18"
                                                         value="English"
+                                                        checked={teleMarketingForm.LANGUAGE_18}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-18">English</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[19]"
+                                                        name="LANGUAGE_19"
                                                         id="LANGUAGE-19"
                                                         value="Estonian"
+                                                        checked={teleMarketingForm.LANGUAGE_19}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-19">Estonian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[20]"
+                                                        name="LANGUAGE_20"
                                                         id="LANGUAGE-20"
                                                         value="Farsi"
+                                                        checked={teleMarketingForm.LANGUAGE_20}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-20">Farsi</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[21]"
+                                                        name="LANGUAGE_21"
                                                         id="LANGUAGE-21"
                                                         value="Finnish"
+                                                        checked={teleMarketingForm.LANGUAGE_21}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-21">Finnish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[22]"
+                                                        name="LANGUAGE_22"
                                                         id="LANGUAGE-22"
                                                         value="French"
+                                                        checked={teleMarketingForm.LANGUAGE_22}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-22">French</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[23]"
+                                                        name="LANGUAGE_23"
                                                         id="LANGUAGE-23"
                                                         value="Ga"
+                                                        checked={teleMarketingForm.LANGUAGE_23}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-23">Ga</label>
                                                 </td>
@@ -5176,61 +5550,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[24]"
+                                                        name="LANGUAGE_24"
                                                         id="LANGUAGE-24"
                                                         value="Georgian"
+                                                        checked={teleMarketingForm.LANGUAGE_24}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-24">Georgian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[25]"
+                                                        name="LANGUAGE_25"
                                                         id="LANGUAGE-25"
                                                         value="German"
+                                                        checked={teleMarketingForm.LANGUAGE_25}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-25">German</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[26]"
+                                                        name="LANGUAGE_26"
                                                         id="LANGUAGE-26"
                                                         value="Greek"
+                                                        checked={teleMarketingForm.LANGUAGE_26}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-26">Greek</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[27]"
+                                                        name="LANGUAGE_27"
                                                         id="LANGUAGE-27"
                                                         value="Hausa"
+                                                        checked={teleMarketingForm.LANGUAGE_27}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-27">Hausa</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[28]"
+                                                        name="LANGUAGE_28"
                                                         id="LANGUAGE-28"
                                                         value="Hebrew"
+                                                        checked={teleMarketingForm.LANGUAGE_28}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-28">Hebrew</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[29]"
+                                                        name="LANGUAGE_29"
                                                         id="LANGUAGE-29"
                                                         value="Hindi"
+                                                        checked={teleMarketingForm.LANGUAGE_29}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-29">Hindi</label>
                                                 </td>
@@ -5238,61 +5618,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[30]"
+                                                        name="LANGUAGE_30"
                                                         id="LANGUAGE-30"
                                                         value="Hungarian"
+                                                        checked={teleMarketingForm.LANGUAGE_30}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-30">Hungarian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[31]"
+                                                        name="LANGUAGE_31"
                                                         id="LANGUAGE-31"
                                                         value="Icelandic"
+                                                        checked={teleMarketingForm.LANGUAGE_31}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-31">Icelandic</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[32]"
+                                                        name="LANGUAGE_32"
                                                         id="LANGUAGE-32"
                                                         value="Indonesian"
+                                                        checked={teleMarketingForm.LANGUAGE_32}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-32">Indonesian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[33]"
+                                                        name="LANGUAGE_33"
                                                         id="LANGUAGE-33"
                                                         value="Italian"
+                                                        checked={teleMarketingForm.LANGUAGE_33}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-33">Italian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[34]"
+                                                        name="LANGUAGE_34"
                                                         id="LANGUAGE-34"
                                                         value="Japanese"
+                                                        checked={teleMarketingForm.LANGUAGE_34}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-34">Japanese</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[35]"
+                                                        name="LANGUAGE_35"
                                                         id="LANGUAGE-35"
                                                         value="Kazakh"
+                                                        checked={teleMarketingForm.LANGUAGE_35}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-35">Kazakh</label>
                                                 </td>
@@ -5300,41 +5686,45 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[36]"
+                                                        name="LANGUAGE_36"
                                                         id="LANGUAGE-36"
                                                         value="Khmer"
+                                                        checked={teleMarketingForm.LANGUAGE_36}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-36">Khmer</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[37]"
+                                                        name="LANGUAGE_37"
                                                         id="LANGUAGE-37"
                                                         value="Kirghiz"
+                                                        checked={teleMarketingForm.LANGUAGE_37}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-37">Kirghiz</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[38]"
+                                                        name="LANGUAGE_38"
                                                         id="LANGUAGE-38"
                                                         value="Korean"
+                                                        checked={teleMarketingForm.LANGUAGE_38}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-38">Korean</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[39]"
+                                                        name="LANGUAGE_39"
                                                         id="LANGUAGE-39"
                                                         value="Laotian (Include Hmong)"
+                                                        checked={teleMarketingForm.LANGUAGE_39}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-39">
                                                         Laotian (Include Hmong)
@@ -5342,21 +5732,23 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[40]"
+                                                        name="LANGUAGE_40"
                                                         id="LANGUAGE-40"
                                                         value="Latvian"
+                                                        checked={teleMarketingForm.LANGUAGE_40}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-40">Latvian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[41]"
+                                                        name="LANGUAGE_41"
                                                         id="LANGUAGE-41"
                                                         value="Lithuanian"
+                                                        checked={teleMarketingForm.LANGUAGE_41}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-41">Lithuanian</label>
                                                 </td>
@@ -5364,61 +5756,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[42]"
+                                                        name="LANGUAGE_42"
                                                         id="LANGUAGE-42"
                                                         value="Macedonian"
+                                                        checked={teleMarketingForm.LANGUAGE_42}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-42">Macedonian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[43]"
+                                                        name="LANGUAGE_43"
                                                         id="LANGUAGE-43"
                                                         value="Malagasy"
+                                                        checked={teleMarketingForm.LANGUAGE_43}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-43">Malagasy</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[44]"
+                                                        name="LANGUAGE_44"
                                                         id="LANGUAGE-44"
                                                         value="Malay"
+                                                        checked={teleMarketingForm.LANGUAGE_44}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-44">Malay</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[45]"
+                                                        name="LANGUAGE_45"
                                                         id="LANGUAGE-45"
                                                         value="Moldavian"
+                                                        checked={teleMarketingForm.LANGUAGE_45}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-45">Moldavian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[46]"
+                                                        name="LANGUAGE_46"
                                                         id="LANGUAGE-46"
                                                         value="Mongolian"
+                                                        checked={teleMarketingForm.LANGUAGE_46}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-46">Mongolian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[47]"
+                                                        name="LANGUAGE_47"
                                                         id="LANGUAGE-47"
                                                         value="Nepali"
+                                                        checked={teleMarketingForm.LANGUAGE_47}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-47">Nepali</label>
                                                 </td>
@@ -5426,61 +5824,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[48]"
+                                                        name="LANGUAGE_48"
                                                         id="LANGUAGE-48"
                                                         value="Norwegian"
+                                                        checked={teleMarketingForm.LANGUAGE_48}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-48">Norwegian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[49]"
+                                                        name="LANGUAGE_49"
                                                         id="LANGUAGE-49"
                                                         value="Oromo"
+                                                        checked={teleMarketingForm.LANGUAGE_49}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-49">Oromo</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[50]"
+                                                        name="LANGUAGE_50"
                                                         id="LANGUAGE-50"
                                                         value="Pashto"
+                                                        checked={teleMarketingForm.LANGUAGE_50}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-50">Pashto</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[51]"
+                                                        name="LANGUAGE_51"
                                                         id="LANGUAGE-51"
                                                         value="Polish"
+                                                        checked={teleMarketingForm.LANGUAGE_51}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-51">Polish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[52]"
+                                                        name="LANGUAGE_52"
                                                         id="LANGUAGE-52"
                                                         value="Portuguese"
+                                                        checked={teleMarketingForm.LANGUAGE_52}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-52">Portuguese</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[53]"
+                                                        name="LANGUAGE_53"
                                                         id="LANGUAGE-53"
                                                         value="Romanian"
+                                                        checked={teleMarketingForm.LANGUAGE_53}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-53">Romanian</label>
                                                 </td>
@@ -5488,61 +5892,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[54]"
+                                                        name="LANGUAGE_54"
                                                         id="LANGUAGE-54"
                                                         value="Russian"
+                                                        checked={teleMarketingForm.LANGUAGE_54}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-54">Russian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[55]"
+                                                        name="LANGUAGE_55"
                                                         id="LANGUAGE-55"
                                                         value="Samoan"
+                                                        checked={teleMarketingForm.LANGUAGE_55}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-55">Samoan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[56]"
+                                                        name="LANGUAGE_56"
                                                         id="LANGUAGE-56"
                                                         value="Serbo-Croatian"
+                                                        checked={teleMarketingForm.LANGUAGE_56}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-56">Serbo-Croatian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[57]"
+                                                        name="LANGUAGE_57"
                                                         id="LANGUAGE-57"
                                                         value="Sinhalese"
+                                                        checked={teleMarketingForm.LANGUAGE_57}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-57">Sinhalese</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[58]"
+                                                        name="LANGUAGE_58"
                                                         id="LANGUAGE-58"
                                                         value="Slovakian"
+                                                        checked={teleMarketingForm.LANGUAGE_58}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-58">Slovakian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[59]"
+                                                        name="LANGUAGE_59"
                                                         id="LANGUAGE-59"
                                                         value="Slovenian"
+                                                        checked={teleMarketingForm.LANGUAGE_59}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-59">Slovenian</label>
                                                 </td>
@@ -5550,61 +5960,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[60]"
+                                                        name="LANGUAGE_60"
                                                         id="LANGUAGE-60"
                                                         value="Somali"
+                                                        checked={teleMarketingForm.LANGUAGE_60}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-60">Somali</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[61]"
+                                                        name="LANGUAGE_61"
                                                         id="LANGUAGE-61"
                                                         value="Sotho"
+                                                        checked={teleMarketingForm.LANGUAGE_61}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-61">Sotho</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[62]"
+                                                        name="LANGUAGE_62"
                                                         id="LANGUAGE-62"
                                                         value="Spanish"
+                                                        checked={teleMarketingForm.LANGUAGE_62}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-62">Spanish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[63]"
+                                                        name="LANGUAGE_63"
                                                         id="LANGUAGE-63"
                                                         value="Swahili"
+                                                        checked={teleMarketingForm.LANGUAGE_63}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-63">Swahili</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[64]"
+                                                        name="LANGUAGE_64"
                                                         id="LANGUAGE-64"
                                                         value="Swazi"
+                                                        checked={teleMarketingForm.LANGUAGE_64}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-64">Swazi</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[65]"
+                                                        name="LANGUAGE_65"
                                                         id="LANGUAGE-65"
                                                         value="Swedish"
+                                                        checked={teleMarketingForm.LANGUAGE_65}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-65">Swedish</label>
                                                 </td>
@@ -5612,61 +6028,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[66]"
+                                                        name="LANGUAGE_66"
                                                         id="LANGUAGE-66"
                                                         value="Tagalog"
+                                                        checked={teleMarketingForm.LANGUAGE_66}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-66">Tagalog</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[67]"
+                                                        name="LANGUAGE_67"
                                                         id="LANGUAGE-67"
                                                         value="Tajik"
+                                                        checked={teleMarketingForm.LANGUAGE_67}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-67">Tajik</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[68]"
+                                                        name="LANGUAGE_68"
                                                         id="LANGUAGE-68"
                                                         value="Thai"
+                                                        checked={teleMarketingForm.LANGUAGE_68}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-68">Thai</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[69]"
+                                                        name="LANGUAGE_69"
                                                         id="LANGUAGE-69"
                                                         value="Tibetan"
+                                                        checked={teleMarketingForm.LANGUAGE_69}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-69">Tibetan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[70]"
+                                                        name="LANGUAGE_70"
                                                         id="LANGUAGE-70"
                                                         value="Tongan"
+                                                        checked={teleMarketingForm.LANGUAGE_70}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-70">Tongan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[71]"
+                                                        name="LANGUAGE_71"
                                                         id="LANGUAGE-71"
                                                         value="Tswana"
+                                                        checked={teleMarketingForm.LANGUAGE_71}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-71">Tswana</label>
                                                 </td>
@@ -5674,61 +6096,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[72]"
+                                                        name="LANGUAGE_72"
                                                         id="LANGUAGE-72"
                                                         value="Turkish"
+                                                        checked={teleMarketingForm.LANGUAGE_72}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-72">Turkish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[73]"
+                                                        name="LANGUAGE_73"
                                                         id="LANGUAGE-73"
                                                         value="Turkmeni"
+                                                        checked={teleMarketingForm.LANGUAGE_73}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-73">Turkmeni</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[74]"
+                                                        name="LANGUAGE_74"
                                                         id="LANGUAGE-74"
                                                         value="Unknown"
+                                                        checked={teleMarketingForm.LANGUAGE_74}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-74">Unknown</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[75]"
+                                                        name="LANGUAGE_75"
                                                         id="LANGUAGE-75"
                                                         value="Urdu"
+                                                        checked={teleMarketingForm.LANGUAGE_75}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-75">Urdu</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[76]"
+                                                        name="LANGUAGE_76"
                                                         id="LANGUAGE-76"
                                                         value="Uzbeki"
+                                                        checked={teleMarketingForm.LANGUAGE_76}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-76">Uzbeki</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[77]"
+                                                        name="LANGUAGE_77"
                                                         id="LANGUAGE-77"
                                                         value="Vietnamese"
+                                                        checked={teleMarketingForm.LANGUAGE_77}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-77">Vietnamese</label>
                                                 </td>
@@ -5736,21 +6164,23 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[78]"
+                                                        name="LANGUAGE_78"
                                                         id="LANGUAGE-78"
                                                         value="Xhosa"
+                                                        checked={teleMarketingForm.LANGUAGE_78}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-78">Xhosa</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="LANGUAGE[79]"
+                                                        name="LANGUAGE_79"
                                                         id="LANGUAGE-79"
                                                         value="Zulu"
+                                                        checked={teleMarketingForm.LANGUAGE_79}
                                                     />{" "}
                                                     <label htmlFor="LANGUAGE-79">Zulu</label>
                                                 </td>
@@ -5804,21 +6234,23 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[0]"
+                                                        name="ETHNIC_CODE_0"
                                                         id="ETHNIC_CODE-0"
                                                         value="Afghani"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_0}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-0">Afghani</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[1]"
+                                                        name="ETHNIC_CODE_1"
                                                         id="ETHNIC_CODE-1"
                                                         value="African American 1"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_1}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-1">
                                                         African American 1
@@ -5826,11 +6258,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[2]"
+                                                        name="ETHNIC_CODE_2"
                                                         id="ETHNIC_CODE-2"
                                                         value="African American 2"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_2}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-2">
                                                         African American 2
@@ -5838,31 +6271,34 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[3]"
+                                                        name="ETHNIC_CODE_3"
                                                         id="ETHNIC_CODE-3"
                                                         value="Albanian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_3}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-3">Albanian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[4]"
+                                                        name="ETHNIC_CODE_4"
                                                         id="ETHNIC_CODE-4"
                                                         value="Aleut"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_4}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-4">Aleut</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[5]"
+                                                        name="ETHNIC_CODE_5"
                                                         id="ETHNIC_CODE-5"
                                                         value="Algerian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_5}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-5">Algerian</label>
                                                 </td>
@@ -5870,61 +6306,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[6]"
+                                                        name="ETHNIC_CODE_6"
                                                         id="ETHNIC_CODE-6"
                                                         value="Angolan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_6}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-6">Angolan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[7]"
+                                                        name="ETHNIC_CODE_7"
                                                         id="ETHNIC_CODE-7"
                                                         value="Arab"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_7}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-7">Arab</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[8]"
+                                                        name="ETHNIC_CODE_8"
                                                         id="ETHNIC_CODE-8"
                                                         value="Armenian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_8}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-8">Armenian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[9]"
+                                                        name="ETHNIC_CODE_9"
                                                         id="ETHNIC_CODE-9"
                                                         value="Ashanti"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_9}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-9">Ashanti</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[10]"
+                                                        name="ETHNIC_CODE_10"
                                                         id="ETHNIC_CODE-10"
                                                         value="Australian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_10}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-10">Australian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[11]"
+                                                        name="ETHNIC_CODE_11"
                                                         id="ETHNIC_CODE-11"
                                                         value="Austrian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_11}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-11">Austrian</label>
                                                 </td>
@@ -5932,61 +6374,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[12]"
+                                                        name="ETHNIC_CODE_12"
                                                         id="ETHNIC_CODE-12"
                                                         value="Azerb"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_12}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-12">Azerb</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[13]"
+                                                        name="ETHNIC_CODE_13"
                                                         id="ETHNIC_CODE-13"
                                                         value="Bahrain"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_13}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-13">Bahrain</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[14]"
+                                                        name="ETHNIC_CODE_14"
                                                         id="ETHNIC_CODE-14"
                                                         value="Basotho"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_14}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-14">Basotho</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[15]"
+                                                        name="ETHNIC_CODE_15"
                                                         id="ETHNIC_CODE-15"
                                                         value="Basque"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_15}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-15">Basque</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[16]"
+                                                        name="ETHNIC_CODE_16"
                                                         id="ETHNIC_CODE-16"
                                                         value="Belgian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_16}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-16">Belgian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[17]"
+                                                        name="ETHNIC_CODE_17"
                                                         id="ETHNIC_CODE-17"
                                                         value="Bengladesh"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_17}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-17">Bengladesh</label>
                                                 </td>
@@ -5994,61 +6442,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[18]"
+                                                        name="ETHNIC_CODE_18"
                                                         id="ETHNIC_CODE-18"
                                                         value="Benin"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_18}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-18">Benin</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[19]"
+                                                        name="ETHNIC_CODE_19"
                                                         id="ETHNIC_CODE-19"
                                                         value="Bhutanese"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_19}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-19">Bhutanese</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[20]"
+                                                        name="ETHNIC_CODE_20"
                                                         id="ETHNIC_CODE-20"
                                                         value="Bosnian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_20}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-20">Bosnian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[21]"
+                                                        name="ETHNIC_CODE_21"
                                                         id="ETHNIC_CODE-21"
                                                         value="Botswanian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_21}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-21">Botswanian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[22]"
+                                                        name="ETHNIC_CODE_22"
                                                         id="ETHNIC_CODE-22"
                                                         value="Bulgarian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_22}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-22">Bulgarian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[23]"
+                                                        name="ETHNIC_CODE_23"
                                                         id="ETHNIC_CODE-23"
                                                         value="Burkina Faso"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_23}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-23">Burkina Faso</label>
                                                 </td>
@@ -6056,41 +6510,45 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[24]"
+                                                        name="ETHNIC_CODE_24"
                                                         id="ETHNIC_CODE-24"
                                                         value="Burundi"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_24}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-24">Burundi</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[25]"
+                                                        name="ETHNIC_CODE_25"
                                                         id="ETHNIC_CODE-25"
                                                         value="Byelorussian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_25}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-25">Byelorussian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[26]"
+                                                        name="ETHNIC_CODE_26"
                                                         id="ETHNIC_CODE-26"
                                                         value="Cameroon"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_26}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-26">Cameroon</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[27]"
+                                                        name="ETHNIC_CODE_27"
                                                         id="ETHNIC_CODE-27"
                                                         value="Caribbean African American"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_27}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-27">
                                                         Caribbean African American
@@ -6098,21 +6556,23 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[28]"
+                                                        name="ETHNIC_CODE_28"
                                                         id="ETHNIC_CODE-28"
                                                         value="Cent Afric Rep"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_28}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-28">Cent Afric Rep</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[29]"
+                                                        name="ETHNIC_CODE_29"
                                                         id="ETHNIC_CODE-29"
                                                         value="Chad"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_29}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-29">Chad</label>
                                                 </td>
@@ -6120,61 +6580,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[30]"
+                                                        name="ETHNIC_CODE_30"
                                                         id="ETHNIC_CODE-30"
                                                         value="Chechnian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_30}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-30">Chechnian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[31]"
+                                                        name="ETHNIC_CODE_31"
                                                         id="ETHNIC_CODE-31"
                                                         value="Chinese"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_31}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-31">Chinese</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[32]"
+                                                        name="ETHNIC_CODE_32"
                                                         id="ETHNIC_CODE-32"
                                                         value="Comoros"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_32}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-32">Comoros</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[33]"
+                                                        name="ETHNIC_CODE_33"
                                                         id="ETHNIC_CODE-33"
                                                         value="Congo"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_33}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-33">Congo</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[34]"
+                                                        name="ETHNIC_CODE_34"
                                                         id="ETHNIC_CODE-34"
                                                         value="Croatian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_34}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-34">Croatian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[35]"
+                                                        name="ETHNIC_CODE_35"
                                                         id="ETHNIC_CODE-35"
                                                         value="Czech"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_35}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-35">Czech</label>
                                                 </td>
@@ -6182,61 +6648,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[36]"
+                                                        name="ETHNIC_CODE_36"
                                                         id="ETHNIC_CODE-36"
                                                         value="Danish"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_36}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-36">Danish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[37]"
+                                                        name="ETHNIC_CODE_37"
                                                         id="ETHNIC_CODE-37"
                                                         value="Djibouti"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_37}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-37">Djibouti</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[38]"
+                                                        name="ETHNIC_CODE_38"
                                                         id="ETHNIC_CODE-38"
                                                         value="Dutch"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_38}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-38">Dutch</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[39]"
+                                                        name="ETHNIC_CODE_39"
                                                         id="ETHNIC_CODE-39"
                                                         value="Egyptian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_39}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-39">Egyptian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[40]"
+                                                        name="ETHNIC_CODE_40"
                                                         id="ETHNIC_CODE-40"
                                                         value="English"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_40}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-40">English</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[41]"
+                                                        name="ETHNIC_CODE_41"
                                                         id="ETHNIC_CODE-41"
                                                         value="Equat Guinea"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_41}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-41">Equat Guinea</label>
                                                 </td>
@@ -6244,61 +6716,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[42]"
+                                                        name="ETHNIC_CODE_42"
                                                         id="ETHNIC_CODE-42"
                                                         value="Estonian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_42}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-42">Estonian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[43]"
+                                                        name="ETHNIC_CODE_43"
                                                         id="ETHNIC_CODE-43"
                                                         value="Ethiopian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_43}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-43">Ethiopian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[44]"
+                                                        name="ETHNIC_CODE_44"
                                                         id="ETHNIC_CODE-44"
                                                         value="Fiji"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_44}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-44">Fiji</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[45]"
+                                                        name="ETHNIC_CODE_45"
                                                         id="ETHNIC_CODE-45"
                                                         value="Filipino"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_45}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-45">Filipino</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[46]"
+                                                        name="ETHNIC_CODE_46"
                                                         id="ETHNIC_CODE-46"
                                                         value="Finnish"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_46}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-46">Finnish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[47]"
+                                                        name="ETHNIC_CODE_47"
                                                         id="ETHNIC_CODE-47"
                                                         value="French"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_47}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-47">French</label>
                                                 </td>
@@ -6306,61 +6784,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[48]"
+                                                        name="ETHNIC_CODE_48"
                                                         id="ETHNIC_CODE-48"
                                                         value="Gabon"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_48}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-48">Gabon</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[49]"
+                                                        name="ETHNIC_CODE_49"
                                                         id="ETHNIC_CODE-49"
                                                         value="Gambia"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_49}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-49">Gambia</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[50]"
+                                                        name="ETHNIC_CODE_50"
                                                         id="ETHNIC_CODE-50"
                                                         value="Georgian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_50}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-50">Georgian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[51]"
+                                                        name="ETHNIC_CODE_51"
                                                         id="ETHNIC_CODE-51"
                                                         value="German"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_51}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-51">German</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[52]"
+                                                        name="ETHNIC_CODE_52"
                                                         id="ETHNIC_CODE-52"
                                                         value="Ghana"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_52}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-52">Ghana</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[53]"
+                                                        name="ETHNIC_CODE_53"
                                                         id="ETHNIC_CODE-53"
                                                         value="Greek"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_53}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-53">Greek</label>
                                                 </td>
@@ -6368,61 +6852,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[54]"
+                                                        name="ETHNIC_CODE_54"
                                                         id="ETHNIC_CODE-54"
                                                         value="Guinea-Bissea"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_54}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-54">Guinea-Bissea</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[55]"
+                                                        name="ETHNIC_CODE_55"
                                                         id="ETHNIC_CODE-55"
                                                         value="Guinean"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_55}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-55">Guinean</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[56]"
+                                                        name="ETHNIC_CODE_56"
                                                         id="ETHNIC_CODE-56"
                                                         value="Guyana"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_56}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-56">Guyana</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[57]"
+                                                        name="ETHNIC_CODE_57"
                                                         id="ETHNIC_CODE-57"
                                                         value="Hausa"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_57}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-57">Hausa</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[58]"
+                                                        name="ETHNIC_CODE_58"
                                                         id="ETHNIC_CODE-58"
                                                         value="Hawaiian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_58}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-58">Hawaiian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[59]"
+                                                        name="ETHNIC_CODE_59"
                                                         id="ETHNIC_CODE-59"
                                                         value="Hispanic"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_59}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-59">Hispanic</label>
                                                 </td>
@@ -6430,61 +6920,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[60]"
+                                                        name="ETHNIC_CODE_60"
                                                         id="ETHNIC_CODE-60"
                                                         value="Hungarian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_60}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-60">Hungarian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[61]"
+                                                        name="ETHNIC_CODE_61"
                                                         id="ETHNIC_CODE-61"
                                                         value="Icelandic"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_61}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-61">Icelandic</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[62]"
+                                                        name="ETHNIC_CODE_62"
                                                         id="ETHNIC_CODE-62"
                                                         value="Indian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_62}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-62">Indian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[63]"
+                                                        name="ETHNIC_CODE_63"
                                                         id="ETHNIC_CODE-63"
                                                         value="Indonesian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_63}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-63">Indonesian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[64]"
+                                                        name="ETHNIC_CODE_64"
                                                         id="ETHNIC_CODE-64"
                                                         value="Iraqi"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_64}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-64">Iraqi</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[65]"
+                                                        name="ETHNIC_CODE_65"
                                                         id="ETHNIC_CODE-65"
                                                         value="Irish"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_65}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-65">Irish</label>
                                                 </td>
@@ -6492,61 +6988,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[66]"
+                                                        name="ETHNIC_CODE_66"
                                                         id="ETHNIC_CODE-66"
                                                         value="Italian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_66}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-66">Italian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[67]"
+                                                        name="ETHNIC_CODE_67"
                                                         id="ETHNIC_CODE-67"
                                                         value="Ivory Coast"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_67}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-67">Ivory Coast</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[68]"
+                                                        name="ETHNIC_CODE_68"
                                                         id="ETHNIC_CODE-68"
                                                         value="Japanese"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_68}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-68">Japanese</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[69]"
+                                                        name="ETHNIC_CODE_69"
                                                         id="ETHNIC_CODE-69"
                                                         value="Jewish"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_69}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-69">Jewish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[70]"
+                                                        name="ETHNIC_CODE_70"
                                                         id="ETHNIC_CODE-70"
                                                         value="Kazakh"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_70}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-70">Kazakh</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[71]"
+                                                        name="ETHNIC_CODE_71"
                                                         id="ETHNIC_CODE-71"
                                                         value="Kenya"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_71}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-71">Kenya</label>
                                                 </td>
@@ -6554,61 +7056,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[72]"
+                                                        name="ETHNIC_CODE_72"
                                                         id="ETHNIC_CODE-72"
                                                         value="Khmer"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_72}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-72">Khmer</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[73]"
+                                                        name="ETHNIC_CODE_73"
                                                         id="ETHNIC_CODE-73"
                                                         value="Kirghiz"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_73}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-73">Kirghiz</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[74]"
+                                                        name="ETHNIC_CODE_74"
                                                         id="ETHNIC_CODE-74"
                                                         value="Korean"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_74}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-74">Korean</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[75]"
+                                                        name="ETHNIC_CODE_75"
                                                         id="ETHNIC_CODE-75"
                                                         value="Kurdish"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_75}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-75">Kurdish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[76]"
+                                                        name="ETHNIC_CODE_76"
                                                         id="ETHNIC_CODE-76"
                                                         value="Kuwaiti"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_76}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-76">Kuwaiti</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[77]"
+                                                        name="ETHNIC_CODE_77"
                                                         id="ETHNIC_CODE-77"
                                                         value="Kyrgyzstani"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_77}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-77">Kyrgyzstani</label>
                                                 </td>
@@ -6616,61 +7124,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[78]"
+                                                        name="ETHNIC_CODE_78"
                                                         id="ETHNIC_CODE-78"
                                                         value="Laotian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_78}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-78">Laotian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[79]"
+                                                        name="ETHNIC_CODE_79"
                                                         id="ETHNIC_CODE-79"
                                                         value="Latvian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_79}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-79">Latvian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[80]"
+                                                        name="ETHNIC_CODE_80"
                                                         id="ETHNIC_CODE-80"
                                                         value="Lesotho"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_80}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-80">Lesotho</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[81]"
+                                                        name="ETHNIC_CODE_81"
                                                         id="ETHNIC_CODE-81"
                                                         value="Liberian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_81}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-81">Liberian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[82]"
+                                                        name="ETHNIC_CODE_82"
                                                         id="ETHNIC_CODE-82"
                                                         value="Libyan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_82}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-82">Libyan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[83]"
+                                                        name="ETHNIC_CODE_83"
                                                         id="ETHNIC_CODE-83"
                                                         value="Liechtenstein"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_83}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-83">Liechtenstein</label>
                                                 </td>
@@ -6678,61 +7192,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[84]"
+                                                        name="ETHNIC_CODE_84"
                                                         id="ETHNIC_CODE-84"
                                                         value="Lithuanian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_84}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-84">Lithuanian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[85]"
+                                                        name="ETHNIC_CODE_85"
                                                         id="ETHNIC_CODE-85"
                                                         value="Luxembourgian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_85}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-85">Luxembourgian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[86]"
+                                                        name="ETHNIC_CODE_86"
                                                         id="ETHNIC_CODE-86"
                                                         value="Macedonian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_86}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-86">Macedonian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[87]"
+                                                        name="ETHNIC_CODE_87"
                                                         id="ETHNIC_CODE-87"
                                                         value="Madagascar"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_87}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-87">Madagascar</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[88]"
+                                                        name="ETHNIC_CODE_88"
                                                         id="ETHNIC_CODE-88"
                                                         value="Malawi"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_88}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-88">Malawi</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[89]"
+                                                        name="ETHNIC_CODE_89"
                                                         id="ETHNIC_CODE-89"
                                                         value="Malay"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_89}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-89">Malay</label>
                                                 </td>
@@ -6740,61 +7260,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[90]"
+                                                        name="ETHNIC_CODE_90"
                                                         id="ETHNIC_CODE-90"
                                                         value="Maldivian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_90}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-90">Maldivian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[91]"
+                                                        name="ETHNIC_CODE_91"
                                                         id="ETHNIC_CODE-91"
                                                         value="Mali"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_91}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-91">Mali</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[92]"
+                                                        name="ETHNIC_CODE_92"
                                                         id="ETHNIC_CODE-92"
                                                         value="Maltese"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_92}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-92">Maltese</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[93]"
+                                                        name="ETHNIC_CODE_93"
                                                         id="ETHNIC_CODE-93"
                                                         value="Manx"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_93}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-93">Manx</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[94]"
+                                                        name="ETHNIC_CODE_94"
                                                         id="ETHNIC_CODE-94"
                                                         value="Mauritania"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_94}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-94">Mauritania</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[95]"
+                                                        name="ETHNIC_CODE_95"
                                                         id="ETHNIC_CODE-95"
                                                         value="Moldavian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_95}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-95">Moldavian</label>
                                                 </td>
@@ -6802,61 +7328,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[96]"
+                                                        name="ETHNIC_CODE_96"
                                                         id="ETHNIC_CODE-96"
                                                         value="Mongolian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_96}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-96">Mongolian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[97]"
+                                                        name="ETHNIC_CODE_97"
                                                         id="ETHNIC_CODE-97"
                                                         value="Moroccan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_97}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-97">Moroccan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[98]"
+                                                        name="ETHNIC_CODE_98"
                                                         id="ETHNIC_CODE-98"
                                                         value="Mozambique"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_98}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-98">Mozambique</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[99]"
+                                                        name="ETHNIC_CODE_99"
                                                         id="ETHNIC_CODE-99"
                                                         value="Multi-Ethnic"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_99}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-99">Multi-Ethnic</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[100]"
+                                                        name="ETHNIC_CODE_100"
                                                         id="ETHNIC_CODE-100"
                                                         value="Myanmar"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_100}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-100">Myanmar</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[101]"
+                                                        name="ETHNIC_CODE_101"
                                                         id="ETHNIC_CODE-101"
                                                         value="Namibian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_101}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-101">Namibian</label>
                                                 </td>
@@ -6864,11 +7396,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[102]"
+                                                        name="ETHNIC_CODE_102"
                                                         id="ETHNIC_CODE-102"
                                                         value="Native American"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_102}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-102">
                                                         Native American
@@ -6876,51 +7409,56 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[103]"
+                                                        name="ETHNIC_CODE_103"
                                                         id="ETHNIC_CODE-103"
                                                         value="Nauruan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_103}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-103">Nauruan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[104]"
+                                                        name="ETHNIC_CODE_104"
                                                         id="ETHNIC_CODE-104"
                                                         value="Nepal"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_104}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-104">Nepal</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[105]"
+                                                        name="ETHNIC_CODE_105"
                                                         id="ETHNIC_CODE-105"
                                                         value="New Zealand"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_105}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-105">New Zealand</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[106]"
+                                                        name="ETHNIC_CODE_106"
                                                         id="ETHNIC_CODE-106"
                                                         value="Niger"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_106}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-106">Niger</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[107]"
+                                                        name="ETHNIC_CODE_107"
                                                         id="ETHNIC_CODE-107"
                                                         value="Nigerian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_107}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-107">Nigerian</label>
                                                 </td>
@@ -6928,41 +7466,45 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[108]"
+                                                        name="ETHNIC_CODE_108"
                                                         id="ETHNIC_CODE-108"
                                                         value="Norwegian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_108}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-108">Norwegian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[109]"
+                                                        name="ETHNIC_CODE_109"
                                                         id="ETHNIC_CODE-109"
                                                         value="Other Asian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_109}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-109">Other Asian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[110]"
+                                                        name="ETHNIC_CODE_110"
                                                         id="ETHNIC_CODE-110"
                                                         value="Pakistani"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_110}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-110">Pakistani</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[111]"
+                                                        name="ETHNIC_CODE_111"
                                                         id="ETHNIC_CODE-111"
                                                         value="Papua New Guinea"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_111}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-111">
                                                         Papua New Guinea
@@ -6970,21 +7512,23 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[112]"
+                                                        name="ETHNIC_CODE_112"
                                                         id="ETHNIC_CODE-112"
                                                         value="Persian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_112}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-112">Persian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[113]"
+                                                        name="ETHNIC_CODE_113"
                                                         id="ETHNIC_CODE-113"
                                                         value="Pili"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_113}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-113">Pili</label>
                                                 </td>
@@ -6992,61 +7536,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[114]"
+                                                        name="ETHNIC_CODE_114"
                                                         id="ETHNIC_CODE-114"
                                                         value="Polish"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_114}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-114">Polish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[115]"
+                                                        name="ETHNIC_CODE-115"
                                                         id="ETHNIC_CODE-115"
                                                         value="Portuguese"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_115}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-115">Portuguese</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[116]"
+                                                        name="ETHNIC_CODE_116"
                                                         id="ETHNIC_CODE-116"
                                                         value="Qatar"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_116}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-116">Qatar</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[117]"
+                                                        name="ETHNIC_CODE_117"
                                                         id="ETHNIC_CODE-117"
                                                         value="Romanian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_117}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-117">Romanian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[118]"
+                                                        name="ETHNIC_CODE_118"
                                                         id="ETHNIC_CODE-118"
                                                         value="Ruandan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_118}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-118">Ruandan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[119]"
+                                                        name="ETHNIC_CODE_119"
                                                         id="ETHNIC_CODE-119"
                                                         value="Russian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_119}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-119">Russian</label>
                                                 </td>
@@ -7054,61 +7604,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[120]"
+                                                        name="ETHNIC_CODE_120"
                                                         id="ETHNIC_CODE-120"
                                                         value="Saudi"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_120}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-120">Saudi</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[121]"
+                                                        name="ETHNIC_CODE_121"
                                                         id="ETHNIC_CODE-121"
                                                         value="Scotch"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_121}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-121">Scotch</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[122]"
+                                                        name="ETHNIC_CODE_122"
                                                         id="ETHNIC_CODE-122"
                                                         value="Senegalese"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_122}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-122">Senegalese</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[123]"
+                                                        name="ETHNIC_CODE_123"
                                                         id="ETHNIC_CODE-123"
                                                         value="Serbian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_123}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-123">Serbian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[124]"
+                                                        name="ETHNIC_CODE_124"
                                                         id="ETHNIC_CODE-124"
                                                         value="Seychelles"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_124}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-124">Seychelles</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[125]"
+                                                        name="ETHNIC_CODE_125"
                                                         id="ETHNIC_CODE-125"
                                                         value="Siere Leone"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_125}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-125">Siere Leone</label>
                                                 </td>
@@ -7116,61 +7672,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[126]"
+                                                        name="ETHNIC_CODE_126"
                                                         id="ETHNIC_CODE-126"
                                                         value="Slovakian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_126}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-126">Slovakian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[127]"
+                                                        name="ETHNIC_CODE_127"
                                                         id="ETHNIC_CODE-127"
                                                         value="Slovenian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_127}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-127">Slovenian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[128]"
+                                                        name="ETHNIC_CODE_128"
                                                         id="ETHNIC_CODE-128"
                                                         value="Somalia"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_128}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-128">Somalia</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[129]"
+                                                        name="ETHNIC_CODE_129"
                                                         id="ETHNIC_CODE-129"
                                                         value="South African"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_129}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-129">South African</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[130]"
+                                                        name="ETHNIC_CODE_130"
                                                         id="ETHNIC_CODE-130"
                                                         value="Sri Lankan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_130}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-130">Sri Lankan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[131]"
+                                                        name="ETHNIC_CODE_131"
                                                         id="ETHNIC_CODE-131"
                                                         value="Sudanese"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_131}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-131">Sudanese</label>
                                                 </td>
@@ -7178,61 +7740,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[132]"
+                                                        name="ETHNIC_CODE_132"
                                                         id="ETHNIC_CODE-132"
                                                         value="Surinam"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_132}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-132">Surinam</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[133]"
+                                                        name="ETHNIC_CODE_133"
                                                         id="ETHNIC_CODE-133"
                                                         value="Swahili"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_133}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-133">Swahili</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[134]"
+                                                        name="ETHNIC_CODE_134"
                                                         id="ETHNIC_CODE-134"
                                                         value="Swaziland"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_134}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-134">Swaziland</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[135]"
+                                                        name="ETHNIC_CODE_135"
                                                         id="ETHNIC_CODE-135"
                                                         value="Swedish"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_135}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-135">Swedish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[136]"
+                                                        name="ETHNIC_CODE_136"
                                                         id="ETHNIC_CODE-136"
                                                         value="Swiss"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_136}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-136">Swiss</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[137]"
+                                                        name="ETHNIC_CODE_137"
                                                         id="ETHNIC_CODE-137"
                                                         value="Syrian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_137}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-137">Syrian</label>
                                                 </td>
@@ -7240,61 +7808,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[138]"
+                                                        name="ETHNIC_CODE_138"
                                                         id="ETHNIC_CODE-138"
                                                         value="Tajik"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_138}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-138">Tajik</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[139]"
+                                                        name="ETHNIC_CODE_139"
                                                         id="ETHNIC_CODE-139"
                                                         value="Tajikistan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_139}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-139">Tajikistan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[140]"
+                                                        name="ETHNIC_CODE_140"
                                                         id="ETHNIC_CODE-140"
                                                         value="Tanzanian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_140}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-140">Tanzanian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[141]"
+                                                        name="ETHNIC_CODE_141"
                                                         id="ETHNIC_CODE-141"
                                                         value="Telugan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_141}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-141">Telugan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[142]"
+                                                        name="ETHNIC_CODE_142"
                                                         id="ETHNIC_CODE-142"
                                                         value="Thai"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_142}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-142">Thai</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[143]"
+                                                        name="ETHNIC_CODE_143"
                                                         id="ETHNIC_CODE-143"
                                                         value="Tibetan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_143}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-143">Tibetan</label>
                                                 </td>
@@ -7302,61 +7876,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[144]"
+                                                        name="ETHNIC_CODE_144"
                                                         id="ETHNIC_CODE-144"
                                                         value="Togo"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_144}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-144">Togo</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[145]"
+                                                        name="ETHNIC_CODE_145"
                                                         id="ETHNIC_CODE-145"
                                                         value="Tonga"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_145}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-145">Tonga</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[146]"
+                                                        name="ETHNIC_CODE_146"
                                                         id="ETHNIC_CODE-146"
                                                         value="Tunisian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_146}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-146">Tunisian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[147]"
+                                                        name="ETHNIC_CODE_147"
                                                         id="ETHNIC_CODE-147"
                                                         value="Turkish"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_147}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-147">Turkish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[148]"
+                                                        name="ETHNIC_CODE_148"
                                                         id="ETHNIC_CODE-148"
                                                         value="Turkmenistan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_148}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-148">Turkmenistan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[149]"
+                                                        name="ETHNIC_CODE_149"
                                                         id="ETHNIC_CODE-149"
                                                         value="Ugandan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_149}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-149">Ugandan</label>
                                                 </td>
@@ -7364,61 +7944,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[150]"
+                                                        name="ETHNIC_CODE_150"
                                                         id="ETHNIC_CODE-150"
                                                         value="Ukrainian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_150}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-150">Ukrainian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[151]"
+                                                        name="ETHNIC_CODE_151"
                                                         id="ETHNIC_CODE-151"
                                                         value="Unknown"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_151}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-151">Unknown</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[152]"
+                                                        name="ETHNIC_CODE_152"
                                                         id="ETHNIC_CODE-152"
                                                         value="Uzbekistani"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_152}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-152">Uzbekistani</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[153]"
+                                                        name="ETHNIC_CODE_153"
                                                         id="ETHNIC_CODE-153"
                                                         value="Vanuatuan"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_153}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-153">Vanuatuan</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[154]"
+                                                        name="ETHNIC_CODE_154"
                                                         id="ETHNIC_CODE-154"
                                                         value="Vietnamese"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_154}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-154">Vietnamese</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[155]"
+                                                        name="ETHNIC_CODE_155"
                                                         id="ETHNIC_CODE-155"
                                                         value="Welsh"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_155}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-155">Welsh</label>
                                                 </td>
@@ -7426,61 +8012,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[156]"
+                                                        name="ETHNIC_CODE_156"
                                                         id="ETHNIC_CODE-156"
                                                         value="Western Samoa"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_156}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-156">Western Samoa</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[157]"
+                                                        name="ETHNIC_CODE_157"
                                                         id="ETHNIC_CODE-157"
                                                         value="Xhosa"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_157}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-157">Xhosa</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[158]"
+                                                        name="ETHNIC_CODE_158"
                                                         id="ETHNIC_CODE-158"
                                                         value="Yemeni"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_158}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-158">Yemeni</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[159]"
+                                                        name="ETHNIC_CODE_159"
                                                         id="ETHNIC_CODE-159"
                                                         value="Zaire"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_159}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-159">Zaire</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[160]"
+                                                        name="ETHNIC_CODE_160"
                                                         id="ETHNIC_CODE-160"
                                                         value="Zambian"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_160}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-160">Zambian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[161]"
+                                                        name="ETHNIC_CODE_161"
                                                         id="ETHNIC_CODE-161"
                                                         value="Zimbabwe"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_161}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-161">Zimbabwe</label>
                                                 </td>
@@ -7488,11 +8080,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_CODE[162]"
+                                                        name="ETHNIC_CODE_162"
                                                         id="ETHNIC_CODE-162"
                                                         value="Zulu"
+                                                        checked={teleMarketingForm.ETHNIC_CODE_162}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_CODE-162">Zulu</label>
                                                 </td>
@@ -7546,11 +8139,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[0]"
+                                                        name="ETHNIC_GROUP_0"
                                                         id="ETHNIC_GROUP-0"
                                                         value="African American"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_0}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-0">
                                                         African American
@@ -7558,11 +8152,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[1]"
+                                                        name="ETHNIC_GROUP_1"
                                                         id="ETHNIC_GROUP-1"
                                                         value="Central + SW Asian"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_1}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-1">
                                                         Central + SW Asian
@@ -7570,11 +8165,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[2]"
+                                                        name="ETHNIC_GROUP_2"
                                                         id="ETHNIC_GROUP-2"
                                                         value="Eastern European"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_2}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-2">
                                                         Eastern European
@@ -7582,11 +8178,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[3]"
+                                                        name="ETHNIC_GROUP_3"
                                                         id="ETHNIC_GROUP-3"
                                                         value="Far Eastern"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_3}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-3">Far Eastern</label>
                                                 </td>
@@ -7594,41 +8191,45 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[4]"
+                                                        name="ETHNIC_GROUP_4"
                                                         id="ETHNIC_GROUP-4"
                                                         value="Hispanic"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_4}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-4">Hispanic</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[5]"
+                                                        name="ETHNIC_GROUP_5"
                                                         id="ETHNIC_GROUP-5"
                                                         value="Jewish"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_5}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-5">Jewish</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[6]"
+                                                        name="ETHNIC_GROUP_6"
                                                         id="ETHNIC_GROUP-6"
                                                         value="Mediterranean"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_6}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-6">Mediterranean</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[7]"
+                                                        name="ETHNIC_GROUP_7"
                                                         id="ETHNIC_GROUP-7"
                                                         value="Middle Eastern"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_7}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-7">Middle Eastern</label>
                                                 </td>
@@ -7636,11 +8237,12 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[8]"
+                                                        name="ETHNIC_GROUP_8"
                                                         id="ETHNIC_GROUP-8"
                                                         value="Miscellaneous Other"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_8}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-8">
                                                         Miscellaneous Other
@@ -7648,11 +8250,12 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[9]"
+                                                        name="ETHNIC_GROUP_9"
                                                         id="ETHNIC_GROUP-9"
                                                         value="Native American"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_9}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-9">
                                                         Native American
@@ -7660,21 +8263,23 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[10]"
+                                                        name="ETHNIC_GROUP_10"
                                                         id="ETHNIC_GROUP-10"
                                                         value="Other"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_10}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-10">Other</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[11]"
+                                                        name="ETHNIC_GROUP_11"
                                                         id="ETHNIC_GROUP-11"
                                                         value="Polynesian"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_11}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-11">Polynesian</label>
                                                 </td>
@@ -7682,21 +8287,23 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[12]"
+                                                        name="ETHNIC_GROUP_12"
                                                         id="ETHNIC_GROUP-12"
                                                         value="Scandinavian"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_12}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-12">Scandinavian</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[13]"
+                                                        name="ETHNIC_GROUP_13"
                                                         id="ETHNIC_GROUP-13"
                                                         value="Southeast Asian"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_13}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-13">
                                                         Southeast Asian
@@ -7704,21 +8311,23 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[14]"
+                                                        name="ETHNIC_GROUP_14"
                                                         id="ETHNIC_GROUP-14"
                                                         value="Unknown"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_14}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-14">Unknown</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="ETHNIC_GROUP[15]"
+                                                        name="ETHNIC_GROUP_15"
                                                         id="ETHNIC_GROUP-15"
                                                         value="Western European"
+                                                        checked={teleMarketingForm.ETHNIC_GROUP_15}
                                                     />{" "}
                                                     <label htmlFor="ETHNIC_GROUP-15">
                                                         Western European
@@ -7774,71 +8383,78 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[A]"
+                                                        name="RELIGION_A"
                                                         id="RELIGION-A"
                                                         value="All Christians"
+                                                        checked={teleMarketingForm.RELIGION_A}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-A">All Christians</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[B]"
+                                                        name="RELIGION_B"
                                                         id="RELIGION-B"
                                                         value="Buddhist"
+                                                        checked={teleMarketingForm.RELIGION_B}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-B">Buddhist</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[C]"
+                                                        name="RELIGION_C"
                                                         id="RELIGION-C"
                                                         value="Catholic"
+                                                        checked={teleMarketingForm.RELIGION_C}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-C">Catholic</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[G]"
+                                                        name="RELIGION_G"
                                                         id="RELIGION-G"
                                                         value="Greek Orthodox"
+                                                        checked={teleMarketingForm.RELIGION_G}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-G">Greek Orthodox</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[H]"
+                                                        name="RELIGION_H"
                                                         id="RELIGION-H"
                                                         value="Hindu"
+                                                        checked={teleMarketingForm.RELIGION_H}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-H">Hindu</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[I]"
+                                                        name="RELIGION_I"
                                                         id="RELIGION-I"
                                                         value="Islamic"
+                                                        checked={teleMarketingForm.RELIGION_I}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-I">Islamic</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[J]"
+                                                        name="RELIGION_J"
                                                         id="RELIGION-J"
                                                         value="Jewish"
+                                                        checked={teleMarketingForm.RELIGION_J}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-J">Jewish</label>
                                                 </td>
@@ -7846,71 +8462,78 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[K]"
+                                                        name="RELIGION_K"
                                                         id="RELIGION-K"
                                                         value="Sikh"
+                                                        checked={teleMarketingForm.RELIGION_K}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-K">Sikh</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[L]"
+                                                        name="RELIGION_L"
                                                         id="RELIGION-L"
                                                         value="Lutheran"
+                                                        checked={teleMarketingForm.RELIGION_L}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-L">Lutheran</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[M]"
+                                                        name="RELIGION_M"
                                                         id="RELIGION-M"
                                                         value="Mormon"
+                                                        checked={teleMarketingForm.RELIGION_M}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-M">Mormon</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[O]"
+                                                        name="RELIGION_O"
                                                         id="RELIGION-O"
                                                         value="Eastern Orthodox"
+                                                        checked={teleMarketingForm.RELIGION_O}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-O">Eastern Orthodox</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[P]"
+                                                        name="RELIGION_P"
                                                         id="RELIGION-P"
                                                         value="Protestant"
+                                                        checked={teleMarketingForm.RELIGION_P}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-P">Protestant</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[S]"
+                                                        name="RELIGION_S"
                                                         id="RELIGION-S"
                                                         value="Shinto"
+                                                        checked={teleMarketingForm.RELIGION_S}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-S">Shinto</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="RELIGION[X]"
+                                                        name="RELIGION_X"
                                                         id="RELIGION-X"
                                                         value="Not Known"
+                                                        checked={teleMarketingForm.RELIGION_X}
                                                     />{" "}
                                                     <label htmlFor="RELIGION-X">Not Known</label>
                                                 </td>
@@ -8160,61 +8783,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[1]"
+                                                        name="AGEINHH_1"
                                                         id="AGEINHH-1"
                                                         value="0 - 2"
+                                                        checked={teleMarketingForm.AGEINHH_1}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-1">0 - 2</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[2]"
+                                                        name="AGEINHH_2"
                                                         id="AGEINHH-2"
                                                         value="3 - 5"
+                                                        checked={teleMarketingForm.AGEINHH_2}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-2">3 - 5</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[3]"
+                                                        name="AGEINHH_3"
                                                         id="AGEINHH-3"
                                                         value="6 - 10"
+                                                        checked={teleMarketingForm.AGEINHH_3}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-3">6 - 10</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[4]"
+                                                        name="AGEINHH_4"
                                                         id="AGEINHH-4"
                                                         value="11 - 15"
+                                                        checked={teleMarketingForm.AGEINHH_4}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-4">11 - 15</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[5]"
+                                                        name="AGEINHH_5"
                                                         id="AGEINHH-5"
                                                         value="16 - 17"
+                                                        checked={teleMarketingForm.AGEINHH_5}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-5">16 - 17</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[6]"
+                                                        name="AGEINHH_6"
                                                         id="AGEINHH-6"
                                                         value="18 - 24"
+                                                        checked={teleMarketingForm.AGEINHH_6}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-6">18 - 24</label>
                                                 </td>
@@ -8222,61 +8851,67 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[7]"
+                                                        name="AGEINHH_7"
                                                         id="AGEINHH-7"
                                                         value="25 - 34"
+                                                        checked={teleMarketingForm.AGEINHH_7}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-7">25 - 34</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[8]"
+                                                        name="AGEINHH_8"
                                                         id="AGEINHH-8"
                                                         value="35 - 44"
+                                                        checked={teleMarketingForm.AGEINHH_8}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-8">35 - 44</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[9]"
+                                                        name="AGEINHH_9"
                                                         id="AGEINHH-9"
                                                         value="45 - 54"
+                                                        checked={teleMarketingForm.AGEINHH_9}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-9">45 - 54</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[10]"
+                                                        name="AGEINHH_10"
                                                         id="AGEINHH-10"
                                                         value="55 - 64"
+                                                        checked={teleMarketingForm.AGEINHH_10}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-10">55 - 64</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[11]"
+                                                        name="AGEINHH_11"
                                                         id="AGEINHH-11"
                                                         value="65 - 74"
+                                                        checked={teleMarketingForm.AGEINHH_11}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-11">65 - 74</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleChange}
+                                                        onChange={handleCheckChange}
                                                         type="checkbox"
-                                                        name="AGEINHH[12]"
+                                                        name="AGEINHH_12"
                                                         id="AGEINHH-12"
                                                         value="75+"
+                                                        checked={teleMarketingForm.AGEINHH_12}
                                                     />{" "}
                                                     <label htmlFor="AGEINHH-12">75+</label>
                                                 </td>
@@ -8688,11 +9323,12 @@ const TableForm = () => {
                                         <tr>
                                             <td>
                                                 <input
-                                                    onChange={handleChange}
+                                                    onChange={handleCheckChange}
                                                     type="checkbox"
-                                                    name="ADDRESS_TYPE_INDICATOR[0]"
+                                                    name="ADDRESS_TYPE_INDICATOR_0"
                                                     id="ADDRESS_TYPE_INDICATOR-0"
                                                     value="Apartment w/o unit designator"
+                                                    checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_0}
                                                 />{" "}
                                                 <label htmlFor="ADDRESS_TYPE_INDICATOR-0">
                                                     Apartment w/o unit designator
@@ -8700,11 +9336,12 @@ const TableForm = () => {
                                             </td>
                                             <td>
                                                 <input
-                                                    onChange={handleChange}
+                                                    onChange={handleCheckChange}
                                                     type="checkbox"
-                                                    name="ADDRESS_TYPE_INDICATOR[1]"
+                                                    name="ADDRESS_TYPE_INDICATOR_1"
                                                     id="ADDRESS_TYPE_INDICATOR-1"
                                                     value="Apartment w/unit designator"
+                                                    checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_1}
                                                 />{" "}
                                                 <label htmlFor="ADDRESS_TYPE_INDICATOR-1">
                                                     Apartment w/unit designator
@@ -8714,11 +9351,12 @@ const TableForm = () => {
                                         <tr>
                                             <td>
                                                 <input
-                                                    onChange={handleChange}
+                                                    onChange={handleCheckChange}
                                                     type="checkbox"
-                                                    name="ADDRESS_TYPE_INDICATOR[2]"
+                                                    name="ADDRESS_TYPE_INDICATOR_2"
                                                     id="ADDRESS_TYPE_INDICATOR-2"
                                                     value="Post Office Box"
+                                                    checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_2}
                                                 />{" "}
                                                 <label htmlFor="ADDRESS_TYPE_INDICATOR-2">
                                                     Post Office Box
@@ -8726,11 +9364,12 @@ const TableForm = () => {
                                             </td>
                                             <td>
                                                 <input
-                                                    onChange={handleChange}
+                                                    onChange={handleCheckChange}
                                                     type="checkbox"
-                                                    name="ADDRESS_TYPE_INDICATOR[3]"
+                                                    name="ADDRESS_TYPE_INDICATOR_3"
                                                     id="ADDRESS_TYPE_INDICATOR-3"
                                                     value="Rural Route"
+                                                    checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_3}
                                                 />{" "}
                                                 <label htmlFor="ADDRESS_TYPE_INDICATOR-3">
                                                     Rural Route
@@ -8740,11 +9379,12 @@ const TableForm = () => {
                                         <tr>
                                             <td>
                                                 <input
-                                                    onChange={handleChange}
+                                                    onChange={handleCheckChange}
                                                     type="checkbox"
-                                                    name="ADDRESS_TYPE_INDICATOR[4]"
+                                                    name="ADDRESS_TYPE_INDICATOR_4"
                                                     id="ADDRESS_TYPE_INDICATOR-4"
                                                     value="Single Family Dwelling"
+                                                    checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_4}
                                                 />{" "}
                                                 <label htmlFor="ADDRESS_TYPE_INDICATOR-4">
                                                     Single Family Dwelling
@@ -8752,11 +9392,12 @@ const TableForm = () => {
                                             </td>
                                             <td>
                                                 <input
-                                                    onChange={handleChange}
+                                                    onChange={handleCheckChange}
                                                     type="checkbox"
-                                                    name="ADDRESS_TYPE_INDICATOR[5]"
+                                                    name="ADDRESS_TYPE_INDICATOR_5"
                                                     id="ADDRESS_TYPE_INDICATOR-5"
                                                     value="Undetermined"
+                                                    checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_5}
                                                 />{" "}
                                                 <label htmlFor="ADDRESS_TYPE_INDICATOR-5">
                                                     Undetermined
@@ -8793,9 +9434,16 @@ const TableForm = () => {
                         <td>
                             {" "}
                             <fieldset>
+                                <div style={{display: "flex"}}>
+                                    <div>
+
                                 <legend>Length of Time in Years at Current Residence</legend>
+                                    </div>
+                                    <div>
+
                                 <small>In Years</small>
-                                <br />
+                                    </div>
+                                </div>
                                 <select
                                     onChange={handleChange}
                                     name="LENGTH_OF_RESIDENCE"

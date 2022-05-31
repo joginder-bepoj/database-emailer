@@ -147,7 +147,7 @@ const NewMovers = () => {
                                 </form>
                             </div>
                             {/* New home movers mail merge */}
-                            <p>Go Here to Run a mail merge on your completed movers files <Link to="/database-emailer/mailmerge"> New Home Movers Mail Merge </Link></p>
+                            <p style={{textAlign: "center"}} >Go Here to Run a mail merge on your completed movers files <Link to="/database-emailer/mailmerge"> New Home Movers Mail Merge </Link></p>
                         </div>
                     </div>
                 </div>

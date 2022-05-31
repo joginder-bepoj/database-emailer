@@ -1,4 +1,5 @@
 import React, {createContext, useContext, useState} from 'react'
+import {tableFormData, ethnicityData, cellCarriersData} from "./settingStates"
 
 const Context = createContext()
 
@@ -18,7 +19,7 @@ export const StateContext = ({children}) => {
   const [houseHoldIncome, setHouseHoldIncome] = useState()
   const [url, setUrl] = useState()
   const [filter, setFilter] = useState()
-  const [ethnicity, setEthnicity] = useState()
+  const [ethnicity, setEthnicity] = useState(ethnicityData)
   const [searchLastName, setSearchLastName] = useState()
   const [enterAge, setEnterAge] = useState('')
   const [dob, setDob] = useState()
@@ -45,11 +46,11 @@ export const StateContext = ({children}) => {
   const [NACIcode, setNACIcode] = useState()
   const [SICcode, setSICcode] = useState()
   const [uniqueTelephoneEmail, setUniqueTelephoneEmail] = useState()
-  const [teleMarketingForm, setTeleMarketingForm] = useState()
+  const [teleMarketingForm, setTeleMarketingForm] = useState(tableFormData)
   const [newMovers, setNewMovers] = useState()
   const [selectRecords, setSelectRecords] = useState()
   const [cellData, setCellData] = useState()
-  const [cellCarrier, setCellCarrier] = useState()
+  const [cellCarrier, setCellCarrier] = useState(cellCarriersData)
   const [urlData, setUrlData] = useState({
     optWorld: "USCAN",
     optSET : "",

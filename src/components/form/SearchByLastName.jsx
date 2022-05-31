@@ -105,6 +105,7 @@ const SearchByLastName = () => {
                     size="10"
                 />{" "}
                 <table width="100%">
+                    <tbody>
                     <tr valign="top">
                         <td width="50%">
                             <label htmlFor="last_exactly_this">Last Name Exactly: </label>{" "}
@@ -143,6 +144,7 @@ const SearchByLastName = () => {
                             />
                         </td>
                     </tr>
+                    </tbody>
                 </table>
             </fieldset>
         </>

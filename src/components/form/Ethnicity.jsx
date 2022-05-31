@@ -3,8 +3,8 @@ import { useStateContext } from "../context/StateContext";
 
 const Ethnicity = () => {
     const {setEthnicity, ethnicity} = useStateContext()
-    const handleChange = (e) =>{
-        setEthnicity({...ethnicity, [e.target.name] : e.target.value })
+    const handleCheckChange = (e) =>{
+        setEthnicity({...ethnicity, [e.target.name] : e.target.checked })
     }
 
     return (
@@ -19,9 +19,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsArmenian">Armenian</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Armenian]"
+                            name="ethnics_Armenian"
                             id="ethnicsArmenian"
                             value="Armenian"
                         />
@@ -29,9 +29,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsAustrian">Austrian</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Austrian]"
+                            name="ethnics_Austrian"
                             id="ethnicsAustrian"
                             value="Austrian"
                         />
@@ -39,9 +39,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsBelgian">Belgian</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Belgian]"
+                            name="ethnics_Belgian"
                             id="ethnicsBelgian"
                             value="Belgian"
                         />
@@ -49,9 +49,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsChinese">Chinese</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Chinese]"
+                            name="ethnics_Chinese"
                             id="ethnicsChinese"
                             value="Chinese"
                         />
@@ -59,9 +59,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsCzech">Czech</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Czech]"
+                            name="ethnics_Czech"
                             id="ethnicsCzech"
                             value="Czech"
                         />
@@ -69,9 +69,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsDanish">Danish</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Danish]"
+                            name="ethnics_Danish"
                             id="ethnicsDanish"
                             value="Danish"
                         />
@@ -79,9 +79,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsDutch">Dutch</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Dutch]"
+                            name="ethnics_Dutch"
                             id="ethnicsDutch"
                             value="Dutch"
                         />
@@ -89,9 +89,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsEnglish">English</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[English]"
+                            name="ethnics_English"
                             id="ethnicsEnglish"
                             value="English"
                         />
@@ -99,9 +99,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsFilipino">Filipino</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Filipino]"
+                            name="ethnics_Filipino"
                             id="ethnicsFilipino"
                             value="Filipino"
                         />
@@ -109,9 +109,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsFinnish">Finnish</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Finnish]"
+                            name="ethnics_Finnish"
                             id="ethnicsFinnish"
                             value="Finnish"
                         />
@@ -119,9 +119,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsFrench">French</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[French]"
+                            name="ethnics_French"
                             id="ethnicsFrench"
                             value="French"
                         />
@@ -129,9 +129,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsGerman">German</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[German]"
+                            name="ethnics_German"
                             id="ethnicsGerman"
                             value="German"
                         />
@@ -139,9 +139,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsGreek">Greek</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Greek]"
+                            name="ethnics_Greek"
                             id="ethnicsGreek"
                             value="Greek"
                         />
@@ -149,9 +149,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsHispanic">Hispanic</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Hispanic]"
+                            name="ethnics_Hispanic"
                             id="ethnicsHispanic"
                             value="Hispanic"
                         />
@@ -159,9 +159,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsHungarian">Hungarian</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Hungarian]"
+                            name="ethnics_Hungarian"
                             id="ethnicsHungarian"
                             value="Hungarian"
                         />
@@ -169,9 +169,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsIndian">Indian</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Indian]"
+                            name="ethnics_Indian"
                             id="ethnicsIndian"
                             value="Indian"
                         />
@@ -179,9 +179,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsIrish">Irish</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Irish]"
+                            name="ethnics_Irish"
                             id="ethnicsIrish"
                             value="Irish"
                         />
@@ -189,9 +189,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsItalian">Italian</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Italian]"
+                            name="ethnics_Italian"
                             id="ethnicsItalian"
                             value="Italian"
                         />
@@ -199,9 +199,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsJapanese">Japanese</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Japanese]"
+                            name="ethnics_Japanese"
                             id="ethnicsJapanese"
                             value="Japanese"
                         />
@@ -209,9 +209,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsJewish">Jewish</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Jewish]"
+                            name="ethnics_Jewish"
                             id="ethnicsJewish"
                             value="Jewish"
                         />
@@ -219,9 +219,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsKorean">Korean</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Korean]"
+                            name="ethnics_Korean"
                             id="ethnicsKorean"
                             value="Korean"
                         />
@@ -229,9 +229,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsNorwegian">Norwegian</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Norwegian]"
+                            name="ethnics_Norwegian"
                             id="ethnicsNorwegian"
                             value="Norwegian"
                         />
@@ -239,9 +239,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsPolish">Polish</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Polish]"
+                            name="ethnics_Polish"
                             id="ethnicsPolish"
                             value="Polish"
                         />
@@ -249,9 +249,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsRomanian">Romanian</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Romanian]"
+                            name="ethnics_Romanian"
                             id="ethnicsRomanian"
                             value="Romanian"
                         />
@@ -259,9 +259,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsRussian">Russian</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Russian]"
+                            name="ethnics_Russian"
                             id="ethnicsRussian"
                             value="Russian"
                         />
@@ -269,9 +269,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsScotch">Scotch</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Scotch]"
+                            name="ethnics_Scotch"
                             id="ethnicsScotch"
                             value="Scotch"
                         />
@@ -279,9 +279,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsSlovakian">Slovakian</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Slovakian]"
+                            name="ethnics_Slovakian"
                             id="ethnicsSlovakian"
                             value="Slovakian"
                         />
@@ -289,9 +289,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsSlovenian">Slovenian</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Slovenian]"
+                            name="ethnics_Slovenian"
                             id="ethnicsSlovenian"
                             value="Slovenian"
                         />
@@ -299,9 +299,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsSwedish">Swedish</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Swedish]"
+                            name="ethnics_Swedish"
                             id="ethnicsSwedish"
                             value="Swedish"
                         />
@@ -309,9 +309,9 @@ const Ethnicity = () => {
                     <div>
                         <label htmlFor="ethnicsTaiwanese">Taiwanese</label>{" "}
                         <input 
-                            onChange={handleChange}
+                            onChange={handleCheckChange}
                             type="checkbox"
-                            name="ethnics[Taiwanese]"
+                            name="ethnics_Taiwanese"
                             id="ethnicsTaiwanese"
                             value="Taiwanese"
                         />

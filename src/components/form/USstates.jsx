@@ -36,7 +36,7 @@ const USstates = () => {
     const searchByCounties = (prev) =>{
         prev.preventDefault()
         if(Object.keys(selectState).length === 0) {
-            alert("Please select atleast one US state ")
+            alert("Please select at least one US state ")
         }else{
         setShow(!prev)}
     }

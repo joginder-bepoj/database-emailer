@@ -94,6 +94,7 @@ const EmailDomain = () => {
                                     <b>INCLUDE All Domains (default)</b>
                                 </label>{" "}
                                 <input 
+                                    onChange={handleChange}
                                     type="radio"
                                     name="emailCondition"
                                     title="the same as ignore this section"
@@ -112,6 +113,7 @@ const EmailDomain = () => {
                                     others will be excluded
                                 </label>
                                 <input 
+                                onChange={handleChange}
                                     type="radio"
                                     checked={isChecked.length > 0 && isChecked.length <62}
                                     name="emailCondition"
@@ -128,7 +130,7 @@ const EmailDomain = () => {
                                     <b>EXCLUDE ONLY</b> the Domains checked above and ALL the
                                     others will be included
                                 </label>{" "}
-                                <input 
+                                <input onChange={handleChange}
                                     type="radio"
                                     title="Do you want some or all of these most common 100 email domains to be Excluded from search "
                                     name="emailCondition"

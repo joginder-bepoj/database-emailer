@@ -1,6 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 
 const SICtoNAICScodes = () => {
+  const [sicCodes, setSicCodes] = useState()
+  const [naicsCodes, setNaicsCodes] = useState()
+  const handleChange= (e) =>{
+    const {name, value} = e.target;
+    if(name === "NAICS_CODE"){
+      setNaicsCodes(value)
+    }
+    if(name === "SIC_CODE"){
+      setSicCodes(value)
+    }
+  }
+  const handleSearch = () =>{
+    
+  }
   return (
     <>
       <div id="contentwrapper">
@@ -17,7 +31,8 @@ const SICtoNAICScodes = () => {
               id="SIC_CODE"
               maxlength="4"
               size="4"
-              value=""
+              value={sicCodes}
+              onChange={handleChange}
             />
             &nbsp;OR&nbsp;
             <b>NAICS Code:</b>{" "}
@@ -27,7 +42,8 @@ const SICtoNAICScodes = () => {
               id="NAICS_CODE"
               maxlength="6"
               size="4"
-              value=""
+              value={naicsCodes}
+              onChange={handleChange}
             />
             <input
               type="submit"
@@ -35,6 +51,7 @@ const SICtoNAICScodes = () => {
               id="subSearch"
               value="Search on Codes"
               title="Search on and entered code above"
+              onClick={handleSearch}
             />
           </form>
           <table width="100%" id="NAICS_SIC">
