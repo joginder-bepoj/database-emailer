@@ -16,18 +16,24 @@ const USstates = () => {
         setTextData({ ...textData, [e.target.name]: e.target.value });
     };
     const selectSCF = (e) => {
-        setSCF(e.target.value);
+        let value = Array.from(e.target.selectedOptions, (option) => option.value)
+        setSCF(value);
     };
     const selectStates = (e) => {
-        setSelectState({...selectState, [e.target.name] : e.target.value})
+        setSelectState({...selectState, [e.target.name] : e.target.checked})
     }
     const selectCanState = (e) => {
         setSelectCanStates({
-            ...selectCanStates, [e.target.name] : e.target.value
+            ...selectCanStates, [e.target.name] : e.target.checked
         })
     }
     const handleZIP = (e) => {
         setZipCodeSelect({...zipCodeSelect, [e.target.name]: e.target.value})
+    }
+    const handleCheckZIP = (e) =>{
+        setZipCodeSelect({
+            ...setZipCodeSelect, [e.target.name] : e.target.checked
+        })
     }
     const disabledStyle = {
         backgroundColor: "red",
@@ -53,7 +59,7 @@ const USstates = () => {
                 >
                     {states.map((states) => (
                         <div key={states.value}>
-                            <label htmlFor={states.name}>{states.name}</label>
+                            <label htmlFor={states.name}>{states.label}</label>
                             <input
                                 onChange={selectStates}
                                 type="checkbox"
@@ -78,7 +84,7 @@ const USstates = () => {
                 >
                     {provinces.map((provinces) => (
                         <div key={provinces.value}>
-                            <label htmlFor={provinces.name}>{provinces.name}</label>
+                            <label htmlFor={provinces.name}>{provinces.label}</label>
                             <input
                                 onChange={selectCanState}
                                 type="checkbox"
@@ -173,7 +179,7 @@ const USstates = () => {
                             </optgroup>
                             <optgroup label="Counties in AR">
                                 {countiesAR.map((counties) => (
-                                    <option vsearch by counonchangealue={counties.value} key={counties.name}>
+                                    <option value={counties.value} key={counties.name}>
                                         {counties.name}
                                     </option>
                                 ))}
@@ -197,7 +203,7 @@ const USstates = () => {
                 <legend>Search By City Names</legend>
                 <table width="100%" cellPadding="1" cellSpacing="1" className="tdBlock">
                     <tbody>
-                        <tr valign="top" style={{display:"flex", justifyContent:"space-between" }}>
+                        <tr valign="top" style={{display:"flex", justifyContent:"space-between", flexWrap: "wrap" }}>
                             <td width="50%" style={{padding: "0 5px"}}>
                                 <span >
                                     City names that are common to multiple States will give you
@@ -281,7 +287,7 @@ const USstates = () => {
                         />
                         <br />
                         <input
-                            onChange={handleZIP}
+                            onChange={handleCheckZIP}
                             disabled={zipCodeSelect.zipCondition === "1"}
                             type="checkbox"
                             name="chkGroupBy"
@@ -326,7 +332,7 @@ const USstates = () => {
                         Selecting an SCF will exclude all Canadian Data
                         <br />
                         <select
-                            name="selSCF[]"
+                            name="selSCF"
                             id="selSCF"
                             size="8"
                             multiple="multiple"

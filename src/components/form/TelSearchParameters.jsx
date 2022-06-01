@@ -23,10 +23,11 @@ const TelSearchParameters = () => {
         setTextData({ ...textData, [e.target.name]: e.target.value });
     };
     const selectSCF = (e) => {
-        setSCF(e.target.value);
+        let value = Array.from(e.target.selectedOptions, (option) => option.value)
+        setSCF(value)
     };
     const selectStates = (e) => {
-        setSelectState({ ...selectState, [e.target.name]: e.target.value });
+        setSelectState({ ...selectState, [e.target.name]: e.target.checked });
     };
     const handleZIP = (e) => {
         setZipCodeSelect({ ...zipCodeSelect, [e.target.name]: e.target.value });
@@ -53,7 +54,7 @@ const TelSearchParameters = () => {
             >
                 {states.map((states) => (
                     <div key={states.value}>
-                        <label htmlFor={states.name}>{states.name}</label>
+                        <label htmlFor={states.name}>{states.label}</label>
                         <input
                             onChange={selectStates}
                             type="checkbox"
@@ -72,7 +73,7 @@ const TelSearchParameters = () => {
                 <tbody>
                     <tr
                         valign="top"
-                        style={{ display: "flex", justifyContent: "space-between" }}
+                        style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}
                     >
                         <td width="50%" style={{ padding: "0 5px" }}>
                             <span>
@@ -194,9 +195,7 @@ const TelSearchParameters = () => {
                             <optgroup label="Counties in AR">
                                 {countiesAR.map((counties) => (
                                     <option
-                                        vsearch
-                                        by
-                                        counonchangealue={counties.value}
+                                        value={counties.value}
                                         key={counties.name}
                                     >
                                         {counties.name}
@@ -304,7 +303,7 @@ const TelSearchParameters = () => {
                     Selecting an SCF will exclude all Canadian Data
                     <br />
                     <select
-                        name="selSCF[]"
+                        name="selSCF"
                         id="selSCF"
                         size="8"
                         multiple="multiple"

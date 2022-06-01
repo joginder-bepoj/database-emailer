@@ -3,9 +3,9 @@ import { useStateContext } from "../context/StateContext";
 
 const ExcludeGeneralEmail = () => {
     const {setExcludeEmail, excludeEmail} = useStateContext()
-    const handleChange = (e) =>{
+    const handleCheckChange = (e) =>{
         setExcludeEmail({
-            ...excludeEmail, [e.target.name] : e.target.value
+            ...excludeEmail, [e.target.name] : e.target.checked
         })
     }
 
@@ -27,27 +27,27 @@ const ExcludeGeneralEmail = () => {
                     <tr>
                         <td align="center">
                             <label htmlFor="chkBoxes_0">sales@</label>{" "}
-                            <input onChange={handleChange}
+                            <input onChange={handleCheckChange}
                                 type="checkbox"
-                                name="chkBoxes[0]"
+                                name="chkBoxes_0"
                                 id="chkBoxes_0"
                                 value="sales@"
                             />
                         </td>
                         <td align="center">
                             <label htmlFor="chkBoxes_1">webmaster@</label>{" "}
-                            <input onChange={handleChange}
+                            <input onChange={handleCheckChange}
                                 type="checkbox"
-                                name="chkBoxes[1]"
+                                name="chkBoxes_1"
                                 id="chkBoxes_1"
                                 value="webmaster@"
                             />
                         </td>
                         <td align="center">
                             <label htmlFor="chkBoxes_2">info@</label>{" "}
-                            <input onChange={handleChange}
+                            <input onChange={handleCheckChange}
                                 type="checkbox"
-                                name="chkBoxes[2]"
+                                name="chkBoxes_2"
                                 id="chkBoxes_2"
                                 value="info@"
                             />

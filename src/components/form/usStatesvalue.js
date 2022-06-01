@@ -2,211 +2,263 @@
 export const states =[
     {
         name: "Alabama",
-        value: "AL"
+        value: "AL",
+        label: "Alabama"
     },
     {
         name: "Alaska",
-        value: "AK"
+        value: "AK",
+        label : "Alaska"
     },
     {
         name: "Arizona",
-        value: "AZ"
+        value: "AZ",
+        label: "Arizona"
     },
     {
         name: "Arkansas",
-        value: "AR"
+        value: "AR",
+        label: "Arkansas"
     },
     {
         name:"California",
-        value: "CA"
+        value: "CA",
+        label : "California"
     },
     {
         name: "Colorado",
-        value: "CO"
+        value: "CO",
+        label: "Colorado"
     },
     {
         name: "Connecticut ",
-        value: "CT"
+        value: "CT",
+        label: "Connecticut"
     },
     {
         name: "Delaware",
-        value: "DE"
+        value: "DE",
+        label: "Delaware"
     },
     {
-        name: 'Dist. of Col.',
-        value: "DC"
+        name: 'Dist_of_Col',
+        value: "DC",
+        label: "Dist. of Col."
     },
     {
         name: "Florida",
-        value: "FL"
+        value: "FL",
+        label: "Florida"
     },
     {
         name: "Georgia",
-        value: "GA"
+        value: "GA",
+        label: "Georgia"
     },
     {
         name: "Hawaii",
-        value: "HI"
+        value: "HI",
+        label: "Hawaii"
     },
     {
         name: "Idaho",
-        value: "ID"
+        value: "ID",
+        label: "Idaho"
     },
     {
         name: "Illinois",
-        value: "IL"
+        value: "IL",
+        label: "Illinois"
     },
     {
         name: "Indiana",
-        value: "IN"
+        value: "IN",
+        label: "Indiana"
     },
     {
         name:"Iowa",
-        value: "IA"
+        value: "IA",
+        label: "Iowa"
     },
     {
         name:  "Kansas",
-        value: "KS"
+        value: "KS",
+        label: "Kansas"
     },
     {
         name:  "Kentucky",
-        value: "KY"
+        value: "KY",
+        label : "kentucky"
     },
     {
         name:  'Louisiana',
-        value: "LA"
+        value: "LA",
+        label: "Loiosiana"
     },
     {
-        name:   'Maine',
-        value: "ME"
+        name: 'Maine',
+        value: "ME",
+        label: "Maine"
     },
     {
         name: 'Maryland',
-        value: "MD"
+        value: "MD",
+        label: "Maryland"
     },
     {
         name: 'Massachusetts',
-        value: "MA"
+        value: "MA",
+        label: "Massachusetts"
     },
     {
-        name:  'Michigan',
-        value: "MI"
+        name: 'Michigan',
+        value: "MI",
+        label: "Michigan"
     },
     {
-        name:   'Minnesota',
-        value: "MN"
+        name: 'Minnesota',
+        value: "MN",
+        label: "Minnesota"
     },
     {
-        name:   'Mississippi', 
-        value: "MS"
+        name: 'Mississippi', 
+        value: "MS",
+        label: "Mississippi"
     },
     {
-        name:  'Missouri',
-        value: "MO"
+        name: 'Missouri',
+        value: "MO",
+        label : "Missouri"
     },
     {
-        name:  'Montana',
-        value: "MT"
+        name: 'Montana',
+        value: "MT",
+        label: "Montana"
     },
     {
-        name:  'Nebraska',
-        value: "NE"
+        name: 'Nebraska',
+        value: "NE",
+        label: "Nebraska"
     },
     {
-        name:  'Nevada',
-        value: " NV"
+        name: 'Nevada',
+        value: " NV",
+        label: "Nevada"
     },
     {
-        name:  'New Hampshire',
-        value: "NH"
+        name: 'New_Hampshire',
+        value: "NH",
+        label: "New Hampshire"
     },
     {
-        name: 'New Jersey',
-        value: "NJ"
+        name: 'New_Jersey',
+        value: "NJ",
+        label: "New Jersey"
     },
     {
-        name: 'New Mexico',
-        value: "NM"
+        name: 'New_Mexico',
+        value: "NM",
+        label : "New Mexico"
     },
     {
-        name:  'New York',
-        value: " NY"
+        name: 'New_York',
+        value: "NY",
+        label: "New York"
     },
     {
-        name:  'No. Carolina',
-        value: "NC"
+        name:  'No_Carolina',
+        value: "NC",
+        label: "No. Carolina"
     },
     {
-        name:  'No. Dakota',
-        value: "ND"
+        name:  'No_Dakota',
+        value: "ND",
+        label: "No. Dakota"
     },
     {
         name:  'Ohio',
-        value: "OH"
+        value: "OH",
+        label: "Ohio"
     },
     {
         name: 'Oklahoma',
-        value: "OK"
+        value: "OK",
+        label: "Oklahoma"
     },
     {
         name: 'Oregon',
-        value: "OR"
+        value: "OR",
+        label: "Oregon"
     },
     {
-        name:  'Pennsylvania', 
-        value: "PA"
+        name: 'Pennsylvania', 
+        value: "PA",
+        label: "Pennsylvania"
     },
     {
-        name:  'Puerto Rico', 
-        value: " PR"
+        name: 'Puerto_Rico', 
+        value: "PR",
+        label: "Puerto Rico"
     },
     {
-        name:  'Rhode Island', 
-        value: "RI"
+        name:  'Rhode_Island', 
+        value: "RI",
+        label: "Rhode Island"
     },
     {
-        name:  'So. Carolina', 
-        value: "SC"
+        name:  'So_Carolina', 
+        value: "SC",
+        label : "So. Carolina"
     },
     {
-        name:  'So. Dakota', 
-        value: "SD"
+        name: 'So_Dakota', 
+        value: "SD",
+        label: "So. Dakota"
     },
     {
-        name:  'Tennessee', 
-        value: "TN"
+        name: 'Tennessee', 
+        value: "TN",
+        label: "Tennessee"
     },
     {
-        name:  'Texas', 
-        value: "TX"
+        name: 'Texas', 
+        value: "TX",
+        label: "Texas"
     },
     {
         name:  'Utah', 
-        value: "UT"
+        value: "UT",
+        label: "Utah"
     },
     {
-        name:  'Vermont',
-        value: "VT"
+        name: 'Vermont',
+        value: "VT",
+        label: "Vermont"
     },
     {
-        name:   'Virginia', 
-        value: "VA"
+        name: 'Virginia', 
+        value: "VA",
+        label: "Virginia"
     },
     {
-        name:   'Washington',  
-        value: "WA"
+        name: 'Washington',  
+        value: "WA",
+        label: "Washington"
     },
     {
-        name:   'West Virginia', 
-        value: "WV"
+        name: 'West_Virginia', 
+        value: "WV",
+        label: "West Virginia"
     },
     {
-        name:   'Wisconsin', 
-        value: "WI"
+        name: 'Wisconsin', 
+        value: "WI",
+        label: "Wisconsin"
     },
     {
-        name:   'Wyoming',
-        value: "WY"
+        name: 'Wyoming',
+        value: "WY",
+        label: "Wyoming"
     },
 ]
 
@@ -215,55 +267,68 @@ export const states =[
 export const provinces = [
     {
         name : "Alberta",
-        value: "AB "
+        value: "AB",
+        label: "Alberta"
     },
     {
-        name : "British Columbia",
-        value: "BC "
+        name : "British_Columbia",
+        value: "BC",
+        label: "British Columbia"
     },
     {
         name : "Manitoba",
-        value: "MB "
+        value: "MB",
+        label : "Manitoba"
     },
     {
-        name : "New Brunswick ",
-        value: "NB "
+        name : "New_Brunswick ",
+        value: "NB",
+        label : "New Brunswick"
     },
     {
         name : "Newfoundland",
-        value: "NL "
+        value: "NL",
+        label: "Newfoundland"
     },
     {
-        name : "Northwest Terr. ",
-        value: "NT "
+        name : "Northwest_Terr",
+        value: "NT",
+        label: "Northwest Terr."
     },
     {
-        name : "Nova Scotia ",
-        value: "NS "
+        name : "Nova_Scotia ",
+        value: "NS",
+        label: "Nova Scotia"
     },
     {
-        name : "Nunavit ",
-        value: "NU "
+        name : "Nunavit",
+        value: "NU ",
+        label: "Nunavit"
     },
     {
-        name : "Ontario ",
-        value: "ON "
+        name : "Ontario",
+        value: "ON",
+        label: "Ontario"
     },
     {
-        name : "Prince Edward Is. ",
-        value: "PE "
+        name : "Prince_Edward_Is",
+        value: "PE",
+        label: "Prince Edward Is"
     },
     {
-        name : "Quebec ",
-        value: "QC "
+        name : "Quebec",
+        value: "QC",
+        label : "Quebec"
     },
     {
         name : "Saskatchewan ",
-        value: "SK "
+        value: "SK",
+        label : "Saskatchewan"
     },
     {
         name : "Yukon ",
-        value: "YT"
+        value: "YT",
+        label: "Yukon"
     },
 ]
 

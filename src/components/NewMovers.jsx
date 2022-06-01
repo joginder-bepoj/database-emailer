@@ -16,6 +16,11 @@ const NewMovers = () => {
             ...newMovers, [e.target.name]:e.target.value
         })
     }
+    const handleCheckChange = (e) =>{
+        setNewMovers({
+            ...newMovers, [e.target.name] : e.target.checked
+        })
+    }
     return (
         <>
             <section className="section section-xs content">
@@ -61,7 +66,7 @@ const NewMovers = () => {
                                         <label htmlFor="chkPhone">
                                             <b>Records Must Include A Phone Number:</b>
                                         </label>{" "}
-                                        <input onChange={handleChange}
+                                        <input onChange={handleCheckChange}
                                             type="checkbox"
                                             name="chkPhone"
                                             id="chkPhone"
@@ -71,7 +76,7 @@ const NewMovers = () => {
                                         <label htmlFor="chkEmails">
                                             <b>Must Include an Email Address</b>
                                         </label>{" "}
-                                        <input onChange={handleChange}
+                                        <input onChange={handleCheckChange}
                                             type="checkbox"
                                             name="chkEmails"
                                             id="chkEmails"

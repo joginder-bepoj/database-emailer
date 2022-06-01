@@ -125,7 +125,7 @@ const CheckConsumer = () => {
                                         name="chkANDs_to_ORs"
                                         id="chkANDs_to_ORs"
                                         value="1"
-                                        onChange={(e)=>setFilter(e.target.value)}
+                                        onChange={(e)=>setFilter(e.target.checked)}
                                     />
                                     <br />
                                     But the checkboxes inside the Interests, Email Domains and

@@ -5,10 +5,19 @@ import { useStateContext } from "../context/StateContext";
 
 const NACIScodes = () => {
   
-    const {setNACIcode, NACIcode} = useStateContext()
+    const {setNACIcode, NACIcodeChanges, setNACIcodeChanges} = useStateContext()
     const handleChange = (e) =>{
-        setNACIcode({
-            ...NACIcode, [e.target.name] : e.target.value
+        let value = Array.from(e.target.selectedOptions, (option)=> option.value)
+        setNACIcode(value)
+    }
+    const handleTextChange = (e) =>{
+        setNACIcodeChanges({
+            ...NACIcodeChanges, [e.target.name] : e.target.value
+        })
+    }
+    const handleCheckChange = (e) => {
+        setNACIcodeChanges({
+            ...NACIcodeChanges, [e.target.name] : e.target.checked
         })
     }
     return (
@@ -50,7 +59,7 @@ const NACIScodes = () => {
                 >
                     Check This If You want the Corresponding SICS Codes Included Too:
                 </label>{" "}
-                <input onChange={handleChange}
+                <input onChange={handleCheckChange}
                     type="checkbox"
                     name="chkSICSfromNAICS"
                     id="chkSICSfromNAICS"
@@ -79,7 +88,7 @@ const NACIScodes = () => {
                                     <br />
                                     <div align="left">
                                         <b>Search on NAICS Description: </b>&nbsp;
-                                        <input onChange={handleChange}
+                                        <input onChange={handleTextChange}
                                             type="text"
                                             name="txtNAICSDescription"
                                             id="txtNAICSDescription"
@@ -2991,7 +3000,7 @@ const NACIScodes = () => {
                                 <b>Select a Range(s) of NAICS Codes:</b>
                                 <br />
                                 <label htmlFor="txtNAICSLower">Lower NAICS Code: </label>{" "}
-                                <input onChange={handleChange}
+                                <input onChange={handleTextChange}
                                     type="text"
                                     name="txtNAICSLower"
                                     id="txtNAICSLower"
@@ -3001,7 +3010,7 @@ const NACIScodes = () => {
                                     placeholder="Lower NAICS Code"
                                 />
                                 | <label htmlFor="txtNAICSHigher">Higher NAICS Code: </label>{" "}
-                                <input onChange={handleChange}
+                                <input onChange={handleTextChange}
                                     type="text"
                                     name="txtNAICSHigher"
                                     id="txtNAICSHigher"
@@ -3160,7 +3169,7 @@ const NACIScodes = () => {
                                 <label htmlFor="chkNAICS">
                                     <b>Select Only Businesses with NAICS Codes</b>
                                 </label>
-                                <input onChange={handleChange}
+                                <input onChange={handleCheckChange}
                                     type="checkbox"
                                     name="chkNAICS"
                                     id="chkNAICS"
@@ -3194,7 +3203,7 @@ const NACIScodes = () => {
                                 ex: 483111, 483112, 483113, 483114, 483211, 483212
                                 <br />
                                 <textarea
-                                onChange={handleChange}
+                                onChange={handleTextChange}
                                     name="taNAICS"
                                     id="taNAICS"
                                     style={{ height: "165px", width: "90%" }}

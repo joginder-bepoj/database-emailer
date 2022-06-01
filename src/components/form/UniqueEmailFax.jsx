@@ -8,6 +8,12 @@ const UniqueEmailFax = () => {
             ...uniqueEmail, [e.target.name] : e.target.value
         })
     }
+    const handleCheckChange =  (e) => {
+        setUniqueEmail({
+            ...uniqueEmail,
+            [e.target.name] : e.target.checked            
+        })
+    }
     return (
         <>
             <fieldset id="fsUniques">
@@ -17,13 +23,13 @@ const UniqueEmailFax = () => {
                     <tbody>
                     <tr>
                         <td align="center">
-                            <input onChange={handleChange} type="checkbox" name="chkFaxes" id="chkFaxes" value="1" />
+                            <input onChange={handleCheckChange} type="checkbox" name="chkFaxes" id="chkFaxes" value="1" />
                         </td>
                         <td>
                             <label htmlFor="chkFaxes">Must Include Valid Fax</label>
                         </td>
                         <td align="center">
-                            <input onChange={handleChange} type="checkbox" name="chkPhone" id="chkPhone" value="1" />
+                            <input onChange={handleCheckChange} type="checkbox" name="chkPhone" id="chkPhone" value="1" />
                         </td>
                         <td>
                             <label htmlFor="chkPhone">Must Include Valid Phone</label>
@@ -33,31 +39,31 @@ const UniqueEmailFax = () => {
                     </tr>
                     <tr>
                         <td align="center">
-                            <input onChange={handleChange}
+                            <input onChange={handleCheckChange}
                                 type="checkbox"
-                                name="chkEmailsPhones"
-                                id="chkEmailsPhones"
+                                name="chkEmailsOrPhones"
+                                id="chkEmailsOrPhones"
                                 value="EmPh"
                             />
                         </td>
                         <td>
-                            <label htmlFor="chkEmailsPhones">Must Include Email OR Phone</label>
+                            <label htmlFor="chkEmailsOrPhones">Must Include Email OR Phone</label>
                         </td>
                         <td align="center">
-                            <input onChange={handleChange}
+                            <input onChange={handleCheckChange}
                                 type="checkbox"
-                                name="chkEmailsPhones"
+                                name="chkEmailsAndPhones"
                                 id="chkEmailsANDPhones"
                                 value="EmANDPh"
                             />
                         </td>
                         <td>
-                            <label htmlFor="chkEmailsPhones">
+                            <label htmlFor="chkEmailsANDPhones">
                                 Must Include Email &amp; Phone
                             </label>
                         </td>
                         <td>
-                            <input onChange={handleChange}
+                            <input onChange={handleCheckChange}
                                 type="checkbox"
                                 name="chkCompNames"
                                 id="chkCompNamesT"

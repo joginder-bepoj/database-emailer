@@ -2,11 +2,9 @@ import React from "react";
 import { useStateContext } from "../context/StateContext";
 
 const RegistrantContact = () => {
-    const {setRegistrantContact, registrantContact} = useStateContext()
+    const {setRegistrantContact} = useStateContext()
     const handleChange = (e) =>{
-        setRegistrantContact({
-            ...registrantContact, [e.target.name] : e.target.value
-        })
+        setRegistrantContact(e.target.value)
     }
     return (
         <>

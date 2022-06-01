@@ -3,9 +3,9 @@ import { useStateContext } from "../context/StateContext";
 
 const IntrestGroup = () => {
     const {setIntrestedGroup, intrestedGroup} = useStateContext()
-    const handleChange= (e) =>{
+    const handleCheckChange= (e) =>{
         setIntrestedGroup({
-            ...intrestedGroup, [e.target.name]: e.target.value
+            ...intrestedGroup, [e.target.name]: e.target.checked
         })
     }
     return (
@@ -20,486 +20,486 @@ const IntrestGroup = () => {
                 >
                     <div>
                         <label htmlFor="chkInterests_55">Airline Tickets</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Airline Tickets']"
+                            name="chkInterests_Airline_Tickets"
                             id="chkInterests_55"
                             value="55"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_56">Apartment Seekers</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Apartment Seekers']"
+                            name="chkInterests_Apartment_Seekers"
                             id="chkInterests_56"
                             value="56"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_57">Astrology</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Astrology']"
+                            name="chkInterests_Astrology"
                             id="chkInterests_57"
                             value="57"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_58">Auto Insurance</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Auto Insurance']"
+                            name="chkInterests_Auto_Insurance"
                             id="chkInterests_58"
                             value="58"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_59">Auto Loans</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Auto Loans']"
+                            name="chkInterests_Auto_Loans"
                             id="chkInterests_59"
                             value="59"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_60">Automobiles</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Automobiles']"
+                            name="chkInterests_Automobiles"
                             id="chkInterests_60"
                             value="60"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_61">Business News</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Business News']"
+                            name="chkInterests_Business_News"
                             id="chkInterests_61"
                             value="61"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_62">Business Opportunities</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Business Opportunities']"
+                            name="chkInterests_Business_Opportunities"
                             id="chkInterests_62"
                             value="62"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_63">Cars Listing Services</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Cars Listing Services']"
+                            name="chkInterests_Cars_Listing_Services"
                             id="chkInterests_63"
                             value="63"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_10">Celebrity Gossip</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Celebrity Gossip']"
+                            name="chkInterests_Celebrity_Gossip"
                             id="chkInterests_10"
                             value="10"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_11">Computers And Technology</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Computers and Technology']"
+                            name="chkInterests_Computers_and_Technology"
                             id="chkInterests_11"
                             value="11"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_12">Coupons</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Coupons']"
+                            name="chkInterests_Coupons"
                             id="chkInterests_12"
                             value="12"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_13">Credit Card Seekers</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Credit Card Seekers']"
+                            name="chkInterests_Credit_Card_Seekers"
                             id="chkInterests_13"
                             value="13"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_14">Debt Leads</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Debt Leads']"
+                            name="chkInterests_Debt_Leads"
                             id="chkInterests_14"
                             value="14"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_15">Ebay</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Ebay']"
+                            name="chkInterests_Ebay"
                             id="chkInterests_15"
                             value="15"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_16">Education</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Education']"
+                            name="chkInterests_Education"
                             id="chkInterests_16"
                             value="16"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_17">Employment</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Employment']"
+                            name="chkInterests_Employment"
                             id="chkInterests_17"
                             value="17"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_18">Entertainment</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Entertainment']"
+                            name="chkInterests_Entertainment"
                             id="chkInterests_18"
                             value="18"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_19">Entrepreneurs</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Entrepreneurs']"
+                            name="chkInterests_Entrepreneurs"
                             id="chkInterests_19"
                             value="19"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_20">Ethnic</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Ethnic']"
+                            name="chkInterests_Ethnic"
                             id="chkInterests_20"
                             value="20"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_21">Event Seekers</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Event Seekers']"
+                            name="chkInterests_Event_Seekers"
                             id="chkInterests_21"
                             value="21"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_22">Fashion</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Fashion']"
+                            name="chkInterests_Fashion"
                             id="chkInterests_22"
                             value="22"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_23">Financial Services</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Financial Services']"
+                            name="chkInterests_Financial_Services"
                             id="chkInterests_23"
                             value="23"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_24">Franchises</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Franchises']"
+                            name="chkInterests_Franchises"
                             id="chkInterests_24"
                             value="24"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_25">Freebies</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Freebies']"
+                            name="chkInterests_Freebies"
                             id="chkInterests_25"
                             value="25"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_26">Gamers</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Gamers']"
+                            name="chkInterests_Gamers"
                             id="chkInterests_26"
                             value="26"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_27">Golf</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Golf']"
+                            name="chkInterests_Golf"
                             id="chkInterests_27"
                             value="27"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_28">Health</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Health']"
+                            name="chkInterests_Health"
                             id="chkInterests_28"
                             value="28"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_29">Hollywood</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Hollywood']"
+                            name="chkInterests_Hollywood"
                             id="chkInterests_29"
                             value="29"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_30">Home</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Home']"
+                            name="chkInterests_Home"
                             id="chkInterests_30"
                             value="30"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_31">Horoscope Related</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Horoscope Related']"
+                            name="chkInterests_Horoscope_Related"
                             id="chkInterests_31"
                             value="31"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_32">Insurance</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Insurance']"
+                            name="chkInterests_Insurance"
                             id="chkInterests_32"
                             value="32"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_33">Internet Based Earning</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Internet Based Earning']"
+                            name="chkInterests_Internet_Based_Earning"
                             id="chkInterests_33"
                             value="33"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_34">Investors</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Investors']"
+                            name="chkInterests_Investors"
                             id="chkInterests_34"
                             value="34"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_35">Loans</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Loans']"
+                            name="chkInterests_Loans"
                             id="chkInterests_35"
                             value="35"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_36">Lottery</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Lottery']"
+                            name="chkInterests_Lottery"
                             id="chkInterests_36"
                             value="36"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_37">Movies</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Movies']"
+                            name="chkInterests_Movies"
                             id="chkInterests_37"
                             value="37"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_38">Nascar</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Nascar']"
+                            name="chkInterests_Nascar"
                             id="chkInterests_38"
                             value="38"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_39">Netscape</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Netscape']"
+                            name="chkInterests_Netscape"
                             id="chkInterests_39"
                             value="39"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_40">Networking-Business</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Networking-Business']"
+                            name="chkInterests_Networking_Business"
                             id="chkInterests_40"
                             value="40"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_41">Networking-Dating</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Networking-Dating']"
+                            name="chkInterests_Networking_Dating"
                             id="chkInterests_41"
                             value="41"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_42">Networking-Social</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Networking-Social']"
+                            name="chkInterests_Networking_Social"
                             id="chkInterests_42"
                             value="42"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_43">Networking-Woman</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Networking-Woman']"
+                            name="chkInterests_Networking_Woman"
                             id="chkInterests_43"
                             value="43"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_44">News</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['News']"
+                            name="chkInterests_News"
                             id="chkInterests_44"
                             value="44"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_45">Parents</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Parents']"
+                            name="chkInterests_Parents"
                             id="chkInterests_45"
                             value="45"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_46">Photography</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Photography']"
+                            name="chkInterests_Photography"
                             id="chkInterests_46"
                             value="46"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_47">Real Estate</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Real Estate']"
+                            name="chkInterests_Real_Estate"
                             id="chkInterests_47"
                             value="47"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_48">Shopping</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Shopping']"
+                            name="chkInterests_Shopping"
                             id="chkInterests_48"
                             value="48"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_49">Sports</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Sports']"
+                            name="chkInterests_Sports"
                             id="chkInterests_49"
                             value="49"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_50">Stocks Investment</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Stocks Investment']"
+                            name="chkInterests_Stocks_Investment"
                             id="chkInterests_50"
                             value="50"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_51">Travel</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Travel']"
+                            name="chkInterests_Travel"
                             id="chkInterests_51"
                             value="51"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_52">Trend Setters</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Trend Setters']"
+                            name="chkInterests_Trend_Setters"
                             id="chkInterests_52"
                             value="52"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_53">Weather</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Weather']"
+                            name="chkInterests_Weather"
                             id="chkInterests_53"
                             value="53"
                         />
                     </div>
                     <div>
                         <label htmlFor="chkInterests_54">Weight Loss</label>{" "}
-                        <input onChange={handleChange}
+                        <input onChange={handleCheckChange}
                             type="checkbox"
-                            name="chkInterests['Weight Loss']"
+                            name="chkInterests_Weight_Loss"
                             id="chkInterests_54"
                             value="54"
                         />

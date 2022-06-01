@@ -976,3 +976,259 @@ export const cellCarriersData = {
     Carriers_Xit_Cellular: false,
     Carriers_Youghiogheny: false,
 }
+
+
+export const intrestGroupData = {
+    chkInterests_Airline_Tickets: false,
+    chkInterests_Apartment_Seekers: false,
+    chkInterests_Astrology: false,
+    chkInterests_Auto_Insurance: false,
+    chkInterests_Auto_Loans: false,
+    chkInterests_Automobiles: false,
+    chkInterests_Business_News: false,
+    chkInterests_Business_Opportunities: false,
+    chkInterests_Cars_Listing_Services: false,
+    chkInterests_Celebrity_Gossip: false,
+    chkInterests_Computers_and_Technology: false,
+    chkInterests_Coupons: false,
+    chkInterests_Credit_Card_Seekers: false,
+    chkInterests_Debt_Leads: false,
+    chkInterests_Ebay: false,
+    chkInterests_Education: false,
+    chkInterests_Employment: false,
+    chkInterests_Entertainment: false,
+    chkInterests_Entrepreneurs: false,
+    chkInterests_Ethnic: false,
+    chkInterests_Event_Seekers: false,
+    chkInterests_Fashion: false,
+    chkInterests_Financial_Services: false,
+    chkInterests_Franchises: false,
+    chkInterests_Freebies: false,
+    chkInterests_Gamers: false,
+    chkInterests_Golf: false,
+    chkInterests_Health: false,
+    chkInterests_Hollywood: false,
+    chkInterests_Home: false,
+    chkInterests_Horoscope_Related: false,
+    chkInterests_Insurance: false,
+    chkInterests_Internet_Based_Earning: false,
+    chkInterests_Investors: false,
+    chkInterests_Loans: false,
+    chkInterests_Lottery: false,
+    chkInterests_Movies: false,
+    chkInterests_Nascar: false,
+    chkInterests_Netscape: false,
+    chkInterests_Networking_Business: false,
+    chkInterests_Networking_Dating: false,
+    chkInterests_Networking_Social: false,
+    chkInterests_Networking_Woman: false,
+    chkInterests_News: false,
+    chkInterests_Parents: false,
+    chkInterests_Photography: false,
+    chkInterests_Real_Estate: false,
+    chkInterests_Shopping: false,
+    chkInterests_Sports: false,
+    chkInterests_Stocks_Investment: false,
+    chkInterests_Travel: false,
+    chkInterests_Trend_Setters: false,
+    chkInterests_Weather: false,
+    chkInterests_Weight_Loss: false,
+}
+
+
+export const uniqueEmailFaxData = {
+    chkFaxes: false,
+    chkPhone: false,
+    chkEmailsOrPhones: false,
+    chkEmailsAndPhones: false,
+    chkCompNames: false,
+    chkEmails: "",
+    chkURL: ""
+}
+
+export const excludeGeneralEmailData = {
+    chkBoxes_0: false,
+    chkBoxes_1: false,
+    chkBoxes_2: false
+}
+
+export const searchLastNameData = {
+    opt_Last_search_conditions: "",
+    chkGroupByLastName: false,
+    chkCapitalizationLastNames: true,
+    chkNameAddress: true,
+    chkNameFL: true
+}
+
+export const newMoversData = {
+    chkPhone: false,
+    chkEmails: false,
+    PriceL: "",
+    PriceH: "",
+    LoanL: "",
+    LoanH: ""
+}
+
+export const zipConditionData = {
+    zipCondition: "0",
+    chkGroupBy: false
+}
+
+export const textDataData = {
+    taCities: "",
+    boolCounty: "",
+    taZIPS: "",
+    txtZipRadius: "",
+    txtZipRadiusMiles: "",
+    handleDataChange: "",
+}
+
+export const telSearchData = {
+    taPhones: "",
+    chkPhone: false
+}
+
+export const houseHoldIncomeData = {
+    MHHIncLo: "",
+    MHHIncHi: ""
+}
+
+export const setSearchUrlData = {
+    web_source: "",
+    chkHasWebSource: false
+}
+
+export const enterAgeData = {
+    ageLower: "",
+    ageUpper: ""
+}
+
+export const dobData = {
+    selDOBMonth: "",
+    selDOBDay: "",
+    selDOBYear: "",
+}
+
+export const optInData = {
+    registration_date: "",
+    registration_date_later: "",
+    chkRegDate: false
+}
+
+export const repeatedData = {
+    selMonth: "",
+    selDay: "",
+    selYear: ""
+}
+
+export const faxNumberData = {
+    taFaxes: "",
+    chkFaxOnly: false
+}
+
+export const obtainRecordsData = {
+    selMonth: "",
+    selDay: "",
+    selYear: ""
+}
+
+export const searchCompanyNameData = {
+    txtCompanyName: "",
+    opt_company_search_conditions: "",
+    chkCapitalizationCompNames: false,
+    chkCompNames: false
+}
+
+export const jobSearchData = {
+    chkFilter: "",
+    titleCondition: "IN",
+    txtTitle: "",
+    optTxtTitle: "",
+}
+export const companyRevenueData = {
+    revenueLo: "",
+    revenueHi: ""
+}
+
+export const searchEmployeeData = {
+    employeesLo: "",
+    employeesHi: ""
+}
+
+export const uniqueTelephoneEmailData = {
+    optUnique: "",
+    chkHavePhone: false,
+    chkValidEmails: false,
+    chkDoNotCall: ""
+}
+
+export const selectRecordsData = {
+    entry_date: "",
+    entry_date_later: ""
+}
+
+export const cellPhoneData = {
+    chkNameFL: "",
+    chkNameAddress: ""
+}
+
+export const urlDatas = {
+    optWorld: "USCAN",
+    optSET: "",
+    selTLD: "",
+    txtTLD: ""
+}
+
+export const regDateData = {
+    selRegYear: "",
+    selRegMonth: "",
+    selRegDay: "",
+    selRegComp: "",
+    selRegUpdateYear: "",
+    selRegUpdateMonth: "",
+    selRegUpdateDay: "",
+    selRegUpdateComp: "",
+    selRegEXPIRESYear: "",
+    selRegEXPIRESMonth: "",
+    selRegEXPIRESDay: "",
+    selRegEXPIRESComp: "",
+}
+
+export const selectCanStatesData = {
+    Alberta: false,
+    British_Columbia: false,
+    Manitoba: false,
+    New_Brunswick: false,
+    Newfoundland: false,
+    Northwest_Terr: false,
+    Nova_Scotia: false,
+    Nunavit: false,
+    Ontario: false,
+    Prince_Edward_Is: false,
+    Quebec: false,
+    Saskatchewan: false,
+    Yukon: false
+}
+
+
+
+
+export const SICCodesChangeData = {
+    chkNAICSfromSICS : false,
+chkGroupBySIC : false,
+chkSICCODESONLY : false,
+txtSICDescription: "",
+txtSicLower: "",
+txtSicHigher: "",
+taSIC : "",
+taSIC6 : "",
+  }
+
+export const NACIcodeChangesData = {
+    txtNAICSDescription : "",
+txtNAICSLower : "",
+txtNAICSHigher : "",
+taNAICS : "",
+chkSICSfromNAICS : false,
+chkNAICS : false
+  }

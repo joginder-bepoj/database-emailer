@@ -3,7 +3,7 @@ import { useStateContext } from "../context/StateContext";
 
 const DOB = () => {
     const {dob, setDob} = useStateContext()
-    const handleChnage= (e) =>{
+    const handleChange= (e) =>{
         setDob({
             ...dob, [e.target.name]: e.target.value
         })
@@ -24,7 +24,7 @@ const DOB = () => {
                         id="selDOBMonth"
                         className="dateSelect"
                         style={{ width: "80px" }}
-                        onChange={handleChnage}
+                        onChange={handleChange}
                     >
                         <option value="">Month</option>
                         <option value="01">January</option>
@@ -46,7 +46,7 @@ const DOB = () => {
                         id="selDOBDay"
                         className="dateSelect"
                         style={{ width: "60px" }}
-                        onChange={handleChnage}
+                        onChange={handleChange}
                     >
                         <option value="">Day</option>
                         <option value="01">1</option>
@@ -87,7 +87,7 @@ const DOB = () => {
                         id="selDOBYear"
                         className="dateSelect"
                         style={{ width: "60px" }}
-                        onChange={handleChnage}
+                        onChange={handleChange}
                     >
                         <option value="">Year</option>
                         <option value="2004">2004</option>

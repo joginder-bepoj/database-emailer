@@ -17,10 +17,10 @@ import SICcodes from "./form/SICcodes";
 import TelephoneSearch from "./form/TelephoneSearch";
 import UniqueEmailFax from "./form/UniqueEmailFax";
 import URLdomain from "./form/URLdomain";
-import USstates from "./form/USstates";
 import ScrollToTop from "react-scroll-to-top";
 import URLdataResult from "./form/URLdataResult";
 import { useStateContext } from "./context/StateContext";
+import TelSearchParameters from "./form/TelSearchParameters";
 
 const CheckBusiness = () => {
     const {isLoggedIn} = useStateContext()
@@ -112,7 +112,7 @@ const CheckBusiness = () => {
                                         {/* search by country */}
                                         <SearchByCountry />
                                         {/* US states */}
-                                        <USstates />
+                                        <TelSearchParameters />
                                     </fieldset>
                                     {/* emails address serach */}
                                     <EmailAddress />

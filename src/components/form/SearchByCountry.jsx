@@ -4,7 +4,7 @@ import { useStateContext } from "../context/StateContext";
 
 const SearchByCountry = () => {
     const location = useLocation()
-    const {setSelectCountry, selectCountry} = useStateContext()
+    const {setSelectCountry} = useStateContext()
     const handleChange = (event) =>{
         setSelectCountry(event.target.value)
     }
@@ -96,6 +96,47 @@ const SearchByCountry = () => {
             </fieldset>
                 </>
             )
+            case "/database-emailer/checkbuisness":
+                return(
+                    <>
+                    <legend>Search By Country</legend>
+                    <h4>
+                    Clicking on the name of a state will check that box too.
+                    </h4>
+                    <div id="divCountriesStates" className="stateLabel flex-row">
+                        <div>
+                            <label htmlFor="optUS">All US</label>
+                            <input
+                                type="radio"
+                                name="US_CAN_ALL"
+                                id="optUS"
+                                value="USA"
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="optNone">States</label>
+                            <input
+                                defaultChecked
+                                type="radio"
+                                name="US_CAN_ALL"
+                                id="optNone"
+                                value="none"
+                                onChange={handleChange}
+                            />
+                        </div>
+                    </div>
+                    <p align="center">
+                        <sup style={{ color: "#bf0700" }}>
+                            <b>*</b>
+                        </sup>
+                        <span className="elevfont">
+                        Selecting US will override any State selection below.
+                        </span>
+                    </p>
+                    <br />
+                    </>
+                )
         default:
             return(
                 <>

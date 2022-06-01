@@ -8,6 +8,11 @@ const UniqueTelephoneEmail = () => {
             ...uniqueTelephoneEmail, [e.target.name] : e.target.value
         })
     }
+    const handleCheckChange = (e) =>{
+        setUniqueTelephoneEmail({
+            ...uniqueTelephoneEmail, [e.target.name] : e.target.checked
+        })
+    }
     return (
         <>
             <fieldset id="fsUniques">
@@ -78,7 +83,7 @@ const UniqueTelephoneEmail = () => {
                 <label htmlFor="chkHavePhone" className="chkUnique">
                     Check Here For Valid Phone #:
                 </label>{" "}
-                <input onChange={handleChange}
+                <input onChange={handleCheckChange}
                     type="checkbox"
                     name="chkHavePhone"
                     id="chkHavePhone"
@@ -89,7 +94,7 @@ const UniqueTelephoneEmail = () => {
                     Check Here For Valid Email Addresses:
                 </label>
                 &nbsp;&nbsp;
-                <input onChange={handleChange}
+                <input onChange={handleCheckChange}
                     type="checkbox"
                     name="chkValidEmails"
                     id="chkValidEmails"

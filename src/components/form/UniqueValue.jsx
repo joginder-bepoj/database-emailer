@@ -2,11 +2,9 @@ import React from "react";
 import { useStateContext } from "../context/StateContext";
 
 const UniqueValue = () => {
-    const {setUniqValues, uniqValues} = useStateContext()
+    const {setUniqValues} = useStateContext()
     const handleChange = (e) =>{
-        setUniqValues({
-            ...uniqValues, [e.target.name] : e.target.value
-        })
+        setUniqValues(e.target.value)
     }
     return (
         <>

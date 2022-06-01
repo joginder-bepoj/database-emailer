@@ -4,12 +4,21 @@ import { Link, useLocation } from "react-router-dom";
 
 const SICcodes = () => {
     const location = useLocation()
-    const {setSICcode, SICcode} = useStateContext()
+    const {setSICcode, SICCodesChange, setSICCodesChages} = useStateContext()
     const handleChange = (e) =>{
-        setSICcode({
-            ...SICcode, [e.target.name] : e.target.value
-        })
+        let value = Array.from(e.target.selectedOptions, (option)=> option.value)
+        setSICcode(value)
     } 
+
+    const handleTextChange = (e) =>{
+        setSICCodesChages({...SICCodesChange, [e.target.name] : e.target.value})
+    }
+    const handleCheckChange = (e) =>{
+        setSICCodesChages({
+            ...SICCodesChange, [e.target.name] : e.target.checked
+        })
+    }
+
     return (
         <>
             <fieldset>
@@ -47,7 +56,7 @@ const SICcodes = () => {
                     >
                         Check This If You want the Corresponding NAICS Codes Included Too:
                     </label>
-                    <input onChange={handleChange}
+                    <input onChange={handleCheckChange}
                         type="checkbox"
                         name="chkNAICSfromSICS"
                         id="chkNAICSfromSICS"
@@ -61,7 +70,7 @@ const SICcodes = () => {
                         Check This If You have Multiple SIC Codes Where You Want the Results
                         Grouped:
                     </label>
-                    <input onChange={handleChange}
+                    <input onChange={handleCheckChange}
                         type="checkbox"
                         name="chkGroupBySIC"
                         id="chkGroupBySIC"
@@ -110,7 +119,7 @@ const SICcodes = () => {
                                     <br />
                                     <div align="left">
                                         <b>Search on SICS Description: </b>&nbsp;
-                                        <input onChange={handleChange}
+                                        <input onChange={handleTextChange}
                                             type="text"
                                             name="txtSICDescription"
                                             id="txtSICDescription"
@@ -7840,7 +7849,7 @@ const SICcodes = () => {
                                     <b> Select a Range(s) of SIC Codes:</b>
                                     <br />
                                     <label htmlFor="txtSicLower">Lower SIC Code: </label>
-                                    <input onChange={handleChange}
+                                    <input onChange={handleTextChange}
                                         type="text"
                                         name="txtSicLower"
                                         id="txtSicLower"
@@ -7850,7 +7859,7 @@ const SICcodes = () => {
                                         placeholder="Lower Sic Code"
                                     />
                                     | <label htmlFor="txtSicHigher">Higher SIC Code: </label>
-                                    <input onChange={handleChange}
+                                    <input onChange={handleTextChange}
                                         type="text"
                                         name="txtSicHigher"
                                         id="txtSicHigher"
@@ -7864,7 +7873,7 @@ const SICcodes = () => {
                                     <br />
                                     <select
                                         onChange={handleChange}
-                                        name="selSIC_code_ranges[]"
+                                        name="selSIC_code_ranges"
                                         id="selSIC_code_ranges"
                                         style={{ width: "90%" }}
                                         size="8"
@@ -8023,7 +8032,7 @@ const SICcodes = () => {
                                     </label>
                                 </td>
                                 <td align="left">
-                                    <input onChange={handleChange}
+                                    <input onChange={handleCheckChange}
                                         type="checkbox"
                                         name="chkSICCODESONLY"
                                         id="chkSICCODESONLY"
@@ -8054,7 +8063,7 @@ const SICcodes = () => {
                                     </b>
                                     <br />
                                     <textarea
-                                        onChange={handleChange}
+                                        onChange={handleTextChange}
                                         name="taSIC"
                                         id="taSIC"
                                         style={{ height: "100px", width: "90%" }}
@@ -8073,7 +8082,7 @@ const SICcodes = () => {
                                     </b>
                                     <br />
                                     <textarea
-                                        onChange={handleChange}
+                                        onChange={handleTextChange}
                                         name="taSIC6"
                                         id="taSIC6"
                                         style={{ height: "100px", width: "90%" }}

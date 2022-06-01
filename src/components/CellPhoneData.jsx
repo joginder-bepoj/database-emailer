@@ -20,7 +20,7 @@ const CellPhoneData = () => {
             [e.target.name]: e.target.checked
         })
     }
-    console.log(cellData)
+
     return (
         <>
             <section className="section section-xs content">

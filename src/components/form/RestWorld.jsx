@@ -15,6 +15,7 @@ const RestWorld = () => {
                         id="tblCountries"
                         className="stateLabel"
                     >
+                        <tbody>
                         <tr valign="top">
                             <td width="34%" className="tdCountries  tdBlock" valign="top">
                                 <h2 style={{textDecoration: "none", color: "black", textShadow: "none"}}>Europe</h2>
@@ -24,7 +25,7 @@ const RestWorld = () => {
                                     style={{width:"99%"}}
                                 >
                                     <div>
-                                        <label for="countries_AL">Albania</label>{" "}
+                                        <label htmlFor="countries_AL">Albania</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[1]"
@@ -33,7 +34,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_AD">Andorra</label>{" "}
+                                        <label htmlFor="countries_AD">Andorra</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[2]"
@@ -42,7 +43,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_AM">Armenia</label>{" "}
+                                        <label htmlFor="countries_AM">Armenia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[3]"
@@ -51,7 +52,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_AT">Austria</label>{" "}
+                                        <label htmlFor="countries_AT">Austria</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[4]"
@@ -60,7 +61,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BY">Belarus</label>{" "}
+                                        <label htmlFor="countries_BY">Belarus</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[5]"
@@ -69,7 +70,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BE">Belgium</label>{" "}
+                                        <label htmlFor="countries_BE">Belgium</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[6]"
@@ -78,7 +79,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BA">Bosnia-Herzegovina</label>{" "}
+                                        <label htmlFor="countries_BA">Bosnia-Herzegovina</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[7]"
@@ -87,7 +88,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BG">Bulgaria</label>{" "}
+                                        <label htmlFor="countries_BG">Bulgaria</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[8]"
@@ -96,7 +97,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CV">Cape Verde</label>{" "}
+                                        <label htmlFor="countries_CV">Cape Verde</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[9]"
@@ -105,7 +106,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_HR">Croatia</label>{" "}
+                                        <label htmlFor="countries_HR">Croatia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[10]"
@@ -114,7 +115,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CY">Cyprus</label>{" "}
+                                        <label htmlFor="countries_CY">Cyprus</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[11]"
@@ -123,7 +124,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CZ">Czech Republic</label>{" "}
+                                        <label htmlFor="countries_CZ">Czech Republic</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[12]"
@@ -132,7 +133,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_DK">Denmark</label>{" "}
+                                        <label htmlFor="countries_DK">Denmark</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[13]"
@@ -141,7 +142,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_EE">Estonia</label>{" "}
+                                        <label htmlFor="countries_EE">Estonia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[14]"
@@ -150,7 +151,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_FO">Faroe Islands</label>{" "}
+                                        <label htmlFor="countries_FO">Faroe Islands</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[15]"
@@ -159,7 +160,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_FI">Finland</label>{" "}
+                                        <label htmlFor="countries_FI">Finland</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[16]"
@@ -168,7 +169,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_FR">France</label>{" "}
+                                        <label htmlFor="countries_FR">France</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[17]"
@@ -177,7 +178,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GE">Georgia</label>{" "}
+                                        <label htmlFor="countries_GE">Georgia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[18]"
@@ -186,7 +187,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_DE">Germany</label>{" "}
+                                        <label htmlFor="countries_DE">Germany</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[19]"
@@ -195,7 +196,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GI">Gibraltar</label>{" "}
+                                        <label htmlFor="countries_GI">Gibraltar</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[20]"
@@ -204,7 +205,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GR">Greece</label>{" "}
+                                        <label htmlFor="countries_GR">Greece</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[21]"
@@ -213,7 +214,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GL">Greenland</label>{" "}
+                                        <label htmlFor="countries_GL">Greenland</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[22]"
@@ -222,7 +223,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_HU">Hungary</label>{" "}
+                                        <label htmlFor="countries_HU">Hungary</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[23]"
@@ -231,7 +232,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_IS">Iceland</label>{" "}
+                                        <label htmlFor="countries_IS">Iceland</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[24]"
@@ -240,7 +241,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_IE">Ireland</label>{" "}
+                                        <label htmlFor="countries_IE">Ireland</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[25]"
@@ -249,7 +250,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_IT">Italy</label>{" "}
+                                        <label htmlFor="countries_IT">Italy</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[26]"
@@ -258,7 +259,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_LV">Latvia</label>{" "}
+                                        <label htmlFor="countries_LV">Latvia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[27]"
@@ -267,7 +268,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_LI">Liechtenstein</label>{" "}
+                                        <label htmlFor="countries_LI">Liechtenstein</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[28]"
@@ -276,7 +277,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_LT">Lithuania</label>{" "}
+                                        <label htmlFor="countries_LT">Lithuania</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[29]"
@@ -285,7 +286,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_LU">Luxembourg</label>{" "}
+                                        <label htmlFor="countries_LU">Luxembourg</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[30]"
@@ -294,7 +295,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MK">Macedonia</label>{" "}
+                                        <label htmlFor="countries_MK">Macedonia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[31]"
@@ -303,7 +304,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MT">Malta</label>{" "}
+                                        <label htmlFor="countries_MT">Malta</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[32]"
@@ -312,7 +313,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MD">Moldova</label>{" "}
+                                        <label htmlFor="countries_MD">Moldova</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[33]"
@@ -321,7 +322,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MC">Monaco</label>{" "}
+                                        <label htmlFor="countries_MC">Monaco</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[34]"
@@ -330,7 +331,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MS">Montserrat</label>{" "}
+                                        <label htmlFor="countries_MS">Montserrat</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[35]"
@@ -339,7 +340,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NL">Netherlands</label>{" "}
+                                        <label htmlFor="countries_NL">Netherlands</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[36]"
@@ -348,7 +349,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NF">Norfolk Island</label>{" "}
+                                        <label htmlFor="countries_NF">Norfolk Island</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[37]"
@@ -357,7 +358,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NO">Norway</label>{" "}
+                                        <label htmlFor="countries_NO">Norway</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[38]"
@@ -366,7 +367,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_PL">Poland</label>{" "}
+                                        <label htmlFor="countries_PL">Poland</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[39]"
@@ -375,7 +376,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_PT">Portugal</label>{" "}
+                                        <label htmlFor="countries_PT">Portugal</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[40]"
@@ -384,7 +385,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_RO">Romania</label>{" "}
+                                        <label htmlFor="countries_RO">Romania</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[41]"
@@ -393,7 +394,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_RU">Russia</label>{" "}
+                                        <label htmlFor="countries_RU">Russia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[42]"
@@ -402,7 +403,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SM">San Marino</label>{" "}
+                                        <label htmlFor="countries_SM">San Marino</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[43]"
@@ -411,7 +412,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_YU">Serbia &amp; Montenegro</label>{" "}
+                                        <label htmlFor="countries_YU">Serbia &amp; Montenegro</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[44]"
@@ -420,7 +421,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SK">Slovakia</label>{" "}
+                                        <label htmlFor="countries_SK">Slovakia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[45]"
@@ -429,7 +430,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SI">Slovenia</label>{" "}
+                                        <label htmlFor="countries_SI">Slovenia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[46]"
@@ -438,7 +439,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_ES">Spain</label>{" "}
+                                        <label htmlFor="countries_ES">Spain</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[47]"
@@ -447,7 +448,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SJ">Svalbard Jan Mayen Island</label>{" "}
+                                        <label htmlFor="countries_SJ">Svalbard Jan Mayen Island</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[48]"
@@ -456,7 +457,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SE">Sweden</label>{" "}
+                                        <label htmlFor="countries_SE">Sweden</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[49]"
@@ -465,7 +466,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CH">Switzerland</label>{" "}
+                                        <label htmlFor="countries_CH">Switzerland</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[50]"
@@ -474,7 +475,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_UA">Ukraine</label>{" "}
+                                        <label htmlFor="countries_UA">Ukraine</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[51]"
@@ -483,7 +484,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_UK">United Kingdom</label>{" "}
+                                        <label htmlFor="countries_UK">United Kingdom</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[52]"
@@ -492,7 +493,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_VA">Vatican City</label>{" "}
+                                        <label htmlFor="countries_VA">Vatican City</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[53]"
@@ -509,7 +510,7 @@ const RestWorld = () => {
                                     style={{width:"99%"}}
                                 >
                                     <div>
-                                        <label for="countries_IO">
+                                        <label htmlFor="countries_IO">
                                             British Indian Ocean Territory
                                         </label>{" "}
                                         <input
@@ -520,7 +521,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CX">Christmas Islands</label>{" "}
+                                        <label htmlFor="countries_CX">Christmas Islands</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[2]"
@@ -529,7 +530,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CC">Cocos Island</label>{" "}
+                                        <label htmlFor="countries_CC">Cocos Island</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[3]"
@@ -538,7 +539,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_KM">Comoros</label>{" "}
+                                        <label htmlFor="countries_KM">Comoros</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[4]"
@@ -547,7 +548,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CK">Cook Islands</label>{" "}
+                                        <label htmlFor="countries_CK">Cook Islands</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[5]"
@@ -556,7 +557,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TP">East Timor</label>{" "}
+                                        <label htmlFor="countries_TP">East Timor</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[6]"
@@ -565,7 +566,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_FJ">Fiji</label>{" "}
+                                        <label htmlFor="countries_FJ">Fiji</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[7]"
@@ -574,7 +575,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_PF">French Polynesia</label>{" "}
+                                        <label htmlFor="countries_PF">French Polynesia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[8]"
@@ -583,7 +584,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TF">French Sthrn Territories</label>{" "}
+                                        <label htmlFor="countries_TF">French Sthrn Territories</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[9]"
@@ -592,7 +593,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_KI">Kiribati</label>{" "}
+                                        <label htmlFor="countries_KI">Kiribati</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[10]"
@@ -601,7 +602,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MV">Maldives</label>{" "}
+                                        <label htmlFor="countries_MV">Maldives</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[11]"
@@ -610,7 +611,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NR">Nauru</label>{" "}
+                                        <label htmlFor="countries_NR">Nauru</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[12]"
@@ -619,7 +620,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NC">New Caledonia</label>{" "}
+                                        <label htmlFor="countries_NC">New Caledonia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[13]"
@@ -628,7 +629,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NU">Niue</label>{" "}
+                                        <label htmlFor="countries_NU">Niue</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[14]"
@@ -637,7 +638,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NF">Norfolk Island</label>{" "}
+                                        <label htmlFor="countries_NF">Norfolk Island</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[15]"
@@ -646,7 +647,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_PG">Papua New Guinea</label>{" "}
+                                        <label htmlFor="countries_PG">Papua New Guinea</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[16]"
@@ -655,7 +656,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_PN">Pitcairn Island</label>{" "}
+                                        <label htmlFor="countries_PN">Pitcairn Island</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[17]"
@@ -664,7 +665,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_RE">Reunion</label>{" "}
+                                        <label htmlFor="countries_RE">Reunion</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[18]"
@@ -673,7 +674,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_WS">Samoa</label>{" "}
+                                        <label htmlFor="countries_WS">Samoa</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[19]"
@@ -682,7 +683,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SC">Seychelles</label>{" "}
+                                        <label htmlFor="countries_SC">Seychelles</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[20]"
@@ -691,7 +692,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SB">Soloman Islands</label>{" "}
+                                        <label htmlFor="countries_SB">Soloman Islands</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[21]"
@@ -700,7 +701,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TO">Tonga</label>{" "}
+                                        <label htmlFor="countries_TO">Tonga</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[22]"
@@ -709,7 +710,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TV">Tuvalu</label>{" "}
+                                        <label htmlFor="countries_TV">Tuvalu</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[23]"
@@ -718,7 +719,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_UM">
+                                        <label htmlFor="countries_UM">
                                             U.S. Minor Outlying Islands
                                         </label>{" "}
                                         <input
@@ -729,7 +730,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_VU">Vanuatu</label>{" "}
+                                        <label htmlFor="countries_VU">Vanuatu</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[25]"
@@ -738,7 +739,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_WF">
+                                        <label htmlFor="countries_WF">
                                             Wallis &amp; Futunu Islands
                                         </label>{" "}
                                         <input
@@ -757,7 +758,7 @@ const RestWorld = () => {
                                     style={{width:"99%"}}
                                 >
                                     <div>
-                                        <label for="countries_AU">Australia</label>{" "}
+                                        <label htmlFor="countries_AU">Australia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[1]"
@@ -766,7 +767,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_HM">
+                                        <label htmlFor="countries_HM">
                                             Heard &amp; McDonald Islands
                                         </label>{" "}
                                         <input
@@ -777,7 +778,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NZ">New Zealand</label>{" "}
+                                        <label htmlFor="countries_NZ">New Zealand</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[3]"
@@ -786,7 +787,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TK">Tokelau</label>{" "}
+                                        <label htmlFor="countries_TK">Tokelau</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[4]"
@@ -804,7 +805,7 @@ const RestWorld = () => {
                                     style={{width:"99%"}}
                                 >
                                     <div>
-                                        <label for="countries_AF">Afghanistan</label>{" "}
+                                        <label htmlFor="countries_AF">Afghanistan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[1]"
@@ -813,7 +814,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_AZ">Azerbaijan</label>{" "}
+                                        <label htmlFor="countries_AZ">Azerbaijan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[2]"
@@ -822,7 +823,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BD">Bangladesh</label>{" "}
+                                        <label htmlFor="countries_BD">Bangladesh</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[3]"
@@ -831,7 +832,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BH">Bahrain</label>{" "}
+                                        <label htmlFor="countries_BH">Bahrain</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[4]"
@@ -840,7 +841,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BT">Bhutan</label>{" "}
+                                        <label htmlFor="countries_BT">Bhutan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[5]"
@@ -849,7 +850,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BN">Brunei Darussalam</label>{" "}
+                                        <label htmlFor="countries_BN">Brunei Darussalam</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[6]"
@@ -858,7 +859,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_KH">Cambodia</label>{" "}
+                                        <label htmlFor="countries_KH">Cambodia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[7]"
@@ -867,7 +868,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CN">China</label>{" "}
+                                        <label htmlFor="countries_CN">China</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[8]"
@@ -876,7 +877,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GZ">Gaza Strip</label>{" "}
+                                        <label htmlFor="countries_GZ">Gaza Strip</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[9]"
@@ -885,7 +886,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_HK">Hong Kong</label>{" "}
+                                        <label htmlFor="countries_HK">Hong Kong</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[10]"
@@ -894,7 +895,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_IN">India</label>{" "}
+                                        <label htmlFor="countries_IN">India</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[11]"
@@ -903,7 +904,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_ID">Indonesia</label>{" "}
+                                        <label htmlFor="countries_ID">Indonesia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[12]"
@@ -912,7 +913,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_IL">Israel</label>{" "}
+                                        <label htmlFor="countries_IL">Israel</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[13]"
@@ -921,7 +922,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_JP">Japan</label>{" "}
+                                        <label htmlFor="countries_JP">Japan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[14]"
@@ -930,7 +931,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_JO">Jordan</label>{" "}
+                                        <label htmlFor="countries_JO">Jordan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[15]"
@@ -939,7 +940,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_KZ">Kazakhstan</label>{" "}
+                                        <label htmlFor="countries_KZ">Kazakhstan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[16]"
@@ -948,7 +949,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_KW">Kuwait</label>{" "}
+                                        <label htmlFor="countries_KW">Kuwait</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[17]"
@@ -957,7 +958,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_KG">Kyrgyzstan</label>{" "}
+                                        <label htmlFor="countries_KG">Kyrgyzstan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[18]"
@@ -966,7 +967,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_LA">Laos</label>{" "}
+                                        <label htmlFor="countries_LA">Laos</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[19]"
@@ -975,7 +976,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_LB">Lebanon</label>{" "}
+                                        <label htmlFor="countries_LB">Lebanon</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[20]"
@@ -984,7 +985,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MO">Macau</label>{" "}
+                                        <label htmlFor="countries_MO">Macau</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[21]"
@@ -993,7 +994,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MY">Malaysia</label>{" "}
+                                        <label htmlFor="countries_MY">Malaysia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[22]"
@@ -1002,7 +1003,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MN">Mongolia</label>{" "}
+                                        <label htmlFor="countries_MN">Mongolia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[23]"
@@ -1011,7 +1012,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MM">Myanmar</label>{" "}
+                                        <label htmlFor="countries_MM">Myanmar</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[24]"
@@ -1020,7 +1021,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NP">Nepal</label>{" "}
+                                        <label htmlFor="countries_NP">Nepal</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[25]"
@@ -1029,7 +1030,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_OM">Oman</label>{" "}
+                                        <label htmlFor="countries_OM">Oman</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[26]"
@@ -1038,7 +1039,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_QA">Qatar</label>{" "}
+                                        <label htmlFor="countries_QA">Qatar</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[27]"
@@ -1047,7 +1048,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_PH">Philippines</label>{" "}
+                                        <label htmlFor="countries_PH">Philippines</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[28]"
@@ -1056,7 +1057,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_PK">Pakistan</label>{" "}
+                                        <label htmlFor="countries_PK">Pakistan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[29]"
@@ -1065,7 +1066,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SA">Saudi Arabia</label>{" "}
+                                        <label htmlFor="countries_SA">Saudi Arabia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[30]"
@@ -1074,7 +1075,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SG">Singapore</label>{" "}
+                                        <label htmlFor="countries_SG">Singapore</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[31]"
@@ -1083,7 +1084,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_KR">South Korea</label>{" "}
+                                        <label htmlFor="countries_KR">South Korea</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[32]"
@@ -1092,7 +1093,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_LK">Sri Lanka</label>{" "}
+                                        <label htmlFor="countries_LK">Sri Lanka</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[33]"
@@ -1101,7 +1102,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TW">Taiwan</label>{" "}
+                                        <label htmlFor="countries_TW">Taiwan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[34]"
@@ -1110,7 +1111,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TJ">Tajikistan</label>{" "}
+                                        <label htmlFor="countries_TJ">Tajikistan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[35]"
@@ -1119,7 +1120,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TH">Thailand</label>{" "}
+                                        <label htmlFor="countries_TH">Thailand</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[36]"
@@ -1128,7 +1129,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TR">Turkey</label>{" "}
+                                        <label htmlFor="countries_TR">Turkey</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[37]"
@@ -1137,7 +1138,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TM">Turkmenistan</label>{" "}
+                                        <label htmlFor="countries_TM">Turkmenistan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[38]"
@@ -1146,7 +1147,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_AE">United Arab Emirates</label>{" "}
+                                        <label htmlFor="countries_AE">United Arab Emirates</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[39]"
@@ -1155,7 +1156,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_UZ">Uzbekistan</label>{" "}
+                                        <label htmlFor="countries_UZ">Uzbekistan</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[40]"
@@ -1164,7 +1165,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_YE">Yemen, Republic Of</label>{" "}
+                                        <label htmlFor="countries_YE">Yemen, Republic Of</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[41]"
@@ -1173,7 +1174,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_WE">West Bank</label>{" "}
+                                        <label htmlFor="countries_WE">West Bank</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[42]"
@@ -1182,7 +1183,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_VN">Vietnam</label>{" "}
+                                        <label htmlFor="countries_VN">Vietnam</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[43]"
@@ -1199,7 +1200,7 @@ const RestWorld = () => {
                                     style={{width:"99%"}}
                                 >
                                     <div>
-                                        <label for="countries_DZ">Algeria</label>{" "}
+                                        <label htmlFor="countries_DZ">Algeria</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[1]"
@@ -1208,7 +1209,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_AO">Angola</label>{" "}
+                                        <label htmlFor="countries_AO">Angola</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[2]"
@@ -1217,7 +1218,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_AI">Anguilla</label>{" "}
+                                        <label htmlFor="countries_AI">Anguilla</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[3]"
@@ -1226,7 +1227,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BJ">Benin</label>{" "}
+                                        <label htmlFor="countries_BJ">Benin</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[4]"
@@ -1235,7 +1236,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BW">Botswana</label>{" "}
+                                        <label htmlFor="countries_BW">Botswana</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[5]"
@@ -1244,7 +1245,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BF">Burkina Faso</label>{" "}
+                                        <label htmlFor="countries_BF">Burkina Faso</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[6]"
@@ -1253,7 +1254,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BI">Burundi</label>{" "}
+                                        <label htmlFor="countries_BI">Burundi</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[7]"
@@ -1262,7 +1263,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CM">Cameroon</label>{" "}
+                                        <label htmlFor="countries_CM">Cameroon</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[8]"
@@ -1271,7 +1272,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CF">Central African Republic</label>{" "}
+                                        <label htmlFor="countries_CF">Central African Republic</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[9]"
@@ -1280,7 +1281,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TD">Chad</label>{" "}
+                                        <label htmlFor="countries_TD">Chad</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[10]"
@@ -1289,7 +1290,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CG">Congo (Brazzaville)</label>{" "}
+                                        <label htmlFor="countries_CG">Congo (Brazzaville)</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[11]"
@@ -1298,7 +1299,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CD">Congo, Dem. Republic Of</label>{" "}
+                                        <label htmlFor="countries_CD">Congo, Dem. Republic Of</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[12]"
@@ -1307,7 +1308,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_DJ">Djibouti</label>{" "}
+                                        <label htmlFor="countries_DJ">Djibouti</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[13]"
@@ -1316,7 +1317,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_EG">Egypt</label>{" "}
+                                        <label htmlFor="countries_EG">Egypt</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[14]"
@@ -1325,7 +1326,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GQ">Equatorial Guinea</label>{" "}
+                                        <label htmlFor="countries_GQ">Equatorial Guinea</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[15]"
@@ -1334,7 +1335,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_ER">Eritrea</label>{" "}
+                                        <label htmlFor="countries_ER">Eritrea</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[16]"
@@ -1343,7 +1344,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_ET">Ethiopia</label>{" "}
+                                        <label htmlFor="countries_ET">Ethiopia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[17]"
@@ -1352,7 +1353,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GA">Gabon</label>{" "}
+                                        <label htmlFor="countries_GA">Gabon</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[18]"
@@ -1361,7 +1362,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GM">Gambia</label>{" "}
+                                        <label htmlFor="countries_GM">Gambia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[19]"
@@ -1370,7 +1371,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GH">Ghana</label>{" "}
+                                        <label htmlFor="countries_GH">Ghana</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[20]"
@@ -1379,7 +1380,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GN">Guinea</label>{" "}
+                                        <label htmlFor="countries_GN">Guinea</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[21]"
@@ -1388,7 +1389,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GW">Guinea-Bissau</label>{" "}
+                                        <label htmlFor="countries_GW">Guinea-Bissau</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[22]"
@@ -1397,7 +1398,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CI">Ivory Coast</label>{" "}
+                                        <label htmlFor="countries_CI">Ivory Coast</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[23]"
@@ -1406,7 +1407,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_KE">Kenya</label>{" "}
+                                        <label htmlFor="countries_KE">Kenya</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[24]"
@@ -1415,7 +1416,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_LS">Lesotho</label>{" "}
+                                        <label htmlFor="countries_LS">Lesotho</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[25]"
@@ -1424,7 +1425,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_LR">Liberia</label>{" "}
+                                        <label htmlFor="countries_LR">Liberia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[26]"
@@ -1433,7 +1434,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MG">Madagascar</label>{" "}
+                                        <label htmlFor="countries_MG">Madagascar</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[27]"
@@ -1442,7 +1443,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MW">Malawi</label>{" "}
+                                        <label htmlFor="countries_MW">Malawi</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[28]"
@@ -1451,7 +1452,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_ML">Mali</label>{" "}
+                                        <label htmlFor="countries_ML">Mali</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[29]"
@@ -1460,7 +1461,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MR">Mauritania</label>{" "}
+                                        <label htmlFor="countries_MR">Mauritania</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[30]"
@@ -1469,7 +1470,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MU">Mauritius</label>{" "}
+                                        <label htmlFor="countries_MU">Mauritius</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[31]"
@@ -1478,7 +1479,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_YT">Mayotte</label>{" "}
+                                        <label htmlFor="countries_YT">Mayotte</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[32]"
@@ -1487,7 +1488,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MA">Morocco</label>{" "}
+                                        <label htmlFor="countries_MA">Morocco</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[33]"
@@ -1496,7 +1497,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MZ">Mozambique</label>{" "}
+                                        <label htmlFor="countries_MZ">Mozambique</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[34]"
@@ -1505,7 +1506,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NA">Namibia</label>{" "}
+                                        <label htmlFor="countries_NA">Namibia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[35]"
@@ -1514,7 +1515,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NE">Niger</label>{" "}
+                                        <label htmlFor="countries_NE">Niger</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[36]"
@@ -1523,7 +1524,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NG">Nigeria</label>{" "}
+                                        <label htmlFor="countries_NG">Nigeria</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[37]"
@@ -1532,7 +1533,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_ST">Sao Tome &amp; Principe</label>{" "}
+                                        <label htmlFor="countries_ST">Sao Tome &amp; Principe</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[38]"
@@ -1541,7 +1542,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SN">Senegal</label>{" "}
+                                        <label htmlFor="countries_SN">Senegal</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[39]"
@@ -1550,7 +1551,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SL">Sierra Leone</label>{" "}
+                                        <label htmlFor="countries_SL">Sierra Leone</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[40]"
@@ -1559,7 +1560,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SO">Somalia</label>{" "}
+                                        <label htmlFor="countries_SO">Somalia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[41]"
@@ -1568,7 +1569,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_ZA">South Africa</label>{" "}
+                                        <label htmlFor="countries_ZA">South Africa</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[42]"
@@ -1577,7 +1578,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SZ">Swaziland</label>{" "}
+                                        <label htmlFor="countries_SZ">Swaziland</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[43]"
@@ -1586,7 +1587,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TZ">Tanzania</label>{" "}
+                                        <label htmlFor="countries_TZ">Tanzania</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[44]"
@@ -1595,7 +1596,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TG">Togo</label>{" "}
+                                        <label htmlFor="countries_TG">Togo</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[45]"
@@ -1604,7 +1605,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TN">Tunisia</label>{" "}
+                                        <label htmlFor="countries_TN">Tunisia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[46]"
@@ -1613,7 +1614,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_UG">Uganda</label>{" "}
+                                        <label htmlFor="countries_UG">Uganda</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[47]"
@@ -1622,7 +1623,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_EH">Western Sahara</label>{" "}
+                                        <label htmlFor="countries_EH">Western Sahara</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[48]"
@@ -1631,7 +1632,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_ZM">Zambia</label>{" "}
+                                        <label htmlFor="countries_ZM">Zambia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[49]"
@@ -1640,7 +1641,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_ZW">Zimbabwe</label>{" "}
+                                        <label htmlFor="countries_ZW">Zimbabwe</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[50]"
@@ -1653,7 +1654,7 @@ const RestWorld = () => {
                             <td
                                 width="33%"
                                 className="tdCountries tdBlock"
-                                style={{borderRightWidth:"0px;"}}
+                                style={{borderRightWidth:"0px"}}
                                 valign="top"
                             >
                                 <h2 style={{textDecoration: "none", color: "black", textShadow: "none"}}>South America</h2>
@@ -1663,7 +1664,7 @@ const RestWorld = () => {
                                     style={{width:"99%"}}
                                 >
                                     <div>
-                                        <label for="countries_AR">Argentina</label>{" "}
+                                        <label htmlFor="countries_AR">Argentina</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[1]"
@@ -1672,7 +1673,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BO">Bolivia</label>{" "}
+                                        <label htmlFor="countries_BO">Bolivia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[2]"
@@ -1681,7 +1682,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BR">Brazil</label>{" "}
+                                        <label htmlFor="countries_BR">Brazil</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[3]"
@@ -1690,7 +1691,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CL">Chile</label>{" "}
+                                        <label htmlFor="countries_CL">Chile</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[4]"
@@ -1699,7 +1700,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CO">Colombia</label>{" "}
+                                        <label htmlFor="countries_CO">Colombia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[5]"
@@ -1708,7 +1709,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_EC">Ecuador</label>{" "}
+                                        <label htmlFor="countries_EC">Ecuador</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[6]"
@@ -1717,7 +1718,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_FK">Falkland Islands</label>{" "}
+                                        <label htmlFor="countries_FK">Falkland Islands</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[7]"
@@ -1726,7 +1727,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GF">French Guiana</label>{" "}
+                                        <label htmlFor="countries_GF">French Guiana</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[8]"
@@ -1735,7 +1736,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_PY">Paraguay</label>{" "}
+                                        <label htmlFor="countries_PY">Paraguay</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[9]"
@@ -1744,7 +1745,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_PE">Peru</label>{" "}
+                                        <label htmlFor="countries_PE">Peru</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[10]"
@@ -1753,7 +1754,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_UY">Uruguay</label>{" "}
+                                        <label htmlFor="countries_UY">Uruguay</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[11]"
@@ -1762,7 +1763,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_VE">Venezuela</label>{" "}
+                                        <label htmlFor="countries_VE">Venezuela</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[12]"
@@ -1779,7 +1780,7 @@ const RestWorld = () => {
                                     style={{width:"99%"}}
                                 >
                                     <div>
-                                        <label for="countries_AG">Antigua &amp; Barduba</label>{" "}
+                                        <label htmlFor="countries_AG">Antigua &amp; Barduba</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[1]"
@@ -1788,7 +1789,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_AW">Aruba</label>{" "}
+                                        <label htmlFor="countries_AW">Aruba</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[2]"
@@ -1797,7 +1798,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BS">Bahamas</label>{" "}
+                                        <label htmlFor="countries_BS">Bahamas</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[3]"
@@ -1806,7 +1807,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BB">Barbados</label>{" "}
+                                        <label htmlFor="countries_BB">Barbados</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[4]"
@@ -1815,7 +1816,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BZ">Belize</label>{" "}
+                                        <label htmlFor="countries_BZ">Belize</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[5]"
@@ -1824,7 +1825,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_BM">Bermuda</label>{" "}
+                                        <label htmlFor="countries_BM">Bermuda</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[6]"
@@ -1833,7 +1834,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_VG">British Virgin Islands</label>{" "}
+                                        <label htmlFor="countries_VG">British Virgin Islands</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[7]"
@@ -1842,7 +1843,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_KY">Cayman Islands</label>{" "}
+                                        <label htmlFor="countries_KY">Cayman Islands</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[8]"
@@ -1851,7 +1852,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_CR">Costa Rica</label>{" "}
+                                        <label htmlFor="countries_CR">Costa Rica</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[9]"
@@ -1860,7 +1861,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_DM">Dominica</label>{" "}
+                                        <label htmlFor="countries_DM">Dominica</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[10]"
@@ -1869,7 +1870,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_DO">Dominican Republic</label>{" "}
+                                        <label htmlFor="countries_DO">Dominican Republic</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[11]"
@@ -1878,7 +1879,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SV">El Salvador</label>{" "}
+                                        <label htmlFor="countries_SV">El Salvador</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[12]"
@@ -1887,7 +1888,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GD">Grenada</label>{" "}
+                                        <label htmlFor="countries_GD">Grenada</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[13]"
@@ -1896,7 +1897,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GP">Guadeloupe</label>{" "}
+                                        <label htmlFor="countries_GP">Guadeloupe</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[14]"
@@ -1905,7 +1906,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GT">Guatemala</label>{" "}
+                                        <label htmlFor="countries_GT">Guatemala</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[15]"
@@ -1914,7 +1915,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_GY">Guyana</label>{" "}
+                                        <label htmlFor="countries_GY">Guyana</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[16]"
@@ -1923,7 +1924,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_HT">Haiti</label>{" "}
+                                        <label htmlFor="countries_HT">Haiti</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[17]"
@@ -1932,7 +1933,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_HN">Honduras</label>{" "}
+                                        <label htmlFor="countries_HN">Honduras</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[18]"
@@ -1941,7 +1942,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_JM">Jamaica</label>{" "}
+                                        <label htmlFor="countries_JM">Jamaica</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[19]"
@@ -1950,7 +1951,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MQ">Martinique</label>{" "}
+                                        <label htmlFor="countries_MQ">Martinique</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[20]"
@@ -1959,7 +1960,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_ME">Mexico</label>{" "}
+                                        <label htmlFor="countries_ME">Mexico</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[21]"
@@ -1968,7 +1969,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_MS">Montserrat</label>{" "}
+                                        <label htmlFor="countries_MS">Montserrat</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[22]"
@@ -1977,7 +1978,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_AN">Netherlands Antilles</label>{" "}
+                                        <label htmlFor="countries_AN">Netherlands Antilles</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[23]"
@@ -1986,7 +1987,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_NI">Nicaragua</label>{" "}
+                                        <label htmlFor="countries_NI">Nicaragua</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[24]"
@@ -1995,7 +1996,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_PA">Panama</label>{" "}
+                                        <label htmlFor="countries_PA">Panama</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[25]"
@@ -2004,7 +2005,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_LC">Saint Lucia</label>{" "}
+                                        <label htmlFor="countries_LC">Saint Lucia</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[26]"
@@ -2013,7 +2014,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_VC">St Vincent And Grenadines</label>{" "}
+                                        <label htmlFor="countries_VC">St Vincent And Grenadines</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[27]"
@@ -2022,7 +2023,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SH">St. Helena</label>{" "}
+                                        <label htmlFor="countries_SH">St. Helena</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[28]"
@@ -2031,7 +2032,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_KN">St. Kitts &amp; Nevis</label>{" "}
+                                        <label htmlFor="countries_KN">St. Kitts &amp; Nevis</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[29]"
@@ -2040,7 +2041,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_PM">St. Pierre And Miquelon</label>{" "}
+                                        <label htmlFor="countries_PM">St. Pierre And Miquelon</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[30]"
@@ -2049,7 +2050,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_SR">Suriname</label>{" "}
+                                        <label htmlFor="countries_SR">Suriname</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[31]"
@@ -2058,7 +2059,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TT">Trinidad And Tobago</label>{" "}
+                                        <label htmlFor="countries_TT">Trinidad And Tobago</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[32]"
@@ -2067,7 +2068,7 @@ const RestWorld = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="countries_TC">Turks And Caicos Islands</label>{" "}
+                                        <label htmlFor="countries_TC">Turks And Caicos Islands</label>{" "}
                                         <input
                                             type="checkbox"
                                             name="countries[33]"
@@ -2078,6 +2079,7 @@ const RestWorld = () => {
                                 </div>
                             </td>
                         </tr>
+                        </tbody>
                     </table>
                 </fieldset>
                 <hr />
