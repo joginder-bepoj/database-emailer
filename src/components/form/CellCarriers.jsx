@@ -74,7 +74,6 @@ const CellCarriers = () => {
                         style={{ width: "100%" }}
                     >
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_0">A.v. Lauttamus</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -84,7 +83,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_1">Aat Paging</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -94,7 +92,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_2">Abc Paging</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -104,7 +101,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_3">Acc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -114,7 +110,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_4">Accessible Wireless, Llc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -124,7 +119,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_5">Acs Wireless, Inc.</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -134,7 +128,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_6">Adbeep, Llc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -144,7 +137,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_7">Advantage Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -154,7 +146,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_8">Aerial Communications</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -164,7 +155,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_9">Airadigm Communications I</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -174,7 +164,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_10">Airtouch Communications, </label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -184,7 +173,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_11">Alexandra Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -194,7 +182,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_12">All City Answering Sv</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -204,7 +191,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_13">Allpage</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -214,7 +200,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_14">Alltel</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -224,7 +209,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_15">American Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -234,7 +218,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_16">American Messaging</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -244,7 +227,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_17">Americell</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -254,7 +236,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_18">Appalachian Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -264,7 +245,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_19">Aquis</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -274,7 +254,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_20">Arch Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -284,7 +263,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_21">Asap Paging</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -294,7 +272,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_22">ATT</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -304,7 +281,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_23">Awesome Paging</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -314,7 +290,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_24">Bell Atlantic</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -324,7 +299,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_25">Blue Licenses</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -334,7 +308,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_26">Bluegrass Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -344,7 +317,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_27">Brookings</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -354,7 +326,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_28">Buffalo-lake Erie Wireles</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -364,7 +335,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_29">Caprock Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -374,7 +344,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_30">Cellcom</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -384,7 +353,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_31">Cellular 29 Plus</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -394,7 +362,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_32">Cellular Mobile Sys Of Mi</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -404,7 +371,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_33">Cellular Network</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -414,7 +380,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_34">Cellular One</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -424,7 +389,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_35">Cellular Properties</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -434,7 +398,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_36">Cellular South</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -444,7 +407,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_37">Centennial</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -454,7 +416,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_38">Central Vermont</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -464,7 +425,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_39">Centurytel Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -474,7 +434,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_40">Chariton Valley</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -484,7 +443,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_41">Choice Wireless Lc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -494,7 +452,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_42">Cincinnati Bell</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -504,7 +461,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_43">Cingular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -514,7 +470,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_44">Citizens Mohave Cell</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -524,7 +479,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_45">Cleveland Unlimited</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -534,7 +488,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_46">Commnet Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -544,7 +497,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_47">Comscape</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -554,7 +506,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_48">Corr Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -564,7 +515,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_49">Cricket</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -574,7 +524,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_50">Ctc Telecom</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -584,7 +533,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_51">Cumberland</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -594,7 +542,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_52">Dba Trans Texas Pcs</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -604,7 +551,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_53">Digicomm</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -614,7 +560,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_54">Dobson</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -624,7 +569,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_55">Douglas</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -634,7 +578,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_56">Dutchess</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -644,7 +587,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_57">Eagle</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -654,7 +596,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_58">Eastern Sub-rsa Limited P</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -664,7 +605,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_59">Edge Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -674,7 +614,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_60">Eliska Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -684,7 +623,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_61">Farmers Cellular Telephon</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -694,7 +632,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_62">Farmers Mutual</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -704,7 +641,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_63">Fiber Data</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -714,7 +650,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_64">Fitch, F. Cary</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -724,7 +659,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_65">Five Star Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -734,7 +668,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_66">Fred Burg</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -744,7 +677,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_67">General Communication</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -754,7 +686,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_68">Globalstar</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -764,7 +695,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_69">Handy Page</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -774,7 +704,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_70">Hargray Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -784,7 +713,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_71">Illinois Valley Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -794,7 +722,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_72">Indiana Paging Ntwk</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -804,7 +731,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_73">Iowa Rsa 2 Limited Partne</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -814,7 +740,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_74">Iowa Wireless Services, L</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -824,7 +749,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_75">Kentucky Rsa 3 Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -834,7 +758,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_76">Keystone Wireless, Inc.</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -844,7 +767,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_77">Lcw Wireless License, Llc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -854,7 +776,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_78">Leaco Rural</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -864,7 +785,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_79">Leap Wireless Intl</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -874,7 +794,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_80">Lincoln Communications</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -884,7 +803,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_81">Louisiana Unwired Llc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -894,7 +812,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_82">Mbo Wireless, Inc.</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -904,7 +821,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_83">Metro Pcs, Inc.</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -914,7 +830,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_84">Metro Southwest Pcs, Llp</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -924,7 +839,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_85">Metrocall</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -934,7 +848,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_86">Metropcs Texas, Llc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -944,7 +857,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_87">Metrotel</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -954,7 +866,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_88">Midwest Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -964,7 +875,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_89">Mtpcs, Llc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -974,7 +884,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_90">Network Services Llc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -984,7 +893,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_91">New Cingular Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -994,7 +902,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_92">Nex-tech Wireless, Llc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1004,7 +911,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_93">Nextel</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1014,7 +920,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_94">North Carolina Rsa</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1024,7 +929,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_95">Northstar</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1034,7 +938,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_96">Northwest Missouri</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1044,7 +947,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_97">Ntch</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1054,7 +956,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_98">Ntch</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1064,7 +965,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_99">Oklahoma City Smsa</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1074,7 +974,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_100">Oklahoma Western</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1084,7 +983,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_101">Omnipoint</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1094,7 +992,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_102">Pacific Bell Mobile</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1104,7 +1001,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_103">Pacificom-alaska, Llc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1114,7 +1010,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_104">Pagedata</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1124,7 +1019,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_105">Pcs One</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1134,7 +1028,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_106">Plateau</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1144,7 +1037,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_107">Powertel</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1154,7 +1046,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_108">Premier Paging</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1164,7 +1055,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_109">Priority Paging</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1174,7 +1064,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_110">Rcc Holdings</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1184,7 +1073,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_111">Rcc Network</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1194,7 +1082,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_112">Royal Street</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1204,7 +1091,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_113">Salmon Pcs</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1214,7 +1100,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_114">Scarsdale</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1224,7 +1109,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_115">Schuylkill</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1234,7 +1118,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_116">Shelcomm</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1244,7 +1127,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_117">Slo Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1254,7 +1136,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_118">South #5 Rsa Limited Part</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1264,7 +1145,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_119">South Canaan Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1274,7 +1154,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_120">Southern Communications S</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1284,7 +1163,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_121">Southern Illinois</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1294,7 +1172,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_122">Southern Michigan</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1304,7 +1181,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_123">Sprint</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1314,7 +1190,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_124">Sprint Spectrum L.p.</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1324,7 +1199,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_125">Star Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1334,7 +1208,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_126">Stpcs Joint Venture, Llc</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1344,7 +1217,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_127">T-mobile Usa</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1354,7 +1226,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_128">T.k.o.</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1364,7 +1235,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_129">Tern Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1374,7 +1244,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_130">Texas Communications</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1384,7 +1253,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_131">Thumb Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1394,7 +1262,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_132">Tmp Corp.</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1404,7 +1271,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_133">Tracy Corporation</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1414,7 +1280,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_134">Uintah Basin</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1424,7 +1289,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_135">Union Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1434,7 +1298,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_136">United States Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1444,7 +1307,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_137">Upstate Paging</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1454,7 +1316,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_138">Verizon</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1464,7 +1325,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_139">Virginia Pcs Alliance</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1474,7 +1334,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_140">Voicestream Gsm</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1484,7 +1343,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_141">Washington Rsa</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1494,7 +1352,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_142">Wavesent</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1504,7 +1361,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_143">West Central Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1514,7 +1370,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_144">West Coast Pcs</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1524,7 +1379,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_145">Western Wireless</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1534,7 +1388,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_146">Westlink Communications</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1544,7 +1397,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_147">Windstream</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1554,7 +1406,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_148">Wireless Alliance</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1564,7 +1415,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_149">Wireless Communications V</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1574,7 +1424,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_150">Wisconsin Rsa</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1584,7 +1433,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_151">Xit Cellular</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
@@ -1594,7 +1442,6 @@ const CellCarriers = () => {
                             />
                         </div>
                         <div>
-                            {" "}
                             <label htmlFor="Carrier_152">Youghiogheny</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"

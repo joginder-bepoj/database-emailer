@@ -121,12 +121,12 @@ const TelSearchParameters = () => {
                                 <div className="tab33">
                                     <span className="twefont" style={{ fontSize: "13px" }}>
                                         Select one or more US STATES FIRST, then click right button
-                                        for all the counties, <i>Not valid for Canada.</i>
+                                        for all the counties
                                     </span>
                                     <br />
                                     <span className="twefont">
                                         Avoid the following "Counties" search option if you are
-                                        searching for a specific State, Country or just one or a few
+                                        searching for a specific State or just one or a few
                                         Municipalities within a State.
                                     </span>
                                     <br />
@@ -207,11 +207,6 @@ const TelSearchParameters = () => {
                 </>
             )}
             <br />
-            <span style={{ fontSize: "8pt" }}>
-                (<b>NOTE</b>, selecting a county name will prevent you from searching by
-                city, radius or zip. Hold the Control key down to select more than one
-                county)
-            </span>
             <input type="hidden" name="stCheck" id="stCheck" value="Array" />
             <hr />
 
@@ -299,8 +294,6 @@ const TelSearchParameters = () => {
                     numbers of the Zip Code, like '011' will give you all the zips in the
                     Springfield Mass area. The US Census Population of the SCF region is
                     the last number.
-                    <br />
-                    Selecting an SCF will exclude all Canadian Data
                     <br />
                     <select
                         name="selSCF"

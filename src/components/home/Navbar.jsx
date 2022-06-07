@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {useNavigate} from "react-router-dom"
 import {useStateContext  } from "../context/StateContext";
 
 const Navbar = () => {
-    const {isLoggedIn, setIsLoggedIn} = useStateContext()
+    const {isLoggedIn, setIsLoggedIn} = useStateContext(false)
     const navigate = useNavigate()
     const handleChange = (e) =>{
         let value = e.target.value
@@ -23,9 +23,6 @@ const Navbar = () => {
     <>
     <div style={{display:"flex", justifyContent:"space-between"}}>
         <div>
-
-       
-
         <select name="goto" id="" onChange={handleChange} style={{background: "blue", height:"30px", textAlign: "center"}} >
             <option style={{background: "none"}} value="">Free data search here</option>
             <option style={{backgroundColor: "none"}} value="checkConsumer">Consumer Opt-in Email 400+ Million 23 Data Fields</option>

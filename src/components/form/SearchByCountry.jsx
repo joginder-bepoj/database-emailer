@@ -19,7 +19,7 @@ const SearchByCountry = () => {
                 Clicking on the name of a state will check that box too.
                 </h4>
                 <div id="divCountriesStates" className="stateLabel flex-row">
-                    <div>
+                    <div style={{display: "flex",maxWidth: "200px", justifyContent: "center", alignItems: "center"}}>
                         <label htmlFor="optUS">All of the US</label>
                         <input
                             type="radio"

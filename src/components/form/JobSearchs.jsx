@@ -29,15 +29,22 @@ const JobSearchs = () => {
     };
 
     const handleSelectAll = e =>{
+        
         setIsCheckedAll(!isCheckedAll);
         setIsChecked(tempArr.map(li => li.id));
         if (isCheckedAll) {
-        setIsChecked([]);
+            setIsChecked([]);
         }
         setCheck(!check)
     }
-
-
+    const handleOption = () =>{
+        setIsCheckedAll(false);
+        setIsChecked([tempArr.map(li => li.id)])
+        if(isCheckedAll){
+            setIsChecked([])
+        }
+        setCheck(false)
+    }
 
 
     return (
@@ -79,7 +86,7 @@ const JobSearchs = () => {
                                     <b>INCLUDE ALL titles, with blank too, in the database </b>
                                 </label>{" "}
                                 <input onChange={handleChange}
-                                    onClick={()=>setIsChecked([tempArr.map(li => li.id)])}
+                                    onClick={handleOption}
                                     defaultChecked
                                     type="radio"
                                     name="titleCondition"
@@ -100,7 +107,7 @@ const JobSearchs = () => {
                                 </label>{" "}
                                 <input onChange={handleChange}
                                     type="radio"
-                                    onClick={()=>setIsChecked([tempArr.map(li => li.id)])}
+                                    onClick={handleOption}
                                     name="titleCondition"
                                     title="Do you want some or all of these most common 100 INCLUDED and you understand thousands of other titles not listed here will be excluded from search"
                                     id="titleCondition_included"
@@ -142,7 +149,7 @@ const JobSearchs = () => {
                                     title="Any records with tiles will be excluded"
                                     name="titleCondition"
                                     id="titleCondition_no"
-                                    
+
                                     value="NONE"
                                 />
                             </td>
@@ -190,7 +197,7 @@ const JobSearchs = () => {
                         id="divJobTitles"
                         style={{ width: "100%" }}
                     >
-                        {
+                        {   
                             jobTitles.map((item) =>(
                             <div key={item.id}>
                                 <label htmlFor={item.id}>{item.value}</label>{" "}
