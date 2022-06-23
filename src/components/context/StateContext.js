@@ -6,7 +6,7 @@ const Context = createContext()
 export const StateContext = ({children}) => {
   const [selectCountry, setSelectCountry] = useState("none")
   const [isLoggedIn, setIsLoggedIn] = useState(true)
-  const [selectState, setSelectState] = useState('')
+  const [selectState, setSelectState] = useState([])
   const [selectCanStates, setSelectCanStates] = useState(selectCanStatesData)
   const [zipCodeSelect, setZipCodeSelect] = useState(zipConditionData)
   const [selectCounty, setSelectCounty] = useState("")

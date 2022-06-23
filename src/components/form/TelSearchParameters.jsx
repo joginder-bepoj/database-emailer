@@ -27,8 +27,10 @@ const TelSearchParameters = () => {
         setSCF(value)
     };
     const selectStates = (e) => {
-        setSelectState({ ...selectState, [e.target.name]: e.target.checked });
-    };
+        const checked = e.target.checked
+        const value = e.target.value
+        setSelectState(checked ? [...selectState, value] : selectState.filter(item=> item !==value))
+    }
     const handleZIP = (e) => {
         setZipCodeSelect({ ...zipCodeSelect, [e.target.name]: e.target.value });
     };
@@ -38,7 +40,7 @@ const TelSearchParameters = () => {
     };
     const searchByCounties = (prev) => {
         prev.preventDefault();
-        if (Object.keys(selectState).length === 0) {
+        if (selectState.length === 0) {
             alert("Please select atleast one US state ");
         } else {
             setShow(!prev);
@@ -137,7 +139,7 @@ const TelSearchParameters = () => {
                                 <br />
                                 <input
                                     type={
-                                        Object.keys(selectState).length !== 0 ? "submit" : "button"
+                                        selectState.length !== 0 ? "submit" : "button"
                                     }
                                     name="SelectCounties"
                                     id="SelectCounties"
