@@ -7,7 +7,6 @@ import SCFtable from "./SCFtable";
 const TelSearchParameters = () => {
     const {
         selectCountry,
-        setSelectCounty,
         setTextData,
         textData,
         setSCF,
@@ -17,10 +16,6 @@ const TelSearchParameters = () => {
         selectState,
     } = useStateContext();
     const [show, setShow] = useState(true);
-
-    const selectCountyChange = (event) => {
-        setSelectCounty(event.target.value);
-    };
     const handleDataChange = (e) => {
         setTextData({ ...textData, [e.target.name]: e.target.value });
     };
