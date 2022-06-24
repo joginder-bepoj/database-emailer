@@ -4,7 +4,6 @@ import axios from "axios";
 const SCFtable = ({ selectSCF }) => {
     const [data, setData] = useState([]);
     const [error, setError] = useState(false);
-    console.log(error);
 
     useEffect(() => {
         const url = "http://localhost:8000";
@@ -18,6 +17,8 @@ const SCFtable = ({ selectSCF }) => {
         };
         fetchData();
     }, []);
+
+    if(error) console.log(error)
 
     return (
         <div className="floatleft" id="SCF" align="left">

@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import { states, provinces, countiesAR, countiesAZ } from "./usStatesvalue";
+import { states, provinces } from "./usStatesvalue";
 import { useStateContext } from "../context/StateContext";
 import { useLocation } from "react-router-dom";
 import SCFtable from "./SCFtable";
+import SearchByUSCounties from "./SearchByUSCounties";
 
 const USstates = () => {
     const location = useLocation()
-    const { selectCountry, setSelectCounty, setTextData, textData, setSCF, zipCodeSelect, setZipCodeSelect, setSelectState, selectState, selectCanStates, setSelectCanStates } =
+    const { selectCountry,  setTextData, textData, setSCF, zipCodeSelect, setZipCodeSelect, setSelectState, selectState, selectCanStates, setSelectCanStates } =
         useStateContext();
     const [show, setShow] = useState(true);
 
-    const selectCountyChange = (event) => {
-        setSelectCounty(event.target.value);
-    };
+   
     const handleDataChange = (e) => {
         setTextData({ ...textData, [e.target.name]: e.target.value });
     };
@@ -151,46 +150,7 @@ const USstates = () => {
                         </tbody>
                     </table>
                 ) : (
-                    <>
-                        <div style={{ fontSize: "13pt" }} align="center">
-                            Select a County
-                        </div>
-                        <span style={{ fontSize: "11pt", verticalAlign: "top", marginLeft: "150px" }}>
-                            All Counties in <span id="St">AZ, AR, NB, YT</span>:
-                        </span>
-                        <div align="center">
-                        <select
-                            name="Counties[]"
-                            id="Counties"
-                            size="10"
-                            multiple="multiple"
-                            onChange={selectCountyChange}
-                           
-                        >
-                            <option
-                                value=""
-                                style={{ color: "#FFF", backgroundColor: "blue" }}
-                            >
-                                Select Counties
-                            </option>
-                            <optgroup label="Counties in AZ">
-                                {countiesAZ.map((counties) => (
-                                    <option value={counties.value} key={counties.name}>
-                                        {counties.name}
-                                    </option>
-                                ))}
-                            </optgroup>
-                            <optgroup label="Counties in AR">
-                                {countiesAR.map((counties) => (
-                                    <option value={counties.value} key={counties.name}>
-                                        {counties.name}
-                                    </option>
-                                ))}
-                            </optgroup>
-                        </select>
-                        </div>
-                        
-                    </>
+                    <SearchByUSCounties />
                 )}
                 <br />
                 <span style={{ fontSize: "8pt" }}>
