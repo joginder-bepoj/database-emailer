@@ -1,6 +1,8 @@
 import React from "react";
+import { useStateContext } from "../context/StateContext";
 
 const URLdataResult = () => {
+    const {data, searchQuery} = useStateContext()
     const refreshPage = () =>{
         window.location.reload()
     }
@@ -11,6 +13,7 @@ const URLdataResult = () => {
                 id="fsResults"
             >
                 <legend>Results:</legend>
+                {data.length !== 0 ? data.message +":"+ data?.output?.NumOfRecords: ""}
             </fieldset>
             <div id="buttonsOuter">
                 <fieldset>
@@ -88,7 +91,7 @@ const URLdataResult = () => {
                         />
                         <input
                             type="submit"
-                            onClick={(e)=> e.preventDefault()}
+                            onClick={searchQuery}
                             value="Check Record Count!"
                             name="cmdSearch"
                             id="cmdSearch"

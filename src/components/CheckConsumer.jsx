@@ -23,7 +23,8 @@ import ScrollToTop from "react-scroll-to-top"
 import URLdataResult from "./form/URLdataResult";
 
 const CheckConsumer = () => {
-    const {setFilter, isLoggedIn} = useStateContext()
+    const {setFilter, isLoggedIn, searchQuery} = useStateContext()
+    
     return (
         <section className="section section-xs content">
          <ScrollToTop smooth />
@@ -52,7 +53,6 @@ const CheckConsumer = () => {
                         </div>
                         <form
                             method="post"
-                            action=""
                             id="frmSearch"
                             name="frmSearch"
                         >
@@ -60,8 +60,8 @@ const CheckConsumer = () => {
                                 <h3>Consumer Residential Opt-In Emails</h3>
                                 <h4>All Records have Emails &amp; All Emails are Unique</h4>
                                 <div align="center">
-                                    <a
-                                        href="@"
+                                    <button 
+                                        onClick={searchQuery}
                                         style={{
                                             textDecoration: "none",
                                             color: "#F00",
@@ -73,7 +73,7 @@ const CheckConsumer = () => {
                                         title="Search Now or alt-s"
                                     >
                                         Check Record Count
-                                    </a>
+                                    </button>
                                 </div>
                                 <br />
                             </div>

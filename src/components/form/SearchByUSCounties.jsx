@@ -51,7 +51,7 @@ const SearchByUSCounties = () => {
                         selectState.map(item =>(
                             <optgroup key={item} label={`Counties in ${item}`}>
                             {data.map((data) => ( data.St === `${item}` &&
-                                <option value={data.StCtyCode} key={data.StCtyCode}>
+                                <option value={data.CtyName} key={data.StCtyCode}>
                                     {data.CtyName}
                                 </option>
                             ))}

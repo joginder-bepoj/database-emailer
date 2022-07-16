@@ -50,9 +50,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Alaska" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "AK" && (
+                            item.Town_State.split(", ")[1] === "AK" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -60,9 +60,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Alabama" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "AL" && (
+                            item.Town_State.split(", ")[1] === "AL" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -70,9 +70,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Arkansas" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "AR" && (
+                            item.Town_State.split(", ")[1] === "AR" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -80,9 +80,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Arizona" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "AZ" && (
+                            item.Town_State.split(", ")[1] === "AZ" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -90,9 +90,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;California" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "CA" && (
+                            item.Town_State.split(", ")[1] === "CA" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -100,9 +100,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Colorado" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "CO" && (
+                            item.Town_State.split(", ")[1] === "CO" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -110,9 +110,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Connecticut" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "CT" && (
+                            item.Town_State.split(", ")[1] === "CT" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -120,9 +120,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Dist. of Col." className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "DC" && (
+                            item.Town_State.split(", ")[1] === "DC" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -130,9 +130,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Delaware" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "DE" && (
+                            item.Town_State.split(", ")[1] === "DE" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -140,9 +140,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Florida" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "FL" && (
+                            item.Town_State.split(", ")[1] === "FL" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -150,9 +150,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Georgia" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "GA" && (
+                            item.Town_State.split(", ")[1] === "GA" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -160,9 +160,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Hawaii" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "HI" && (
+                            item.Town_State.split(", ")[1] === "HI" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -170,9 +170,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Iowa" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "IA" && (
+                            item.Town_State.split(", ")[1] === "IA" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -180,9 +180,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Idaho" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "ID" && (
+                            item.Town_State.split(", ")[1] === "ID" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -190,9 +190,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Illinois" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "IL" && (
+                            item.Town_State.split(", ")[1] === "IL" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -200,9 +200,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Indiana" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "IN" && (
+                            item.Town_State.split(", ")[1] === "IN" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -210,9 +210,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Kansas" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "KS" && (
+                            item.Town_State.split(", ")[1] === "KS" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -220,9 +220,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Kentucky" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "KY" && (
+                            item.Town_State.split(", ")[1] === "KY" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -230,9 +230,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Louisiana" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "LA" && (
+                            item.Town_State.split(", ")[1] === "LA" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -240,9 +240,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Massachusetts" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "MA" && (
+                            item.Town_State.split(", ")[1] === "MA" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -250,9 +250,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Maryland" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "MD" && (
+                            item.Town_State.split(", ")[1] === "MD" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -260,9 +260,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Maine" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "ME" && (
+                            item.Town_State.split(", ")[1] === "ME" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -270,9 +270,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Michigan" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "MI" && (
+                            item.Town_State.split(", ")[1] === "MI" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -280,9 +280,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Minnesota" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "MN" && (
+                            item.Town_State.split(", ")[1] === "MN" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -290,9 +290,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Missouri" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "MO" && (
+                            item.Town_State.split(", ")[1] === "MO" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -300,9 +300,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Mississippi" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "MS" && (
+                            item.Town_State.split(", ")[1] === "MS" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -310,9 +310,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Montana" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "MT" && (
+                            item.Town_State.split(", ")[1] === "MT" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -320,9 +320,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;No. Carolina" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "NC" && (
+                            item.Town_State.split(", ")[1] === "NC" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -330,9 +330,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;No. Dakota" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "ND" && (
+                            item.Town_State.split(", ")[1] === "ND" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -340,9 +340,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Nebraska" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "NE" && (
+                            item.Town_State.split(", ")[1] === "NE" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -350,9 +350,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;New Hampshire" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "NH" && (
+                            item.Town_State.split(", ")[1] === "NH" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -360,9 +360,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;New Jersey" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "NJ" && (
+                            item.Town_State.split(", ")[1] === "NJ" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -370,9 +370,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;New Mexico" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "NM" && (
+                            item.Town_State.split(", ")[1] === "NM" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -380,9 +380,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Nevada" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "NV" && (
+                            item.Town_State.split(", ")[1] === "NV" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -390,9 +390,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;New York" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "NY" && (
+                            item.Town_State.split(", ")[1] === "NY" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -400,9 +400,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Ohio" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "OH" && (
+                            item.Town_State.split(", ")[1] === "OH" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} | {item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -410,9 +410,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Oklahoma" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "OK" && (
+                            item.Town_State.split(", ")[1] === "OK" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -420,9 +420,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Oregon" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "OR" && (
+                            item.Town_State.split(", ")[1] === "OR" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -430,9 +430,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Pennsylvania" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "PA" && (
+                            item.Town_State.split(", ")[1] === "PA" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -440,9 +440,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Rhode Island" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "RI" && (
+                            item.Town_State.split(", ")[1] === "RI" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -450,9 +450,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;So. Carolina" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "SC" && (
+                            item.Town_State.split(", ")[1] === "SC" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -460,9 +460,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;So. Dakota" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "SD" && (
+                            item.Town_State.split(", ")[1] === "SD" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -470,9 +470,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Tennessee" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "TN" && (
+                            item.Town_State.split(", ")[1] === "TN" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -480,9 +480,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Texas" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "TX" && (
+                            item.Town_State.split(", ")[1] === "TX" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -490,9 +490,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Utah" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "UT" && (
+                            item.Town_State.split(", ")[1] === "UT" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -500,9 +500,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Virginia" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "VA" && (
+                            item.Town_State.split(", ")[1] === "VA" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -510,9 +510,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Vermont" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "VT" && (
+                            item.Town_State.split(", ")[1] === "VT" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -520,9 +520,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Washington" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "WA" && (
+                            item.Town_State.split(", ")[1] === "WA" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -530,9 +530,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Wisconsin" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "WI" && (
+                            item.Town_State.split(", ")[1] === "WI" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -540,9 +540,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;West Virginia" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "WV" && (
+                            item.Town_State.split(", ")[1] === "WV" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}
@@ -550,9 +550,9 @@ const SCFtable = ({ selectSCF }) => {
                 <optgroup label="&nbsp;&nbsp;Wyoming" className="optGroupSCF">
                     {data.map(
                         (item) =>
-                            item.State === "WY" && (
+                            item.Town_State.split(", ")[1] === "WY" && (
                                 <option key={item.SCF_Code} value={item.SCF_Code}>
-                                    {item.SCF_Code} |{item.Town}, {item.State} | {item.Population}
+                                    {item.SCF_Code} |{item.Town_State} | {item.Population}
                                 </option>
                             )
                     )}

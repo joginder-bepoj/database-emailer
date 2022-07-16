@@ -1,4 +1,5 @@
 import React, {createContext, useContext, useState} from 'react'
+import axios from 'axios'
 import {tableFormData, ethnicityData, cellCarriersData, intrestGroupData, uniqueEmailFaxData, excludeGeneralEmailData, searchLastNameData, newMoversData, zipConditionData, textDataData, telSearchData, houseHoldIncomeData, setSearchUrlData, enterAgeData, dobData, optInData, repeatedData, faxNumberData, obtainRecordsData, searchCompanyNameData, jobSearchData, companyRevenueData, searchEmployeeData, uniqueTelephoneEmailData, selectRecordsData, cellPhoneData, urlDatas, regDateData, selectCanStatesData,  SICCodesChangeData, NACIcodeChangesData} from "./settingStates"
 
 const Context = createContext()
@@ -53,8 +54,37 @@ export const StateContext = ({children}) => {
   const [uniqValues, setUniqValues] = useState('')
   const [registrantContact, setRegistrantContact] = useState('')
   const [badData, setBadData] = useState('')
+
+  // check consumer data api
+  const [data, setData] = useState([]);
+    const [error, setError] = useState(false);
+
+    if(error) console.log(error)
+
+    const searchQuery = (e) =>{
+        e.preventDefault()
+        const url = "http://localhost:8000";
+        const fetchData = async () => {
+            try {
+                const res = await axios.get(url + "/checkConsumer");
+                setData(res.data);
+            } catch (err) {
+                setError(err);
+            }
+        };
+        fetchData();
+    }
+    console.log(data);
+
+
+
+
+
+
+
+
   return (
-    <Context.Provider value={{selectCountry,selectState, setSelectState,selectCanStates, setSelectCanStates, zipCodeSelect, setZipCodeSelect, setSelectCountry, setSelectCounty, selectCounty, textData, setTextData, setSCF, SCF, setEmail, setUniqueValue, setTelSearch, telSearch, setGender, setHouseHoldIncome, houseHoldIncome, setUrl, url, setFilter, setEthnicity, ethnicity, setSearchLastName, searchLastName, setEnterAge, enterAge, setDob, dob, setrentingHome, rentingHome, setOptIn, optIn, setRepeated, repeated, setIntrestedGroup, intrestedGroup, setEmailDomain, emailDomain, setUniqueEmail, uniqueEmail, setExcludeEmail, excludeEmail, setUrlDomain, setFaxNumber, faxNumber, setObtainRecords, obtainRecords, setExecutiveContact, setSearchCompany, searchCompany, jobSearch, setJobSearch, setCompanyRevenue, companyRevenue, setSearchEmployee, searchEmployee, setNACIcode, NACIcode, setSICcode, SICcode, setUniqueTelephoneEmail, uniqueTelephoneEmail, setTeleMarketingForm, teleMarketingForm, setNewMovers, newMovers, setSelectRecords, selectRecords, setCellData, cellData, setCellCarrier, cellCarrier, setUrlData, urlData, setRegDates, regDates, setUniqValues, uniqValues, setRegistrantContact, registrantContact, setBadData, badData, isLoggedIn, setIsLoggedIn, email, uniqueValues, gender, filter, executiveContact, urlDomain, SICCodesChange, setSICCodesChages, NACIcodeChanges, setNACIcodeChanges}}>
+    <Context.Provider value={{selectCountry,selectState, data, searchQuery, setSelectState,selectCanStates, setSelectCanStates, zipCodeSelect, setZipCodeSelect, setSelectCountry, setSelectCounty, selectCounty, textData, setTextData, setSCF, SCF, setEmail, setUniqueValue, setTelSearch, telSearch, setGender, setHouseHoldIncome, houseHoldIncome, setUrl, url, setFilter, setEthnicity, ethnicity, setSearchLastName, searchLastName, setEnterAge, enterAge, setDob, dob, setrentingHome, rentingHome, setOptIn, optIn, setRepeated, repeated, setIntrestedGroup, intrestedGroup, setEmailDomain, emailDomain, setUniqueEmail, uniqueEmail, setExcludeEmail, excludeEmail, setUrlDomain, setFaxNumber, faxNumber, setObtainRecords, obtainRecords, setExecutiveContact, setSearchCompany, searchCompany, jobSearch, setJobSearch, setCompanyRevenue, companyRevenue, setSearchEmployee, searchEmployee, setNACIcode, NACIcode, setSICcode, SICcode, setUniqueTelephoneEmail, uniqueTelephoneEmail, setTeleMarketingForm, teleMarketingForm, setNewMovers, newMovers, setSelectRecords, selectRecords, setCellData, cellData, setCellCarrier, cellCarrier, setUrlData, urlData, setRegDates, regDates, setUniqValues, uniqValues, setRegistrantContact, registrantContact, setBadData, badData, isLoggedIn, setIsLoggedIn, email, uniqueValues, gender, filter, executiveContact, urlDomain, SICCodesChange, setSICCodesChages, NACIcodeChanges, setNACIcodeChanges}}>
       {children}
     </Context.Provider>
   )
