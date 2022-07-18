@@ -3,33 +3,37 @@ import { useStateContext } from "../context/StateContext";
 import { emailDomainData } from "./emailDomainData";
 
 const EmailDomain = () => {
-    const { setEmailDomain } = useStateContext();
+    const { setEmailDomain, } = useStateContext();
     const [isCheckedAll, setIsCheckedAll] = useState(false);
     const [isChecked, setIsChecked] = useState([]);
     const [tempArr, setTempArr] = useState([]);
     const [check, setCheck] = useState(false);
+    let epmty = []
 
     useEffect(() => {
         setTempArr(emailDomainData);
     }, [tempArr]);
 
     const handleChange = (e) => {
-        const { id, checked } = e.target;
-        setIsChecked([...isChecked, id]);
+        const { checked, value } = e.target;
+        setIsChecked([...isChecked, value]);
         if (!checked) {
-            setIsChecked(isChecked.filter((item) => item !== id));
+            setIsChecked(isChecked.filter((item) => item !== value));
         }
-        setEmailDomain(isChecked);
+        setEmailDomain(checked ? [...isChecked, value] : isChecked.filter(item=> item !==value))
+        
     };
 
     const handleSelectAll = (e) => {
+        console.log(isCheckedAll, "ischecl");
         setIsCheckedAll(!isCheckedAll);
-        setIsChecked(tempArr.map((li) => li.id));
+        setIsChecked(tempArr.map((li) => li.value));
         if (isCheckedAll) {
             setIsChecked([]);
         }
+
         setCheck(!check);
-        setEmailDomain(isCheckedAll);
+        setEmailDomain(isCheckedAll ? epmty :  tempArr.map(item=>item.value))
     };
 
     return (
@@ -77,7 +81,7 @@ const EmailDomain = () => {
                                     name={item.name}
                                     id={item.id}
                                     value={item.value}
-                                    checked={isChecked.includes(item.id)}
+                                    checked={isChecked.includes(item.value)}
                                 />
                             </div>
                         ))}

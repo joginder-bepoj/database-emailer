@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#InterestIDs{
+  font-size: "12pt";
+  font-weight: "600";
+  color: "#111";
+  background-color: white;
+  border: none;
+  outline: none;
+
+
+}

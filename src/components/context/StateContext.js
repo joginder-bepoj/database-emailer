@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useState} from 'react'
 import axios from 'axios'
-import {tableFormData, ethnicityData, cellCarriersData, intrestGroupData, uniqueEmailFaxData, excludeGeneralEmailData, searchLastNameData, newMoversData, zipConditionData, textDataData, telSearchData, houseHoldIncomeData, setSearchUrlData, enterAgeData, dobData, optInData, repeatedData, faxNumberData, obtainRecordsData, searchCompanyNameData, jobSearchData, companyRevenueData, searchEmployeeData, uniqueTelephoneEmailData, selectRecordsData, cellPhoneData, urlDatas, regDateData, selectCanStatesData,  SICCodesChangeData, NACIcodeChangesData} from "./settingStates"
+import {tableFormData, cellCarriersData, intrestGroupData, uniqueEmailFaxData, excludeGeneralEmailData, searchLastNameData, newMoversData, zipConditionData, textDataData, telSearchData, houseHoldIncomeData, setSearchUrlData, enterAgeData, dobData, optInData, repeatedData, faxNumberData, obtainRecordsData, searchCompanyNameData, jobSearchData, companyRevenueData, searchEmployeeData, uniqueTelephoneEmailData, selectRecordsData, cellPhoneData, urlDatas, regDateData, selectCanStatesData,  SICCodesChangeData, NACIcodeChangesData} from "./settingStates"
 
 const Context = createContext()
 
@@ -20,15 +20,16 @@ export const StateContext = ({children}) => {
   const [houseHoldIncome, setHouseHoldIncome] = useState(houseHoldIncomeData)
   const [url, setUrl] = useState(setSearchUrlData)
   const [filter, setFilter] = useState(false)
-  const [ethnicity, setEthnicity] = useState(ethnicityData)
+  const [ethnicity, setEthnicity] = useState([])
   const [searchLastName, setSearchLastName] = useState(searchLastNameData)
   const [enterAge, setEnterAge] = useState(enterAgeData)
   const [dob, setDob] = useState(dobData)
   const [rentingHome, setrentingHome] = useState('')
   const [optIn, setOptIn] = useState(optInData)
   const [repeated, setRepeated] = useState(repeatedData)
-  const [intrestedGroup, setIntrestedGroup] = useState(intrestGroupData)
-  const [emailDomain, setEmailDomain] = useState()
+  const [intrestedGroup, setIntrestedGroup] = useState([])
+  const [emailDomain, setEmailDomain] = useState([])
+  const [allEmailDomains, setAllEmailDomains] = useState(false)
   const [uniqueEmail, setUniqueEmail] = useState(uniqueEmailFaxData)
   const [excludeEmail, setExcludeEmail] = useState(excludeGeneralEmailData)
   const [urlDomain, setUrlDomain] = useState('')
@@ -74,17 +75,32 @@ export const StateContext = ({children}) => {
         };
         fetchData();
     }
-    console.log(data);
+   
+    let checkConsumer = {
+        country : selectCountry,
+        state: selectState,
+        county : selectCounty,
+        city : textData.taCities,
+        zip: textData.taZIPS,
+        email_address: email,
+        gender: gender,
+        url : url.web_source,
+        ethnicity: ethnicity,
+        last_name: searchLastName.taLastNames,
+        dob: dob.selDOBMonth+'-'+dob.selDOBDay+'-'+dob.selDOBYear,
+        ownrent: rentingHome,
+        interest_ids: intrestedGroup,
+        email_domain: emailDomain
+    }
+    console.log(checkConsumer);
 
-
-
-
+    console.log(allEmailDomains);
 
 
 
 
   return (
-    <Context.Provider value={{selectCountry,selectState, data, searchQuery, setSelectState,selectCanStates, setSelectCanStates, zipCodeSelect, setZipCodeSelect, setSelectCountry, setSelectCounty, selectCounty, textData, setTextData, setSCF, SCF, setEmail, setUniqueValue, setTelSearch, telSearch, setGender, setHouseHoldIncome, houseHoldIncome, setUrl, url, setFilter, setEthnicity, ethnicity, setSearchLastName, searchLastName, setEnterAge, enterAge, setDob, dob, setrentingHome, rentingHome, setOptIn, optIn, setRepeated, repeated, setIntrestedGroup, intrestedGroup, setEmailDomain, emailDomain, setUniqueEmail, uniqueEmail, setExcludeEmail, excludeEmail, setUrlDomain, setFaxNumber, faxNumber, setObtainRecords, obtainRecords, setExecutiveContact, setSearchCompany, searchCompany, jobSearch, setJobSearch, setCompanyRevenue, companyRevenue, setSearchEmployee, searchEmployee, setNACIcode, NACIcode, setSICcode, SICcode, setUniqueTelephoneEmail, uniqueTelephoneEmail, setTeleMarketingForm, teleMarketingForm, setNewMovers, newMovers, setSelectRecords, selectRecords, setCellData, cellData, setCellCarrier, cellCarrier, setUrlData, urlData, setRegDates, regDates, setUniqValues, uniqValues, setRegistrantContact, registrantContact, setBadData, badData, isLoggedIn, setIsLoggedIn, email, uniqueValues, gender, filter, executiveContact, urlDomain, SICCodesChange, setSICCodesChages, NACIcodeChanges, setNACIcodeChanges}}>
+    <Context.Provider value={{selectCountry,selectState, data, searchQuery, setSelectState,selectCanStates, setSelectCanStates, zipCodeSelect, setZipCodeSelect, setSelectCountry, setSelectCounty, selectCounty, textData, setTextData, setSCF, SCF, setEmail, setUniqueValue, setTelSearch, telSearch, setGender, setHouseHoldIncome, houseHoldIncome, setUrl, url, setFilter, setEthnicity, ethnicity, setSearchLastName, searchLastName, setEnterAge, enterAge, setDob, dob, setrentingHome, rentingHome, setOptIn, optIn, setRepeated, repeated, setIntrestedGroup, intrestedGroup, setEmailDomain, emailDomain, setUniqueEmail, uniqueEmail, setExcludeEmail, excludeEmail, setUrlDomain, setFaxNumber, faxNumber, setObtainRecords, obtainRecords, setExecutiveContact, setSearchCompany, searchCompany, jobSearch, setJobSearch, setCompanyRevenue, companyRevenue, setSearchEmployee, searchEmployee, setNACIcode, NACIcode, setSICcode, SICcode, setUniqueTelephoneEmail, uniqueTelephoneEmail, setTeleMarketingForm, teleMarketingForm, setNewMovers, newMovers, setSelectRecords, selectRecords, setCellData, cellData, setCellCarrier, cellCarrier, setUrlData, urlData, setRegDates, regDates, setUniqValues, uniqValues, setRegistrantContact, registrantContact, setBadData, badData, isLoggedIn, setIsLoggedIn, email, uniqueValues, gender, filter, executiveContact, urlDomain, SICCodesChange, setSICCodesChages, NACIcodeChanges, setNACIcodeChanges, setAllEmailDomains, allEmailDomains}}>
       {children}
     </Context.Provider>
   )

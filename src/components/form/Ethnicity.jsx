@@ -4,7 +4,9 @@ import { useStateContext } from "../context/StateContext";
 const Ethnicity = () => {
     const {setEthnicity, ethnicity} = useStateContext()
     const handleCheckChange = (e) =>{
-        setEthnicity({...ethnicity, [e.target.name] : e.target.checked })
+        const checked = e.target.checked
+        const value = e.target.value
+        setEthnicity(checked ? [...ethnicity, value] : ethnicity.filter(item=> item !==value))
     }
 
     return (
