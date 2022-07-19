@@ -69,7 +69,7 @@ const USstates = () => {
                                 id={states.name}
                                 className="sc"
                                 value={states.value}
-                                disabled={selectCountry !== "none"}
+                                disabled={selectCountry !== ""}
                             />
                         </div>
                     ))}
@@ -94,7 +94,7 @@ const USstates = () => {
                                 id={provinces.name}
                                 className="sc"
                                 value={provinces.value}
-                                disabled={selectCountry !== "none"}
+                                disabled={selectCountry !== ""}
                             />
                         </div>
                     ))}
@@ -138,8 +138,8 @@ const USstates = () => {
                                         name="SelectCounties"
                                         id="SelectCounties"
                                         className="sc"
-                                        style={selectCountry !== 'none' ? disabledStyle : {color: "black"}}
-                                        disabled={selectCountry !== "none"}
+                                        style={selectCountry !== '' ? disabledStyle : {color: "black"}}
+                                        disabled={selectCountry !== ""}
                                         onClick={searchByCounties}
                                         value="Search By Counties"
                                         title="Brings Up Counties in a State or states, But select at least one state first! Or alt-v"

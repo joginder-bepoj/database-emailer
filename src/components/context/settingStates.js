@@ -965,7 +965,8 @@ export const searchLastNameData = {
     chkGroupByLastName: false,
     chkCapitalizationLastNames: true,
     chkNameAddress: true,
-    chkNameFL: true
+    chkNameFL: true,
+    taLastNames: ""
 }
 
 export const newMoversData = {

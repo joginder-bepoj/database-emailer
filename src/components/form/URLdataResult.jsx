@@ -2,18 +2,19 @@ import React from "react";
 import { useStateContext } from "../context/StateContext";
 
 const URLdataResult = () => {
-    const {data, searchQuery} = useStateContext()
+    const {data, searchQuery, resultRef} = useStateContext()
     const refreshPage = () =>{
         window.location.reload()
     }
+    
     return (
         <>
             <fieldset
                 style={{fontSize: "12pt", fontWeight: "600", color:"#F03"}}
-                id="fsResults"
+                id="fsResults" ref={resultRef}
             >
                 <legend>Results:</legend>
-                {data.length !== 0 ? data.message +":"+ data?.output?.NumOfRecords: ""}
+                {data.length !== 0 ? data.message : ""}
             </fieldset>
             <div id="buttonsOuter">
                 <fieldset>

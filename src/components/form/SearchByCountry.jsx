@@ -36,7 +36,7 @@ const SearchByCountry = () => {
                             type="radio"
                             name="US_CAN_ALL"
                             id="optNone"
-                            value="none"
+                            value=""
                             onChange={handleChange}
                         />
                     </div>
@@ -79,7 +79,7 @@ const SearchByCountry = () => {
                             type="radio"
                             name="US_CAN_ALL"
                             id="optNone"
-                            value="none"
+                            value=""
                             onChange={handleChange}
                         />
                     </div>
@@ -121,7 +121,7 @@ const SearchByCountry = () => {
                                 type="radio"
                                 name="US_CAN_ALL"
                                 id="optNone"
-                                value="none"
+                                value=""
                                 onChange={handleChange}
                             />
                         </div>
@@ -183,7 +183,7 @@ const SearchByCountry = () => {
                             type="radio"
                             name="US_CAN_ALL"
                             id="optNone"
-                            value="none"
+                            value=""
                             onChange={handleChange}
                         />
                     </div>
