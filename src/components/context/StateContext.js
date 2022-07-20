@@ -72,7 +72,11 @@ export const StateContext = ({children}) => {
     ownrent: rentingHome,
     interest_ids: intrestedGroup,
     email_domain: emailDomain,
-    phone: telSearch.taPhones
+    phone: telSearch.taPhones, 
+    scf: SCF,
+    regDate: optIn.registration_date,
+    regDate2: optIn.registration_date_later, 
+    uniqueValues : uniqueValues
 }
 
   // check consumer data api
@@ -85,7 +89,7 @@ export const StateContext = ({children}) => {
       e.preventDefault()
       resultRef.current.scrollIntoView();
       const url = "http://localhost:8000";
-      if(selectCountry !=="" || selectState.length !==0 || selectCounty.length !==0 || email !== "" || gender !== "" || ethnicity.length !== 0 || rentingHome !=="" || intrestedGroup.length !==0 || emailDomain.length !== 0 || checkConsumer.dob !== "--" || checkConsumer.last_name !== "" || checkConsumer.zip !== "" || checkConsumer.city !== "" || checkConsumer.phone !==""){
+      if(selectCountry !=="" || selectState.length !==0 || selectCounty.length !==0 || email !== "" || gender !== "" || ethnicity.length !== 0 || rentingHome !=="" || intrestedGroup.length !==0 || emailDomain.length !== 0 || checkConsumer.dob !== "--" || checkConsumer.last_name !== "" || checkConsumer.zip !== "" || checkConsumer.city !== "" || checkConsumer.phone !=="" || SCF.length !== 0 || checkConsumer.regDate !== "" || checkConsumer.regDate2 !== "" || checkConsumer.uniqueValues !== ""){
         const fetchData = async () => {
             try {
                 const res = await axios.post(url + "/checkConsumer/find", checkConsumer);

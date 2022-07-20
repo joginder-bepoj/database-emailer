@@ -70,7 +70,7 @@ const GetUnique = () => {
                             type="radio"
                             name="optGrouping"
                             id="optZED"
-                            value="none"
+                            value=""
                             onChange={handleChange}
                             defaultChecked
                         />
