@@ -76,7 +76,13 @@ export const StateContext = ({children}) => {
     scf: SCF,
     regDate: optIn.registration_date,
     regDate2: optIn.registration_date_later, 
-    uniqueValues : uniqueValues
+    uniqueValues : uniqueValues,
+    zipRadius: textData.txtZipRadius,
+    zipMiles: textData.txtZipRadiusMiles,
+    upperAge : enterAge.ageUpper,
+    lowerAge : enterAge.ageLower,
+    lowIncome : houseHoldIncome.MHHIncLo,
+    highIncome : houseHoldIncome.MHHIncHi
 }
 
   // check consumer data api
@@ -89,7 +95,7 @@ export const StateContext = ({children}) => {
       e.preventDefault()
       resultRef.current.scrollIntoView();
       const url = "http://localhost:8000";
-      if(selectCountry !=="" || selectState.length !==0 || selectCounty.length !==0 || email !== "" || gender !== "" || ethnicity.length !== 0 || rentingHome !=="" || intrestedGroup.length !==0 || emailDomain.length !== 0 || checkConsumer.dob !== "--" || checkConsumer.last_name !== "" || checkConsumer.zip !== "" || checkConsumer.city !== "" || checkConsumer.phone !=="" || SCF.length !== 0 || checkConsumer.regDate !== "" || checkConsumer.regDate2 !== "" || checkConsumer.uniqueValues !== ""){
+      if(selectCountry !=="" || selectState.length !==0 || selectCounty.length !==0 || email !== "" || gender !== "" || ethnicity.length !== 0 || rentingHome !=="" || intrestedGroup.length !==0 || emailDomain.length !== 0 || checkConsumer.dob !== "--" || checkConsumer.last_name !== "" || checkConsumer.zip !== "" || checkConsumer.city !== "" || checkConsumer.phone !=="" || SCF.length !== 0 || checkConsumer.regDate !== "" || checkConsumer.regDate2 !== "" || checkConsumer.uniqueValues !== "" || checkConsumer.zipRadius !== "" || checkConsumer.zipMiles !== "" || checkConsumer.upperAge !== "" || checkConsumer.lowerAge !== "" || checkConsumer.lowIncome !== "" || checkConsumer.highIncome !== ""){
         const fetchData = async () => {
             try {
                 const res = await axios.post(url + "/checkConsumer/find", checkConsumer);
