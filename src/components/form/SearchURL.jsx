@@ -2,10 +2,8 @@ import React from "react";
 import { useStateContext } from "../context/StateContext";
 
 const SearchURL = () => {
-    const {setUrl, url} = useStateContext()
-    const handleChange = (e) =>{
-        setUrl({...url, [e.target.name]: e.target.value})
-    }
+    const {setUrl, setUrlCondition} = useStateContext()
+
     return (
         <>
             <fieldset>
@@ -19,7 +17,7 @@ const SearchURL = () => {
                 No spaces or commas
                 <br />
                 <small>https(s)://www.</small>
-                <input type="text" name="web_source" size="50" onChange={handleChange} />
+                <input type="text" name="web_source" size="50" onChange={(e)=>setUrl(e.target.value)} />
                 <br />
                 <label htmlFor="chkHasWebSource">Has A Websource URL:</label>{" "}
                 <input
@@ -27,7 +25,7 @@ const SearchURL = () => {
                     name="chkHasWebSource"
                     id="chkHasWebSource"
                     value="1"
-                    onChange={handleChange}
+                    onChange={(e)=>setUrlCondition(e.target.checked ? e.target.value : "")}
                 />
             </fieldset>
         </>

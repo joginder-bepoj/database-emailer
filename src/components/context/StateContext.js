@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useState, useRef} from 'react'
 import axios from 'axios'
-import {tableFormData, cellCarriersData, uniqueEmailFaxData, excludeGeneralEmailData, searchLastNameData, newMoversData, zipConditionData, textDataData, telSearchData, houseHoldIncomeData, setSearchUrlData, enterAgeData, dobData, optInData, repeatedData, faxNumberData, obtainRecordsData, searchCompanyNameData, jobSearchData, companyRevenueData, searchEmployeeData, uniqueTelephoneEmailData, selectRecordsData, cellPhoneData, urlDatas, regDateData, selectCanStatesData,  SICCodesChangeData, NACIcodeChangesData} from "./settingStates"
+import {tableFormData, cellCarriersData, uniqueEmailFaxData, excludeGeneralEmailData, searchLastNameData, newMoversData, zipConditionData, textDataData, telSearchData, houseHoldIncomeData, enterAgeData, dobData, optInData, repeatedData, faxNumberData, obtainRecordsData, searchCompanyNameData, jobSearchData, companyRevenueData, searchEmployeeData, uniqueTelephoneEmailData, selectRecordsData, cellPhoneData, urlDatas, regDateData, selectCanStatesData,  SICCodesChangeData, NACIcodeChangesData} from "./settingStates"
 
 const Context = createContext()
 
@@ -18,7 +18,8 @@ export const StateContext = ({children}) => {
   const [telSearch, setTelSearch] = useState(telSearchData)
   const [gender, setGender] = useState('')
   const [houseHoldIncome, setHouseHoldIncome] = useState(houseHoldIncomeData)
-  const [url, setUrl] = useState(setSearchUrlData)
+  const [url, setUrl] = useState("")
+  const [urlCondition, setUrlCondition] = useState("")
   const [filter, setFilter] = useState(false)
   const [ethnicity, setEthnicity] = useState([])
   const [searchLastName, setSearchLastName] = useState(searchLastNameData)
@@ -54,6 +55,8 @@ export const StateContext = ({children}) => {
   const [uniqValues, setUniqValues] = useState('')
   const [registrantContact, setRegistrantContact] = useState('')
   const [badData, setBadData] = useState('')
+  const [SCFNOT, setSCFNOT] = useState('')
+  const [domainCondition, setDomainCondition] = useState("")
 
   const resultRef = useRef()
 
@@ -63,17 +66,22 @@ export const StateContext = ({children}) => {
     county : selectCounty,
     city : textData.taCities,
     zip: textData.taZIPS,
+    zipCondition: zipCodeSelect.zipCondition,
     email_address: email,
     gender: gender,
-    url : url.web_source,
+    url : url,
+    urlCondition: urlCondition,
     ethnicity: ethnicity,
     last_name: searchLastName.taLastNames,
+    last_nameConditions: searchLastName,
     dob: dob.selDOBYear+'-'+dob.selDOBMonth+'-'+dob.selDOBDay,
     ownrent: rentingHome,
     interest_ids: intrestedGroup,
     email_domain: emailDomain,
+    domainCondition : domainCondition,
     phone: telSearch.taPhones, 
     scf: SCF,
+    scfCondition: SCFNOT,
     regDate: optIn.registration_date,
     regDate2: optIn.registration_date_later, 
     uniqueValues : uniqueValues,
@@ -95,7 +103,7 @@ export const StateContext = ({children}) => {
       e.preventDefault()
       resultRef.current.scrollIntoView();
       const url = "http://localhost:8000";
-      if(selectCountry !=="" || selectState.length !==0 || selectCounty.length !==0 || email !== "" || gender !== "" || ethnicity.length !== 0 || rentingHome !=="" || intrestedGroup.length !==0 || emailDomain.length !== 0 || checkConsumer.dob !== "--" || checkConsumer.last_name !== "" || checkConsumer.zip !== "" || checkConsumer.city !== "" || checkConsumer.phone !=="" || SCF.length !== 0 || checkConsumer.regDate !== "" || checkConsumer.regDate2 !== "" || checkConsumer.uniqueValues !== "" || checkConsumer.zipRadius !== "" || checkConsumer.zipMiles !== "" || checkConsumer.upperAge !== "" || checkConsumer.lowerAge !== "" || checkConsumer.lowIncome !== "" || checkConsumer.highIncome !== ""){
+      if(selectCountry !=="" || selectState.length !==0 || selectCounty.length !==0 || email !== "" || gender !== "" || ethnicity.length !== 0 || rentingHome !=="" || intrestedGroup.length !==0 || emailDomain.length !== 0 || checkConsumer.dob !== "--" || checkConsumer.last_name !== "" || checkConsumer.zip !== "" || checkConsumer.city !== "" || checkConsumer.phone !=="" || SCF.length !== 0 || checkConsumer.regDate !== "" || checkConsumer.regDate2 !== "" || checkConsumer.uniqueValues !== "" || checkConsumer.zipRadius !== "" || checkConsumer.zipMiles !== "" || checkConsumer.upperAge !== "" || checkConsumer.lowerAge !== "" || checkConsumer.lowIncome !== "" || checkConsumer.highIncome !== "" || checkConsumer.zipCondition !== "0" || checkConsumer.scfCondition !== "" || checkConsumer.urlCondition !== "" || checkConsumer.url !== ""){
         const fetchData = async () => {
             try {
                 const res = await axios.post(url + "/checkConsumer/find", checkConsumer);
@@ -123,9 +131,8 @@ export const StateContext = ({children}) => {
 
 
 
-
   return (
-    <Context.Provider value={{selectCountry,selectState, data, searchQuery, setSelectState,selectCanStates, setSelectCanStates, zipCodeSelect, setZipCodeSelect, setSelectCountry, setSelectCounty, selectCounty, textData, setTextData, setSCF, SCF, setEmail, setUniqueValue, setTelSearch, telSearch, setGender, setHouseHoldIncome, houseHoldIncome, setUrl, url, setFilter, setEthnicity, ethnicity, setSearchLastName, searchLastName, setEnterAge, enterAge, setDob, dob, setrentingHome, rentingHome, setOptIn, optIn, setRepeated, repeated, setIntrestedGroup, intrestedGroup, setEmailDomain, emailDomain, setUniqueEmail, uniqueEmail, setExcludeEmail, excludeEmail, setUrlDomain, setFaxNumber, faxNumber, setObtainRecords, obtainRecords, setExecutiveContact, setSearchCompany, searchCompany, jobSearch, setJobSearch, setCompanyRevenue, companyRevenue, setSearchEmployee, searchEmployee, setNACIcode, NACIcode, setSICcode, SICcode, setUniqueTelephoneEmail, uniqueTelephoneEmail, setTeleMarketingForm, teleMarketingForm, setNewMovers, newMovers, setSelectRecords, selectRecords, setCellData, cellData, setCellCarrier, cellCarrier, setUrlData, urlData, setRegDates, regDates, setUniqValues, uniqValues, setRegistrantContact, registrantContact, setBadData, badData, isLoggedIn, setIsLoggedIn, email, uniqueValues, gender, filter, executiveContact, urlDomain, SICCodesChange, setSICCodesChages, NACIcodeChanges, setNACIcodeChanges, resultRef}}>
+    <Context.Provider value={{selectCountry,selectState, data, searchQuery, setSelectState,selectCanStates, setSelectCanStates, zipCodeSelect, setZipCodeSelect, setSelectCountry, setSelectCounty, selectCounty, textData, setTextData, setSCF, SCF, setEmail, setUniqueValue, setTelSearch, telSearch, setGender, setHouseHoldIncome, houseHoldIncome, setUrl, url, setFilter, setEthnicity, ethnicity, setSearchLastName, searchLastName, setEnterAge, enterAge, setDob, dob, setrentingHome, rentingHome, setOptIn, optIn, setRepeated, repeated, setIntrestedGroup, intrestedGroup, setEmailDomain, emailDomain, setUniqueEmail, uniqueEmail, setExcludeEmail, excludeEmail, setUrlDomain, setFaxNumber, faxNumber, setObtainRecords, obtainRecords, setExecutiveContact, setSearchCompany, searchCompany, jobSearch, setJobSearch, setCompanyRevenue, companyRevenue, setSearchEmployee, searchEmployee, setNACIcode, NACIcode, setSICcode, SICcode, setUniqueTelephoneEmail, uniqueTelephoneEmail, setTeleMarketingForm, teleMarketingForm, setNewMovers, newMovers, setSelectRecords, selectRecords, setCellData, cellData, setCellCarrier, cellCarrier, setUrlData, urlData, setRegDates, regDates, setUniqValues, uniqValues, setRegistrantContact, registrantContact, setBadData, badData, isLoggedIn, setIsLoggedIn, email, uniqueValues, gender, filter, executiveContact, urlDomain, SICCodesChange, setSICCodesChages, NACIcodeChanges, setNACIcodeChanges, resultRef, setSCFNOT, SCFNOT, setUrlCondition, urlCondition, setDomainCondition, domainCondition}}>
       {children}
     </Context.Provider>
   )

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const SCFtable = ({ selectSCF }) => {
+const SCFtable = ({ selectSCF, setSCFNOT }) => {
     const [data, setData] = useState([]);
     const [error, setError] = useState(false);
 
@@ -19,6 +19,11 @@ const SCFtable = ({ selectSCF }) => {
     }, []);
 
     if(error) console.log(error)
+
+    const handleCheckbox = (e)=>{
+        const {checked, value} = e.target;
+        setSCFNOT(checked ? value: "")
+    }
 
     return (
         <div className="floatleft" id="SCF" align="left">
@@ -567,7 +572,7 @@ const SCFtable = ({ selectSCF }) => {
             <label htmlFor="SCFNOT">
                 <b>To Instead EXCLUDE The Above Selected SCF Zones:</b>
             </label>
-            <input type="checkbox" name="SCFNOT" id="SCFNOT" value="NOT" />
+            <input type="checkbox" name="SCFNOT" id="SCFNOT" value="NOT" onChange={handleCheckbox} />
         </div>
     );
 };

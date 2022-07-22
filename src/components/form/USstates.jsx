@@ -7,7 +7,7 @@ import SearchByUSCounties from "./SearchByUSCounties";
 
 const USstates = () => {
     const location = useLocation()
-    const { selectCountry,  setTextData, textData, setSCF, zipCodeSelect, setZipCodeSelect, setSelectState, selectState, selectCanStates, setSelectCanStates } =
+    const { selectCountry,  setTextData, textData, setSCF, zipCodeSelect, setZipCodeSelect, setSelectState, selectState, selectCanStates, setSelectCanStates, setSCFNOT } =
         useStateContext();
     const [show, setShow] = useState(true);
 
@@ -33,9 +33,8 @@ const USstates = () => {
         setZipCodeSelect({...zipCodeSelect, [e.target.name]: e.target.value})
     }
     const handleCheckZIP = (e) =>{
-        setZipCodeSelect({
-            ...setZipCodeSelect, [e.target.name] : e.target.checked
-        })
+        const {checked, value, name}  = e.target
+        setZipCodeSelect({...zipCodeSelect, [name] : checked ? value : ""})
     }
     const disabledStyle = {
         backgroundColor: "red",
@@ -285,7 +284,7 @@ const USstates = () => {
                     </div>
                     <hr />
                     {/* SCF table here */}
-                    <SCFtable selectSCF={selectSCF}/>
+                    <SCFtable selectSCF={selectSCF} setSCFNOT={setSCFNOT} />
                     <div className="floatleft" id="ZIPRAD" align="center">
                         <b className="redtextbold2">Zip Code Option lV:</b>
                         <h4>Radius Search by US Zip Code:</h4>

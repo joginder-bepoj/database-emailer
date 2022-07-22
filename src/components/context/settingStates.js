@@ -962,10 +962,10 @@ export const excludeGeneralEmailData = {
 
 export const searchLastNameData = {
     opt_Last_search_conditions: "",
-    chkGroupByLastName: false,
-    chkCapitalizationLastNames: true,
-    chkNameAddress: true,
-    chkNameFL: true,
+    chkGroupByLastName: "",
+    chkCapitalizationLastNames: "",
+    chkNameAddress: "",
+    chkNameFL: "",
     taLastNames: ""
 }
 
@@ -980,7 +980,7 @@ export const newMoversData = {
 
 export const zipConditionData = {
     zipCondition: "0",
-    chkGroupBy: false
+    chkGroupBy: "0"
 }
 
 export const textDataData = {
@@ -1002,10 +1002,7 @@ export const houseHoldIncomeData = {
     MHHIncHi: ""
 }
 
-export const setSearchUrlData = {
-    web_source: "",
-    chkHasWebSource: false
-}
+
 
 export const enterAgeData = {
     ageLower: "",

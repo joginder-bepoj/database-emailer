@@ -3,7 +3,7 @@ import { useStateContext } from "../context/StateContext";
 import { emailDomainData } from "./emailDomainData";
 
 const EmailDomain = () => {
-    const { setEmailDomain, } = useStateContext();
+    const { setEmailDomain, setDomainCondition } = useStateContext();
     const [isCheckedAll, setIsCheckedAll] = useState(false);
     const [isChecked, setIsChecked] = useState([]);
     const [tempArr, setTempArr] = useState([]);
@@ -23,9 +23,11 @@ const EmailDomain = () => {
         setEmailDomain(checked ? [...isChecked, value] : isChecked.filter(item=> item !==value))
         
     };
+    const handleRadioChange = (e) =>{
+        setDomainCondition(e.target.value)
+    }
 
     const handleSelectAll = (e) => {
-        console.log(isCheckedAll, "ischecl");
         setIsCheckedAll(!isCheckedAll);
         setIsChecked(tempArr.map((li) => li.value));
         if (isCheckedAll) {
@@ -109,7 +111,7 @@ const EmailDomain = () => {
                                         <b>INCLUDE All Domains (default)</b>
                                     </label>{" "}
                                     <input
-                                        onChange={handleChange}
+                                        onChange={handleRadioChange}
                                         type="radio"
                                         name="emailCondition"
                                         title="the same as ignore this section"
@@ -127,9 +129,9 @@ const EmailDomain = () => {
                                         others will be excluded
                                     </label>
                                     <input
-                                        onChange={handleChange}
+                                        onChange={handleRadioChange}
                                         type="radio"
-                                        checked={isChecked.length > 0 && isChecked.length < 62}
+                                        
                                         name="emailCondition"
                                         title="Do you want some or all of these most common 100 INCLUDED and you understand thousands of other domains not listed here will be excluded from search"
                                         id="emailCondition_included"
@@ -145,13 +147,12 @@ const EmailDomain = () => {
                                         others will be included
                                     </label>{" "}
                                     <input
-                                        onChange={handleChange}
+                                        onChange={handleRadioChange}
                                         type="radio"
                                         title="Do you want some or all of these most common 100 email domains to be Excluded from search "
                                         name="emailCondition"
                                         id="emailCondition_excluded"
                                         value="NOT IN"
-                                        checked={isChecked.length > 0 && isChecked.length < 62}
                                     />
                                 </td>
 

@@ -10,8 +10,9 @@ const SearchLastName = () => {
         });
     };
     const handleCheckChange = (e) => {
+        const {name, value, checked} = e.target
         setSearchLastName({
-            ...searchLastName, [e.target.name]: e.target.checked
+            ...searchLastName, [name]: checked ? value: "" 
         })
     }
 
