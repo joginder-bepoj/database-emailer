@@ -61,7 +61,7 @@ const TelSearchParameters = () => {
                             id={states.name}
                             className="sc"
                             value={states.value}
-                            disabled={selectCountry !== "none"}
+                            disabled={selectCountry !== ""}
                         />
                     </div>
                 ))}
@@ -142,11 +142,11 @@ const TelSearchParameters = () => {
                                     id="SelectCounties"
                                     className="sc"
                                     style={
-                                        selectCountry !== "none"
+                                        selectCountry !== ""
                                             ? disabledStyle
                                             : { color: "black" }
                                     }
-                                    disabled={selectCountry !== "none"}
+                                    disabled={selectCountry !== ""}
                                     onClick={searchByCounties}
                                     value="Search By Counties"
                                     title="Brings Up Counties in a State or states, But select at least one state first! Or alt-v"

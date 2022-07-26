@@ -10,11 +10,11 @@ import { StateContext } from "./components/context/StateContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <StateContext>
       <Router>
+    <StateContext>
         <App />
-      </Router>
     </StateContext>
+      </Router>
   </React.StrictMode>
 );
 

@@ -23,7 +23,7 @@ import { useStateContext } from "./context/StateContext";
 import TelSearchParameters from "./form/TelSearchParameters";
 
 const CheckBusiness = () => {
-    const {isLoggedIn} = useStateContext()
+    const {isLoggedIn, searchQuery} = useStateContext()
 
     return (
         <>
@@ -90,6 +90,7 @@ const CheckBusiness = () => {
                                     <div align="center">
                                         <button 
                                             type="button"
+                                            onClick={searchQuery}
                                             style={{
                                                 textDecoration: "none",
                                                 color: "#F00",
