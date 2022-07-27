@@ -5,7 +5,6 @@ import {
     tableFormData,
     cellCarriersData,
     uniqueEmailFaxData,
-    excludeGeneralEmailData,
     searchLastNameData,
     newMoversData,
     zipConditionData,
@@ -62,7 +61,7 @@ export const StateContext = ({ children }) => {
     const [intrestedGroup, setIntrestedGroup] = useState([]);
     const [emailDomain, setEmailDomain] = useState([]);
     const [uniqueEmail, setUniqueEmail] = useState(uniqueEmailFaxData);
-    const [excludeEmail, setExcludeEmail] = useState(excludeGeneralEmailData);
+    const [excludeEmail, setExcludeEmail] = useState([]);
     const [urlDomain, setUrlDomain] = useState("");
     const [faxNumber, setFaxNumber] = useState(faxNumberData);
     const [obtainRecords, setObtainRecords] = useState(obtainRecordsData);
@@ -133,10 +132,20 @@ export const StateContext = ({ children }) => {
         city: textData.taCities,
         zip: textData.taZIPS,
         zipCondition: zipCodeSelect.zipCondition,
-        email_address: email
+        email_address: email,
+        excludeEmail: excludeEmail,
+        uniqueValues: uniqueValues,
+        uniqueEmailCondition: uniqueEmail,
+        urlDomain: urlDomain, 
+        phone : telSearch.taPhones,
+        fax : faxNumber.taFaxes,
+        empLow : searchEmployee.employeesLo,
+        empHi : searchEmployee.employeesHi,
+        revenueLow : companyRevenue.revenueLo,
+        revenueHigh: companyRevenue.revenueHi
     }
+    console.log(checkBuisness, "checkbusiness")
 
-    // check consumer data api
     const [data, setData] = useState([]);
     const [error, setError] = useState(false);
 
@@ -203,7 +212,7 @@ export const StateContext = ({ children }) => {
 
         }else if(location.pathname === "/database-emailer/checkbuisness"){
             const fetchData = async () =>{
-                if(checkBuisness.country !=="" || checkBuisness.state.length !== 0 || checkBuisness.county.length !== 0 || checkBuisness.city !== "" || checkBuisness.email_address !==""){
+                if(checkBuisness.country !=="" || checkBuisness.state.length !== 0 || checkBuisness.county.length !== "" || checkBuisness.city !== "" || checkBuisness.email_address !=="" || checkBuisness.excludeEmail.length !==0 || checkBuisness.uniqueValues !=="" || checkBuisness.uniqueEmailCondition.chkCompNames !=="" || checkBuisness.uniqueEmailCondition.chkEmails !=="" || checkBuisness.uniqueEmailCondition.chkEmailsAndPhones !== "" || checkBuisness.uniqueEmailCondition.chkEmailsOrPhones !=="" || checkBuisness.uniqueEmailCondition.chkFaxes !== "" || checkBuisness.uniqueEmailCondition.chkPhone !== "" || checkBuisness.uniqueEmailCondition.chkURL !=="" || checkBuisness.urlDomain !== "" || checkBuisness.phone !=="" || checkConsumer.fax !== "" || checkBuisness.empLow !=="" || checkBuisness.revenueLow !== ""){
                     const fetchData = async () => {
                         try {
                             const res = await axios.post(

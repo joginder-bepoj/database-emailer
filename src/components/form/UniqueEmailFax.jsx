@@ -9,9 +9,10 @@ const UniqueEmailFax = () => {
         })
     }
     const handleCheckChange =  (e) => {
+        const {name, value, checked} = e.target
         setUniqueEmail({
             ...uniqueEmail,
-            [e.target.name] : e.target.checked            
+            [name] : checked ? value : ""            
         })
     }
     return (

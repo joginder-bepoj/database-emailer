@@ -8,6 +8,12 @@ const FaxNumber = () => {
             ...faxNumber, [e.target.name] : e.target.value
         })
     }
+    const handleCheckChange = (e) =>{
+        const {name, value, checked} = e.target
+        setFaxNumber({
+            ...faxNumber, [name]: checked ? value : ""
+        })
+    }
 
 
     return (
@@ -32,7 +38,7 @@ const FaxNumber = () => {
                 <br />
                 <label htmlFor="chkFaxOnly"> For Valid Faxes Only</label> (don't use if you
                 are searching on faxes above){" "}
-                <input type="checkbox" name="chkFaxOnly" id="chkFaxOnly" value="1" onChange={handleChange} />
+                <input type="checkbox" name="chkFaxOnly" id="chkFaxOnly" value="1" onChange={handleCheckChange} />
                 <hr />
             </fieldset>
         </>

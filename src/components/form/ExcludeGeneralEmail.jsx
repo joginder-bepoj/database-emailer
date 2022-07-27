@@ -4,9 +4,8 @@ import { useStateContext } from "../context/StateContext";
 const ExcludeGeneralEmail = () => {
     const {setExcludeEmail, excludeEmail} = useStateContext()
     const handleCheckChange = (e) =>{
-        setExcludeEmail({
-            ...excludeEmail, [e.target.name] : e.target.checked
-        })
+        const {value, checked} = e.target
+        setExcludeEmail(checked ? [...excludeEmail, value] : excludeEmail.filter(item=> item !==value))
     }
 
     return (

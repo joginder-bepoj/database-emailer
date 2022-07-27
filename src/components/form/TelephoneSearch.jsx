@@ -6,6 +6,10 @@ const TelephoneSearch = () => {
     const handleChange = (e) =>{
         setTelSearch({ ...telSearch,[e.target.name] : e.target.value})
     }
+    const handleCheckChange = (e)=>{
+        const {name, value, checked} = e.target
+        setTelSearch({...telSearch, [name]: checked ? value: ""})
+    }
     return (
         <>
             <fieldset className="stateLabel">
@@ -30,7 +34,7 @@ const TelephoneSearch = () => {
                 <label htmlFor="chkPhone2">
                     <b>Records Must Include A Phone Number:</b>
                 </label>
-                <input type="checkbox" name="chkPhone" id="chkPhone2" value="1" onChange={handleChange}/>
+                <input type="checkbox" name="chkPhone" id="chkPhone2" value="1" onChange={handleCheckChange}/>
                 <br />
             </fieldset>
         </>

@@ -945,20 +945,15 @@ export const cellCarriersData = {
 }
 
 export const uniqueEmailFaxData = {
-    chkFaxes: false,
-    chkPhone: false,
-    chkEmailsOrPhones: false,
-    chkEmailsAndPhones: false,
-    chkCompNames: false,
+    chkFaxes: "",
+    chkPhone: "",
+    chkEmailsOrPhones: "",
+    chkEmailsAndPhones: "",
+    chkCompNames: "",
     chkEmails: "",
     chkURL: ""
 }
 
-export const excludeGeneralEmailData = {
-    chkBoxes_0: false,
-    chkBoxes_1: false,
-    chkBoxes_2: false
-}
 
 export const searchLastNameData = {
     opt_Last_search_conditions: "",
@@ -994,7 +989,7 @@ export const textDataData = {
 
 export const telSearchData = {
     taPhones: "",
-    chkPhone: false
+    chkPhone: ""
 }
 
 export const houseHoldIncomeData = {
@@ -1029,7 +1024,7 @@ export const repeatedData = {
 
 export const faxNumberData = {
     taFaxes: "",
-    chkFaxOnly: false
+    chkFaxOnly: ""
 }
 
 export const obtainRecordsData = {
