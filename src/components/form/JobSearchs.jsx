@@ -7,13 +7,14 @@ const JobSearchs = () => {
     const [isChecked, setIsChecked] = useState([])
     const [tempArr, setTempArr] = useState([])
     const [check, setCheck] = useState(false)
-
-    const {setJobSearch, jobSearch} = useStateContext()
+    
+    const {setJobSearch, jobSearch, setJobTitle, jobTitle} = useStateContext()
     const handleChange = (e) =>{
         setJobSearch({
             ...jobSearch, [e.target.name] : e.target.value
         })
     } 
+    console.log(jobTitle);
 
     useEffect(() => {
         setTempArr(jobTitles);
@@ -21,29 +22,32 @@ const JobSearchs = () => {
 
 
     const handleJobChange = e => {
-        const { id, checked } = e.target;
-        setIsChecked([...isChecked, id]);
+        const { checked, value } = e.target;
+        setIsChecked([...isChecked, value]);
         if (!checked) {
-          setIsChecked(isChecked.filter(item => item !== id));
+          setIsChecked(isChecked.filter(item => item !== value));
         }
+        setJobTitle(checked ? [...isChecked, value] : isChecked.filter(item=> item !==value))
+        
     };
 
     const handleSelectAll = e =>{
         
         setIsCheckedAll(!isCheckedAll);
-        setIsChecked(tempArr.map(li => li.id));
+        setIsChecked(tempArr.map(li => li.value));
         if (isCheckedAll) {
             setIsChecked([]);
         }
         setCheck(!check)
+        setJobTitle(isCheckedAll ? [] : tempArr.map(item => item))
     }
     const handleOption = () =>{
         setIsCheckedAll(false);
-        setIsChecked([tempArr.map(li => li.id)])
         if(isCheckedAll){
             setIsChecked([])
         }
         setCheck(false)
+        setJobTitle([])
     }
 
 
@@ -206,7 +210,7 @@ const JobSearchs = () => {
                                     name={item.name}
                                     id={item.id}
                                     value={item.value}
-                                    checked={isChecked.includes(item.id)}
+                                    checked={isChecked.includes(item.value)}
                                 />
                             </div>
                             ))

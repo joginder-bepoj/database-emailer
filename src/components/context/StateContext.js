@@ -89,7 +89,7 @@ export const StateContext = ({ children }) => {
     const [badData, setBadData] = useState("");
     const [SCFNOT, setSCFNOT] = useState("");
     const [domainCondition, setDomainCondition] = useState("");
-
+    const [jobTitle, setJobTitle] = useState([])
     const resultRef = useRef();
 
     let checkConsumer = {
@@ -354,6 +354,8 @@ export const StateContext = ({ children }) => {
                 urlCondition,
                 setDomainCondition,
                 domainCondition,
+                setJobTitle,
+                jobTitle
             }}
         >
             {children}
