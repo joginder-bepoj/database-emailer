@@ -65,7 +65,7 @@ export const StateContext = ({ children }) => {
     const [urlDomain, setUrlDomain] = useState("");
     const [faxNumber, setFaxNumber] = useState(faxNumberData);
     const [obtainRecords, setObtainRecords] = useState(obtainRecordsData);
-    const [executiveContact, setExecutiveContact] = useState("");
+    const [executiveContact, setExecutiveContact] = useState("0");
     const [searchCompany, setSearchCompany] = useState(searchCompanyNameData);
     const [jobSearch, setJobSearch] = useState(jobSearchData);
     const [companyRevenue, setCompanyRevenue] = useState(companyRevenueData);
@@ -142,7 +142,13 @@ export const StateContext = ({ children }) => {
         empLow : searchEmployee.employeesLo,
         empHi : searchEmployee.employeesHi,
         revenueLow : companyRevenue.revenueLo,
-        revenueHigh: companyRevenue.revenueHi
+        revenueHigh: companyRevenue.revenueHi,
+        last_name: searchLastName.taLastNames,
+        last_nameConditions: searchLastName,
+        executiveContact: executiveContact,
+        companyName : searchCompany.txtCompanyName,
+        companyConditions: searchCompany,
+        chkCompNames: searchCompany.chkCompNames,
     }
     console.log(checkBuisness, "checkbusiness")
 
@@ -212,7 +218,7 @@ export const StateContext = ({ children }) => {
 
         }else if(location.pathname === "/database-emailer/checkbuisness"){
             const fetchData = async () =>{
-                if(checkBuisness.country !=="" || checkBuisness.state.length !== 0 || checkBuisness.county.length !== "" || checkBuisness.city !== "" || checkBuisness.email_address !=="" || checkBuisness.excludeEmail.length !==0 || checkBuisness.uniqueValues !=="" || checkBuisness.uniqueEmailCondition.chkCompNames !=="" || checkBuisness.uniqueEmailCondition.chkEmails !=="" || checkBuisness.uniqueEmailCondition.chkEmailsAndPhones !== "" || checkBuisness.uniqueEmailCondition.chkEmailsOrPhones !=="" || checkBuisness.uniqueEmailCondition.chkFaxes !== "" || checkBuisness.uniqueEmailCondition.chkPhone !== "" || checkBuisness.uniqueEmailCondition.chkURL !=="" || checkBuisness.urlDomain !== "" || checkBuisness.phone !=="" || checkConsumer.fax !== "" || checkBuisness.empLow !=="" || checkBuisness.revenueLow !== ""){
+                if(checkBuisness.country !=="" || checkBuisness.state.length !== 0 || checkBuisness.county !== "" || checkBuisness.city !== "" || checkBuisness.email_address !=="" || checkBuisness.excludeEmail.length !==0 || checkBuisness.uniqueValues !=="" || checkBuisness.uniqueEmailCondition.chkCompNames !=="" || checkBuisness.uniqueEmailCondition.chkEmails !=="" || checkBuisness.uniqueEmailCondition.chkEmailsAndPhones !== "" || checkBuisness.uniqueEmailCondition.chkEmailsOrPhones !=="" || checkBuisness.uniqueEmailCondition.chkFaxes !== "" || checkBuisness.uniqueEmailCondition.chkPhone !== "" || checkBuisness.uniqueEmailCondition.chkURL !=="" || checkBuisness.urlDomain !== "" || checkBuisness.phone !=="" || checkBuisness.fax !== "" || checkBuisness.empLow !=="" || checkBuisness.revenueLow !== "" || checkBuisness.last_name !== "" || checkBuisness.executiveContact !=="0" || checkBuisness.companyName !== "" || checkBuisness.chkCompNames !== ""){
                     const fetchData = async () => {
                         try {
                             const res = await axios.post(

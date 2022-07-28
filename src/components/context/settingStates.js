@@ -1036,8 +1036,8 @@ export const obtainRecordsData = {
 export const searchCompanyNameData = {
     txtCompanyName: "",
     opt_company_search_conditions: "",
-    chkCapitalizationCompNames: false,
-    chkCompNames: false
+    chkCapitalizationCompNames: "",
+    chkCompNames: ""
 }
 
 export const jobSearchData = {

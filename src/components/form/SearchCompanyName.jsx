@@ -8,6 +8,12 @@ const SearchCompanyName = () => {
             ...searchCompany, [e.target.name] : e.target.value
         })
     }
+    const handleCheckChange = (e) =>{
+        const {name, value, checked} = e.target;
+        setSearchCompany({
+            ...searchCompany, [name] : checked ? value : ""
+        })
+    }
     return (
         <>
             <fieldset id="fsCompanyName">
@@ -62,14 +68,14 @@ const SearchCompanyName = () => {
                 <label htmlFor="chkCapitalizationCompNames">
                     Make This Search Case Sensitive:
                 </label>
-                <input onChange={handleChange}
+                <input onChange={handleCheckChange}
                     type="checkbox"
                     name="chkCapitalizationCompNames"
                     id="chkCapitalizationCompNames"
                     value="1"
                 />{" "}
                 | <label htmlFor="chkCompNames">Must have a Company Name:</label>{" "}
-                <input onChange={handleChange}
+                <input onChange={handleCheckChange}
                     type="checkbox"
                     name="chkCompNames"
                     id="chkCompNames"
