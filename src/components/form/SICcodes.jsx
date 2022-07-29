@@ -23,18 +23,22 @@ const SICcodes = () => {
     if(error) console.log(error)
     
     const location = useLocation()
-    const {setSICcode, SICCodesChange, setSICCodesChages} = useStateContext()
+    const {setSICcode, SICCodesChange, setSICCodesChages, setSICValue} = useStateContext()
     const handleChange = (e) =>{
         let value = Array.from(e.target.selectedOptions, (option)=> option.value)
         setSICcode(value)
     } 
+    const handleValueChange = (e) => {
+        setSICValue(e.target.value)
+    }
 
     const handleTextChange = (e) =>{
         setSICCodesChages({...SICCodesChange, [e.target.name] : e.target.value})
     }
     const handleCheckChange = (e) =>{
+        const {name, value, checked} =e.target
         setSICCodesChages({
-            ...SICCodesChange, [e.target.name] : e.target.checked
+            ...SICCodesChange, [name] : checked ? value : ""
         })
     }
 
@@ -149,12 +153,11 @@ const SICcodes = () => {
                                         <br />
                                         <br />
                                         <input 
-                                            type="submit"
+                                            type="button"
                                             name="subSICDescription"
                                             id="subSICDescription"
                                             value="Search for SICS Based on Description"
                                             title="or alt-h"
-                                           
                                         />
                                     </div>
                                 </td>
@@ -292,7 +295,7 @@ const SICcodes = () => {
                                     Or Use this Box Below:
                                     <br />
                                     <select
-                                        onChange={handleChange}
+                                        onChange={handleValueChange}
                                         name="selSIC_code_ranges"
                                         id="selSIC_code_ranges"
                                         style={{ width: "90%" }}

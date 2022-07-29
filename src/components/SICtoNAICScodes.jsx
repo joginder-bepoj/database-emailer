@@ -23,7 +23,7 @@ const SICtoNAICScodes = () => {
         };
         fetchData();
     }, []);
-    console.log(relation);
+
     
     if(error) console.log(error)
 

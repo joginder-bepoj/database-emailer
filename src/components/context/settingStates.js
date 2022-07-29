@@ -1044,7 +1044,7 @@ export const jobSearchData = {
     chkFilter: "",
     titleCondition: "IN",
     txtTitle: "",
-    optTxtTitle: "",
+    optTxtTitle: "E",
 }
 export const companyRevenueData = {
     revenueLo: "",
@@ -1115,9 +1115,9 @@ export const selectCanStatesData = {
 
 
 export const SICCodesChangeData = {
-    chkNAICSfromSICS : false,
-chkGroupBySIC : false,
-chkSICCODESONLY : false,
+    chkNAICSfromSICS : "",
+chkGroupBySIC : "",
+chkSICCODESONLY : "",
 txtSICDescription: "",
 txtSicLower: "",
 txtSicHigher: "",

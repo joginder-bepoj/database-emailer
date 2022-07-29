@@ -14,7 +14,7 @@ const JobSearchs = () => {
             ...jobSearch, [e.target.name] : e.target.value
         })
     } 
-    console.log(jobTitle);
+
 
     useEffect(() => {
         setTempArr(jobTitles);
@@ -246,6 +246,7 @@ const JobSearchs = () => {
                                 name="optTxtTitle"
                                 id="optTxtTitle_Exact"
                                 value="E"
+                                defaultChecked
                             />{" "}
                             | <label htmlFor="optTxtTitle_Like">Starts With:</label>
                             <input onChange={handleChange}

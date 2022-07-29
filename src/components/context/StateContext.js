@@ -73,6 +73,7 @@ export const StateContext = ({ children }) => {
     const [NACIcode, setNACIcode] = useState([]);
     const [NACIcodeChanges, setNACIcodeChanges] = useState(NACIcodeChangesData);
     const [SICcode, setSICcode] = useState([]);
+    const [SICValue, setSICValue] = useState("")
     const [SICCodesChange, setSICCodesChages] = useState(SICCodesChangeData);
     const [uniqueTelephoneEmail, setUniqueTelephoneEmail] = useState(
         uniqueTelephoneEmailData
@@ -149,6 +150,11 @@ export const StateContext = ({ children }) => {
         companyName : searchCompany.txtCompanyName,
         companyConditions: searchCompany,
         chkCompNames: searchCompany.chkCompNames,
+        jobTitle: jobTitle,
+        jobSearchCondition: jobSearch,
+        sicCode : SICcode,
+        sicCodeChanges: SICCodesChange,
+        sicValueRange : SICValue
     }
     console.log(checkBuisness, "checkbusiness")
 
@@ -218,7 +224,7 @@ export const StateContext = ({ children }) => {
 
         }else if(location.pathname === "/database-emailer/checkbuisness"){
             const fetchData = async () =>{
-                if(checkBuisness.country !=="" || checkBuisness.state.length !== 0 || checkBuisness.county !== "" || checkBuisness.city !== "" || checkBuisness.email_address !=="" || checkBuisness.excludeEmail.length !==0 || checkBuisness.uniqueValues !=="" || checkBuisness.uniqueEmailCondition.chkCompNames !=="" || checkBuisness.uniqueEmailCondition.chkEmails !=="" || checkBuisness.uniqueEmailCondition.chkEmailsAndPhones !== "" || checkBuisness.uniqueEmailCondition.chkEmailsOrPhones !=="" || checkBuisness.uniqueEmailCondition.chkFaxes !== "" || checkBuisness.uniqueEmailCondition.chkPhone !== "" || checkBuisness.uniqueEmailCondition.chkURL !=="" || checkBuisness.urlDomain !== "" || checkBuisness.phone !=="" || checkBuisness.fax !== "" || checkBuisness.empLow !=="" || checkBuisness.revenueLow !== "" || checkBuisness.last_name !== "" || checkBuisness.executiveContact !=="0" || checkBuisness.companyName !== "" || checkBuisness.chkCompNames !== ""){
+                if(checkBuisness.country !=="" || checkBuisness.state.length !== 0 || checkBuisness.county !== "" || checkBuisness.city !== "" || checkBuisness.email_address !=="" || checkBuisness.excludeEmail.length !==0 || checkBuisness.uniqueValues !=="" || checkBuisness.uniqueEmailCondition.chkCompNames !=="" || checkBuisness.uniqueEmailCondition.chkEmails !=="" || checkBuisness.uniqueEmailCondition.chkEmailsAndPhones !== "" || checkBuisness.uniqueEmailCondition.chkEmailsOrPhones !=="" || checkBuisness.uniqueEmailCondition.chkFaxes !== "" || checkBuisness.uniqueEmailCondition.chkPhone !== "" || checkBuisness.uniqueEmailCondition.chkURL !=="" || checkBuisness.urlDomain !== "" || checkBuisness.phone !=="" || checkBuisness.fax !== "" || checkBuisness.empLow !=="" || checkBuisness.revenueLow !== "" || checkBuisness.last_name !== "" || checkBuisness.executiveContact !=="0" || checkBuisness.companyName !== "" || checkBuisness.chkCompNames !== "" || checkBuisness.jobTitle.length !== 0 || checkBuisness.jobSearchCondition.titleCondition === "ALL" || checkBuisness.jobSearchCondition.titleCondition==="NONE" || checkBuisness.jobSearchCondition.txtTitle !=="" || checkBuisness.sicCode.length !== 0 || checkBuisness.sicValueRange !== "" || checkBuisness.sicCodeChanges.txtSicLower !=="" || checkBuisness.sicCodeChanges.chkSICCODESONLY !== ""){
                     const fetchData = async () => {
                         try {
                             const res = await axios.post(
@@ -355,7 +361,9 @@ export const StateContext = ({ children }) => {
                 setDomainCondition,
                 domainCondition,
                 setJobTitle,
-                jobTitle
+                jobTitle,
+                setSICValue,
+                SICValue
             }}
         >
             {children}
