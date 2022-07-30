@@ -23,7 +23,7 @@ const NACIScodes = () => {
     
     if(error) console.log(error)
   
-    const {setNACIcode, NACIcodeChanges, setNACIcodeChanges} = useStateContext()
+    const {setNACIcode, NACIcodeChanges, setNACIcodeChanges, setNaicsCodeValue} = useStateContext()
     const handleChange = (e) =>{
         let value = Array.from(e.target.selectedOptions, (option)=> option.value)
         setNACIcode(value)
@@ -33,9 +33,13 @@ const NACIScodes = () => {
             ...NACIcodeChanges, [e.target.name] : e.target.value
         })
     }
+    const handleValueChange = (e) =>{
+        setNaicsCodeValue(e.target.value)
+    }
     const handleCheckChange = (e) => {
+        const {name, value, checked} = e.target
         setNACIcodeChanges({
-            ...NACIcodeChanges, [e.target.name] : e.target.checked
+            ...NACIcodeChanges, [name] : checked ? value : ""
         })
     }
     return (
@@ -233,7 +237,7 @@ const NACIScodes = () => {
                                     size="8"
                                     multiple="multiple"
                                     style={{ width: "90%" }}
-                                    onChange={handleChange}
+                                    onChange={handleValueChange}
                                 >
                                     <option
                                         style={{

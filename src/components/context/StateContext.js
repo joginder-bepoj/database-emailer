@@ -71,6 +71,7 @@ export const StateContext = ({ children }) => {
     const [companyRevenue, setCompanyRevenue] = useState(companyRevenueData);
     const [searchEmployee, setSearchEmployee] = useState(searchEmployeeData);
     const [NACIcode, setNACIcode] = useState([]);
+    const [naicsCodeValue, setNaicsCodeValue] = useState('')
     const [NACIcodeChanges, setNACIcodeChanges] = useState(NACIcodeChangesData);
     const [SICcode, setSICcode] = useState([]);
     const [SICValue, setSICValue] = useState("")
@@ -154,7 +155,10 @@ export const StateContext = ({ children }) => {
         jobSearchCondition: jobSearch,
         sicCode : SICcode,
         sicCodeChanges: SICCodesChange,
-        sicValueRange : SICValue
+        sicValueRange : SICValue,
+        naicsCode: NACIcode,
+        naicsCodeChanges : NACIcodeChanges,
+        naicsValueRange: naicsCodeValue
     }
     console.log(checkBuisness, "checkbusiness")
 
@@ -224,7 +228,7 @@ export const StateContext = ({ children }) => {
 
         }else if(location.pathname === "/database-emailer/checkbuisness"){
             const fetchData = async () =>{
-                if(checkBuisness.country !=="" || checkBuisness.state.length !== 0 || checkBuisness.county !== "" || checkBuisness.city !== "" || checkBuisness.email_address !=="" || checkBuisness.excludeEmail.length !==0 || checkBuisness.uniqueValues !=="" || checkBuisness.uniqueEmailCondition.chkCompNames !=="" || checkBuisness.uniqueEmailCondition.chkEmails !=="" || checkBuisness.uniqueEmailCondition.chkEmailsAndPhones !== "" || checkBuisness.uniqueEmailCondition.chkEmailsOrPhones !=="" || checkBuisness.uniqueEmailCondition.chkFaxes !== "" || checkBuisness.uniqueEmailCondition.chkPhone !== "" || checkBuisness.uniqueEmailCondition.chkURL !=="" || checkBuisness.urlDomain !== "" || checkBuisness.phone !=="" || checkBuisness.fax !== "" || checkBuisness.empLow !=="" || checkBuisness.revenueLow !== "" || checkBuisness.last_name !== "" || checkBuisness.executiveContact !=="0" || checkBuisness.companyName !== "" || checkBuisness.chkCompNames !== "" || checkBuisness.jobTitle.length !== 0 || checkBuisness.jobSearchCondition.titleCondition === "ALL" || checkBuisness.jobSearchCondition.titleCondition==="NONE" || checkBuisness.jobSearchCondition.txtTitle !=="" || checkBuisness.sicCode.length !== 0 || checkBuisness.sicValueRange !== "" || checkBuisness.sicCodeChanges.txtSicLower !=="" || checkBuisness.sicCodeChanges.chkSICCODESONLY !== ""){
+                if(checkBuisness.country !=="" || checkBuisness.state.length !== 0 || checkBuisness.county !== "" || checkBuisness.city !== "" || checkBuisness.email_address !=="" || checkBuisness.excludeEmail.length !==0 || checkBuisness.uniqueValues !=="" || checkBuisness.uniqueEmailCondition.chkCompNames !=="" || checkBuisness.uniqueEmailCondition.chkEmails !=="" || checkBuisness.uniqueEmailCondition.chkEmailsAndPhones !== "" || checkBuisness.uniqueEmailCondition.chkEmailsOrPhones !=="" || checkBuisness.uniqueEmailCondition.chkFaxes !== "" || checkBuisness.uniqueEmailCondition.chkPhone !== "" || checkBuisness.uniqueEmailCondition.chkURL !=="" || checkBuisness.urlDomain !== "" || checkBuisness.phone !=="" || checkBuisness.fax !== "" || checkBuisness.empLow !=="" || checkBuisness.revenueLow !== "" || checkBuisness.last_name !== "" || checkBuisness.executiveContact !=="0" || checkBuisness.companyName !== "" || checkBuisness.chkCompNames !== "" || checkBuisness.jobTitle.length !== 0 || checkBuisness.jobSearchCondition.titleCondition === "ALL" || checkBuisness.jobSearchCondition.titleCondition==="NONE" || checkBuisness.jobSearchCondition.txtTitle !=="" || checkBuisness.sicCode.length !== 0 || checkBuisness.sicValueRange !== "" || checkBuisness.sicCodeChanges.txtSicLower !=="" || checkBuisness.sicCodeChanges.chkSICCODESONLY !== "" || checkBuisness.naicsCode.length !==0 || checkBuisness.naicsCodeChanges.txtNAICSLower !== "" || checkBuisness.naicsValueRange !=="" || checkBuisness.naicsCodeChanges.chkNAICS !== "" || checkBuisness.naicsCodeChanges.taNAICS!=="" || checkBuisness.sicCodeChanges.taSIC !==""){
                     const fetchData = async () => {
                         try {
                             const res = await axios.post(
@@ -363,7 +367,9 @@ export const StateContext = ({ children }) => {
                 setJobTitle,
                 jobTitle,
                 setSICValue,
-                SICValue
+                SICValue,
+                setNaicsCodeValue,
+                naicsCodeValue
             }}
         >
             {children}
