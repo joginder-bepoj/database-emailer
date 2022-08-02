@@ -92,6 +92,9 @@ export const StateContext = ({ children }) => {
     const [SCFNOT, setSCFNOT] = useState("");
     const [domainCondition, setDomainCondition] = useState("");
     const [jobTitle, setJobTitle] = useState([])
+    const [Age, setAge] = useState({ageLower: "", ageUpper: "",})
+    const [telDOB, setTelDOB] = useState({ selDOBMonth: "", selDOBDay: "", selDOBYear: ""})
+    const [edu, setEdu] = useState([])
     const resultRef = useRef();
 
     let checkConsumer = {
@@ -160,7 +163,25 @@ export const StateContext = ({ children }) => {
         naicsCodeChanges : NACIcodeChanges,
         naicsValueRange: naicsCodeValue
     }
-    console.log(checkBuisness, "checkbusiness")
+
+    let checkTelemarketing = {
+        country: selectCountry,
+        state: selectState,
+        county: selectCounty,
+        city: textData.taCities,
+        zip: textData.taZIPS,
+        zipCondition: zipCodeSelect.zipCondition,
+        email_address: email,
+        emailDomain : emailDomain,
+        domainCondition: domainCondition,
+        uniqueConditions : uniqueTelephoneEmail,
+        telSearch: telSearch.taPhones,
+        age: Age,
+        dob: telDOB.selDOBYear + "-" + telDOB.selDOBMonth + "-" + telDOB.selDOBDay,
+        edu: edu
+    }
+
+    console.log(checkTelemarketing, "checkTelemarketing")
 
     const [data, setData] = useState([]);
     const [error, setError] = useState(false);
@@ -229,7 +250,6 @@ export const StateContext = ({ children }) => {
         }else if(location.pathname === "/database-emailer/checkbuisness"){
             const fetchData = async () =>{
                 if(checkBuisness.country !=="" || checkBuisness.state.length !== 0 || checkBuisness.county !== "" || checkBuisness.city !== "" || checkBuisness.email_address !=="" || checkBuisness.excludeEmail.length !==0 || checkBuisness.uniqueValues !=="" || checkBuisness.uniqueEmailCondition.chkCompNames !=="" || checkBuisness.uniqueEmailCondition.chkEmails !=="" || checkBuisness.uniqueEmailCondition.chkEmailsAndPhones !== "" || checkBuisness.uniqueEmailCondition.chkEmailsOrPhones !=="" || checkBuisness.uniqueEmailCondition.chkFaxes !== "" || checkBuisness.uniqueEmailCondition.chkPhone !== "" || checkBuisness.uniqueEmailCondition.chkURL !=="" || checkBuisness.urlDomain !== "" || checkBuisness.phone !=="" || checkBuisness.fax !== "" || checkBuisness.empLow !=="" || checkBuisness.revenueLow !== "" || checkBuisness.last_name !== "" || checkBuisness.executiveContact !=="0" || checkBuisness.companyName !== "" || checkBuisness.chkCompNames !== "" || checkBuisness.jobTitle.length !== 0 || checkBuisness.jobSearchCondition.titleCondition === "ALL" || checkBuisness.jobSearchCondition.titleCondition==="NONE" || checkBuisness.jobSearchCondition.txtTitle !=="" || checkBuisness.sicCode.length !== 0 || checkBuisness.sicValueRange !== "" || checkBuisness.sicCodeChanges.txtSicLower !=="" || checkBuisness.sicCodeChanges.chkSICCODESONLY !== "" || checkBuisness.naicsCode.length !==0 || checkBuisness.naicsCodeChanges.txtNAICSLower !== "" || checkBuisness.naicsValueRange !=="" || checkBuisness.naicsCodeChanges.chkNAICS !== "" || checkBuisness.naicsCodeChanges.taNAICS!=="" || checkBuisness.sicCodeChanges.taSIC !==""){
-                    const fetchData = async () => {
                         try {
                             const res = await axios.post(
                                 url + "/checkBusiness/find",
@@ -239,11 +259,28 @@ export const StateContext = ({ children }) => {
                         } catch (err) {
                             setError(err);
                         }
-                    };
-                    fetchData();
                 }else{
                     try {
                         const res = await axios.get(url + "/checkBusiness");
+                        setData(res.data)
+                    } catch (err) {
+                        setError(err)
+                    }
+                }
+            }
+            fetchData()
+        }else if(location.pathname === "/database-emailer/telemarketing"){
+            const fetchData = async() =>{
+                if(checkTelemarketing.country !=="" || checkTelemarketing.city !== "" || checkTelemarketing.country !== "" || checkTelemarketing.state.length !==0 || checkTelemarketing.email_address !== "" || checkTelemarketing.zip !=="" || checkTelemarketing.emailDomain.length !== 0 || checkTelemarketing.uniqueConditions.chkDoNotCall !=="" || checkTelemarketing.uniqueConditions.chkHavePhone !=="" || checkTelemarketing.uniqueConditions.chkValidEmails!=="" || checkTelemarketing.uniqueConditions.optUnique !=="" || checkConsumer.telSearch !== "" || checkTelemarketing.age.ageLower !=="" || checkTelemarketing.dob !== "--" || checkTelemarketing.edu.length !== 0){
+                    try {
+                        const res = await axios.post(url + "/telemarketing/find", checkTelemarketing)
+                        setData(res.data)
+                    } catch (err) {
+                        setError(err)
+                    }
+                }else{
+                    try {
+                        const res = await axios.get(url+ "/telemarketing");
                         setData(res.data)
                     } catch (err) {
                         setError(err)
@@ -369,7 +406,13 @@ export const StateContext = ({ children }) => {
                 setSICValue,
                 SICValue,
                 setNaicsCodeValue,
-                naicsCodeValue
+                naicsCodeValue,
+                setAge,
+                Age,
+                setTelDOB,
+                telDOB,
+                setEdu,
+                edu
             }}
         >
             {children}

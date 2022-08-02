@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useStateContext } from "../context/StateContext";
 
 const TableForm = () => {
-    const { setTeleMarketingForm, teleMarketingForm } = useStateContext();
+    const { setTeleMarketingForm, teleMarketingForm, setAge, Age, setTelDOB, telDOB, setEdu, edu } = useStateContext();
     const handleChange = (e) => {
         setTeleMarketingForm({
             ...teleMarketingForm,
@@ -10,11 +10,34 @@ const TableForm = () => {
         });
     };
     const handleCheckChange = (e) =>{
+        const {name, value, checked} = e.target
         setTeleMarketingForm({
             ...teleMarketingForm,
-            [e.target.name] : e.target.checked
+            [name] : checked ? value : ""
         })
     }
+
+    const handleAgeChange = (e) =>{
+        setAge({
+            ...Age, [e.target.name] : e.target.value
+        })
+    }
+
+    const handleDOBChange = (e) =>{
+        setTelDOB({
+            ...telDOB, [e.target.name]: e.target.value
+        })
+    }
+
+    const handleEduChange = (e) =>{
+        const checked = e.target.checked
+        const value = e.target.value
+        setEdu(checked ? [...edu, value] : edu.filter(item=> item !==value))
+    }
+
+
+
+
     const [education, setEducation] = useState(false);
     const [buisnessOwner, setBuisnessOwner] = useState(false);
     const [occupation, setOccupation] = useState(false);
@@ -47,7 +70,7 @@ const TableForm = () => {
                                         <tr valign="top">
                                             <td>
                                                 <select
-                                                    onChange={handleChange}
+                                                    onChange={handleAgeChange}
                                                     name="ageLower"
                                                     id="ageLower"
                                                 >
@@ -139,7 +162,7 @@ const TableForm = () => {
                                             </td>
                                             <td>
                                                 <select
-                                                    onChange={handleChange}
+                                                    onChange={handleAgeChange}
                                                     name="ageUpper"
                                                     id="ageUpper"
                                                 >
@@ -246,7 +269,7 @@ const TableForm = () => {
                                 <div align="center">
                                     <label htmlFor="selDOBMonth">DOB:</label>
                                     <select
-                                        onChange={handleChange}
+                                        onChange={handleDOBChange}
                                         name="selDOBMonth"
                                         id="selDOBMonth"
                                         className="dateSelect"
@@ -268,7 +291,7 @@ const TableForm = () => {
                                     </select>{" "}
                                     /
                                     <select
-                                        onChange={handleChange}
+                                        onChange={handleDOBChange}
                                         name="selDOBDay"
                                         id="selDOBDay"
                                         className="dateSelect"
@@ -309,7 +332,7 @@ const TableForm = () => {
                                     </select>{" "}
                                     /
                                     <select
-                                        onChange={handleChange}
+                                        onChange={handleDOBChange}
                                         name="selDOBYear"
                                         id="selDOBYear"
                                         className="dateSelect"
@@ -439,12 +462,11 @@ const TableForm = () => {
                                             <tr>
                                                 <td>
                                                     <input
-                                                        onChange={handleCheckChange}
+                                                        onChange={handleEduChange}
                                                         type="checkbox"
                                                         name="EDUCATION_0"
                                                         id="EDUCATION-0"
                                                         value="Attended Vocational/Technical"
-                                                        checked={teleMarketingForm.EDUCATION_0}
                                                     />{" "}
                                                     <label htmlFor="EDUCATION-0">
                                                         Attended Vocational/Technical
@@ -452,23 +474,21 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleCheckChange}
+                                                        onChange={handleEduChange}
                                                         type="checkbox"
                                                         name="EDUCATION_1"
                                                         id="EDUCATION-1"
                                                         value="Completed College"
-                                                        checked={teleMarketingForm.EDUCATION_1}
                                                     />{" "}
                                                     <label htmlFor="EDUCATION-1">Completed College</label>
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleCheckChange}
+                                                        onChange={handleEduChange}
                                                         type="checkbox"
                                                         name="EDUCATION_2"
                                                         id="EDUCATION-2"
                                                         value="Completed Graduate School"
-                                                        checked={teleMarketingForm.EDUCATION_2}
                                                     />{" "}
                                                     <label htmlFor="EDUCATION-2">
                                                         Completed Graduate School
@@ -476,12 +496,11 @@ const TableForm = () => {
                                                 </td>
                                                 <td>
                                                     <input
-                                                        onChange={handleCheckChange}
+                                                        onChange={handleEduChange}
                                                         type="checkbox"
                                                         name="EDUCATION_3"
                                                         id="EDUCATION-3"
                                                         value="Completed High School"
-                                                        checked={teleMarketingForm.EDUCATION_3}
                                                     />{" "}
                                                     <label htmlFor="EDUCATION-3">
                                                         Completed High School

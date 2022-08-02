@@ -15,7 +15,7 @@ import URLdataResult from "./form/URLdataResult";
 import { useStateContext } from "./context/StateContext";
 
 const TelemarketingConsumer = () => {
-    const {isLoggedIn} = useStateContext()
+    const {isLoggedIn, searchQuery} = useStateContext()
     return (
         <>
             <section className="section section-xs content">
@@ -54,8 +54,9 @@ const TelemarketingConsumer = () => {
                                         <br />
                                         <br />
                                         <div align="center">
-                                            <a
-                                                href="@"
+                                            <button
+                                                type="button"
+                                                onClick={searchQuery}
                                                 style={{
                                                     textDecoration: "none",
                                                     color: "#F00",
@@ -67,7 +68,7 @@ const TelemarketingConsumer = () => {
                                                 title="Search Now or alt-s"
                                             >
                                                 Check Record Count
-                                            </a>
+                                            </button>
                                         </div>
                                         <br />
                                     </div>

@@ -3,14 +3,15 @@ import { useStateContext } from "../context/StateContext";
 
 const UniqueTelephoneEmail = () => {
     const {setUniqueTelephoneEmail, uniqueTelephoneEmail} = useStateContext()
-    const handleChange = (e) =>{
+    const handleChange = (e) =>{  
         setUniqueTelephoneEmail({
             ...uniqueTelephoneEmail, [e.target.name] : e.target.value
         })
     }
     const handleCheckChange = (e) =>{
+        const {name, value, checked} = e.target
         setUniqueTelephoneEmail({
-            ...uniqueTelephoneEmail, [e.target.name] : e.target.checked
+            ...uniqueTelephoneEmail, [name] : checked ? value : ""
         })
     }
     return (
