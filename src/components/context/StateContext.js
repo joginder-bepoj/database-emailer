@@ -95,6 +95,20 @@ export const StateContext = ({ children }) => {
     const [Age, setAge] = useState({ageLower: "", ageUpper: "",})
     const [telDOB, setTelDOB] = useState({ selDOBMonth: "", selDOBDay: "", selDOBYear: ""})
     const [edu, setEdu] = useState([])
+    const [businessOwner, setBusinessOwner] = useState([])
+    const [occupationsGeneral, setOccupationsGeneral] = useState([])
+    const [occupationDetailed, setOccupationDetailed] = useState([])
+    const [languages, setLanguages] = useState([])
+    const [ethnicitiesOP, setEthnicitiesOP] = useState([])
+    const [ethnicGroup, setEthnicGroup] = useState([])
+    const [religions, setReligions] = useState([])
+    const [childrenAndMartial, setChildrenAndMartial] = useState({
+        NUMBER_OF_CHILDREN: "",
+        PRESENCE_OF_CHILDREN: "",
+        SEX_OF_CHILDREN: "",
+        MARITAL_STATUS: ""
+    })
+    const [childAndAdult, setChildAndAdult] = useState([])
     const resultRef = useRef();
 
     let checkConsumer = {
@@ -178,7 +192,16 @@ export const StateContext = ({ children }) => {
         telSearch: telSearch.taPhones,
         age: Age,
         dob: telDOB.selDOBYear + "-" + telDOB.selDOBMonth + "-" + telDOB.selDOBDay,
-        edu: edu
+        edu: edu,
+        businessOwner: businessOwner,
+        generalOccupation : occupationsGeneral,
+        detailedOccupation: occupationDetailed,
+        languages: languages,
+        ethnicities: ethnicitiesOP,
+        ethnicGroup: ethnicGroup,
+        religions: religions,
+        childrenAndMartial: childrenAndMartial,
+        childAndAdult: childAndAdult
     }
 
     console.log(checkTelemarketing, "checkTelemarketing")
@@ -271,7 +294,7 @@ export const StateContext = ({ children }) => {
             fetchData()
         }else if(location.pathname === "/database-emailer/telemarketing"){
             const fetchData = async() =>{
-                if(checkTelemarketing.country !=="" || checkTelemarketing.city !== "" || checkTelemarketing.country !== "" || checkTelemarketing.state.length !==0 || checkTelemarketing.email_address !== "" || checkTelemarketing.zip !=="" || checkTelemarketing.emailDomain.length !== 0 || checkTelemarketing.uniqueConditions.chkDoNotCall !=="" || checkTelemarketing.uniqueConditions.chkHavePhone !=="" || checkTelemarketing.uniqueConditions.chkValidEmails!=="" || checkTelemarketing.uniqueConditions.optUnique !=="" || checkConsumer.telSearch !== "" || checkTelemarketing.age.ageLower !=="" || checkTelemarketing.dob !== "--" || checkTelemarketing.edu.length !== 0){
+                if(checkTelemarketing.country !=="" || checkTelemarketing.city !== "" || checkTelemarketing.country !== "" || checkTelemarketing.state.length !==0 || checkTelemarketing.email_address !== "" || checkTelemarketing.zip !=="" || checkTelemarketing.emailDomain.length !== 0 || checkTelemarketing.uniqueConditions.chkDoNotCall !=="" || checkTelemarketing.uniqueConditions.chkHavePhone !=="" || checkTelemarketing.uniqueConditions.chkValidEmails!=="" || checkTelemarketing.uniqueConditions.optUnique !=="" || checkTelemarketing.telSearch !== "" || checkTelemarketing.age.ageLower !=="" || checkTelemarketing.dob !== "--" || checkTelemarketing.edu.length !== 0 || checkTelemarketing.businessOwner.length !== 0 || checkTelemarketing.generalOccupation.length !== 0 || checkTelemarketing.detailedOccupation.length !==0 || checkTelemarketing.languages.length !==0 || checkTelemarketing.ethnicities.length !==0 || checkTelemarketing.ethnicGroup.length !==0 || checkTelemarketing.religions.length !==0 || checkTelemarketing.childrenAndMartial.NUMBER_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.PRESENCE_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.SEX_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.MARITAL_STATUS !=="" || checkTelemarketing.childAndAdult.length !==0){
                     try {
                         const res = await axios.post(url + "/telemarketing/find", checkTelemarketing)
                         setData(res.data)
@@ -412,7 +435,25 @@ export const StateContext = ({ children }) => {
                 setTelDOB,
                 telDOB,
                 setEdu,
-                edu
+                edu,
+                setBusinessOwner,
+                businessOwner,
+                setOccupationsGeneral,
+                occupationsGeneral,
+                occupationDetailed, 
+                setOccupationDetailed,
+                setLanguages,
+                languages,
+                setEthnicitiesOP,
+                ethnicitiesOP,
+                setEthnicGroup,
+                ethnicGroup,
+                setReligions,
+                religions,
+                setChildrenAndMartial,
+                childrenAndMartial,
+                setChildAndAdult,
+                childAndAdult
             }}
         >
             {children}
