@@ -52,7 +52,12 @@ const TableForm = () => {
     setWater,
     setSewer,
     setGenerations,
-    setNumAdults
+    setNumAdults,
+    setDiscovercard,
+    setVisaCard,
+    setMasterCard,
+    setAmericanCard,
+    setGasRetailCard,
   } = useStateContext();
   const handleChange = (e) => {
     setTeleMarketingForm({
@@ -203,6 +208,22 @@ const TableForm = () => {
   }
   const handleGenerationChange = (e) =>{
     setGenerations(e.target.value)
+  }
+
+  const handleDiscoverChange = (e) =>{
+    setDiscovercard(e.target.value)
+  }
+  const handleMasterChange = (e) =>{
+    setMasterCard(e.target.value)
+  }
+  const handleVisaChange = (e) =>{
+    setVisaCard(e.target.value)
+  }
+  const handleAmericanChange = (e) =>{
+    setAmericanCard(e.target.value)
+  }
+  const handleGasRetailChange = (e) =>{
+    setGasRetailCard(e.target.value)
   }
 
 
@@ -10983,7 +11004,7 @@ const TableForm = () => {
               <fieldset id="fsDISCOVER_CARD">
                 <legend>Discover Card User</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleDiscoverChange}
                   type="radio"
                   name="DISCOVER_CARD"
                   id="DISCOVER_CARD_Y"
@@ -10991,7 +11012,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="DISCOVER_CARD_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleDiscoverChange}
                   type="radio"
                   name="DISCOVER_CARD"
                   id="DISCOVER_CARD_N"
@@ -10999,7 +11020,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="DISCOVER_CARD_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleDiscoverChange}
                   type="radio"
                   name="DISCOVER_CARD"
                   id="DISCOVER_CARD_NULL"
@@ -11031,7 +11052,7 @@ const TableForm = () => {
               <fieldset id="fsMASTERCARD">
                 <legend>MASTERCARD User</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleMasterChange}
                   type="radio"
                   name="MASTERCARD"
                   id="MASTERCARD_Y"
@@ -11039,7 +11060,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="MASTERCARD_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleMasterChange}
                   type="radio"
                   name="MASTERCARD"
                   id="MASTERCARD_N"
@@ -11047,7 +11068,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="MASTERCARD_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleMasterChange}
                   type="radio"
                   name="MASTERCARD"
                   id="MASTERCARD_NULL"
@@ -11081,7 +11102,7 @@ const TableForm = () => {
               <fieldset id="fsVISA">
                 <legend>VISA Card User</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleVisaChange}
                   type="radio"
                   name="VISA"
                   id="VISA_Y"
@@ -11089,7 +11110,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="VISA_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleVisaChange}
                   type="radio"
                   name="VISA"
                   id="VISA_N"
@@ -11097,7 +11118,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="VISA_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleVisaChange}
                   type="radio"
                   name="VISA"
                   id="VISA_NULL"
@@ -11129,7 +11150,7 @@ const TableForm = () => {
               <fieldset id="fsAMERICAN_EXPRESS">
                 <legend>American Express Card User</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleAmericanChange}
                   type="radio"
                   name="AMERICAN_EXPRESS"
                   id="AMERICAN_EXPRESS_Y"
@@ -11137,7 +11158,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="AMERICAN_EXPRESS_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleAmericanChange}
                   type="radio"
                   name="AMERICAN_EXPRESS"
                   id="AMERICAN_EXPRESS_N"
@@ -11145,7 +11166,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="AMERICAN_EXPRESS_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleAmericanChange}
                   type="radio"
                   name="AMERICAN_EXPRESS"
                   id="AMERICAN_EXPRESS_NULL"
@@ -11179,7 +11200,7 @@ const TableForm = () => {
               <fieldset id="fsGASOLINE_OR_RETAIL_CARD_REGULAR">
                 <legend>Gas, Department, Retail Card Holder</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleGasRetailChange}
                   type="radio"
                   name="GASOLINE_OR_RETAIL_CARD_REGULAR"
                   id="GASOLINE_OR_RETAIL_CARD_REGULAR_Y"
@@ -11187,7 +11208,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="GASOLINE_OR_RETAIL_CARD_REGULAR_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleGasRetailChange}
                   type="radio"
                   name="GASOLINE_OR_RETAIL_CARD_REGULAR"
                   id="GASOLINE_OR_RETAIL_CARD_REGULAR_N"
@@ -11195,7 +11216,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="GASOLINE_OR_RETAIL_CARD_REGULAR_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleGasRetailChange}
                   type="radio"
                   name="GASOLINE_OR_RETAIL_CARD_REGULAR"
                   id="GASOLINE_OR_RETAIL_CARD_REGULAR_NULL"
