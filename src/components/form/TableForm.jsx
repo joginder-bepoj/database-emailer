@@ -28,19 +28,36 @@ const TableForm = () => {
     setChildrenAndMartial,
     childrenAndMartial,
     setChildAndAdult,
-    childAndAdult
+    childAndAdult,
+    setIncomeHH,
+    incomeHH,
+    setNetWorth,
+    netWorth,
+    setCreditRating,
+    creditRating,
+    setFamily,
+    setOwnerRenter,
+    setAddress,
+    address,
+    setResidentLength,
+    residentLength,
+    setMortgageDate,
+    mortgageDate,
+    setHomeMarket,
+    homeMarket,
+    setFuel,
+    setAirCond,
+    setSmokker,
+    setGenderMF,
+    setWater,
+    setSewer,
+    setGenerations,
+    setNumAdults
   } = useStateContext();
   const handleChange = (e) => {
     setTeleMarketingForm({
       ...teleMarketingForm,
       [e.target.name]: e.target.value,
-    });
-  };
-  const handleCheckChange = (e) => {
-    const { name, value, checked } = e.target;
-    setTeleMarketingForm({
-      ...teleMarketingForm,
-      [name]: checked ? value : "",
     });
   };
 
@@ -129,6 +146,65 @@ const TableForm = () => {
         checked ? [...childAndAdult, value] : childAndAdult.filter(item => item !== value)
     )
   }
+
+  const handleIncChange = (e) =>{
+    setIncomeHH({...incomeHH, [e.target.name]: e.target.value})
+  }
+  const handleNetChange = (e) =>{
+    setNetWorth({...netWorth, [e.target.name]: e.target.value})
+  }
+  const handleCreditChange = (e) =>{
+    setCreditRating({...creditRating, [e.target.name]: e.target.value})
+  }
+
+  const handleFamilyChange = (e) =>{
+    setFamily(e.target.value)
+  }
+  const handlePropChange = (e) =>{
+    setOwnerRenter(e.target.value)
+  }
+
+  const handleAddressChange = (e) =>{
+    const {checked, value} = e.target;
+    setAddress(checked ? [...address, value]: address.filter(item => item !== value))
+  }
+
+  const handleResidentChange = (e) =>{
+    setResidentLength({...residentLength, [e.target.name]: e.target.value})
+  }
+
+  const handleMortgageChange = (e) =>{
+    setMortgageDate({...mortgageDate, [e.target.name]: e.target.value})
+  }
+  const handleHomeMarkChange = (e) =>{
+    setHomeMarket({...homeMarket, [e.target.name]: e.target.value})
+  }
+
+  const handleFuelChange = (e) =>{
+    setFuel(e.target.value)
+  }
+  const handleAirChange = (e) =>{
+    setAirCond(e.target.value)
+  }
+  const handleGenderChange = (e) =>{
+    setGenderMF(e.target.value)
+  }
+  const handleWaterChange = (e) =>{
+    setWater(e.target.value)
+  }
+  const handleSewerChange =(e) =>{
+    setSewer(e.target.value)
+  }
+  const handleSomkkerChange = (e) =>{
+    setSmokker(e.target.value)
+  }
+  const handleAdultsChange = (e) =>{
+    setNumAdults(e.target.value)
+  }
+  const handleGenerationChange = (e) =>{
+    setGenerations(e.target.value)
+  }
+
 
   const [education, setEducation] = useState(false);
   const [buisnessOwner, setBuisnessOwner] = useState(false);
@@ -5051,9 +5127,7 @@ const TableForm = () => {
                             type="checkbox"
                             name="LANGUAGE_0"
                             id="LANGUAGE-0"
-                            value="Afrikaans"
-                            checked={teleMarketingForm.LANGUAGE_0}
-                          />{" "}
+                            value="Afrikaans"                          />{" "}
                           <label htmlFor="LANGUAGE-0">Afrikaans</label>
                         </td>
                         <td>
@@ -5062,9 +5136,7 @@ const TableForm = () => {
                             type="checkbox"
                             name="LANGUAGE_1"
                             id="LANGUAGE-1"
-                            value="Albanian"
-                            checked={teleMarketingForm.LANGUAGE_1}
-                          />{" "}
+                            value="Albanian"                          />{" "}
                           <label htmlFor="LANGUAGE-1">Albanian</label>
                         </td>
                         <td>
@@ -5073,9 +5145,7 @@ const TableForm = () => {
                             type="checkbox"
                             name="LANGUAGE_2"
                             id="LANGUAGE-2"
-                            value="Amharic"
-                            checked={teleMarketingForm.LANGUAGE_2}
-                          />{" "}
+                            value="Amharic"                          />{" "}
                           <label htmlFor="LANGUAGE-2">Amharic</label>
                         </td>
                         <td>
@@ -5084,9 +5154,7 @@ const TableForm = () => {
                             type="checkbox"
                             name="LANGUAGE_3"
                             id="LANGUAGE-3"
-                            value="Arabic"
-                            checked={teleMarketingForm.LANGUAGE_3}
-                          />{" "}
+                            value="Arabic"                          />{" "}
                           <label htmlFor="LANGUAGE-3">Arabic</label>
                         </td>
                         <td>
@@ -5095,9 +5163,7 @@ const TableForm = () => {
                             type="checkbox"
                             name="LANGUAGE_4"
                             id="LANGUAGE-4"
-                            value="Armenian"
-                            checked={teleMarketingForm.LANGUAGE_4}
-                          />{" "}
+                            value="Armenian"                          />{" "}
                           <label htmlFor="LANGUAGE-4">Armenian</label>
                         </td>
                         <td>
@@ -5106,9 +5172,7 @@ const TableForm = () => {
                             type="checkbox"
                             name="LANGUAGE_5"
                             id="LANGUAGE-5"
-                            value="Ashanti"
-                            checked={teleMarketingForm.LANGUAGE_5}
-                          />{" "}
+                            value="Ashanti"                          />{" "}
                           <label htmlFor="LANGUAGE-5">Ashanti</label>
                         </td>
                       </tr>
@@ -5119,9 +5183,7 @@ const TableForm = () => {
                             type="checkbox"
                             name="LANGUAGE_6"
                             id="LANGUAGE-6"
-                            value="Azeri"
-                            checked={teleMarketingForm.LANGUAGE_6}
-                          />{" "}
+                            value="Azeri"                          />{" "}
                           <label htmlFor="LANGUAGE-6">Azeri</label>
                         </td>
                         <td>
@@ -5130,9 +5192,7 @@ const TableForm = () => {
                             type="checkbox"
                             name="LANGUAGE_7"
                             id="LANGUAGE-7"
-                            value="Bantu"
-                            checked={teleMarketingForm.LANGUAGE_7}
-                          />{" "}
+                            value="Bantu"                          />{" "}
                           <label htmlFor="LANGUAGE-7">Bantu</label>
                         </td>
                         <td>
@@ -5141,9 +5201,7 @@ const TableForm = () => {
                             type="checkbox"
                             name="LANGUAGE_8"
                             id="LANGUAGE-8"
-                            value="Basque"
-                            checked={teleMarketingForm.LANGUAGE_8}
-                          />{" "}
+                            value="Basque"                          />{" "}
                           <label htmlFor="LANGUAGE-8">Basque</label>
                         </td>
                         <td>
@@ -5152,9 +5210,7 @@ const TableForm = () => {
                             type="checkbox"
                             name="LANGUAGE_9"
                             id="LANGUAGE-9"
-                            value="Bengali"
-                            checked={teleMarketingForm.LANGUAGE_9}
-                          />{" "}
+                            value="Bengali"                          />{" "}
                           <label htmlFor="LANGUAGE-9">Bengali</label>
                         </td>
                         <td>
@@ -5164,7 +5220,6 @@ const TableForm = () => {
                             name="LANGUAGE_10"
                             id="LANGUAGE-10"
                             value="Bulgarian"
-                            checked={teleMarketingForm.LANGUAGE_10}
                           />{" "}
                           <label htmlFor="LANGUAGE-10">Bulgarian</label>
                         </td>
@@ -5175,7 +5230,6 @@ const TableForm = () => {
                             name="LANGUAGE_11"
                             id="LANGUAGE-11"
                             value="Burmese"
-                            checked={teleMarketingForm.LANGUAGE_11}
                           />{" "}
                           <label htmlFor="LANGUAGE-11">Burmese</label>
                         </td>
@@ -5188,7 +5242,6 @@ const TableForm = () => {
                             name="LANGUAGE_12"
                             id="LANGUAGE-12"
                             value="Chinese"
-                            checked={teleMarketingForm.LANGUAGE_12}
                           />{" "}
                           <label htmlFor="LANGUAGE-12">Chinese</label>
                         </td>
@@ -5199,7 +5252,6 @@ const TableForm = () => {
                             name="LANGUAGE_13"
                             id="LANGUAGE-13"
                             value="Comorian"
-                            checked={teleMarketingForm.LANGUAGE_13}
                           />{" "}
                           <label htmlFor="LANGUAGE-13">Comorian</label>
                         </td>
@@ -5210,7 +5262,6 @@ const TableForm = () => {
                             name="LANGUAGE_14"
                             id="LANGUAGE-14"
                             value="Czech"
-                            checked={teleMarketingForm.LANGUAGE_14}
                           />{" "}
                           <label htmlFor="LANGUAGE-14">Czech</label>
                         </td>
@@ -5221,7 +5272,6 @@ const TableForm = () => {
                             name="LANGUAGE_15"
                             id="LANGUAGE-15"
                             value="Danish"
-                            checked={teleMarketingForm.LANGUAGE_15}
                           />{" "}
                           <label htmlFor="LANGUAGE-15">Danish</label>
                         </td>
@@ -5232,7 +5282,6 @@ const TableForm = () => {
                             name="LANGUAGE_16"
                             id="LANGUAGE-16"
                             value="Dutch"
-                            checked={teleMarketingForm.LANGUAGE_16}
                           />{" "}
                           <label htmlFor="LANGUAGE-16">Dutch</label>
                         </td>
@@ -5243,7 +5292,6 @@ const TableForm = () => {
                             name="LANGUAGE_17"
                             id="LANGUAGE-17"
                             value="Dzongha"
-                            checked={teleMarketingForm.LANGUAGE_17}
                           />{" "}
                           <label htmlFor="LANGUAGE-17">Dzongha</label>
                         </td>
@@ -5256,7 +5304,6 @@ const TableForm = () => {
                             name="LANGUAGE_18"
                             id="LANGUAGE-18"
                             value="English"
-                            checked={teleMarketingForm.LANGUAGE_18}
                           />{" "}
                           <label htmlFor="LANGUAGE-18">English</label>
                         </td>
@@ -5267,7 +5314,6 @@ const TableForm = () => {
                             name="LANGUAGE_19"
                             id="LANGUAGE-19"
                             value="Estonian"
-                            checked={teleMarketingForm.LANGUAGE_19}
                           />{" "}
                           <label htmlFor="LANGUAGE-19">Estonian</label>
                         </td>
@@ -5278,7 +5324,6 @@ const TableForm = () => {
                             name="LANGUAGE_20"
                             id="LANGUAGE-20"
                             value="Farsi"
-                            checked={teleMarketingForm.LANGUAGE_20}
                           />{" "}
                           <label htmlFor="LANGUAGE-20">Farsi</label>
                         </td>
@@ -5289,7 +5334,6 @@ const TableForm = () => {
                             name="LANGUAGE_21"
                             id="LANGUAGE-21"
                             value="Finnish"
-                            checked={teleMarketingForm.LANGUAGE_21}
                           />{" "}
                           <label htmlFor="LANGUAGE-21">Finnish</label>
                         </td>
@@ -5300,7 +5344,6 @@ const TableForm = () => {
                             name="LANGUAGE_22"
                             id="LANGUAGE-22"
                             value="French"
-                            checked={teleMarketingForm.LANGUAGE_22}
                           />{" "}
                           <label htmlFor="LANGUAGE-22">French</label>
                         </td>
@@ -5311,7 +5354,6 @@ const TableForm = () => {
                             name="LANGUAGE_23"
                             id="LANGUAGE-23"
                             value="Ga"
-                            checked={teleMarketingForm.LANGUAGE_23}
                           />{" "}
                           <label htmlFor="LANGUAGE-23">Ga</label>
                         </td>
@@ -5324,7 +5366,6 @@ const TableForm = () => {
                             name="LANGUAGE_24"
                             id="LANGUAGE-24"
                             value="Georgian"
-                            checked={teleMarketingForm.LANGUAGE_24}
                           />{" "}
                           <label htmlFor="LANGUAGE-24">Georgian</label>
                         </td>
@@ -5335,7 +5376,6 @@ const TableForm = () => {
                             name="LANGUAGE_25"
                             id="LANGUAGE-25"
                             value="German"
-                            checked={teleMarketingForm.LANGUAGE_25}
                           />{" "}
                           <label htmlFor="LANGUAGE-25">German</label>
                         </td>
@@ -5346,7 +5386,6 @@ const TableForm = () => {
                             name="LANGUAGE_26"
                             id="LANGUAGE-26"
                             value="Greek"
-                            checked={teleMarketingForm.LANGUAGE_26}
                           />{" "}
                           <label htmlFor="LANGUAGE-26">Greek</label>
                         </td>
@@ -5357,7 +5396,6 @@ const TableForm = () => {
                             name="LANGUAGE_27"
                             id="LANGUAGE-27"
                             value="Hausa"
-                            checked={teleMarketingForm.LANGUAGE_27}
                           />{" "}
                           <label htmlFor="LANGUAGE-27">Hausa</label>
                         </td>
@@ -5368,7 +5406,6 @@ const TableForm = () => {
                             name="LANGUAGE_28"
                             id="LANGUAGE-28"
                             value="Hebrew"
-                            checked={teleMarketingForm.LANGUAGE_28}
                           />{" "}
                           <label htmlFor="LANGUAGE-28">Hebrew</label>
                         </td>
@@ -5379,7 +5416,6 @@ const TableForm = () => {
                             name="LANGUAGE_29"
                             id="LANGUAGE-29"
                             value="Hindi"
-                            checked={teleMarketingForm.LANGUAGE_29}
                           />{" "}
                           <label htmlFor="LANGUAGE-29">Hindi</label>
                         </td>
@@ -5392,7 +5428,6 @@ const TableForm = () => {
                             name="LANGUAGE_30"
                             id="LANGUAGE-30"
                             value="Hungarian"
-                            checked={teleMarketingForm.LANGUAGE_30}
                           />{" "}
                           <label htmlFor="LANGUAGE-30">Hungarian</label>
                         </td>
@@ -5403,7 +5438,6 @@ const TableForm = () => {
                             name="LANGUAGE_31"
                             id="LANGUAGE-31"
                             value="Icelandic"
-                            checked={teleMarketingForm.LANGUAGE_31}
                           />{" "}
                           <label htmlFor="LANGUAGE-31">Icelandic</label>
                         </td>
@@ -5414,7 +5448,6 @@ const TableForm = () => {
                             name="LANGUAGE_32"
                             id="LANGUAGE-32"
                             value="Indonesian"
-                            checked={teleMarketingForm.LANGUAGE_32}
                           />{" "}
                           <label htmlFor="LANGUAGE-32">Indonesian</label>
                         </td>
@@ -5425,7 +5458,6 @@ const TableForm = () => {
                             name="LANGUAGE_33"
                             id="LANGUAGE-33"
                             value="Italian"
-                            checked={teleMarketingForm.LANGUAGE_33}
                           />{" "}
                           <label htmlFor="LANGUAGE-33">Italian</label>
                         </td>
@@ -5436,7 +5468,6 @@ const TableForm = () => {
                             name="LANGUAGE_34"
                             id="LANGUAGE-34"
                             value="Japanese"
-                            checked={teleMarketingForm.LANGUAGE_34}
                           />{" "}
                           <label htmlFor="LANGUAGE-34">Japanese</label>
                         </td>
@@ -5447,7 +5478,6 @@ const TableForm = () => {
                             name="LANGUAGE_35"
                             id="LANGUAGE-35"
                             value="Kazakh"
-                            checked={teleMarketingForm.LANGUAGE_35}
                           />{" "}
                           <label htmlFor="LANGUAGE-35">Kazakh</label>
                         </td>
@@ -5460,7 +5490,6 @@ const TableForm = () => {
                             name="LANGUAGE_36"
                             id="LANGUAGE-36"
                             value="Khmer"
-                            checked={teleMarketingForm.LANGUAGE_36}
                           />{" "}
                           <label htmlFor="LANGUAGE-36">Khmer</label>
                         </td>
@@ -5471,7 +5500,6 @@ const TableForm = () => {
                             name="LANGUAGE_37"
                             id="LANGUAGE-37"
                             value="Kirghiz"
-                            checked={teleMarketingForm.LANGUAGE_37}
                           />{" "}
                           <label htmlFor="LANGUAGE-37">Kirghiz</label>
                         </td>
@@ -5482,7 +5510,6 @@ const TableForm = () => {
                             name="LANGUAGE_38"
                             id="LANGUAGE-38"
                             value="Korean"
-                            checked={teleMarketingForm.LANGUAGE_38}
                           />{" "}
                           <label htmlFor="LANGUAGE-38">Korean</label>
                         </td>
@@ -5493,7 +5520,6 @@ const TableForm = () => {
                             name="LANGUAGE_39"
                             id="LANGUAGE-39"
                             value="Laotian (Include Hmong)"
-                            checked={teleMarketingForm.LANGUAGE_39}
                           />{" "}
                           <label htmlFor="LANGUAGE-39">
                             Laotian (Include Hmong)
@@ -5506,7 +5532,6 @@ const TableForm = () => {
                             name="LANGUAGE_40"
                             id="LANGUAGE-40"
                             value="Latvian"
-                            checked={teleMarketingForm.LANGUAGE_40}
                           />{" "}
                           <label htmlFor="LANGUAGE-40">Latvian</label>
                         </td>
@@ -5517,7 +5542,6 @@ const TableForm = () => {
                             name="LANGUAGE_41"
                             id="LANGUAGE-41"
                             value="Lithuanian"
-                            checked={teleMarketingForm.LANGUAGE_41}
                           />{" "}
                           <label htmlFor="LANGUAGE-41">Lithuanian</label>
                         </td>
@@ -5530,7 +5554,6 @@ const TableForm = () => {
                             name="LANGUAGE_42"
                             id="LANGUAGE-42"
                             value="Macedonian"
-                            checked={teleMarketingForm.LANGUAGE_42}
                           />{" "}
                           <label htmlFor="LANGUAGE-42">Macedonian</label>
                         </td>
@@ -5541,7 +5564,6 @@ const TableForm = () => {
                             name="LANGUAGE_43"
                             id="LANGUAGE-43"
                             value="Malagasy"
-                            checked={teleMarketingForm.LANGUAGE_43}
                           />{" "}
                           <label htmlFor="LANGUAGE-43">Malagasy</label>
                         </td>
@@ -5552,7 +5574,6 @@ const TableForm = () => {
                             name="LANGUAGE_44"
                             id="LANGUAGE-44"
                             value="Malay"
-                            checked={teleMarketingForm.LANGUAGE_44}
                           />{" "}
                           <label htmlFor="LANGUAGE-44">Malay</label>
                         </td>
@@ -5563,7 +5584,6 @@ const TableForm = () => {
                             name="LANGUAGE_45"
                             id="LANGUAGE-45"
                             value="Moldavian"
-                            checked={teleMarketingForm.LANGUAGE_45}
                           />{" "}
                           <label htmlFor="LANGUAGE-45">Moldavian</label>
                         </td>
@@ -5574,7 +5594,6 @@ const TableForm = () => {
                             name="LANGUAGE_46"
                             id="LANGUAGE-46"
                             value="Mongolian"
-                            checked={teleMarketingForm.LANGUAGE_46}
                           />{" "}
                           <label htmlFor="LANGUAGE-46">Mongolian</label>
                         </td>
@@ -5585,7 +5604,6 @@ const TableForm = () => {
                             name="LANGUAGE_47"
                             id="LANGUAGE-47"
                             value="Nepali"
-                            checked={teleMarketingForm.LANGUAGE_47}
                           />{" "}
                           <label htmlFor="LANGUAGE-47">Nepali</label>
                         </td>
@@ -5598,7 +5616,6 @@ const TableForm = () => {
                             name="LANGUAGE_48"
                             id="LANGUAGE-48"
                             value="Norwegian"
-                            checked={teleMarketingForm.LANGUAGE_48}
                           />{" "}
                           <label htmlFor="LANGUAGE-48">Norwegian</label>
                         </td>
@@ -5609,7 +5626,6 @@ const TableForm = () => {
                             name="LANGUAGE_49"
                             id="LANGUAGE-49"
                             value="Oromo"
-                            checked={teleMarketingForm.LANGUAGE_49}
                           />{" "}
                           <label htmlFor="LANGUAGE-49">Oromo</label>
                         </td>
@@ -5620,7 +5636,6 @@ const TableForm = () => {
                             name="LANGUAGE_50"
                             id="LANGUAGE-50"
                             value="Pashto"
-                            checked={teleMarketingForm.LANGUAGE_50}
                           />{" "}
                           <label htmlFor="LANGUAGE-50">Pashto</label>
                         </td>
@@ -5631,7 +5646,6 @@ const TableForm = () => {
                             name="LANGUAGE_51"
                             id="LANGUAGE-51"
                             value="Polish"
-                            checked={teleMarketingForm.LANGUAGE_51}
                           />{" "}
                           <label htmlFor="LANGUAGE-51">Polish</label>
                         </td>
@@ -5642,7 +5656,6 @@ const TableForm = () => {
                             name="LANGUAGE_52"
                             id="LANGUAGE-52"
                             value="Portuguese"
-                            checked={teleMarketingForm.LANGUAGE_52}
                           />{" "}
                           <label htmlFor="LANGUAGE-52">Portuguese</label>
                         </td>
@@ -5653,7 +5666,6 @@ const TableForm = () => {
                             name="LANGUAGE_53"
                             id="LANGUAGE-53"
                             value="Romanian"
-                            checked={teleMarketingForm.LANGUAGE_53}
                           />{" "}
                           <label htmlFor="LANGUAGE-53">Romanian</label>
                         </td>
@@ -5666,7 +5678,6 @@ const TableForm = () => {
                             name="LANGUAGE_54"
                             id="LANGUAGE-54"
                             value="Russian"
-                            checked={teleMarketingForm.LANGUAGE_54}
                           />{" "}
                           <label htmlFor="LANGUAGE-54">Russian</label>
                         </td>
@@ -5677,7 +5688,6 @@ const TableForm = () => {
                             name="LANGUAGE_55"
                             id="LANGUAGE-55"
                             value="Samoan"
-                            checked={teleMarketingForm.LANGUAGE_55}
                           />{" "}
                           <label htmlFor="LANGUAGE-55">Samoan</label>
                         </td>
@@ -5688,7 +5698,6 @@ const TableForm = () => {
                             name="LANGUAGE_56"
                             id="LANGUAGE-56"
                             value="Serbo-Croatian"
-                            checked={teleMarketingForm.LANGUAGE_56}
                           />{" "}
                           <label htmlFor="LANGUAGE-56">Serbo-Croatian</label>
                         </td>
@@ -5699,7 +5708,6 @@ const TableForm = () => {
                             name="LANGUAGE_57"
                             id="LANGUAGE-57"
                             value="Sinhalese"
-                            checked={teleMarketingForm.LANGUAGE_57}
                           />{" "}
                           <label htmlFor="LANGUAGE-57">Sinhalese</label>
                         </td>
@@ -5710,7 +5718,6 @@ const TableForm = () => {
                             name="LANGUAGE_58"
                             id="LANGUAGE-58"
                             value="Slovakian"
-                            checked={teleMarketingForm.LANGUAGE_58}
                           />{" "}
                           <label htmlFor="LANGUAGE-58">Slovakian</label>
                         </td>
@@ -5721,7 +5728,6 @@ const TableForm = () => {
                             name="LANGUAGE_59"
                             id="LANGUAGE-59"
                             value="Slovenian"
-                            checked={teleMarketingForm.LANGUAGE_59}
                           />{" "}
                           <label htmlFor="LANGUAGE-59">Slovenian</label>
                         </td>
@@ -5734,7 +5740,6 @@ const TableForm = () => {
                             name="LANGUAGE_60"
                             id="LANGUAGE-60"
                             value="Somali"
-                            checked={teleMarketingForm.LANGUAGE_60}
                           />{" "}
                           <label htmlFor="LANGUAGE-60">Somali</label>
                         </td>
@@ -5745,7 +5750,6 @@ const TableForm = () => {
                             name="LANGUAGE_61"
                             id="LANGUAGE-61"
                             value="Sotho"
-                            checked={teleMarketingForm.LANGUAGE_61}
                           />{" "}
                           <label htmlFor="LANGUAGE-61">Sotho</label>
                         </td>
@@ -5756,7 +5760,6 @@ const TableForm = () => {
                             name="LANGUAGE_62"
                             id="LANGUAGE-62"
                             value="Spanish"
-                            checked={teleMarketingForm.LANGUAGE_62}
                           />{" "}
                           <label htmlFor="LANGUAGE-62">Spanish</label>
                         </td>
@@ -5767,7 +5770,6 @@ const TableForm = () => {
                             name="LANGUAGE_63"
                             id="LANGUAGE-63"
                             value="Swahili"
-                            checked={teleMarketingForm.LANGUAGE_63}
                           />{" "}
                           <label htmlFor="LANGUAGE-63">Swahili</label>
                         </td>
@@ -5778,7 +5780,6 @@ const TableForm = () => {
                             name="LANGUAGE_64"
                             id="LANGUAGE-64"
                             value="Swazi"
-                            checked={teleMarketingForm.LANGUAGE_64}
                           />{" "}
                           <label htmlFor="LANGUAGE-64">Swazi</label>
                         </td>
@@ -5789,7 +5790,6 @@ const TableForm = () => {
                             name="LANGUAGE_65"
                             id="LANGUAGE-65"
                             value="Swedish"
-                            checked={teleMarketingForm.LANGUAGE_65}
                           />{" "}
                           <label htmlFor="LANGUAGE-65">Swedish</label>
                         </td>
@@ -5802,7 +5802,6 @@ const TableForm = () => {
                             name="LANGUAGE_66"
                             id="LANGUAGE-66"
                             value="Tagalog"
-                            checked={teleMarketingForm.LANGUAGE_66}
                           />{" "}
                           <label htmlFor="LANGUAGE-66">Tagalog</label>
                         </td>
@@ -5813,7 +5812,6 @@ const TableForm = () => {
                             name="LANGUAGE_67"
                             id="LANGUAGE-67"
                             value="Tajik"
-                            checked={teleMarketingForm.LANGUAGE_67}
                           />{" "}
                           <label htmlFor="LANGUAGE-67">Tajik</label>
                         </td>
@@ -5824,7 +5822,6 @@ const TableForm = () => {
                             name="LANGUAGE_68"
                             id="LANGUAGE-68"
                             value="Thai"
-                            checked={teleMarketingForm.LANGUAGE_68}
                           />{" "}
                           <label htmlFor="LANGUAGE-68">Thai</label>
                         </td>
@@ -5835,7 +5832,6 @@ const TableForm = () => {
                             name="LANGUAGE_69"
                             id="LANGUAGE-69"
                             value="Tibetan"
-                            checked={teleMarketingForm.LANGUAGE_69}
                           />{" "}
                           <label htmlFor="LANGUAGE-69">Tibetan</label>
                         </td>
@@ -5846,7 +5842,6 @@ const TableForm = () => {
                             name="LANGUAGE_70"
                             id="LANGUAGE-70"
                             value="Tongan"
-                            checked={teleMarketingForm.LANGUAGE_70}
                           />{" "}
                           <label htmlFor="LANGUAGE-70">Tongan</label>
                         </td>
@@ -5857,7 +5852,6 @@ const TableForm = () => {
                             name="LANGUAGE_71"
                             id="LANGUAGE-71"
                             value="Tswana"
-                            checked={teleMarketingForm.LANGUAGE_71}
                           />{" "}
                           <label htmlFor="LANGUAGE-71">Tswana</label>
                         </td>
@@ -5870,7 +5864,6 @@ const TableForm = () => {
                             name="LANGUAGE_72"
                             id="LANGUAGE-72"
                             value="Turkish"
-                            checked={teleMarketingForm.LANGUAGE_72}
                           />{" "}
                           <label htmlFor="LANGUAGE-72">Turkish</label>
                         </td>
@@ -5881,7 +5874,6 @@ const TableForm = () => {
                             name="LANGUAGE_73"
                             id="LANGUAGE-73"
                             value="Turkmeni"
-                            checked={teleMarketingForm.LANGUAGE_73}
                           />{" "}
                           <label htmlFor="LANGUAGE-73">Turkmeni</label>
                         </td>
@@ -5892,7 +5884,6 @@ const TableForm = () => {
                             name="LANGUAGE_74"
                             id="LANGUAGE-74"
                             value="Unknown"
-                            checked={teleMarketingForm.LANGUAGE_74}
                           />{" "}
                           <label htmlFor="LANGUAGE-74">Unknown</label>
                         </td>
@@ -5903,7 +5894,6 @@ const TableForm = () => {
                             name="LANGUAGE_75"
                             id="LANGUAGE-75"
                             value="Urdu"
-                            checked={teleMarketingForm.LANGUAGE_75}
                           />{" "}
                           <label htmlFor="LANGUAGE-75">Urdu</label>
                         </td>
@@ -5914,7 +5904,6 @@ const TableForm = () => {
                             name="LANGUAGE_76"
                             id="LANGUAGE-76"
                             value="Uzbeki"
-                            checked={teleMarketingForm.LANGUAGE_76}
                           />{" "}
                           <label htmlFor="LANGUAGE-76">Uzbeki</label>
                         </td>
@@ -5925,7 +5914,6 @@ const TableForm = () => {
                             name="LANGUAGE_77"
                             id="LANGUAGE-77"
                             value="Vietnamese"
-                            checked={teleMarketingForm.LANGUAGE_77}
                           />{" "}
                           <label htmlFor="LANGUAGE-77">Vietnamese</label>
                         </td>
@@ -5938,7 +5926,6 @@ const TableForm = () => {
                             name="LANGUAGE_78"
                             id="LANGUAGE-78"
                             value="Xhosa"
-                            checked={teleMarketingForm.LANGUAGE_78}
                           />{" "}
                           <label htmlFor="LANGUAGE-78">Xhosa</label>
                         </td>
@@ -5949,7 +5936,6 @@ const TableForm = () => {
                             name="LANGUAGE_79"
                             id="LANGUAGE-79"
                             value="Zulu"
-                            checked={teleMarketingForm.LANGUAGE_79}
                           />{" "}
                           <label htmlFor="LANGUAGE-79">Zulu</label>
                         </td>
@@ -8497,7 +8483,6 @@ const TableForm = () => {
               </fieldset>
             </td>
           </tr>
-
           <tr valign="top">
             <td width="50%">
               <fieldset>
@@ -8510,7 +8495,7 @@ const TableForm = () => {
                   </div>
                 </div>
                 <select
-                  onChange={handleChange}
+                  onChange={handleIncChange}
                   name="INCOME_ESTIMATED_HH"
                   id="INCOME_ESTIMATED_HH"
                 >
@@ -8548,7 +8533,7 @@ const TableForm = () => {
                   </div>
                 </div>
                 <select
-                  onChange={handleChange}
+                  onChange={handleIncChange}
                   name="INCOME_ESTIMATED_HH_UPPER"
                   id="INCOME_ESTIMATED_HH_UPPER"
                 >
@@ -8615,7 +8600,7 @@ const TableForm = () => {
                     <small>Lower Range or Exact Values</small>
                   </div>
                 </div>
-                <select onChange={handleChange} name="NET_WORTH" id="NET_WORTH">
+                <select onChange={handleNetChange} name="NET_WORTH" id="NET_WORTH">
                   <option value="">Select Estimated Net Worth</option>
                   <option value="1 - 5K">1 - 5K</option>
                   <option value="5K - 10K">5K - 10K</option>
@@ -8639,7 +8624,7 @@ const TableForm = () => {
                   </div>
                 </div>
                 <select
-                  onChange={handleChange}
+                  onChange={handleNetChange}
                   name="NET_WORTH_UPPER"
                   id="NET_WORTH_UPPER"
                 >
@@ -8693,7 +8678,7 @@ const TableForm = () => {
                   </div>
                 </div>
                 <select
-                  onChange={handleChange}
+                  onChange={handleCreditChange}
                   name="CREDIT_RATING"
                   id="CREDIT_RATING"
                 >
@@ -8720,7 +8705,7 @@ const TableForm = () => {
                   </div>
                 </div>
                 <select
-                  onChange={handleChange}
+                  onChange={handleCreditChange}
                   name="CREDIT_RATING_UPPER"
                   id="CREDIT_RATING_UPPER"
                 >
@@ -8772,7 +8757,7 @@ const TableForm = () => {
               <fieldset>
                 <legend>Type of Property</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleFamilyChange}
                   type="radio"
                   name="DWELLING_TYPE"
                   id="DWELLING_TYPE_S"
@@ -8780,7 +8765,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="DWELLING_TYPE_S">Single Family</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleFamilyChange}
                   type="radio"
                   name="DWELLING_TYPE"
                   id="DWELLING_TYPE_M"
@@ -8788,7 +8773,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="DWELLING_TYPE_M">Multi Family</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleFamilyChange}
                   type="radio"
                   name="DWELLING_TYPE"
                   id="DWELLING_TYPE_NULL"
@@ -8820,7 +8805,7 @@ const TableForm = () => {
               <fieldset>
                 <legend>Property Owner or Renter</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handlePropChange}
                   type="radio"
                   name="HOME_OWNER_RENTER"
                   id="HOME_OWNER_RENTER_O"
@@ -8828,7 +8813,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="HOME_OWNER_RENTER_O">Property Owner</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handlePropChange}
                   type="radio"
                   name="HOME_OWNER_RENTER"
                   id="HOME_OWNER_RENTER_R"
@@ -8836,7 +8821,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="HOME_OWNER_RENTER_R">Property Renter</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handlePropChange}
                   type="radio"
                   name="HOME_OWNER_RENTER"
                   id="HOME_OWNER_RENTER_NULL"
@@ -8878,12 +8863,11 @@ const TableForm = () => {
                     <tr>
                       <td>
                         <input
-                          onChange={handleCheckChange}
+                          onChange={handleAddressChange}
                           type="checkbox"
                           name="ADDRESS_TYPE_INDICATOR_0"
                           id="ADDRESS_TYPE_INDICATOR-0"
                           value="Apartment w/o unit designator"
-                          checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_0}
                         />{" "}
                         <label htmlFor="ADDRESS_TYPE_INDICATOR-0">
                           Apartment w/o unit designator
@@ -8891,12 +8875,11 @@ const TableForm = () => {
                       </td>
                       <td>
                         <input
-                          onChange={handleCheckChange}
+                          onChange={handleAddressChange}
                           type="checkbox"
                           name="ADDRESS_TYPE_INDICATOR_1"
                           id="ADDRESS_TYPE_INDICATOR-1"
                           value="Apartment w/unit designator"
-                          checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_1}
                         />{" "}
                         <label htmlFor="ADDRESS_TYPE_INDICATOR-1">
                           Apartment w/unit designator
@@ -8906,12 +8889,11 @@ const TableForm = () => {
                     <tr>
                       <td>
                         <input
-                          onChange={handleCheckChange}
+                          onChange={handleAddressChange}
                           type="checkbox"
                           name="ADDRESS_TYPE_INDICATOR_2"
                           id="ADDRESS_TYPE_INDICATOR-2"
-                          value="Post Office Box"
-                          checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_2}
+                          value="PO Box"
                         />{" "}
                         <label htmlFor="ADDRESS_TYPE_INDICATOR-2">
                           Post Office Box
@@ -8919,12 +8901,11 @@ const TableForm = () => {
                       </td>
                       <td>
                         <input
-                          onChange={handleCheckChange}
+                          onChange={handleAddressChange}
                           type="checkbox"
                           name="ADDRESS_TYPE_INDICATOR_3"
                           id="ADDRESS_TYPE_INDICATOR-3"
                           value="Rural Route"
-                          checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_3}
                         />{" "}
                         <label htmlFor="ADDRESS_TYPE_INDICATOR-3">
                           Rural Route
@@ -8934,12 +8915,11 @@ const TableForm = () => {
                     <tr>
                       <td>
                         <input
-                          onChange={handleCheckChange}
+                          onChange={handleAddressChange}
                           type="checkbox"
                           name="ADDRESS_TYPE_INDICATOR_4"
                           id="ADDRESS_TYPE_INDICATOR-4"
                           value="Single Family Dwelling"
-                          checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_4}
                         />{" "}
                         <label htmlFor="ADDRESS_TYPE_INDICATOR-4">
                           Single Family Dwelling
@@ -8947,12 +8927,11 @@ const TableForm = () => {
                       </td>
                       <td>
                         <input
-                          onChange={handleCheckChange}
+                          onChange={handleAddressChange}
                           type="checkbox"
                           name="ADDRESS_TYPE_INDICATOR_5"
                           id="ADDRESS_TYPE_INDICATOR-5"
                           value="Undetermined"
-                          checked={teleMarketingForm.ADDRESS_TYPE_INDICATOR_5}
                         />{" "}
                         <label htmlFor="ADDRESS_TYPE_INDICATOR-5">
                           Undetermined
@@ -9000,7 +8979,7 @@ const TableForm = () => {
                   </div>
                 </div>
                 <select
-                  onChange={handleChange}
+                  onChange={handleResidentChange}
                   name="LENGTH_OF_RESIDENCE"
                   id="LENGTH_OF_RESIDENCE"
                 >
@@ -9033,7 +9012,7 @@ const TableForm = () => {
                 <br />
                 <label htmlFor="LTY">Less Than or Equal To in Years</label>{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleResidentChange}
                   type="radio"
                   name="Years_Residence"
                   id="LTY"
@@ -9043,7 +9022,7 @@ const TableForm = () => {
                 <br />
                 <label htmlFor="EQU">Exactly Equal To in Years</label>{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleResidentChange}
                   type="radio"
                   name="Years_Residence"
                   id="EQU"
@@ -9054,7 +9033,7 @@ const TableForm = () => {
                   Greater Than or Equal To in Years
                 </label>{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleResidentChange}
                   type="radio"
                   name="Years_Residence"
                   id="GTY"
@@ -9112,7 +9091,7 @@ const TableForm = () => {
                       <td align="center">
                         <h5 className="redtext">From this Date:</h5>
                         <select
-                          onChange={handleChange}
+                          onChange={handleMortgageChange}
                           name="mortgage_date"
                           id="mortgage_date"
                         >
@@ -9660,7 +9639,7 @@ const TableForm = () => {
                       <td align="center" width="49%">
                         <h5 className="redtext">To this Date:</h5>
                         <select
-                          onChange={handleChange}
+                          onChange={handleMortgageChange}
                           name="mortgage_date_later"
                           id="mortgage_date_later"
                         >
@@ -10222,7 +10201,7 @@ const TableForm = () => {
                   </div>
                 </div>
                 <select
-                  onChange={handleChange}
+                  onChange={handleHomeMarkChange}
                   name="HOME_MARKET_VALUE"
                   id="HOME_MARKET_VALUE"
                 >
@@ -10261,7 +10240,7 @@ const TableForm = () => {
                   </div>
                 </div>
                 <select
-                  onChange={handleChange}
+                  onChange={handleHomeMarkChange}
                   name="HOME_MARKET_VALUE_UPPER"
                   id="HOME_MARKET_VALUE_UPPER"
                 >
@@ -10322,7 +10301,7 @@ const TableForm = () => {
                 <div style={{ display: "flex", flexWrap: "wrap" }}>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleFuelChange}
                       type="radio"
                       name="FUEL"
                       id="FUEL_Electric"
@@ -10332,7 +10311,7 @@ const TableForm = () => {
                   </div>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleFuelChange}
                       type="radio"
                       name="FUEL"
                       id="FUEL_Gas"
@@ -10342,7 +10321,7 @@ const TableForm = () => {
                   </div>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleFuelChange}
                       type="radio"
                       name="FUEL"
                       id="FUEL_Gas Piped"
@@ -10352,7 +10331,7 @@ const TableForm = () => {
                   </div>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleFuelChange}
                       type="radio"
                       name="FUEL"
                       id="FUEL_Oil"
@@ -10362,7 +10341,7 @@ const TableForm = () => {
                   </div>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleFuelChange}
                       type="radio"
                       name="FUEL"
                       id="FUEL_NULL"
@@ -10398,7 +10377,7 @@ const TableForm = () => {
                 <div style={{ display: "flex", flexWrap: "wrap" }}>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC CENTRAL"
@@ -10411,7 +10390,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC CENTRAL & UNIT"
@@ -10424,7 +10403,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC DUAL UNIT"
@@ -10437,7 +10416,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC EVAPORATIVE"
@@ -10450,7 +10429,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC HEAT PUMP"
@@ -10463,7 +10442,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC REFRIGERATION"
@@ -10476,7 +10455,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC PACKAGE"
@@ -10489,7 +10468,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC SEPARATE SYSTEM"
@@ -10502,7 +10481,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC SPLIT SYSTEM"
@@ -10515,7 +10494,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC WALL UNIT"
@@ -10528,7 +10507,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC WINDOW UNIT"
@@ -10541,7 +10520,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_AC WALL/WINDOW UNIT"
@@ -10554,7 +10533,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleAirChange}
                       type="radio"
                       name="AIR_CONDITIONING"
                       id="AIR_CONDITIONING_NULL"
@@ -10585,7 +10564,6 @@ const TableForm = () => {
               </fieldset>
             </td>
           </tr>
-
           <tr>
             <td>
               <fieldset>
@@ -10593,7 +10571,7 @@ const TableForm = () => {
                 <div style={{ display: "flex", flexWrap: "wrap" }}>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleWaterChange}
                       type="radio"
                       name="WATER"
                       id="WATER_Commercial Water"
@@ -10607,7 +10585,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleWaterChange}
                       type="radio"
                       name="WATER"
                       id="WATER_Private Water"
@@ -10617,7 +10595,7 @@ const TableForm = () => {
                   </div>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleWaterChange}
                       type="radio"
                       name="WATER"
                       id="WATER_Public Water"
@@ -10627,7 +10605,7 @@ const TableForm = () => {
                   </div>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleWaterChange}
                       type="radio"
                       name="WATER"
                       id="WATER_Well"
@@ -10637,7 +10615,7 @@ const TableForm = () => {
                   </div>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleWaterChange}
                       type="radio"
                       name="WATER"
                       id="WATER_NULL"
@@ -10673,7 +10651,7 @@ const TableForm = () => {
                 <div style={{ display: "flex", flexWrap: "wrap" }}>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleSewerChange}
                       type="radio"
                       name="SEWER"
                       id="SEWER_Commercial Sewer"
@@ -10686,7 +10664,7 @@ const TableForm = () => {
                   <div>
                     |
                     <input
-                      onChange={handleChange}
+                      onChange={handleSewerChange}
                       type="radio"
                       name="SEWER"
                       id="SEWER_Private Sewer"
@@ -10696,7 +10674,7 @@ const TableForm = () => {
                   </div>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleSewerChange}
                       type="radio"
                       name="SEWER"
                       id="SEWER_Public Sewer"
@@ -10706,7 +10684,7 @@ const TableForm = () => {
                   </div>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleSewerChange}
                       type="radio"
                       name="SEWER"
                       id="SEWER_Septic"
@@ -10716,7 +10694,7 @@ const TableForm = () => {
                   </div>
                   <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleSewerChange}
                       type="radio"
                       name="SEWER"
                       id="SEWER_NULL"
@@ -10753,7 +10731,7 @@ const TableForm = () => {
               <fieldset>
                 <legend>Generations in Household</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleGenerationChange}
                   type="radio"
                   name="GENERATIONS_IN_HH"
                   id="GENERATIONS_IN_HH_1"
@@ -10761,7 +10739,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="GENERATIONS_IN_HH_1">1</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleGenerationChange}
                   type="radio"
                   name="GENERATIONS_IN_HH"
                   id="GENERATIONS_IN_HH_2"
@@ -10769,7 +10747,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="GENERATIONS_IN_HH_2">2</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleGenerationChange}
                   type="radio"
                   name="GENERATIONS_IN_HH"
                   id="GENERATIONS_IN_HH_3"
@@ -10777,7 +10755,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="GENERATIONS_IN_HH_3">3</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleGenerationChange}
                   type="radio"
                   name="GENERATIONS_IN_HH"
                   id="GENERATIONS_IN_HH_4"
@@ -10785,7 +10763,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="GENERATIONS_IN_HH_4">4</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleGenerationChange}
                   type="radio"
                   name="GENERATIONS_IN_HH"
                   id="GENERATIONS_IN_HH_NULL"
@@ -10817,7 +10795,7 @@ const TableForm = () => {
               <fieldset>
                 <legend>No. of Adults in Household</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleAdultsChange}
                   type="radio"
                   name="NUMBER_OF_ADULTS"
                   id="NUMBER_OF_ADULTS_1"
@@ -10825,7 +10803,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="NUMBER_OF_ADULTS_1">1</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleAdultsChange}
                   type="radio"
                   name="NUMBER_OF_ADULTS"
                   id="NUMBER_OF_ADULTS_2"
@@ -10833,7 +10811,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="NUMBER_OF_ADULTS_2">2</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleAdultsChange}
                   type="radio"
                   name="NUMBER_OF_ADULTS"
                   id="NUMBER_OF_ADULTS_3"
@@ -10841,7 +10819,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="NUMBER_OF_ADULTS_3">3</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleAdultsChange}
                   type="radio"
                   name="NUMBER_OF_ADULTS"
                   id="NUMBER_OF_ADULTS_4"
@@ -10849,7 +10827,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="NUMBER_OF_ADULTS_4">4</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleAdultsChange}
                   type="radio"
                   name="NUMBER_OF_ADULTS"
                   id="NUMBER_OF_ADULTS_5"
@@ -10857,7 +10835,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="NUMBER_OF_ADULTS_5">5</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleAdultsChange}
                   type="radio"
                   name="NUMBER_OF_ADULTS"
                   id="NUMBER_OF_ADULTS_6"
@@ -10865,7 +10843,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="NUMBER_OF_ADULTS_6">6</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleAdultsChange}
                   type="radio"
                   name="NUMBER_OF_ADULTS"
                   id="NUMBER_OF_ADULTS_NULL"
@@ -10894,13 +10872,12 @@ const TableForm = () => {
               </fieldset>
             </td>
           </tr>
-
           <tr>
             <td>
               <fieldset>
                 <legend>Gender Male or Female</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleGenderChange}
                   type="radio"
                   name="GENDER"
                   id="GENDER_F"
@@ -10908,7 +10885,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="GENDER_F">Female</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleGenderChange}
                   type="radio"
                   name="GENDER"
                   id="GENDER_M"
@@ -10916,7 +10893,7 @@ const TableForm = () => {
                 />
                 <label htmlFor="GENDER_M">Male</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleGenderChange}
                   type="radio"
                   name="GENDER"
                   id="GENDER_NULL"
@@ -10948,7 +10925,7 @@ const TableForm = () => {
               <fieldset id="fsSmoking_Tobacco">
                 <legend>Tobacco Smoker</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleSomkkerChange}
                   type="radio"
                   name="Smoking_Tobacco"
                   id="Smoking_Tobacco_Y"
@@ -10956,7 +10933,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="Smoking_Tobacco_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleSomkkerChange}
                   type="radio"
                   name="Smoking_Tobacco"
                   id="Smoking_Tobacco_N"
@@ -10964,7 +10941,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="Smoking_Tobacco_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleSomkkerChange}
                   type="radio"
                   name="Smoking_Tobacco"
                   id="Smoking_Tobacco_NULL"

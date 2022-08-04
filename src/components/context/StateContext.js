@@ -109,6 +109,41 @@ export const StateContext = ({ children }) => {
         MARITAL_STATUS: ""
     })
     const [childAndAdult, setChildAndAdult] = useState([])
+    const [incomeHH, setIncomeHH] = useState({
+        INCOME_ESTIMATED_HH: "",
+        INCOME_ESTIMATED_HH_UPPER: ""
+    })
+    const [netWorth, setNetWorth] = useState({
+        NET_WORTH: "",
+        NET_WORTH_UPPER: ""
+    })
+    const [creditRating, setCreditRating] = useState({
+        CREDIT_RATING: "",
+        CREDIT_RATING_UPPER: ""
+    })
+    const [family, setFamily] = useState("")
+    const [ownerRenter, setOwnerRenter] = useState("")
+    const [address, setAddress] = useState([])
+    const [residentLength, setResidentLength] = useState({
+        LENGTH_OF_RESIDENCE: "",
+        Years_Residence: "0"
+    })
+    const [mortgageDate, setMortgageDate] = useState({
+        mortgage_date: "",
+        mortgage_date_later: "",
+    })
+    const [homeMarket, setHomeMarket] = useState({
+        HOME_MARKET_VALUE: "",
+        HOME_MARKET_VALUE_UPPER: "",
+    })
+    const [fuel, setFuel] = useState("")
+    const [airCond, setAirCond] = useState("")
+    const [water, setWater] = useState("")
+    const [sewer, setSewer] = useState("")
+    const [generations, setGenerations] = useState("")
+    const [numAdults, setNumAdults] = useState("")
+    const [genderMF, setGenderMF] = useState("")
+    const [smokker, setSmokker] = useState("")
     const resultRef = useRef();
 
     let checkConsumer = {
@@ -201,7 +236,24 @@ export const StateContext = ({ children }) => {
         ethnicGroup: ethnicGroup,
         religions: religions,
         childrenAndMartial: childrenAndMartial,
-        childAndAdult: childAndAdult
+        childAndAdult: childAndAdult,
+        incomeHH: incomeHH,
+        netWorth: netWorth,
+        creditRating: creditRating,
+        family : family,
+        ownerRenter: ownerRenter,
+        address: address,
+        residentLength: residentLength,
+        mortgageDate: mortgageDate,
+        homeMarket: homeMarket,
+        fuel: fuel,
+        airCond : airCond,
+        water: water,
+        sewer: sewer,
+        generations: generations,
+        numAdults : numAdults,
+        genderMF : genderMF,
+        smokker: smokker,
     }
 
     console.log(checkTelemarketing, "checkTelemarketing")
@@ -294,7 +346,7 @@ export const StateContext = ({ children }) => {
             fetchData()
         }else if(location.pathname === "/database-emailer/telemarketing"){
             const fetchData = async() =>{
-                if(checkTelemarketing.country !=="" || checkTelemarketing.city !== "" || checkTelemarketing.country !== "" || checkTelemarketing.state.length !==0 || checkTelemarketing.email_address !== "" || checkTelemarketing.zip !=="" || checkTelemarketing.emailDomain.length !== 0 || checkTelemarketing.uniqueConditions.chkDoNotCall !=="" || checkTelemarketing.uniqueConditions.chkHavePhone !=="" || checkTelemarketing.uniqueConditions.chkValidEmails!=="" || checkTelemarketing.uniqueConditions.optUnique !=="" || checkTelemarketing.telSearch !== "" || checkTelemarketing.age.ageLower !=="" || checkTelemarketing.dob !== "--" || checkTelemarketing.edu.length !== 0 || checkTelemarketing.businessOwner.length !== 0 || checkTelemarketing.generalOccupation.length !== 0 || checkTelemarketing.detailedOccupation.length !==0 || checkTelemarketing.languages.length !==0 || checkTelemarketing.ethnicities.length !==0 || checkTelemarketing.ethnicGroup.length !==0 || checkTelemarketing.religions.length !==0 || checkTelemarketing.childrenAndMartial.NUMBER_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.PRESENCE_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.SEX_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.MARITAL_STATUS !=="" || checkTelemarketing.childAndAdult.length !==0){
+                if(checkTelemarketing.country !=="" || checkTelemarketing.city !== "" || checkTelemarketing.country !== "" || checkTelemarketing.state.length !==0 || checkTelemarketing.email_address !== "" || checkTelemarketing.zip !=="" || checkTelemarketing.emailDomain.length !== 0 || checkTelemarketing.uniqueConditions.chkDoNotCall !=="" || checkTelemarketing.uniqueConditions.chkHavePhone !=="" || checkTelemarketing.uniqueConditions.chkValidEmails!=="" || checkTelemarketing.uniqueConditions.optUnique !=="" || checkTelemarketing.telSearch !== "" || checkTelemarketing.age.ageLower !=="" || checkTelemarketing.dob !== "--" || checkTelemarketing.edu.length !== 0 || checkTelemarketing.businessOwner.length !== 0 || checkTelemarketing.generalOccupation.length !== 0 || checkTelemarketing.detailedOccupation.length !==0 || checkTelemarketing.languages.length !==0 || checkTelemarketing.ethnicities.length !==0 || checkTelemarketing.ethnicGroup.length !==0 || checkTelemarketing.religions.length !==0 || checkTelemarketing.childrenAndMartial.NUMBER_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.PRESENCE_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.SEX_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.MARITAL_STATUS !=="" || checkTelemarketing.childAndAdult.length !==0 || checkTelemarketing.incomeHH.INCOME_ESTIMATED_HH !=="" || checkTelemarketing.netWorth.NET_WORTH !=="" || checkTelemarketing.creditRating.CREDIT_RATING !==""|| checkTelemarketing.family !=="" || checkTelemarketing.ownerRenter !=="" || checkTelemarketing.address.length !==0 || checkTelemarketing.residentLength.LENGTH_OF_RESIDENCE !=="" || checkTelemarketing.mortgageDate.mortgage_date !=="" || checkTelemarketing.homeMarket.HOME_MARKET_VALUE !==""|| checkTelemarketing.fuel !=="" || checkTelemarketing.airCond !=="" || checkTelemarketing.sewer !=="" || checkTelemarketing.water !=="" || checkTelemarketing.generations !==""|| checkTelemarketing.numAdults !=="" || checkTelemarketing.genderMF !=="" || checkTelemarketing.smokker !==""){
                     try {
                         const res = await axios.post(url + "/telemarketing/find", checkTelemarketing)
                         setData(res.data)
@@ -453,7 +505,33 @@ export const StateContext = ({ children }) => {
                 setChildrenAndMartial,
                 childrenAndMartial,
                 setChildAndAdult,
-                childAndAdult
+                childAndAdult,
+                setIncomeHH,
+                incomeHH,
+                setNetWorth,
+                netWorth,
+                setCreditRating,
+                creditRating,
+                setFamily,
+                family,
+                setOwnerRenter,
+                setAddress,
+                address,
+                setResidentLength,
+                residentLength,
+                setMortgageDate,
+                mortgageDate,
+                setHomeMarket,
+                homeMarket,
+                setFuel,
+                fuel,
+                setAirCond,
+                setSmokker,
+                setGenderMF,
+                setWater,
+                setSewer,
+                setGenerations,
+                setNumAdults
             }}
         >
             {children}
