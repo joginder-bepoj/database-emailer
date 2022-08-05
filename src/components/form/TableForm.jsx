@@ -83,7 +83,15 @@ const TableForm = () => {
     setBasketBall,
     setHocky,
     setSoccer,
-    setSweepSkates
+    setSweepSkates,
+    setCollectors,
+    setStampCollector,
+    setCoinCollector,
+    setArtCollector,
+    setAntiqueCollector,
+    setMilitaryCollector,
+    setSportsCollector,
+    setLifestyleCollector,
   } = useStateContext();
   const handleChange = (e) => {
     setTeleMarketingForm({
@@ -286,7 +294,22 @@ const TableForm = () => {
   const handleSoccerChange = e => setSoccer(e.target.value)
   
   const handleSweepChange = e => setSweepSkates(e.target.value)
-   
+
+  const handleCollectorChange = e => setCollectors(e.target.value)
+
+  const handleStampChange = e => setStampCollector(e.target.value)
+
+  const handleCoinChange = e => setCoinCollector(e.target.value)
+
+  const handleArtChange = e => setArtCollector(e.target.value)
+
+  const handleAntiqueChange = e => setAntiqueCollector(e.target.value)
+
+  const handleMiltiaryChange = e => setMilitaryCollector(e.target.value)
+
+  const handleSportsChange = e => setSportsCollector(e.target.value)
+
+  const handleLifeStyleChange = e => setLifestyleCollector(e.target.value)
 
   const [education, setEducation] = useState(false);
   const [buisnessOwner, setBuisnessOwner] = useState(false);
@@ -12682,7 +12705,7 @@ const TableForm = () => {
               <fieldset id="fsCOLLECTIBLES_GENERAL">
                 <legend>Collectors</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleCollectorChange}
                   type="radio"
                   name="COLLECTIBLES_GENERAL"
                   id="COLLECTIBLES_GENERAL_Y"
@@ -12690,7 +12713,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_GENERAL_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleCollectorChange}
                   type="radio"
                   name="COLLECTIBLES_GENERAL"
                   id="COLLECTIBLES_GENERAL_N"
@@ -12698,7 +12721,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_GENERAL_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleCollectorChange}
                   type="radio"
                   name="COLLECTIBLES_GENERAL"
                   id="COLLECTIBLES_GENERAL_NULL"
@@ -12733,7 +12756,7 @@ const TableForm = () => {
               <fieldset id="fsCOLLECTIBLES_STAMPS">
                 <legend>Stamp Collectors</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleStampChange}
                   type="radio"
                   name="COLLECTIBLES_STAMPS"
                   id="COLLECTIBLES_STAMPS_Y"
@@ -12741,7 +12764,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_STAMPS_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleStampChange}
                   type="radio"
                   name="COLLECTIBLES_STAMPS"
                   id="COLLECTIBLES_STAMPS_N"
@@ -12749,7 +12772,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_STAMPS_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleStampChange}
                   type="radio"
                   name="COLLECTIBLES_STAMPS"
                   id="COLLECTIBLES_STAMPS_NULL"
@@ -12786,7 +12809,7 @@ const TableForm = () => {
               <fieldset id="fsCOLLECTIBLES_COINS">
                 <legend>Coin Collectors</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleCoinChange}
                   type="radio"
                   name="COLLECTIBLES_COINS"
                   id="COLLECTIBLES_COINS_Y"
@@ -12794,7 +12817,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_COINS_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleCoinChange}
                   type="radio"
                   name="COLLECTIBLES_COINS"
                   id="COLLECTIBLES_COINS_N"
@@ -12802,7 +12825,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_COINS_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleCoinChange}
                   type="radio"
                   name="COLLECTIBLES_COINS"
                   id="COLLECTIBLES_COINS_NULL"
@@ -12834,7 +12857,7 @@ const TableForm = () => {
               <fieldset id="fsCOLLECTIBLES_ARTS">
                 <legend>Art Collectors</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleArtChange}
                   type="radio"
                   name="COLLECTIBLES_ARTS"
                   id="COLLECTIBLES_ARTS_Y"
@@ -12842,7 +12865,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_ARTS_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleArtChange}
                   type="radio"
                   name="COLLECTIBLES_ARTS"
                   id="COLLECTIBLES_ARTS_N"
@@ -12850,7 +12873,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_ARTS_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleArtChange}
                   type="radio"
                   name="COLLECTIBLES_ARTS"
                   id="COLLECTIBLES_ARTS_NULL"
@@ -12884,7 +12907,7 @@ const TableForm = () => {
               <fieldset id="fsCOLLECTIBLES_ANTIQUES">
                 <legend>Antique Collectors</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleAntiqueChange}
                   type="radio"
                   name="COLLECTIBLES_ANTIQUES"
                   id="COLLECTIBLES_ANTIQUES_Y"
@@ -12892,7 +12915,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_ANTIQUES_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleAntiqueChange}
                   type="radio"
                   name="COLLECTIBLES_ANTIQUES"
                   id="COLLECTIBLES_ANTIQUES_N"
@@ -12900,7 +12923,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_ANTIQUES_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleAntiqueChange}
                   type="radio"
                   name="COLLECTIBLES_ANTIQUES"
                   id="COLLECTIBLES_ANTIQUES_NULL"
@@ -12937,7 +12960,7 @@ const TableForm = () => {
               <fieldset id="fsMILITARY_MEMORABILIA_WEAPONRY">
                 <legend>Military Memorabilia Collectors</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleMiltiaryChange}
                   type="radio"
                   name="MILITARY_MEMORABILIA_WEAPONRY"
                   id="MILITARY_MEMORABILIA_WEAPONRY_Y"
@@ -12945,7 +12968,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="MILITARY_MEMORABILIA_WEAPONRY_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleMiltiaryChange}
                   type="radio"
                   name="MILITARY_MEMORABILIA_WEAPONRY"
                   id="MILITARY_MEMORABILIA_WEAPONRY_N"
@@ -12953,7 +12976,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="MILITARY_MEMORABILIA_WEAPONRY_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleMiltiaryChange}
                   type="radio"
                   name="MILITARY_MEMORABILIA_WEAPONRY"
                   id="MILITARY_MEMORABILIA_WEAPONRY_NULL"
@@ -12994,7 +13017,7 @@ const TableForm = () => {
               <fieldset id="fsCOLLECTIBLES_SPORTS_MEMORABILIA">
                 <legend>Sports Memorabilia Collectors</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleSportsChange}
                   type="radio"
                   name="COLLECTIBLES_SPORTS_MEMORABILIA"
                   id="COLLECTIBLES_SPORTS_MEMORABILIA_Y"
@@ -13002,7 +13025,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_SPORTS_MEMORABILIA_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleSportsChange}
                   type="radio"
                   name="COLLECTIBLES_SPORTS_MEMORABILIA"
                   id="COLLECTIBLES_SPORTS_MEMORABILIA_N"
@@ -13010,7 +13033,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="COLLECTIBLES_SPORTS_MEMORABILIA_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleSportsChange}
                   type="radio"
                   name="COLLECTIBLES_SPORTS_MEMORABILIA"
                   id="COLLECTIBLES_SPORTS_MEMORABILIA_NULL"
@@ -13049,7 +13072,7 @@ const TableForm = () => {
               <fieldset id="fsLIFESTYLES_INTERESTS_AND_PASSIONS_COLLECTIBLES">
                 <legend>Lifestyles Collectors</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleLifeStyleChange}
                   type="radio"
                   name="LIFESTYLES_INTERESTS_AND_PASSIONS_COLLECTIBLES"
                   id="LIFESTYLES_INTERESTS_AND_PASSIONS_COLLECTIBLES_Y"
@@ -13060,7 +13083,7 @@ const TableForm = () => {
                 </label>{" "}
                 |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleLifeStyleChange}
                   type="radio"
                   name="LIFESTYLES_INTERESTS_AND_PASSIONS_COLLECTIBLES"
                   id="LIFESTYLES_INTERESTS_AND_PASSIONS_COLLECTIBLES_N"
@@ -13071,7 +13094,7 @@ const TableForm = () => {
                 </label>{" "}
                 |
                 <input
-                  onChange={handleChange}
+                  onChange={handleLifeStyleChange}
                   type="radio"
                   name="LIFESTYLES_INTERESTS_AND_PASSIONS_COLLECTIBLES"
                   id="LIFESTYLES_INTERESTS_AND_PASSIONS_COLLECTIBLES_NULL"
