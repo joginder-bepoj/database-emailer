@@ -76,6 +76,14 @@ const TableForm = () => {
     setDomesticTravel,
     setForeignTravel,
     setCruiseTravel,
+    setTvSports,
+    setAutoRacing,
+    setFootball,
+    setBaseBall,
+    setBasketBall,
+    setHocky,
+    setSoccer,
+    setSweepSkates
   } = useStateContext();
   const handleChange = (e) => {
     setTeleMarketingForm({
@@ -180,12 +188,10 @@ const TableForm = () => {
     setCreditRating({...creditRating, [e.target.name]: e.target.value})
   }
 
-  const handleFamilyChange = (e) =>{
-    setFamily(e.target.value)
-  }
-  const handlePropChange = (e) =>{
-    setOwnerRenter(e.target.value)
-  }
+  const handleFamilyChange = (e) => setFamily(e.target.value)
+
+  const handlePropChange = (e) => setOwnerRenter(e.target.value)
+  
 
   const handleAddressChange = (e) =>{
     const {checked, value} = e.target;
@@ -203,100 +209,84 @@ const TableForm = () => {
     setHomeMarket({...homeMarket, [e.target.name]: e.target.value})
   }
 
-  const handleFuelChange = (e) =>{
-    setFuel(e.target.value)
-  }
-  const handleAirChange = (e) =>{
-    setAirCond(e.target.value)
-  }
-  const handleGenderChange = (e) =>{
-    setGenderMF(e.target.value)
-  }
-  const handleWaterChange = (e) =>{
-    setWater(e.target.value)
-  }
-  const handleSewerChange =(e) =>{
-    setSewer(e.target.value)
-  }
-  const handleSomkkerChange = (e) =>{
-    setSmokker(e.target.value)
-  }
-  const handleAdultsChange = (e) =>{
-    setNumAdults(e.target.value)
-  }
-  const handleGenerationChange = (e) =>{
-    setGenerations(e.target.value)
-  }
-
-  const handleDiscoverChange = (e) =>{
-    setDiscovercard(e.target.value)
-  }
-  const handleMasterChange = (e) =>{
-    setMasterCard(e.target.value)
-  }
-  const handleVisaChange = (e) =>{
-    setVisaCard(e.target.value)
-  }
-  const handleAmericanChange = (e) =>{
-    setAmericanCard(e.target.value)
-  }
-  const handleGasRetailChange = (e) =>{
-    setGasRetailCard(e.target.value)
-  }
-  const handleTennisChange = (e) =>{
-    setTennis(e.target.value)
-  }
-  const handleGolfChange = (e) =>{
-    setGolf(e.target.value)
-  }
-  const handleSnowChange = (e) =>{
-    setSnowSkiing(e.target.value)
-  }
-  const handleMotorChange = (e) =>{
-    setMotorCycling(e.target.value)
-  }
-  const handleNascarChange = (e) =>{
-    setNASACR(e.target.value)
-  }
-  const handleBoatingChange = (e) =>{
-    setBoating(e.target.value)
-  }
-  const handleScubaChange = (e) =>{
-    setSCUBA(e.target.value)
-  }
-  const handleSportsLesuireChange = (e) =>{
-    setSportsLesiure(e.target.value)
-  }
-  const handleHuntingChange = (e) =>{
-    setHunting(e.target.value)
-  }
-  const handleFishingChange = (e) =>{
-    setFishing(e.target.value)
-  }
-  const handleHikingChange = (e) =>{
-    setHiking(e.target.value)
-  }
-  const handleShootingChange = (e) =>{
-    setShooting(e.target.value)
-  }
-  const handleExerciseChange = (e) =>{
-    setExercise(e.target.value)
-  }
-  const handleFlyingChange = (e) =>{
-    setFlying(e.target.value)
-  }
-  const handleTravelChange = (e) =>{
-    setTravel(e.target.value)
-  }
-  const handleDomesticChange = (e) =>{
-    setDomesticTravel(e.target.value)
-  }
-  const handleForeignChange = e =>{
-    setForeignTravel(e.target.value)
-  }
-  const handleCruiseChange = e =>{
-    setCruiseTravel(e.target.value)
-  }
+  const handleFuelChange = (e) => setFuel(e.target.value)
+  
+  const handleAirChange = (e) => setAirCond(e.target.value)
+  
+  const handleGenderChange = (e) => setGenderMF(e.target.value)
+  
+  const handleWaterChange = (e) => setWater(e.target.value)
+  
+  const handleSewerChange =(e) => setSewer(e.target.value)
+  
+  const handleSomkkerChange = (e) => setSmokker(e.target.value)
+  
+  const handleAdultsChange = (e) => setNumAdults(e.target.value)
+  
+  const handleGenerationChange = (e) => setGenerations(e.target.value)
+  
+  const handleDiscoverChange = (e) => setDiscovercard(e.target.value)
+  
+  const handleMasterChange = (e) => setMasterCard(e.target.value)
+  
+  const handleVisaChange = (e) => setVisaCard(e.target.value)
+  
+  const handleAmericanChange = (e) => setAmericanCard(e.target.value)
+  
+  const handleGasRetailChange = (e) => setGasRetailCard(e.target.value)
+  
+  const handleTennisChange = (e) => setTennis(e.target.value)
+  
+  const handleGolfChange = (e) => setGolf(e.target.value)
+  
+  const handleSnowChange = (e) => setSnowSkiing(e.target.value)
+  
+  const handleMotorChange = (e) => setMotorCycling(e.target.value)
+  
+  const handleNascarChange = (e) => setNASACR(e.target.value)
+  
+  const handleBoatingChange = (e) => setBoating(e.target.value)
+  
+  const handleScubaChange = (e) => setSCUBA(e.target.value)
+  
+  const handleSportsLesuireChange = (e) => setSportsLesiure(e.target.value)
+  
+  const handleHuntingChange = (e) => setHunting(e.target.value)
+  
+  const handleFishingChange = (e) => setFishing(e.target.value)
+  
+  const handleHikingChange = (e) => setHiking(e.target.value)
+  
+  const handleShootingChange = (e) => setShooting(e.target.value)
+  
+  const handleExerciseChange = (e) => setExercise(e.target.value)
+  
+  const handleFlyingChange = (e) => setFlying(e.target.value)
+  
+  const handleTravelChange = (e) => setTravel(e.target.value)
+  
+  const handleDomesticChange = (e) => setDomesticTravel(e.target.value)
+  
+  const handleForeignChange = e => setForeignTravel(e.target.value)
+  
+  const handleCruiseChange = e => setCruiseTravel(e.target.value)
+  
+  const handleTVsportsChange = e => setTvSports(e.target.value)
+  
+  const handleRacingChange = e => setAutoRacing(e.target.value)
+  
+  const handleFootballChange = e => setFootball(e.target.value)
+  
+  const handleBaseballChange = e => setBaseBall(e.target.value)
+  
+  const handleBasketChange = e => setBasketBall(e.target.value)
+  
+  const handleHockeyChange = e => setHocky(e.target.value)
+  
+  const handleSoccerChange = e => setSoccer(e.target.value)
+  
+  const handleSweepChange = e => setSweepSkates(e.target.value)
+   
 
   const [education, setEducation] = useState(false);
   const [buisnessOwner, setBuisnessOwner] = useState(false);
@@ -12247,7 +12237,7 @@ const TableForm = () => {
               <fieldset id="fsSPECTATOR_SPORTS_TV_SPORTS">
                 <legend>TV Sports</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleTVsportsChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_TV_SPORTS"
                   id="SPECTATOR_SPORTS_TV_SPORTS_Y"
@@ -12255,7 +12245,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_TV_SPORTS_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleTVsportsChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_TV_SPORTS"
                   id="SPECTATOR_SPORTS_TV_SPORTS_N"
@@ -12263,7 +12253,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_TV_SPORTS_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleTVsportsChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_TV_SPORTS"
                   id="SPECTATOR_SPORTS_TV_SPORTS_NULL"
@@ -12300,7 +12290,7 @@ const TableForm = () => {
               <fieldset id="fsSPECTATOR_SPORTS_AUTO_MOTORCYCLE_RACING">
                 <legend>Auto &amp; Motorcycle Racing</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleRacingChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_AUTO_MOTORCYCLE_RACING"
                   id="SPECTATOR_SPORTS_AUTO_MOTORCYCLE_RACING_Y"
@@ -12311,7 +12301,7 @@ const TableForm = () => {
                 </label>{" "}
                 |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleRacingChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_AUTO_MOTORCYCLE_RACING"
                   id="SPECTATOR_SPORTS_AUTO_MOTORCYCLE_RACING_N"
@@ -12322,7 +12312,7 @@ const TableForm = () => {
                 </label>{" "}
                 |
                 <input
-                  onChange={handleChange}
+                  onChange={handleRacingChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_AUTO_MOTORCYCLE_RACING"
                   id="SPECTATOR_SPORTS_AUTO_MOTORCYCLE_RACING_NULL"
@@ -12363,7 +12353,7 @@ const TableForm = () => {
               <fieldset id="fsSPECTATOR_SPORTS_FOOTBALL">
                 <legend>Football</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleFootballChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_FOOTBALL"
                   id="SPECTATOR_SPORTS_FOOTBALL_Y"
@@ -12371,7 +12361,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_FOOTBALL_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleFootballChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_FOOTBALL"
                   id="SPECTATOR_SPORTS_FOOTBALL_N"
@@ -12379,7 +12369,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_FOOTBALL_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleFootballChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_FOOTBALL"
                   id="SPECTATOR_SPORTS_FOOTBALL_NULL"
@@ -12416,7 +12406,7 @@ const TableForm = () => {
               <fieldset id="fsSPECTATOR_SPORTS_BASEBALL">
                 <legend>Baseball</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleBaseballChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_BASEBALL"
                   id="SPECTATOR_SPORTS_BASEBALL_Y"
@@ -12424,7 +12414,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_BASEBALL_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleBaseballChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_BASEBALL"
                   id="SPECTATOR_SPORTS_BASEBALL_N"
@@ -12432,7 +12422,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_BASEBALL_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleBaseballChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_BASEBALL"
                   id="SPECTATOR_SPORTS_BASEBALL_NULL"
@@ -12471,7 +12461,7 @@ const TableForm = () => {
               <fieldset id="fsSPECTATOR_SPORTS_BASKETBALL">
                 <legend>Basketball</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleBasketChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_BASKETBALL"
                   id="SPECTATOR_SPORTS_BASKETBALL_Y"
@@ -12479,7 +12469,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_BASKETBALL_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleBasketChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_BASKETBALL"
                   id="SPECTATOR_SPORTS_BASKETBALL_N"
@@ -12487,7 +12477,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_BASKETBALL_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleBasketChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_BASKETBALL"
                   id="SPECTATOR_SPORTS_BASKETBALL_NULL"
@@ -12524,7 +12514,7 @@ const TableForm = () => {
               <fieldset id="fsSPECTATOR_SPORTS_HOCKEY">
                 <legend>Hockey</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleHockeyChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_HOCKEY"
                   id="SPECTATOR_SPORTS_HOCKEY_Y"
@@ -12532,7 +12522,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_HOCKEY_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleHockeyChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_HOCKEY"
                   id="SPECTATOR_SPORTS_HOCKEY_N"
@@ -12540,7 +12530,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_HOCKEY_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleHockeyChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_HOCKEY"
                   id="SPECTATOR_SPORTS_HOCKEY_NULL"
@@ -12579,7 +12569,7 @@ const TableForm = () => {
               <fieldset id="fsSPECTATOR_SPORTS_SOCCER">
                 <legend>Soccer</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleSoccerChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_SOCCER"
                   id="SPECTATOR_SPORTS_SOCCER_Y"
@@ -12587,7 +12577,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_SOCCER_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleSoccerChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_SOCCER"
                   id="SPECTATOR_SPORTS_SOCCER_N"
@@ -12595,7 +12585,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPECTATOR_SPORTS_SOCCER_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleSoccerChange}
                   type="radio"
                   name="SPECTATOR_SPORTS_SOCCER"
                   id="SPECTATOR_SPORTS_SOCCER_NULL"
@@ -12632,7 +12622,7 @@ const TableForm = () => {
               <fieldset id="fsSWEEPSTAKES_CONTESTS">
                 <legend>Sweepstakes Contests</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleSweepChange}
                   type="radio"
                   name="SWEEPSTAKES_CONTESTS"
                   id="SWEEPSTAKES_CONTESTS_Y"
@@ -12640,7 +12630,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SWEEPSTAKES_CONTESTS_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleSweepChange}
                   type="radio"
                   name="SWEEPSTAKES_CONTESTS"
                   id="SWEEPSTAKES_CONTESTS_N"
@@ -12648,7 +12638,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SWEEPSTAKES_CONTESTS_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleSweepChange}
                   type="radio"
                   name="SWEEPSTAKES_CONTESTS"
                   id="SWEEPSTAKES_CONTESTS_NULL"
