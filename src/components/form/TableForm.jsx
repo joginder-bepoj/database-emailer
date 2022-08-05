@@ -58,6 +58,20 @@ const TableForm = () => {
     setMasterCard,
     setAmericanCard,
     setGasRetailCard,
+    setTennis,
+    setGolf,
+    setSnowSkiing,
+    setMotorCycling,
+    setNASACR,
+    setBoating,
+    setSCUBA,
+    setSportsLesiure,
+    setHunting,
+    setFishing,
+    setHiking,
+    setShooting,
+    setExercise,
+    setFlying,
   } = useStateContext();
   const handleChange = (e) => {
     setTeleMarketingForm({
@@ -225,7 +239,48 @@ const TableForm = () => {
   const handleGasRetailChange = (e) =>{
     setGasRetailCard(e.target.value)
   }
-
+  const handleTennisChange = (e) =>{
+    setTennis(e.target.value)
+  }
+  const handleGolfChange = (e) =>{
+    setGolf(e.target.value)
+  }
+  const handleSnowChange = (e) =>{
+    setSnowSkiing(e.target.value)
+  }
+  const handleMotorChange = (e) =>{
+    setMotorCycling(e.target.value)
+  }
+  const handleNascarChange = (e) =>{
+    setNASACR(e.target.value)
+  }
+  const handleBoatingChange = (e) =>{
+    setBoating(e.target.value)
+  }
+  const handleScubaChange = (e) =>{
+    setSCUBA(e.target.value)
+  }
+  const handleSportsLesuireChange = (e) =>{
+    setSportsLesiure(e.target.value)
+  }
+  const handleHuntingChange = (e) =>{
+    setHunting(e.target.value)
+  }
+  const handleFishingChange = (e) =>{
+    setFishing(e.target.value)
+  }
+  const handleHikingChange = (e) =>{
+    setHiking(e.target.value)
+  }
+  const handleShootingChange = (e) =>{
+    setShooting(e.target.value)
+  }
+  const handleExerciseChange = (e) =>{
+    setExercise(e.target.value)
+  }
+  const handleFlyingChange = (e) =>{
+    setFlying(e.target.value)
+  }
 
   const [education, setEducation] = useState(false);
   const [buisnessOwner, setBuisnessOwner] = useState(false);
@@ -11266,7 +11321,7 @@ const TableForm = () => {
               <fieldset id="fsTENNIS">
                 <legend>Tennis</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleTennisChange}
                   type="radio"
                   name="TENNIS"
                   id="TENNIS_Y"
@@ -11274,7 +11329,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="TENNIS_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleTennisChange}
                   type="radio"
                   name="TENNIS"
                   id="TENNIS_N"
@@ -11282,7 +11337,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="TENNIS_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleTennisChange}
                   type="radio"
                   name="TENNIS"
                   id="TENNIS_NULL"
@@ -11314,7 +11369,7 @@ const TableForm = () => {
               <fieldset id="fsGOLF">
                 <legend>Golf</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleGolfChange}
                   type="radio"
                   name="GOLF"
                   id="GOLF_Y"
@@ -11322,7 +11377,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="GOLF_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleGolfChange}
                   type="radio"
                   name="GOLF"
                   id="GOLF_N"
@@ -11330,7 +11385,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="GOLF_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleGolfChange}
                   type="radio"
                   name="GOLF"
                   id="GOLF_NULL"
@@ -11364,7 +11419,7 @@ const TableForm = () => {
               <fieldset id="fsSNOW_SKIING">
                 <legend>Snow Skiing</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleSnowChange}
                   type="radio"
                   name="SNOW_SKIING"
                   id="SNOW_SKIING_Y"
@@ -11372,7 +11427,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SNOW_SKIING_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleSnowChange}
                   type="radio"
                   name="SNOW_SKIING"
                   id="SNOW_SKIING_N"
@@ -11380,7 +11435,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SNOW_SKIING_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleSnowChange}
                   type="radio"
                   name="SNOW_SKIING"
                   id="SNOW_SKIING_NULL"
@@ -11412,7 +11467,7 @@ const TableForm = () => {
               <fieldset id="fsMOTORCYCLING">
                 <legend>Motorcycling</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleMotorChange}
                   type="radio"
                   name="MOTORCYCLING"
                   id="MOTORCYCLING_Y"
@@ -11420,7 +11475,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="MOTORCYCLING_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleMotorChange}
                   type="radio"
                   name="MOTORCYCLING"
                   id="MOTORCYCLING_N"
@@ -11428,7 +11483,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="MOTORCYCLING_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleMotorChange}
                   type="radio"
                   name="MOTORCYCLING"
                   id="MOTORCYCLING_NULL"
@@ -11462,7 +11517,7 @@ const TableForm = () => {
               <fieldset id="fsNASCAR">
                 <legend>NASCAR</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleNascarChange}
                   type="radio"
                   name="NASCAR"
                   id="NASCAR_Y"
@@ -11470,7 +11525,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="NASCAR_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleNascarChange}
                   type="radio"
                   name="NASCAR"
                   id="NASCAR_N"
@@ -11478,7 +11533,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="NASCAR_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleNascarChange}
                   type="radio"
                   name="NASCAR"
                   id="NASCAR_NULL"
@@ -11510,7 +11565,7 @@ const TableForm = () => {
               <fieldset id="fsBOATING_SAILING">
                 <legend>Boating &amp; Sailing</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleBoatingChange}
                   type="radio"
                   name="BOATING_SAILING"
                   id="BOATING_SAILING_Y"
@@ -11518,7 +11573,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="BOATING_SAILING_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleBoatingChange}
                   type="radio"
                   name="BOATING_SAILING"
                   id="BOATING_SAILING_N"
@@ -11526,7 +11581,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="BOATING_SAILING_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleBoatingChange}
                   type="radio"
                   name="BOATING_SAILING"
                   id="BOATING_SAILING_NULL"
@@ -11560,7 +11615,7 @@ const TableForm = () => {
               <fieldset id="fsSCUBA_DIVING">
                 <legend>SCUBA Diving</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleScubaChange}
                   type="radio"
                   name="SCUBA_DIVING"
                   id="SCUBA_DIVING_Y"
@@ -11568,7 +11623,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SCUBA_DIVING_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleScubaChange}
                   type="radio"
                   name="SCUBA_DIVING"
                   id="SCUBA_DIVING_N"
@@ -11576,7 +11631,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SCUBA_DIVING_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleScubaChange}
                   type="radio"
                   name="SCUBA_DIVING"
                   id="SCUBA_DIVING_NULL"
@@ -11608,7 +11663,7 @@ const TableForm = () => {
               <fieldset id="fsSPORTS_AND_LEISURE">
                 <legend>Sports And Leisure</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleSportsLesuireChange}
                   type="radio"
                   name="SPORTS_AND_LEISURE"
                   id="SPORTS_AND_LEISURE_Y"
@@ -11616,7 +11671,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPORTS_AND_LEISURE_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleSportsLesuireChange}
                   type="radio"
                   name="SPORTS_AND_LEISURE"
                   id="SPORTS_AND_LEISURE_N"
@@ -11624,7 +11679,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="SPORTS_AND_LEISURE_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleSportsLesuireChange}
                   type="radio"
                   name="SPORTS_AND_LEISURE"
                   id="SPORTS_AND_LEISURE_NULL"
@@ -11658,7 +11713,7 @@ const TableForm = () => {
               <fieldset id="fsHUNTING">
                 <legend>Hunting</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleHuntingChange}
                   type="radio"
                   name="HUNTING"
                   id="HUNTING_Y"
@@ -11666,7 +11721,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="HUNTING_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleHuntingChange}
                   type="radio"
                   name="HUNTING"
                   id="HUNTING_N"
@@ -11674,7 +11729,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="HUNTING_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleHuntingChange}
                   type="radio"
                   name="HUNTING"
                   id="HUNTING_NULL"
@@ -11707,7 +11762,7 @@ const TableForm = () => {
               <fieldset id="fsFISHING">
                 <legend>Fishing</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleFishingChange}
                   type="radio"
                   name="FISHING"
                   id="FISHING_Y"
@@ -11715,7 +11770,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="FISHING_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleFishingChange}
                   type="radio"
                   name="FISHING"
                   id="FISHING_N"
@@ -11723,7 +11778,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="FISHING_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleFishingChange}
                   type="radio"
                   name="FISHING"
                   id="FISHING_NULL"
@@ -11757,7 +11812,7 @@ const TableForm = () => {
               <fieldset id="fsCAMPING_HIKING">
                 <legend>Camping And Hiking</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleHikingChange}
                   type="radio"
                   name="CAMPING_HIKING"
                   id="CAMPING_HIKING_Y"
@@ -11765,7 +11820,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="CAMPING_HIKING_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleHikingChange}
                   type="radio"
                   name="CAMPING_HIKING"
                   id="CAMPING_HIKING_N"
@@ -11773,7 +11828,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="CAMPING_HIKING_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleHikingChange}
                   type="radio"
                   name="CAMPING_HIKING"
                   id="CAMPING_HIKING_NULL"
@@ -11805,7 +11860,7 @@ const TableForm = () => {
               <fieldset id="fsHUNTING_SHOOTING">
                 <legend>Hunting And Shooting</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleShootingChange}
                   type="radio"
                   name="HUNTING_SHOOTING"
                   id="HUNTING_SHOOTING_Y"
@@ -11813,7 +11868,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="HUNTING_SHOOTING_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleShootingChange}
                   type="radio"
                   name="HUNTING_SHOOTING"
                   id="HUNTING_SHOOTING_N"
@@ -11821,7 +11876,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="HUNTING_SHOOTING_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleShootingChange}
                   type="radio"
                   name="HUNTING_SHOOTING"
                   id="HUNTING_SHOOTING_NULL"
@@ -11855,7 +11910,7 @@ const TableForm = () => {
               <fieldset id="fsEXERCISE_HEALTH_GROUPING">
                 <legend>Exercise Enthusiasts</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleExerciseChange}
                   type="radio"
                   name="EXERCISE_HEALTH_GROUPING"
                   id="EXERCISE_HEALTH_GROUPING_Y"
@@ -11863,7 +11918,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="EXERCISE_HEALTH_GROUPING_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleExerciseChange}
                   type="radio"
                   name="EXERCISE_HEALTH_GROUPING"
                   id="EXERCISE_HEALTH_GROUPING_N"
@@ -11871,7 +11926,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="EXERCISE_HEALTH_GROUPING_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleExerciseChange}
                   type="radio"
                   name="EXERCISE_HEALTH_GROUPING"
                   id="EXERCISE_HEALTH_GROUPING_NULL"
@@ -11908,7 +11963,7 @@ const TableForm = () => {
               <fieldset id="fsAVIATION">
                 <legend>Flying</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleFlyingChange}
                   type="radio"
                   name="AVIATION"
                   id="AVIATION_Y"
@@ -11916,7 +11971,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="AVIATION_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleFlyingChange}
                   type="radio"
                   name="AVIATION"
                   id="AVIATION_N"
@@ -11924,7 +11979,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="AVIATION_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleFlyingChange}
                   type="radio"
                   name="AVIATION"
                   id="AVIATION_NULL"
