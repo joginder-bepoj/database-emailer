@@ -72,6 +72,10 @@ const TableForm = () => {
     setShooting,
     setExercise,
     setFlying,
+    setTravel,
+    setDomesticTravel,
+    setForeignTravel,
+    setCruiseTravel,
   } = useStateContext();
   const handleChange = (e) => {
     setTeleMarketingForm({
@@ -280,6 +284,18 @@ const TableForm = () => {
   }
   const handleFlyingChange = (e) =>{
     setFlying(e.target.value)
+  }
+  const handleTravelChange = (e) =>{
+    setTravel(e.target.value)
+  }
+  const handleDomesticChange = (e) =>{
+    setDomesticTravel(e.target.value)
+  }
+  const handleForeignChange = e =>{
+    setForeignTravel(e.target.value)
+  }
+  const handleCruiseChange = e =>{
+    setCruiseTravel(e.target.value)
   }
 
   const [education, setEducation] = useState(false);
@@ -12020,7 +12036,7 @@ const TableForm = () => {
               <fieldset id="fsTRAVEL">
                 <legend>Travel</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleTravelChange}
                   type="radio"
                   name="TRAVEL"
                   id="TRAVEL_Y"
@@ -12028,7 +12044,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="TRAVEL_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleTravelChange}
                   type="radio"
                   name="TRAVEL"
                   id="TRAVEL_N"
@@ -12036,7 +12052,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="TRAVEL_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleTravelChange}
                   type="radio"
                   name="TRAVEL"
                   id="TRAVEL_NULL"
@@ -12068,7 +12084,7 @@ const TableForm = () => {
               <fieldset id="fsTRAVEL_DOMESTIC">
                 <legend>Travel: Domestic</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleDomesticChange}
                   type="radio"
                   name="TRAVEL_DOMESTIC"
                   id="TRAVEL_DOMESTIC_Y"
@@ -12076,7 +12092,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="TRAVEL_DOMESTIC_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleDomesticChange}
                   type="radio"
                   name="TRAVEL_DOMESTIC"
                   id="TRAVEL_DOMESTIC_N"
@@ -12084,7 +12100,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="TRAVEL_DOMESTIC_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleDomesticChange}
                   type="radio"
                   name="TRAVEL_DOMESTIC"
                   id="TRAVEL_DOMESTIC_NULL"
@@ -12118,7 +12134,7 @@ const TableForm = () => {
               <fieldset id="fsTRAVEL_INTERNATIONAL">
                 <legend>Travel: Foreign</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleForeignChange}
                   type="radio"
                   name="TRAVEL_INTERNATIONAL"
                   id="TRAVEL_INTERNATIONAL_Y"
@@ -12126,7 +12142,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="TRAVEL_INTERNATIONAL_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleForeignChange}
                   type="radio"
                   name="TRAVEL_INTERNATIONAL"
                   id="TRAVEL_INTERNATIONAL_N"
@@ -12134,7 +12150,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="TRAVEL_INTERNATIONAL_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleForeignChange}
                   type="radio"
                   name="TRAVEL_INTERNATIONAL"
                   id="TRAVEL_INTERNATIONAL_NULL"
@@ -12168,30 +12184,24 @@ const TableForm = () => {
             <td>
               <fieldset id="fsTRAVEL_CRUISE_VACATIONS">
                 <legend>Travel: Cruise Vacations</legend>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
-                  <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleCruiseChange}
                       type="radio"
                       name="TRAVEL_CRUISE_VACATIONS"
                       id="TRAVEL_CRUISE_VACATIONS_Y"
                       value="Y"
                     />{" "}
                     <label htmlFor="TRAVEL_CRUISE_VACATIONS_Y">Yes</label> |{" "}
-                  </div>
-                  <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleCruiseChange}
                       type="radio"
                       name="TRAVEL_CRUISE_VACATIONS"
                       id="TRAVEL_CRUISE_VACATIONS_N"
                       value="N"
                     />{" "}
                     <label htmlFor="TRAVEL_CRUISE_VACATIONS_N">No</label> |
-                  </div>
-                  <div>
                     <input
-                      onChange={handleChange}
+                      onChange={handleCruiseChange}
                       type="radio"
                       name="TRAVEL_CRUISE_VACATIONS"
                       id="TRAVEL_CRUISE_VACATIONS_NULL"
@@ -12199,8 +12209,7 @@ const TableForm = () => {
                       defaultChecked
                     />{" "}
                     <label htmlFor="TRAVEL_CRUISE_VACATIONS_NULL">Either</label>
-                  </div>
-                  <div>
+                  <hr />
                     <input
                       onChange={handleChange}
                       type="radio"
@@ -12213,8 +12222,6 @@ const TableForm = () => {
                       All Must Match
                     </label>{" "}
                     |
-                  </div>
-                  <div>
                     <input
                       onChange={handleChange}
                       type="radio"
@@ -12225,8 +12232,6 @@ const TableForm = () => {
                     <label htmlFor="TRAVEL_CRUISE_VACATIONS_OR">
                       Any Match On This
                     </label>
-                  </div>
-                </div>
               </fieldset>
             </td>
           </tr>
