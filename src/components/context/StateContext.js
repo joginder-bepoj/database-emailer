@@ -183,6 +183,13 @@ export const StateContext = ({ children }) => {
     const [militaryCollector, setMilitaryCollector] = useState("")
     const [sportsCollector, setSportsCollector] = useState("")
     const [lifestyleCollector, setLifestyleCollector] = useState("")
+    const [homeGarden, setHomeGarden] = useState("")
+    const [housePlant, setHousePlant] = useState("")
+    const [homeImprovement, setHomeImprovement] = useState("")
+    const [gardening, setGardening] = useState("")
+    const [crafts, setCrafts] = useState("")
+    const [woodWorking, setWoodWorking] = useState("")
+    const [lastName, setLastName] = useState("")
     const resultRef = useRef();
 
     let checkConsumer = {
@@ -332,6 +339,12 @@ export const StateContext = ({ children }) => {
         militaryCollector: militaryCollector,
         sportsCollector: sportsCollector,
         lifestyleCollector: lifestyleCollector,
+        homeGarden: homeGarden,
+        housePlant : housePlant,
+        homeImprovement: homeImprovement,
+        gardening : gardening,
+        crafts : crafts,
+        woodWorking : woodWorking,
     }
 
     console.log(checkTelemarketing, "checkTelemarketing")
@@ -424,7 +437,7 @@ export const StateContext = ({ children }) => {
             fetchData()
         }else if(location.pathname === "/database-emailer/telemarketing"){
             const fetchData = async() =>{
-                if(checkTelemarketing.country !=="" || checkTelemarketing.city !== "" || checkTelemarketing.country !== "" || checkTelemarketing.state.length !==0 || checkTelemarketing.email_address !== "" || checkTelemarketing.zip !=="" || checkTelemarketing.emailDomain.length !== 0 || checkTelemarketing.uniqueConditions.chkDoNotCall !=="" || checkTelemarketing.uniqueConditions.chkHavePhone !=="" || checkTelemarketing.uniqueConditions.chkValidEmails!=="" || checkTelemarketing.uniqueConditions.optUnique !=="" || checkTelemarketing.telSearch !== "" || checkTelemarketing.age.ageLower !=="" || checkTelemarketing.dob !== "--" || checkTelemarketing.edu.length !== 0 || checkTelemarketing.businessOwner.length !== 0 || checkTelemarketing.generalOccupation.length !== 0 || checkTelemarketing.detailedOccupation.length !==0 || checkTelemarketing.languages.length !==0 || checkTelemarketing.ethnicities.length !==0 || checkTelemarketing.ethnicGroup.length !==0 || checkTelemarketing.religions.length !==0 || checkTelemarketing.childrenAndMartial.NUMBER_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.PRESENCE_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.SEX_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.MARITAL_STATUS !=="" || checkTelemarketing.childAndAdult.length !==0 || checkTelemarketing.incomeHH.INCOME_ESTIMATED_HH !=="" || checkTelemarketing.netWorth.NET_WORTH !=="" || checkTelemarketing.creditRating.CREDIT_RATING !==""|| checkTelemarketing.family !=="" || checkTelemarketing.ownerRenter !=="" || checkTelemarketing.address.length !==0 || checkTelemarketing.residentLength.LENGTH_OF_RESIDENCE !=="" || checkTelemarketing.mortgageDate.mortgage_date !=="" || checkTelemarketing.homeMarket.HOME_MARKET_VALUE !==""|| checkTelemarketing.fuel !=="" || checkTelemarketing.airCond !=="" || checkTelemarketing.sewer !=="" || checkTelemarketing.water !=="" || checkTelemarketing.generations !==""|| checkTelemarketing.numAdults !=="" || checkTelemarketing.genderMF !=="" || checkTelemarketing.smokker !=="" || checkTelemarketing.discovercard !=="" || checkTelemarketing.americanCard !=="" || checkTelemarketing.visaCard !=="" || checkTelemarketing.masterCard !=="" || checkTelemarketing.gasRetailCard !=="" || checkTelemarketing.Tennis !=="" || checkTelemarketing.Golf !=="" || checkTelemarketing.snowSkiing !=="" || checkTelemarketing.motorCycling !=="" || checkTelemarketing.NASACR !=="" || checkTelemarketing.Boating !=="" || checkTelemarketing.SCUBA !=="" || checkTelemarketing.sportsLesiure !=="" || checkTelemarketing.Hunting !=="" || checkTelemarketing.Fishing !=="" || checkTelemarketing.hiking !=="" || checkTelemarketing.shooting !=="" || checkTelemarketing.exercise !=="" || checkTelemarketing.flying !==""|| checkTelemarketing.travel !=="" || checkTelemarketing.domesticTravel !=="" || checkTelemarketing.foreignTravel !=="" || checkTelemarketing.cruiseTravel !=="" || checkTelemarketing.tvSports !=="" || checkTelemarketing.autoRacing !=="" || checkTelemarketing.football !=="" || checkTelemarketing.basketBall !=="" || checkTelemarketing.baseBall !=="" || checkTelemarketing.soccer!=="" || checkTelemarketing.hocky !=="" || checkTelemarketing.sweepSkates !=="" || checkTelemarketing.collectors!=="" || checkTelemarketing.stampCollector !=="" || checkTelemarketing.coinCollector!=="" || checkTelemarketing.artCollector!=="" || checkTelemarketing.antiqueCollector!=="" || checkTelemarketing.militaryCollector!=="" || checkTelemarketing.sportsCollector!=="" || checkTelemarketing.lifestyleCollector!=="")
+                if(checkTelemarketing.country !=="" || checkTelemarketing.city !== "" || checkTelemarketing.country !== "" || checkTelemarketing.state.length !==0 || checkTelemarketing.email_address !== "" || checkTelemarketing.zip !=="" || checkTelemarketing.emailDomain.length !== 0 || checkTelemarketing.uniqueConditions.chkDoNotCall !=="" || checkTelemarketing.uniqueConditions.chkHavePhone !=="" || checkTelemarketing.uniqueConditions.chkValidEmails!=="" || checkTelemarketing.uniqueConditions.optUnique !=="" || checkTelemarketing.telSearch !== "" || checkTelemarketing.age.ageLower !=="" || checkTelemarketing.dob !== "--" || checkTelemarketing.edu.length !== 0 || checkTelemarketing.businessOwner.length !== 0 || checkTelemarketing.generalOccupation.length !== 0 || checkTelemarketing.detailedOccupation.length !==0 || checkTelemarketing.languages.length !==0 || checkTelemarketing.ethnicities.length !==0 || checkTelemarketing.ethnicGroup.length !==0 || checkTelemarketing.religions.length !==0 || checkTelemarketing.childrenAndMartial.NUMBER_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.PRESENCE_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.SEX_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.MARITAL_STATUS !=="" || checkTelemarketing.childAndAdult.length !==0 || checkTelemarketing.incomeHH.INCOME_ESTIMATED_HH !=="" || checkTelemarketing.netWorth.NET_WORTH !=="" || checkTelemarketing.creditRating.CREDIT_RATING !==""|| checkTelemarketing.family !=="" || checkTelemarketing.ownerRenter !=="" || checkTelemarketing.address.length !==0 || checkTelemarketing.residentLength.LENGTH_OF_RESIDENCE !=="" || checkTelemarketing.mortgageDate.mortgage_date !=="" || checkTelemarketing.homeMarket.HOME_MARKET_VALUE !==""|| checkTelemarketing.fuel !=="" || checkTelemarketing.airCond !=="" || checkTelemarketing.sewer !=="" || checkTelemarketing.water !=="" || checkTelemarketing.generations !==""|| checkTelemarketing.numAdults !=="" || checkTelemarketing.genderMF !=="" || checkTelemarketing.smokker !=="" || checkTelemarketing.discovercard !=="" || checkTelemarketing.americanCard !=="" || checkTelemarketing.visaCard !=="" || checkTelemarketing.masterCard !=="" || checkTelemarketing.gasRetailCard !=="" || checkTelemarketing.Tennis !=="" || checkTelemarketing.Golf !=="" || checkTelemarketing.snowSkiing !=="" || checkTelemarketing.motorCycling !=="" || checkTelemarketing.NASACR !=="" || checkTelemarketing.Boating !=="" || checkTelemarketing.SCUBA !=="" || checkTelemarketing.sportsLesiure !=="" || checkTelemarketing.Hunting !=="" || checkTelemarketing.Fishing !=="" || checkTelemarketing.hiking !=="" || checkTelemarketing.shooting !=="" || checkTelemarketing.exercise !=="" || checkTelemarketing.flying !==""|| checkTelemarketing.travel !=="" || checkTelemarketing.domesticTravel !=="" || checkTelemarketing.foreignTravel !=="" || checkTelemarketing.cruiseTravel !=="" || checkTelemarketing.tvSports !=="" || checkTelemarketing.autoRacing !=="" || checkTelemarketing.football !=="" || checkTelemarketing.basketBall !=="" || checkTelemarketing.baseBall !=="" || checkTelemarketing.soccer!=="" || checkTelemarketing.hocky !=="" || checkTelemarketing.sweepSkates !=="" || checkTelemarketing.collectors!=="" || checkTelemarketing.stampCollector !=="" || checkTelemarketing.coinCollector!=="" || checkTelemarketing.artCollector!=="" || checkTelemarketing.antiqueCollector!=="" || checkTelemarketing.militaryCollector!=="" || checkTelemarketing.sportsCollector!=="" || checkTelemarketing.lifestyleCollector!=="" || checkTelemarketing.homeGarden !=="" || checkTelemarketing.housePlant !=="" || checkTelemarketing.homeImprovement !=="" || checkTelemarketing.gardening !=="" || checkTelemarketing.crafts!=="" || checkTelemarketing.woodWorking !=="")
                 {
                     try {
                         const res = await axios.post(url + "/telemarketing/find", checkTelemarketing)
@@ -650,6 +663,13 @@ export const StateContext = ({ children }) => {
                 setMilitaryCollector,
                 setSportsCollector,
                 setLifestyleCollector,
+                setHomeGarden,
+                setHousePlant,
+                setHomeImprovement,
+                setGardening,
+                setCrafts,
+                setWoodWorking,
+                setLastName,
             }}
         >
             {children}

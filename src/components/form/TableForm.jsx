@@ -92,6 +92,12 @@ const TableForm = () => {
     setMilitaryCollector,
     setSportsCollector,
     setLifestyleCollector,
+    setHomeGarden,
+    setHousePlant,
+    setHomeImprovement,
+    setGardening,
+    setCrafts,
+    setWoodWorking,
   } = useStateContext();
   const handleChange = (e) => {
     setTeleMarketingForm({
@@ -310,6 +316,18 @@ const TableForm = () => {
   const handleSportsChange = e => setSportsCollector(e.target.value)
 
   const handleLifeStyleChange = e => setLifestyleCollector(e.target.value)
+
+  const handleHomeGardenChange = e => setHomeGarden(e.target.value)
+
+  const handleHousePlantChnage = e => setHousePlant(e.target.value)
+
+  const handleHomeImprovementChange = e => setHomeImprovement(e.target.value)
+
+  const handleGardeningChange = e => setGardening(e.target.value)
+
+  const handleCraftsChange = e => setCrafts(e.target.value)
+
+  const handleWoodworkingChange = e => setWoodWorking(e.target.value)
 
   const [education, setEducation] = useState(false);
   const [buisnessOwner, setBuisnessOwner] = useState(false);
@@ -13143,7 +13161,7 @@ const TableForm = () => {
               <fieldset id="fsHOME_AND_GARDEN">
                 <legend>Home &amp; Garden</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleHomeGardenChange}
                   type="radio"
                   name="HOME_AND_GARDEN"
                   id="HOME_AND_GARDEN_Y"
@@ -13151,7 +13169,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="HOME_AND_GARDEN_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleHomeGardenChange}
                   type="radio"
                   name="HOME_AND_GARDEN"
                   id="HOME_AND_GARDEN_N"
@@ -13159,7 +13177,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="HOME_AND_GARDEN_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleHomeGardenChange}
                   type="radio"
                   name="HOME_AND_GARDEN"
                   id="HOME_AND_GARDEN_NULL"
@@ -13191,7 +13209,7 @@ const TableForm = () => {
               <fieldset id="fsHOUSE_PLANTS">
                 <legend>House Plants</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleHousePlantChnage}
                   type="radio"
                   name="HOUSE_PLANTS"
                   id="HOUSE_PLANTS_Y"
@@ -13199,7 +13217,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="HOUSE_PLANTS_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleHousePlantChnage}
                   type="radio"
                   name="HOUSE_PLANTS"
                   id="HOUSE_PLANTS_N"
@@ -13207,7 +13225,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="HOUSE_PLANTS_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleHousePlantChnage}
                   type="radio"
                   name="HOUSE_PLANTS"
                   id="HOUSE_PLANTS_NULL"
@@ -13241,7 +13259,7 @@ const TableForm = () => {
               <fieldset id="fsHOME_IMPROVEMENT_GROUPING">
                 <legend>Home Improvement</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleHomeImprovementChange}
                   type="radio"
                   name="HOME_IMPROVEMENT_GROUPING"
                   id="HOME_IMPROVEMENT_GROUPING_Y"
@@ -13249,7 +13267,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="HOME_IMPROVEMENT_GROUPING_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleHomeImprovementChange}
                   type="radio"
                   name="HOME_IMPROVEMENT_GROUPING"
                   id="HOME_IMPROVEMENT_GROUPING_N"
@@ -13257,7 +13275,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="HOME_IMPROVEMENT_GROUPING_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleHomeImprovementChange}
                   type="radio"
                   name="HOME_IMPROVEMENT_GROUPING"
                   id="HOME_IMPROVEMENT_GROUPING_NULL"
@@ -13294,7 +13312,7 @@ const TableForm = () => {
               <fieldset id="fsGARDENING1">
                 <legend>Gardening</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleGardeningChange}
                   type="radio"
                   name="GARDENING1"
                   id="GARDENING1_Y"
@@ -13302,7 +13320,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="GARDENING1_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleGardeningChange}
                   type="radio"
                   name="GARDENING1"
                   id="GARDENING1_N"
@@ -13310,7 +13328,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="GARDENING1_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleGardeningChange}
                   type="radio"
                   name="GARDENING1"
                   id="GARDENING1_NULL"
@@ -13344,7 +13362,7 @@ const TableForm = () => {
               <fieldset id="fsCRAFTS">
                 <legend>Crafts</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleCraftsChange}
                   type="radio"
                   name="CRAFTS"
                   id="CRAFTS_Y"
@@ -13352,7 +13370,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="CRAFTS_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleCraftsChange}
                   type="radio"
                   name="CRAFTS"
                   id="CRAFTS_N"
@@ -13360,7 +13378,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="CRAFTS_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleCraftsChange}
                   type="radio"
                   name="CRAFTS"
                   id="CRAFTS_NULL"
@@ -13392,7 +13410,7 @@ const TableForm = () => {
               <fieldset id="fsWOODWORKING">
                 <legend>Woodworking</legend>
                 <input
-                  onChange={handleChange}
+                  onChange={handleWoodworkingChange}
                   type="radio"
                   name="WOODWORKING"
                   id="WOODWORKING_Y"
@@ -13400,7 +13418,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="WOODWORKING_Y">Yes</label> |{" "}
                 <input
-                  onChange={handleChange}
+                  onChange={handleWoodworkingChange}
                   type="radio"
                   name="WOODWORKING"
                   id="WOODWORKING_N"
@@ -13408,7 +13426,7 @@ const TableForm = () => {
                 />{" "}
                 <label htmlFor="WOODWORKING_N">No</label> |
                 <input
-                  onChange={handleChange}
+                  onChange={handleWoodworkingChange}
                   type="radio"
                   name="WOODWORKING"
                   id="WOODWORKING_NULL"
