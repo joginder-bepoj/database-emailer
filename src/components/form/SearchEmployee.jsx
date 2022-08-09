@@ -49,7 +49,7 @@ const SearchEmployee = () => {
                                 <small>
                                     Select an Upper Limit of the Number of Employees Below:
                                 </small>
-
+                                <br />
                                 <select
                                     onChange={handleChange}
                                     name="employeesHi"

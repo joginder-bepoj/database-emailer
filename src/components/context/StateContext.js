@@ -351,7 +351,32 @@ export const StateContext = ({ children }) => {
         zipRadius: textData.txtZipRadius,
         zipMiles: textData.txtZipRadiusMiles,
     }
-    console.log(checkCellData, "check cell phone dataa")
+
+    let checkLinkedIn = {
+        country: selectCountry,
+        state: selectState,
+        county: selectCounty,
+        city: textData.taCities,
+        zip: textData.taZIPS,
+        zipCondition: zipCodeSelect.zipCondition,
+        scf: SCF,
+        scfCondition: SCFNOT,
+        zipRadius: textData.txtZipRadius,
+        zipMiles: textData.txtZipRadiusMiles,
+        email_address : email,
+        uniqueEmailCondition: uniqueEmail,
+        uniqueValues: uniqueValues,
+        urlDomain: urlDomain,
+        phone: telSearch.taPhones,
+        empLow : searchEmployee.employeesLo,
+        empHi : searchEmployee.employeesHi,
+        revenueLow : companyRevenue.revenueLo,
+        revenueHigh: companyRevenue.revenueHi,
+        companyName : searchCompany.txtCompanyName,
+        companyConditions: searchCompany,
+        chkCompNames: searchCompany.chkCompNames,
+    }
+    console.log(checkLinkedIn, "check linkedin data")
 
     const [data, setData] = useState([]);
     const [error, setError] = useState(false);
@@ -462,11 +487,34 @@ export const StateContext = ({ children }) => {
         }else if(location.pathname === "/database-emailer/cellphonedata"){
             const fetchData = async() =>{
                 if(checkCellData.country !=="" || checkCellData.city!=="" || checkCellData.county!=="" || checkCellData.state.length!==0 || checkCellData.zip!=="" || checkCellData.phone !=="" || checkCellData.ethnicity.length !==0 || checkCellData.gender!=="" || checkCellData.ownrent!=="" || checkCellData.nameAddress.chkNameAddress!=="" || checkCellData.nameAddress.chkNameFL!=="" || checkCellData.cellCarrier !=="" || checkCellData.carriers.length!==0 || checkCellData.incomeHH.MHHIncLo !=="" || checkCellData.scf.length !==0 || checkCellData.zipRadius){
-                    const res = await axios.post(url+ "/cellPhoneData/find", checkCellData)
-                    setData(res.data)
+                    try {
+                        const res = await axios.post(url+ "/cellPhoneData/find", checkCellData)
+                        setData(res.data)
+                    } catch (err) {
+                        setError(err)
+                    }
                 }else{
                     try {
                         const res = await axios.get(url + "/cellPhoneData");
+                        setData(res.data)
+                    } catch (err) {
+                        setError(err)
+                    }
+                }
+            }
+            fetchData()
+        }else if(location.pathname === "/database-emailer/checklinkedin"){
+            const fetchData = async() =>{
+                if(checkLinkedIn.country !=="" || checkLinkedIn.city !=="" || checkLinkedIn.county!=="" || checkLinkedIn.scf.length!==0 || checkLinkedIn.state.length!==0 || checkLinkedIn.zip!=="" || checkLinkedIn.zipMiles!=="" || checkLinkedIn.zipRadius!=="" || checkLinkedIn.email_address!=="" || checkLinkedIn.uniqueValues !=="" || checkLinkedIn.uniqueEmailCondition.chkCompNames !=="" || checkLinkedIn.uniqueEmailCondition.chkPhone !== "" || checkLinkedIn.uniqueEmailCondition.chkURL !=="" || checkLinkedIn.urlDomain !=="" || checkLinkedIn.phone !=="" || checkLinkedIn.empLow!=="" || checkLinkedIn.revenueLow!=="" || checkLinkedIn.companyName!=="" || checkLinkedIn.chkCompNames!==""){
+                    try {
+                        const res = await axios.post(url + "/linkedInData/find", checkLinkedIn)
+                        setData(res.data)
+                    } catch (err) {
+                        setError(err)
+                    }
+                }else{
+                    try {
+                        const res = await axios.get(url + "/linkedInData");
                         setData(res.data)
                     } catch (err) {
                         setError(err)

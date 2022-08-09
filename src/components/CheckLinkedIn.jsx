@@ -21,7 +21,7 @@ import URLdataResult from "./form/URLdataResult";
 import { useStateContext } from "./context/StateContext";
 
 const CheckLinkedIn = () => {
-    const {isLoggedIn} = useStateContext()
+    const {isLoggedIn, searchQuery} = useStateContext()
     return (
         <>
             <section className="section section-xs content">
@@ -51,8 +51,8 @@ const CheckLinkedIn = () => {
                                         </h4>
                                         <br />
                                         <div align="center">
-                                            <a
-                                                href="@"
+                                            <button
+                                                onClick={searchQuery}
                                                 style={{
                                                     textDecoration: "none",
                                                     color: "#F00",
@@ -65,7 +65,7 @@ const CheckLinkedIn = () => {
                                                 id="topSearch"
                                             >
                                                 Check Record Count
-                                            </a>
+                                            </button>
                                         </div>
                                         <br />
                                     </div>
@@ -86,20 +86,11 @@ const CheckLinkedIn = () => {
                                         {/* get unique value */}
                                         <GetUnique />
                                         <hr />
-                                        {/* Execlude general */}
-                                        <ExcludeGeneralEmail />
-                                        <hr />
                                         {/* URL domain search */}
                                         <URLdomain />
                                         <hr />
                                         {/* telephone serach */}
                                         <TelephoneSearch />
-                                        <hr />
-                                        {/* Fax number */}
-                                        <FaxNumber />
-                                        <hr />
-                                        {/* Obtain records */}
-                                        <ObtainRecords />
                                         <hr />
                                         {/* SIS Codes */}
                                         <SICcodes />
