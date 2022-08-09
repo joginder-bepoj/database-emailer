@@ -2,16 +2,13 @@ import React from "react";
 import { useStateContext } from "../context/StateContext";
 
 const CellCarriers = () => {
-    const { setCellCarrier, cellCarrier } = useStateContext()
+    const { setCellCarrier, setCarriers, carriers} = useStateContext()
     const handleChange = (e) => {
-        setCellCarrier({
-            ...cellCarrier, [e.target.name]: e.target.value
-        })
+        setCellCarrier(e.target.value)
     }
     const handleCheckChange = (e) =>{
-        setCellCarrier({
-           ...cellCarrier, [e.target.name] : e.target.checked
-        })
+        const {checked, value} = e.target
+        setCarriers(checked ? [...carriers, value] : carriers.filter(item => item !== value))
     }
     return (
         <>
@@ -1220,7 +1217,7 @@ const CellCarriers = () => {
                             <label htmlFor="Carrier_127">T-mobile Usa</label>&nbsp;
                             <input onChange={handleCheckChange}
                                 type="checkbox"
-                                value="T-mobile Usa"
+                                value="T-mobile"
                                 name="Carriers_T_mobile_Usa"
                                 id="Carrier_127"
                             />

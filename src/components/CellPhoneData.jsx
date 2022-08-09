@@ -16,8 +16,9 @@ import ScrollToTop from "react-scroll-to-top"
 const CellPhoneData = () => {
     const {setCellData, cellData, isLoggedIn} = useStateContext()
     const handleChange = (e) =>{
+        const {name, checked, value} = e.target
         setCellData({ ...cellData,
-            [e.target.name]: e.target.checked
+            [name]: checked ? value : ""
         })
     }
 

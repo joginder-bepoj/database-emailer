@@ -1,6 +1,15 @@
 import React from "react";
+import { useStateContext } from "../context/StateContext";
 
 const SearchByLastName = () => {
+    const {setLastName, lastName} = useStateContext()
+
+    const handleNameChange = e =>{
+        const {value, id} = e.target
+        setLastName({...lastName, [id]:value})
+    }
+   
+
     return (
         <>
             <fieldset id="fsLastName">
@@ -8,97 +17,113 @@ const SearchByLastName = () => {
                 <h3>Search By Last Name:</h3>
                 <small>(Use Proper Capitalization)</small>
                 <br />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[0]"
                     id="txtLastNames_0"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[1]"
                     id="txtLastNames_1"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[2]"
                     id="txtLastNames_2"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[3]"
                     id="txtLastNames_3"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[4]"
                     id="txtLastNames_4"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[5]"
                     id="txtLastNames_5"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[6]"
                     id="txtLastNames_6"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[7]"
                     id="txtLastNames_7"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[8]"
                     id="txtLastNames_8"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[9]"
                     id="txtLastNames_9"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[10]"
                     id="txtLastNames_10"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[11]"
                     id="txtLastNames_11"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[12]"
                     id="txtLastNames_12"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[13]"
                     id="txtLastNames_13"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[14]"
                     id="txtLastNames_14"
                     size="10"
                 />
-                <input
+                <input 
+                    onChange={handleNameChange}
                     type="text"
                     name="txtLastNames[15]"
                     id="txtLastNames_15"

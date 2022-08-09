@@ -3,7 +3,6 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import {
     tableFormData,
-    cellCarriersData,
     uniqueEmailFaxData,
     searchLastNameData,
     newMoversData,
@@ -29,6 +28,14 @@ import {
     selectCanStatesData,
     SICCodesChangeData,
     NACIcodeChangesData,
+    lastNameData,
+    incomeHHData,
+    childrenAndMartialData,
+    netWorthData,
+    creditRatingData,
+    mortgageData,
+    residentLengthData,
+    homeMarketData
 } from "./settingStates";
 
 const Context = createContext();
@@ -76,14 +83,12 @@ export const StateContext = ({ children }) => {
     const [SICcode, setSICcode] = useState([]);
     const [SICValue, setSICValue] = useState("")
     const [SICCodesChange, setSICCodesChages] = useState(SICCodesChangeData);
-    const [uniqueTelephoneEmail, setUniqueTelephoneEmail] = useState(
-        uniqueTelephoneEmailData
-    );
+    const [uniqueTelephoneEmail, setUniqueTelephoneEmail] = useState(uniqueTelephoneEmailData);
     const [teleMarketingForm, setTeleMarketingForm] = useState(tableFormData);
     const [newMovers, setNewMovers] = useState(newMoversData);
     const [selectRecords, setSelectRecords] = useState(selectRecordsData);
     const [cellData, setCellData] = useState(cellPhoneData);
-    const [cellCarrier, setCellCarrier] = useState(cellCarriersData);
+    const [cellCarrier, setCellCarrier] = useState("");
     const [urlData, setUrlData] = useState(urlDatas);
     const [regDates, setRegDates] = useState(regDateData);
     const [uniqValues, setUniqValues] = useState("");
@@ -102,40 +107,17 @@ export const StateContext = ({ children }) => {
     const [ethnicitiesOP, setEthnicitiesOP] = useState([])
     const [ethnicGroup, setEthnicGroup] = useState([])
     const [religions, setReligions] = useState([])
-    const [childrenAndMartial, setChildrenAndMartial] = useState({
-        NUMBER_OF_CHILDREN: "",
-        PRESENCE_OF_CHILDREN: "",
-        SEX_OF_CHILDREN: "",
-        MARITAL_STATUS: ""
-    })
+    const [childrenAndMartial, setChildrenAndMartial] = useState(childrenAndMartialData)
     const [childAndAdult, setChildAndAdult] = useState([])
-    const [incomeHH, setIncomeHH] = useState({
-        INCOME_ESTIMATED_HH: "",
-        INCOME_ESTIMATED_HH_UPPER: ""
-    })
-    const [netWorth, setNetWorth] = useState({
-        NET_WORTH: "",
-        NET_WORTH_UPPER: ""
-    })
-    const [creditRating, setCreditRating] = useState({
-        CREDIT_RATING: "",
-        CREDIT_RATING_UPPER: ""
-    })
+    const [incomeHH, setIncomeHH] = useState( incomeHHData)
+    const [netWorth, setNetWorth] = useState(netWorthData)
+    const [creditRating, setCreditRating] = useState(creditRatingData)
     const [family, setFamily] = useState("")
     const [ownerRenter, setOwnerRenter] = useState("")
     const [address, setAddress] = useState([])
-    const [residentLength, setResidentLength] = useState({
-        LENGTH_OF_RESIDENCE: "",
-        Years_Residence: "0"
-    })
-    const [mortgageDate, setMortgageDate] = useState({
-        mortgage_date: "",
-        mortgage_date_later: "",
-    })
-    const [homeMarket, setHomeMarket] = useState({
-        HOME_MARKET_VALUE: "",
-        HOME_MARKET_VALUE_UPPER: "",
-    })
+    const [residentLength, setResidentLength] = useState(residentLengthData)
+    const [mortgageDate, setMortgageDate] = useState(mortgageData)
+    const [homeMarket, setHomeMarket] = useState(homeMarketData)
     const [fuel, setFuel] = useState("")
     const [airCond, setAirCond] = useState("")
     const [water, setWater] = useState("")
@@ -189,7 +171,8 @@ export const StateContext = ({ children }) => {
     const [gardening, setGardening] = useState("")
     const [crafts, setCrafts] = useState("")
     const [woodWorking, setWoodWorking] = useState("")
-    const [lastName, setLastName] = useState("")
+    const [lastName, setLastName] = useState(lastNameData)
+    const [carriers, setCarriers] = useState([])
     const resultRef = useRef();
 
     let checkConsumer = {
@@ -345,9 +328,30 @@ export const StateContext = ({ children }) => {
         gardening : gardening,
         crafts : crafts,
         woodWorking : woodWorking,
+        lastName: lastName
     }
 
-    console.log(checkTelemarketing, "checkTelemarketing")
+    let checkCellData = {
+        country: selectCountry,
+        state: selectState,
+        county: selectCounty,
+        city: textData.taCities,
+        zip: textData.taZIPS,
+        zipCondition: zipCodeSelect.zipCondition,
+        phone: telSearch.taPhones,
+        ethnicity: ethnicity,
+        gender : gender,
+        ownrent: rentingHome,
+        nameAddress: cellData,
+        carriers: carriers,
+        cellCarrier: cellCarrier,
+        incomeHH: houseHoldIncome,
+        scf: SCF,
+        scfCondition: SCFNOT,
+        zipRadius: textData.txtZipRadius,
+        zipMiles: textData.txtZipRadiusMiles,
+    }
+    console.log(checkCellData, "check cell phone dataa")
 
     const [data, setData] = useState([]);
     const [error, setError] = useState(false);
@@ -437,7 +441,7 @@ export const StateContext = ({ children }) => {
             fetchData()
         }else if(location.pathname === "/database-emailer/telemarketing"){
             const fetchData = async() =>{
-                if(checkTelemarketing.country !=="" || checkTelemarketing.city !== "" || checkTelemarketing.country !== "" || checkTelemarketing.state.length !==0 || checkTelemarketing.email_address !== "" || checkTelemarketing.zip !=="" || checkTelemarketing.emailDomain.length !== 0 || checkTelemarketing.uniqueConditions.chkDoNotCall !=="" || checkTelemarketing.uniqueConditions.chkHavePhone !=="" || checkTelemarketing.uniqueConditions.chkValidEmails!=="" || checkTelemarketing.uniqueConditions.optUnique !=="" || checkTelemarketing.telSearch !== "" || checkTelemarketing.age.ageLower !=="" || checkTelemarketing.dob !== "--" || checkTelemarketing.edu.length !== 0 || checkTelemarketing.businessOwner.length !== 0 || checkTelemarketing.generalOccupation.length !== 0 || checkTelemarketing.detailedOccupation.length !==0 || checkTelemarketing.languages.length !==0 || checkTelemarketing.ethnicities.length !==0 || checkTelemarketing.ethnicGroup.length !==0 || checkTelemarketing.religions.length !==0 || checkTelemarketing.childrenAndMartial.NUMBER_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.PRESENCE_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.SEX_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.MARITAL_STATUS !=="" || checkTelemarketing.childAndAdult.length !==0 || checkTelemarketing.incomeHH.INCOME_ESTIMATED_HH !=="" || checkTelemarketing.netWorth.NET_WORTH !=="" || checkTelemarketing.creditRating.CREDIT_RATING !==""|| checkTelemarketing.family !=="" || checkTelemarketing.ownerRenter !=="" || checkTelemarketing.address.length !==0 || checkTelemarketing.residentLength.LENGTH_OF_RESIDENCE !=="" || checkTelemarketing.mortgageDate.mortgage_date !=="" || checkTelemarketing.homeMarket.HOME_MARKET_VALUE !==""|| checkTelemarketing.fuel !=="" || checkTelemarketing.airCond !=="" || checkTelemarketing.sewer !=="" || checkTelemarketing.water !=="" || checkTelemarketing.generations !==""|| checkTelemarketing.numAdults !=="" || checkTelemarketing.genderMF !=="" || checkTelemarketing.smokker !=="" || checkTelemarketing.discovercard !=="" || checkTelemarketing.americanCard !=="" || checkTelemarketing.visaCard !=="" || checkTelemarketing.masterCard !=="" || checkTelemarketing.gasRetailCard !=="" || checkTelemarketing.Tennis !=="" || checkTelemarketing.Golf !=="" || checkTelemarketing.snowSkiing !=="" || checkTelemarketing.motorCycling !=="" || checkTelemarketing.NASACR !=="" || checkTelemarketing.Boating !=="" || checkTelemarketing.SCUBA !=="" || checkTelemarketing.sportsLesiure !=="" || checkTelemarketing.Hunting !=="" || checkTelemarketing.Fishing !=="" || checkTelemarketing.hiking !=="" || checkTelemarketing.shooting !=="" || checkTelemarketing.exercise !=="" || checkTelemarketing.flying !==""|| checkTelemarketing.travel !=="" || checkTelemarketing.domesticTravel !=="" || checkTelemarketing.foreignTravel !=="" || checkTelemarketing.cruiseTravel !=="" || checkTelemarketing.tvSports !=="" || checkTelemarketing.autoRacing !=="" || checkTelemarketing.football !=="" || checkTelemarketing.basketBall !=="" || checkTelemarketing.baseBall !=="" || checkTelemarketing.soccer!=="" || checkTelemarketing.hocky !=="" || checkTelemarketing.sweepSkates !=="" || checkTelemarketing.collectors!=="" || checkTelemarketing.stampCollector !=="" || checkTelemarketing.coinCollector!=="" || checkTelemarketing.artCollector!=="" || checkTelemarketing.antiqueCollector!=="" || checkTelemarketing.militaryCollector!=="" || checkTelemarketing.sportsCollector!=="" || checkTelemarketing.lifestyleCollector!=="" || checkTelemarketing.homeGarden !=="" || checkTelemarketing.housePlant !=="" || checkTelemarketing.homeImprovement !=="" || checkTelemarketing.gardening !=="" || checkTelemarketing.crafts!=="" || checkTelemarketing.woodWorking !=="")
+                if(checkTelemarketing.country !=="" || checkTelemarketing.city !== "" || checkTelemarketing.country !== "" || checkTelemarketing.state.length !==0 || checkTelemarketing.email_address !== "" || checkTelemarketing.zip !=="" || checkTelemarketing.emailDomain.length !== 0 || checkTelemarketing.uniqueConditions.chkDoNotCall !=="" || checkTelemarketing.uniqueConditions.chkHavePhone !=="" || checkTelemarketing.uniqueConditions.chkValidEmails!=="" || checkTelemarketing.uniqueConditions.optUnique !=="" || checkTelemarketing.telSearch !== "" || checkTelemarketing.age.ageLower !=="" || checkTelemarketing.dob !== "--" || checkTelemarketing.edu.length !== 0 || checkTelemarketing.businessOwner.length !== 0 || checkTelemarketing.generalOccupation.length !== 0 || checkTelemarketing.detailedOccupation.length !==0 || checkTelemarketing.languages.length !==0 || checkTelemarketing.ethnicities.length !==0 || checkTelemarketing.ethnicGroup.length !==0 || checkTelemarketing.religions.length !==0 || checkTelemarketing.childrenAndMartial.NUMBER_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.PRESENCE_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.SEX_OF_CHILDREN !=="" || checkTelemarketing.childrenAndMartial.MARITAL_STATUS !=="" || checkTelemarketing.childAndAdult.length !==0 || checkTelemarketing.incomeHH.INCOME_ESTIMATED_HH !=="" || checkTelemarketing.netWorth.NET_WORTH !=="" || checkTelemarketing.creditRating.CREDIT_RATING !==""|| checkTelemarketing.family !=="" || checkTelemarketing.ownerRenter !=="" || checkTelemarketing.address.length !==0 || checkTelemarketing.residentLength.LENGTH_OF_RESIDENCE !=="" || checkTelemarketing.mortgageDate.mortgage_date !=="" || checkTelemarketing.homeMarket.HOME_MARKET_VALUE !==""|| checkTelemarketing.fuel !=="" || checkTelemarketing.airCond !=="" || checkTelemarketing.sewer !=="" || checkTelemarketing.water !=="" || checkTelemarketing.generations !==""|| checkTelemarketing.numAdults !=="" || checkTelemarketing.genderMF !=="" || checkTelemarketing.smokker !=="" || checkTelemarketing.discovercard !=="" || checkTelemarketing.americanCard !=="" || checkTelemarketing.visaCard !=="" || checkTelemarketing.masterCard !=="" || checkTelemarketing.gasRetailCard !=="" || checkTelemarketing.Tennis !=="" || checkTelemarketing.Golf !=="" || checkTelemarketing.snowSkiing !=="" || checkTelemarketing.motorCycling !=="" || checkTelemarketing.NASACR !=="" || checkTelemarketing.Boating !=="" || checkTelemarketing.SCUBA !=="" || checkTelemarketing.sportsLesiure !=="" || checkTelemarketing.Hunting !=="" || checkTelemarketing.Fishing !=="" || checkTelemarketing.hiking !=="" || checkTelemarketing.shooting !=="" || checkTelemarketing.exercise !=="" || checkTelemarketing.flying !==""|| checkTelemarketing.travel !=="" || checkTelemarketing.domesticTravel !=="" || checkTelemarketing.foreignTravel !=="" || checkTelemarketing.cruiseTravel !=="" || checkTelemarketing.tvSports !=="" || checkTelemarketing.autoRacing !=="" || checkTelemarketing.football !=="" || checkTelemarketing.basketBall !=="" || checkTelemarketing.baseBall !=="" || checkTelemarketing.soccer!=="" || checkTelemarketing.hocky !=="" || checkTelemarketing.sweepSkates !=="" || checkTelemarketing.collectors!=="" || checkTelemarketing.stampCollector !=="" || checkTelemarketing.coinCollector!=="" || checkTelemarketing.artCollector!=="" || checkTelemarketing.antiqueCollector!=="" || checkTelemarketing.militaryCollector!=="" || checkTelemarketing.sportsCollector!=="" || checkTelemarketing.lifestyleCollector!=="" || checkTelemarketing.homeGarden !=="" || checkTelemarketing.housePlant !=="" || checkTelemarketing.homeImprovement !=="" || checkTelemarketing.gardening !=="" || checkTelemarketing.crafts!=="" || checkTelemarketing.woodWorking !==""|| checkTelemarketing.lastName.txtLastNames_0!=="")
                 {
                     try {
                         const res = await axios.post(url + "/telemarketing/find", checkTelemarketing)
@@ -448,6 +452,21 @@ export const StateContext = ({ children }) => {
                 }else{
                     try {
                         const res = await axios.get(url+ "/telemarketing");
+                        setData(res.data)
+                    } catch (err) {
+                        setError(err)
+                    }
+                }
+            }
+            fetchData()
+        }else if(location.pathname === "/database-emailer/cellphonedata"){
+            const fetchData = async() =>{
+                if(checkCellData.country !=="" || checkCellData.city!=="" || checkCellData.county!=="" || checkCellData.state.length!==0 || checkCellData.zip!=="" || checkCellData.phone !=="" || checkCellData.ethnicity.length !==0 || checkCellData.gender!=="" || checkCellData.ownrent!=="" || checkCellData.nameAddress.chkNameAddress!=="" || checkCellData.nameAddress.chkNameFL!=="" || checkCellData.cellCarrier !=="" || checkCellData.carriers.length!==0 || checkCellData.incomeHH.MHHIncLo !=="" || checkCellData.scf.length !==0 || checkCellData.zipRadius){
+                    const res = await axios.post(url+ "/cellPhoneData/find", checkCellData)
+                    setData(res.data)
+                }else{
+                    try {
+                        const res = await axios.get(url + "/cellPhoneData");
                         setData(res.data)
                     } catch (err) {
                         setError(err)
@@ -670,6 +689,9 @@ export const StateContext = ({ children }) => {
                 setCrafts,
                 setWoodWorking,
                 setLastName,
+                lastName,
+                setCarriers,
+                carriers
             }}
         >
             {children}
