@@ -8,7 +8,7 @@ const JobSearchs = () => {
     const [tempArr, setTempArr] = useState([])
     const [check, setCheck] = useState(false)
     
-    const {setJobSearch, jobSearch, setJobTitle, jobTitle} = useStateContext()
+    const {setJobSearch, jobSearch, setJobTitle} = useStateContext()
     const handleChange = (e) =>{
         setJobSearch({
             ...jobSearch, [e.target.name] : e.target.value

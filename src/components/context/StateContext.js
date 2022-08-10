@@ -375,6 +375,13 @@ export const StateContext = ({ children }) => {
         companyName : searchCompany.txtCompanyName,
         companyConditions: searchCompany,
         chkCompNames: searchCompany.chkCompNames,
+        last_name: searchLastName.taLastNames,
+        last_nameConditions: searchLastName,
+        jobTitle: jobTitle,
+        jobSearchCondition: jobSearch,
+        sicCode : SICcode,
+        sicCodeChanges: SICCodesChange,
+        sicValueRange : SICValue,
     }
     console.log(checkLinkedIn, "check linkedin data")
 
@@ -505,7 +512,7 @@ export const StateContext = ({ children }) => {
             fetchData()
         }else if(location.pathname === "/database-emailer/checklinkedin"){
             const fetchData = async() =>{
-                if(checkLinkedIn.country !=="" || checkLinkedIn.city !=="" || checkLinkedIn.county!=="" || checkLinkedIn.scf.length!==0 || checkLinkedIn.state.length!==0 || checkLinkedIn.zip!=="" || checkLinkedIn.zipMiles!=="" || checkLinkedIn.zipRadius!=="" || checkLinkedIn.email_address!=="" || checkLinkedIn.uniqueValues !=="" || checkLinkedIn.uniqueEmailCondition.chkCompNames !=="" || checkLinkedIn.uniqueEmailCondition.chkPhone !== "" || checkLinkedIn.uniqueEmailCondition.chkURL !=="" || checkLinkedIn.urlDomain !=="" || checkLinkedIn.phone !=="" || checkLinkedIn.empLow!=="" || checkLinkedIn.revenueLow!=="" || checkLinkedIn.companyName!=="" || checkLinkedIn.chkCompNames!==""){
+                if(checkLinkedIn.country !=="" || checkLinkedIn.city !=="" || checkLinkedIn.county!=="" || checkLinkedIn.scf.length!==0 || checkLinkedIn.state.length!==0 || checkLinkedIn.zip!=="" || checkLinkedIn.zipMiles!=="" || checkLinkedIn.zipRadius!=="" || checkLinkedIn.email_address!=="" || checkLinkedIn.uniqueValues !=="" || checkLinkedIn.uniqueEmailCondition.chkCompNames !=="" || checkLinkedIn.uniqueEmailCondition.chkPhone !== "" || checkLinkedIn.uniqueEmailCondition.chkURL !=="" || checkLinkedIn.urlDomain !=="" || checkLinkedIn.phone !=="" || checkLinkedIn.empLow!=="" || checkLinkedIn.revenueLow!=="" || checkLinkedIn.companyName!=="" || checkLinkedIn.chkCompNames!=="" || checkLinkedIn.last_name!=="" || checkLinkedIn.jobTitle.length !== 0 || checkLinkedIn.jobSearchCondition.titleCondition === "ALL" || checkLinkedIn.jobSearchCondition.titleCondition==="NONE" || checkLinkedIn.jobSearchCondition.txtTitle !=="" || checkLinkedIn.sicCode.length !== 0 || checkLinkedIn.sicValueRange !== "" || checkLinkedIn.sicCodeChanges.txtSicLower !=="" || checkLinkedIn.sicCodeChanges.chkSICCODESONLY !== ""){
                     try {
                         const res = await axios.post(url + "/linkedInData/find", checkLinkedIn)
                         setData(res.data)
