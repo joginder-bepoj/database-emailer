@@ -383,7 +383,26 @@ export const StateContext = ({ children }) => {
         sicCodeChanges: SICCodesChange,
         sicValueRange : SICValue,
     }
-    console.log(checkLinkedIn, "check linkedin data")
+
+
+    let checkUrlData = {
+        world: urlData.optWorld,
+        searchRecords: urlData.optSET,
+        country : selectCountry,
+        state: selectState,
+        county: selectCounty,
+        city: textData.taCities,
+        zip: textData.taZIPS,
+        zipCondition: zipCodeSelect.zipCondition,
+        scf: SCF,
+        scfCondition: SCFNOT,
+        email: email,
+        phone: telSearch.taPhones,
+        regDate : {year: regDates.selRegYear, month: regDates.selRegMonth, day: regDates.selRegDay},
+        uptDate: {year: regDates.selRegUpdateYear, month: regDates.selRegUpdateMonth, day: regDates.selRegUpdateDay},
+        expDate: {year: regDates.selRegEXPIRESYear, month: regDates.selRegEXPIRESMonth, day: regDates.selRegEXPIRESDay}
+    }
+    console.log(checkUrlData, "check URL data")
 
     const [data, setData] = useState([]);
     const [error, setError] = useState(false);
@@ -522,6 +541,25 @@ export const StateContext = ({ children }) => {
                 }else{
                     try {
                         const res = await axios.get(url + "/linkedInData");
+                        setData(res.data)
+                    } catch (err) {
+                        setError(err)
+                    }
+                }
+            }
+            fetchData()
+        }else if(location.pathname === "/database-emailer/urldata"){
+            const fetchData = async () =>{
+                if(checkUrlData.world !=="USCAN" || checkUrlData.searchRecords !=="Registrant" || (checkUrlData.country !=="" && checkUrlData.country !=="ALL")|| checkUrlData.state.length !==0 || checkUrlData.city!=="" || checkUrlData.scf.length!==0 || checkUrlData.zip!=="" || checkUrlData.email !=="" || checkUrlData.phone !=="" || checkUrlData.regDate.year!=="" || checkUrlData.regDate.month!=="" || checkUrlData.uptDate.year!=="" || checkUrlData.uptDate.month!=="" || checkUrlData.expDate.year!=="" || checkUrlData.expDate.month!==""){
+                    try {
+                        const res = await axios.post(url + "/urlData/find", checkUrlData)
+                        setData(res.data)
+                    } catch (err) {
+                        setError(err)
+                    }
+                }else{
+                    try {
+                        const res = await axios.get(url + "/urlData");
                         setData(res.data)
                     } catch (err) {
                         setError(err)

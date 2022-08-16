@@ -152,7 +152,7 @@ const SearchByCountry = () => {
                             type="radio"
                             name="US_CAN_ALL"
                             id="optUS"
-                            value="USA"
+                            value="US"
                             onChange={handleChange}
                         />
                     </div>
@@ -162,7 +162,7 @@ const SearchByCountry = () => {
                             type="radio"
                             name="US_CAN_ALL"
                             id="optCAN"
-                            value="CAN"
+                            value="CA"
                             onChange={handleChange}
                         />
                     </div>

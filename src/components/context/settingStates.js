@@ -255,7 +255,7 @@ export const cellPhoneData = {
 
 export const urlDatas = {
   optWorld: "USCAN",
-  optSET: "",
+  optSET: "Registrant",
   selTLD: "",
   txtTLD: "",
 };

@@ -103,7 +103,7 @@ const USstates = () => {
                 }
                 
             </fieldset>
-            <fieldset id="counties">
+            {location.pathname !== "/database-emailer/urldata" && <fieldset id="counties">
                 <legend>Search By US Counties</legend>
                 {show ? (
                     <table
@@ -158,7 +158,8 @@ const USstates = () => {
                     one county)
                 </span>
                 <input type="hidden" name="stCheck" id="stCheck" value="Array" />
-            </fieldset>
+            </fieldset>}
+            
             <hr />
 
             <fieldset>

@@ -4,7 +4,6 @@ import RegistrationDates from "./form/RegistrationDates";
 import SearchByCountry from "./form/SearchByCountry";
 import TelephoneSearch from "./form/TelephoneSearch";
 import USstates from "./form/USstates";
-import UniqueEmailFax from "./form/UniqueEmailFax";
 import UniqueValue from "./form/UniqueValue";
 import ExcludeGeneralEmail from "./form/ExcludeGeneralEmail";
 import URLdomain from "./form/URLdomain";
@@ -14,9 +13,10 @@ import URLdataResult from "./form/URLdataResult";
 import { useStateContext } from "./context/StateContext";
 import ScrollToTop from "react-scroll-to-top";
 import RestWorld from "./form/RestWorld";
+import UniqueWebfax from "./form/UniqueWebfax";
 
 const URLdata = () => {
-    const {setUrlData, urlData} = useStateContext()
+    const {setUrlData, urlData, searchQuery} = useStateContext()
     const handleChange = (e) =>{
         setUrlData({
             ...urlData, [e.target.name] : e.target.value
@@ -45,8 +45,8 @@ const URLdata = () => {
                                 >
                                     <div className="important">
                                         <div align="center">
-                                            <a
-                                                href="@"
+                                            <button
+                                                onClick={searchQuery}
                                                 style={{
                                                     textDecoration: "none",
                                                     color: "#F00",
@@ -59,7 +59,7 @@ const URLdata = () => {
                                                 id="topSearch"
                                             >
                                                 Check Record Count
-                                            </a>
+                                            </button>
                                         </div>
                                         <br />
                                     </div>
@@ -120,13 +120,13 @@ const URLdata = () => {
                                             urlData.optWorld === "USCAN" ? (
                                                 <>
                                                      <h2 style={{color: "black", textShadow: "none"}}>USA and Canada Only</h2>
-                                        <fieldset>
-                                            <legend>Geographic Search Parameters</legend>
-                                            {/* search by country */}
-                                            <SearchByCountry />
-                                            {/* US states */}
-                                            <USstates />
-                                        </fieldset>
+                                                    <fieldset>
+                                                        <legend>Geographic Search Parameters</legend>
+                                                        {/* search by country */}
+                                                        <SearchByCountry />
+                                                        {/* US states */}
+                                                        <USstates />
+                                                    </fieldset>
                                                 </>
                                             ) : <RestWorld />
                                         }
@@ -141,9 +141,9 @@ const URLdata = () => {
                                         <hr />
                                         <div id="divCountries" align="center">
                                             <hr />
-                                            <a href="@">US + Canada</a>
-                                            OR
-                                            <a href="@">The Rest of world</a>
+                                            <a href="#USCAN">US + Canada</a>&nbsp;
+                                            OR &nbsp;
+                                            <a href="#USCAN">The Rest of world</a>
                                             <hr />
                                         </div>
                                         {/* Email address search */}
@@ -152,7 +152,7 @@ const URLdata = () => {
                                         <RegistrationDates />
                                         <hr />
                                         {/* Unique email and fax address */}
-                                        <UniqueEmailFax />
+                                        <UniqueWebfax />
                                         <hr />
                                         {/* unique value */}
                                         <UniqueValue />
