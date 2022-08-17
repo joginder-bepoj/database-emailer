@@ -35,7 +35,8 @@ import {
     creditRatingData,
     mortgageData,
     residentLengthData,
-    homeMarketData
+    homeMarketData,
+    uniqueWebFaxData
 } from "./settingStates";
 
 const Context = createContext();
@@ -92,7 +93,7 @@ export const StateContext = ({ children }) => {
     const [urlData, setUrlData] = useState(urlDatas);
     const [regDates, setRegDates] = useState(regDateData);
     const [uniqValues, setUniqValues] = useState("");
-    const [registrantContact, setRegistrantContact] = useState("");
+    const [registrantContact, setRegistrantContact] = useState("0");
     const [badData, setBadData] = useState("");
     const [SCFNOT, setSCFNOT] = useState("");
     const [domainCondition, setDomainCondition] = useState("");
@@ -173,6 +174,9 @@ export const StateContext = ({ children }) => {
     const [woodWorking, setWoodWorking] = useState("")
     const [lastName, setLastName] = useState(lastNameData)
     const [carriers, setCarriers] = useState([])
+    const [uniqueWebFax, setUniqueWebFax] = useState(uniqueWebFaxData)
+    const [restWorld, setRestWorld] = useState([])
+    const [worldText, setWorldText] = useState({})
     const resultRef = useRef();
 
     let checkConsumer = {
@@ -400,7 +404,17 @@ export const StateContext = ({ children }) => {
         phone: telSearch.taPhones,
         regDate : {year: regDates.selRegYear, month: regDates.selRegMonth, day: regDates.selRegDay},
         uptDate: {year: regDates.selRegUpdateYear, month: regDates.selRegUpdateMonth, day: regDates.selRegUpdateDay},
-        expDate: {year: regDates.selRegEXPIRESYear, month: regDates.selRegEXPIRESMonth, day: regDates.selRegEXPIRESDay}
+        expDate: {year: regDates.selRegEXPIRESYear, month: regDates.selRegEXPIRESMonth, day: regDates.selRegEXPIRESDay},
+        uniqueWebFax: uniqueWebFax,
+        uniqValues: uniqValues,
+        tld: {opt: urlData.selTLD, text: urlData.txtTLD},
+        excludeEmail: excludeEmail,
+        urlDomain: urlDomain,
+        companyName : searchCompany.txtCompanyName,
+        companyConditions: searchCompany,
+        chkCompNames: searchCompany.chkCompNames,
+        registrantContact: registrantContact,
+        restWorld: restWorld
     }
     console.log(checkUrlData, "check URL data")
 
@@ -550,7 +564,7 @@ export const StateContext = ({ children }) => {
             fetchData()
         }else if(location.pathname === "/database-emailer/urldata"){
             const fetchData = async () =>{
-                if(checkUrlData.world !=="USCAN" || checkUrlData.searchRecords !=="Registrant" || (checkUrlData.country !=="" && checkUrlData.country !=="ALL")|| checkUrlData.state.length !==0 || checkUrlData.city!=="" || checkUrlData.scf.length!==0 || checkUrlData.zip!=="" || checkUrlData.email !=="" || checkUrlData.phone !=="" || checkUrlData.regDate.year!=="" || checkUrlData.regDate.month!=="" || checkUrlData.uptDate.year!=="" || checkUrlData.uptDate.month!=="" || checkUrlData.expDate.year!=="" || checkUrlData.expDate.month!==""){
+                if(checkUrlData.world !=="USCAN" || checkUrlData.searchRecords !=="Registrant" || (checkUrlData.country !=="" && checkUrlData.country !=="ALL")|| checkUrlData.state.length !==0 || checkUrlData.city!=="" || checkUrlData.scf.length!==0 || checkUrlData.zip!=="" || checkUrlData.email !=="" || checkUrlData.phone !=="" || checkUrlData.regDate.year!=="" || checkUrlData.regDate.month!=="" || checkUrlData.uptDate.year!=="" || checkUrlData.uptDate.month!=="" || checkUrlData.expDate.year!=="" || checkUrlData.expDate.month!=="" || checkUrlData.uniqueWebFax.chkEmails!=="0" || checkUrlData.uniqueWebFax.chkFaxes!=="" || checkUrlData.uniqueWebFax.chkPhone!=="" || checkUrlData.uniqValues!=="" || checkUrlData.tld.opt !=="" || checkUrlData.tld.text!=="" || checkUrlData.excludeEmail.length !==0 || checkUrlData.urlDomain!=="" || checkUrlData.companyName !=="" || checkUrlData.chkCompNames!=="" || checkUrlData.registrantContact !=="0"){
                     try {
                         const res = await axios.post(url + "/urlData/find", checkUrlData)
                         setData(res.data)
@@ -784,7 +798,13 @@ export const StateContext = ({ children }) => {
                 setLastName,
                 lastName,
                 setCarriers,
-                carriers
+                carriers,
+                setUniqueWebFax,
+                uniqueWebFax,
+                setRestWorld,
+                restWorld,
+                setWorldText,
+                worldText
             }}
         >
             {children}

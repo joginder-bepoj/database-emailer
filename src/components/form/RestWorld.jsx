@@ -1,6 +1,17 @@
 import React from "react";
+import { useStateContext } from "../context/StateContext";
 
 const RestWorld = () => {
+    const {setRestWorld, restWorld, setWorldText, worldText} = useStateContext()
+    const handleCheckChange = (e) =>{
+        const {value, checked} = e.target
+        setRestWorld(checked ? [...restWorld, value] : restWorld.filter(item => item !== value))
+    }
+    const handleChange = (e) =>{
+        setWorldText({
+            ...worldText, [e.target.name] : e.target.value
+        })
+    }
     return (
         <div>
             <div id="theWorld" className="world" >
@@ -27,6 +38,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AL">Albania</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[1]"
                                             id="countries_AL"
@@ -36,6 +48,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AD">Andorra</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[2]"
                                             id="countries_AD"
@@ -45,6 +58,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AM">Armenia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[3]"
                                             id="countries_AM"
@@ -54,6 +68,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AT">Austria</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[4]"
                                             id="countries_AT"
@@ -63,6 +78,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BY">Belarus</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[5]"
                                             id="countries_BY"
@@ -72,6 +88,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BE">Belgium</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[6]"
                                             id="countries_BE"
@@ -81,6 +98,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BA">Bosnia-Herzegovina</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[7]"
                                             id="countries_BA"
@@ -90,6 +108,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BG">Bulgaria</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[8]"
                                             id="countries_BG"
@@ -99,6 +118,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CV">Cape Verde</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[9]"
                                             id="countries_CV"
@@ -108,6 +128,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_HR">Croatia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[10]"
                                             id="countries_HR"
@@ -117,6 +138,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CY">Cyprus</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[11]"
                                             id="countries_CY"
@@ -126,6 +148,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CZ">Czech Republic</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[12]"
                                             id="countries_CZ"
@@ -135,6 +158,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_DK">Denmark</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[13]"
                                             id="countries_DK"
@@ -144,6 +168,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_EE">Estonia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[14]"
                                             id="countries_EE"
@@ -153,6 +178,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_FO">Faroe Islands</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[15]"
                                             id="countries_FO"
@@ -162,6 +188,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_FI">Finland</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[16]"
                                             id="countries_FI"
@@ -171,6 +198,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_FR">France</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[17]"
                                             id="countries_FR"
@@ -180,6 +208,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GE">Georgia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[18]"
                                             id="countries_GE"
@@ -189,6 +218,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_DE">Germany</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[19]"
                                             id="countries_DE"
@@ -198,6 +228,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GI">Gibraltar</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[20]"
                                             id="countries_GI"
@@ -207,6 +238,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GR">Greece</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[21]"
                                             id="countries_GR"
@@ -216,6 +248,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GL">Greenland</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[22]"
                                             id="countries_GL"
@@ -225,6 +258,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_HU">Hungary</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[23]"
                                             id="countries_HU"
@@ -234,6 +268,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_IS">Iceland</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[24]"
                                             id="countries_IS"
@@ -243,6 +278,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_IE">Ireland</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[25]"
                                             id="countries_IE"
@@ -252,6 +288,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_IT">Italy</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[26]"
                                             id="countries_IT"
@@ -261,6 +298,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_LV">Latvia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[27]"
                                             id="countries_LV"
@@ -270,6 +308,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_LI">Liechtenstein</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[28]"
                                             id="countries_LI"
@@ -279,6 +318,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_LT">Lithuania</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[29]"
                                             id="countries_LT"
@@ -288,6 +328,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_LU">Luxembourg</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[30]"
                                             id="countries_LU"
@@ -297,6 +338,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MK">Macedonia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[31]"
                                             id="countries_MK"
@@ -306,6 +348,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MT">Malta</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[32]"
                                             id="countries_MT"
@@ -315,6 +358,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MD">Moldova</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[33]"
                                             id="countries_MD"
@@ -324,6 +368,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MC">Monaco</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[34]"
                                             id="countries_MC"
@@ -333,6 +378,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MS">Montserrat</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[35]"
                                             id="countries_MS"
@@ -342,6 +388,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NL">Netherlands</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[36]"
                                             id="countries_NL"
@@ -351,6 +398,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NF">Norfolk Island</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[37]"
                                             id="countries_NF"
@@ -360,6 +408,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NO">Norway</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[38]"
                                             id="countries_NO"
@@ -369,6 +418,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_PL">Poland</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[39]"
                                             id="countries_PL"
@@ -378,6 +428,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_PT">Portugal</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[40]"
                                             id="countries_PT"
@@ -387,6 +438,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_RO">Romania</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[41]"
                                             id="countries_RO"
@@ -396,6 +448,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_RU">Russia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[42]"
                                             id="countries_RU"
@@ -405,6 +458,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SM">San Marino</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[43]"
                                             id="countries_SM"
@@ -414,6 +468,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_YU">Serbia &amp; Montenegro</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[44]"
                                             id="countries_YU"
@@ -423,6 +478,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SK">Slovakia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[45]"
                                             id="countries_SK"
@@ -432,6 +488,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SI">Slovenia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[46]"
                                             id="countries_SI"
@@ -441,6 +498,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_ES">Spain</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[47]"
                                             id="countries_ES"
@@ -450,6 +508,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SJ">Svalbard Jan Mayen Island</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[48]"
                                             id="countries_SJ"
@@ -459,6 +518,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SE">Sweden</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[49]"
                                             id="countries_SE"
@@ -468,6 +528,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CH">Switzerland</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[50]"
                                             id="countries_CH"
@@ -477,6 +538,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_UA">Ukraine</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[51]"
                                             id="countries_UA"
@@ -486,6 +548,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_UK">United Kingdom</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[52]"
                                             id="countries_UK"
@@ -495,6 +558,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_VA">Vatican City</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[53]"
                                             id="countries_VA"
@@ -514,6 +578,7 @@ const RestWorld = () => {
                                             British Indian Ocean Territory
                                         </label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[1]"
                                             id="countries_IO"
@@ -523,6 +588,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CX">Christmas Islands</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[2]"
                                             id="countries_CX"
@@ -532,6 +598,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CC">Cocos Island</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[3]"
                                             id="countries_CC"
@@ -541,6 +608,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_KM">Comoros</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[4]"
                                             id="countries_KM"
@@ -550,6 +618,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CK">Cook Islands</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[5]"
                                             id="countries_CK"
@@ -559,6 +628,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TP">East Timor</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[6]"
                                             id="countries_TP"
@@ -568,6 +638,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_FJ">Fiji</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[7]"
                                             id="countries_FJ"
@@ -577,6 +648,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_PF">French Polynesia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[8]"
                                             id="countries_PF"
@@ -586,6 +658,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TF">French Sthrn Territories</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[9]"
                                             id="countries_TF"
@@ -595,6 +668,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_KI">Kiribati</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[10]"
                                             id="countries_KI"
@@ -604,6 +678,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MV">Maldives</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[11]"
                                             id="countries_MV"
@@ -613,6 +688,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NR">Nauru</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[12]"
                                             id="countries_NR"
@@ -622,6 +698,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NC">New Caledonia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[13]"
                                             id="countries_NC"
@@ -631,6 +708,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NU">Niue</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[14]"
                                             id="countries_NU"
@@ -640,6 +718,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NF">Norfolk Island</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[15]"
                                             id="countries_NF"
@@ -649,6 +728,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_PG">Papua New Guinea</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[16]"
                                             id="countries_PG"
@@ -658,6 +738,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_PN">Pitcairn Island</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[17]"
                                             id="countries_PN"
@@ -667,6 +748,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_RE">Reunion</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[18]"
                                             id="countries_RE"
@@ -676,6 +758,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_WS">Samoa</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[19]"
                                             id="countries_WS"
@@ -685,6 +768,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SC">Seychelles</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[20]"
                                             id="countries_SC"
@@ -694,6 +778,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SB">Soloman Islands</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[21]"
                                             id="countries_SB"
@@ -703,6 +788,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TO">Tonga</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[22]"
                                             id="countries_TO"
@@ -712,6 +798,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TV">Tuvalu</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[23]"
                                             id="countries_TV"
@@ -723,6 +810,7 @@ const RestWorld = () => {
                                             U.S. Minor Outlying Islands
                                         </label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[24]"
                                             id="countries_UM"
@@ -732,6 +820,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_VU">Vanuatu</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[25]"
                                             id="countries_VU"
@@ -743,6 +832,7 @@ const RestWorld = () => {
                                             Wallis &amp; Futunu Islands
                                         </label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[26]"
                                             id="countries_WF"
@@ -760,6 +850,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AU">Australia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[1]"
                                             id="countries_AU"
@@ -771,6 +862,7 @@ const RestWorld = () => {
                                             Heard &amp; McDonald Islands
                                         </label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[2]"
                                             id="countries_HM"
@@ -780,6 +872,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NZ">New Zealand</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[3]"
                                             id="countries_NZ"
@@ -789,6 +882,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TK">Tokelau</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[4]"
                                             id="countries_TK"
@@ -807,6 +901,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AF">Afghanistan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[1]"
                                             id="countries_AF"
@@ -816,6 +911,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AZ">Azerbaijan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[2]"
                                             id="countries_AZ"
@@ -825,6 +921,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BD">Bangladesh</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[3]"
                                             id="countries_BD"
@@ -834,6 +931,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BH">Bahrain</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[4]"
                                             id="countries_BH"
@@ -843,6 +941,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BT">Bhutan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[5]"
                                             id="countries_BT"
@@ -852,6 +951,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BN">Brunei Darussalam</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[6]"
                                             id="countries_BN"
@@ -861,6 +961,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_KH">Cambodia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[7]"
                                             id="countries_KH"
@@ -870,6 +971,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CN">China</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[8]"
                                             id="countries_CN"
@@ -879,6 +981,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GZ">Gaza Strip</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[9]"
                                             id="countries_GZ"
@@ -888,6 +991,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_HK">Hong Kong</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[10]"
                                             id="countries_HK"
@@ -897,6 +1001,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_IN">India</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[11]"
                                             id="countries_IN"
@@ -906,6 +1011,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_ID">Indonesia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[12]"
                                             id="countries_ID"
@@ -915,6 +1021,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_IL">Israel</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[13]"
                                             id="countries_IL"
@@ -924,6 +1031,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_JP">Japan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[14]"
                                             id="countries_JP"
@@ -933,6 +1041,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_JO">Jordan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[15]"
                                             id="countries_JO"
@@ -942,6 +1051,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_KZ">Kazakhstan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[16]"
                                             id="countries_KZ"
@@ -951,6 +1061,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_KW">Kuwait</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[17]"
                                             id="countries_KW"
@@ -960,6 +1071,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_KG">Kyrgyzstan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[18]"
                                             id="countries_KG"
@@ -969,6 +1081,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_LA">Laos</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[19]"
                                             id="countries_LA"
@@ -978,6 +1091,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_LB">Lebanon</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[20]"
                                             id="countries_LB"
@@ -987,6 +1101,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MO">Macau</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[21]"
                                             id="countries_MO"
@@ -996,6 +1111,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MY">Malaysia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[22]"
                                             id="countries_MY"
@@ -1005,6 +1121,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MN">Mongolia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[23]"
                                             id="countries_MN"
@@ -1014,6 +1131,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MM">Myanmar</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[24]"
                                             id="countries_MM"
@@ -1023,6 +1141,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NP">Nepal</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[25]"
                                             id="countries_NP"
@@ -1032,6 +1151,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_OM">Oman</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[26]"
                                             id="countries_OM"
@@ -1041,6 +1161,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_QA">Qatar</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[27]"
                                             id="countries_QA"
@@ -1050,6 +1171,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_PH">Philippines</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[28]"
                                             id="countries_PH"
@@ -1059,6 +1181,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_PK">Pakistan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[29]"
                                             id="countries_PK"
@@ -1068,6 +1191,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SA">Saudi Arabia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[30]"
                                             id="countries_SA"
@@ -1077,6 +1201,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SG">Singapore</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[31]"
                                             id="countries_SG"
@@ -1086,6 +1211,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_KR">South Korea</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[32]"
                                             id="countries_KR"
@@ -1095,6 +1221,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_LK">Sri Lanka</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[33]"
                                             id="countries_LK"
@@ -1104,6 +1231,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TW">Taiwan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[34]"
                                             id="countries_TW"
@@ -1113,6 +1241,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TJ">Tajikistan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[35]"
                                             id="countries_TJ"
@@ -1122,6 +1251,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TH">Thailand</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[36]"
                                             id="countries_TH"
@@ -1131,6 +1261,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TR">Turkey</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[37]"
                                             id="countries_TR"
@@ -1140,6 +1271,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TM">Turkmenistan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[38]"
                                             id="countries_TM"
@@ -1149,6 +1281,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AE">United Arab Emirates</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[39]"
                                             id="countries_AE"
@@ -1158,6 +1291,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_UZ">Uzbekistan</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[40]"
                                             id="countries_UZ"
@@ -1167,6 +1301,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_YE">Yemen, Republic Of</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[41]"
                                             id="countries_YE"
@@ -1176,6 +1311,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_WE">West Bank</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[42]"
                                             id="countries_WE"
@@ -1185,6 +1321,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_VN">Vietnam</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[43]"
                                             id="countries_VN"
@@ -1202,6 +1339,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_DZ">Algeria</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[1]"
                                             id="countries_DZ"
@@ -1211,6 +1349,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AO">Angola</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[2]"
                                             id="countries_AO"
@@ -1220,6 +1359,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AI">Anguilla</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[3]"
                                             id="countries_AI"
@@ -1229,6 +1369,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BJ">Benin</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[4]"
                                             id="countries_BJ"
@@ -1238,6 +1379,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BW">Botswana</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[5]"
                                             id="countries_BW"
@@ -1247,6 +1389,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BF">Burkina Faso</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[6]"
                                             id="countries_BF"
@@ -1256,6 +1399,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BI">Burundi</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[7]"
                                             id="countries_BI"
@@ -1265,6 +1409,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CM">Cameroon</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[8]"
                                             id="countries_CM"
@@ -1274,6 +1419,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CF">Central African Republic</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[9]"
                                             id="countries_CF"
@@ -1283,6 +1429,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TD">Chad</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[10]"
                                             id="countries_TD"
@@ -1292,6 +1439,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CG">Congo (Brazzaville)</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[11]"
                                             id="countries_CG"
@@ -1301,6 +1449,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CD">Congo, Dem. Republic Of</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[12]"
                                             id="countries_CD"
@@ -1310,6 +1459,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_DJ">Djibouti</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[13]"
                                             id="countries_DJ"
@@ -1319,6 +1469,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_EG">Egypt</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[14]"
                                             id="countries_EG"
@@ -1328,6 +1479,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GQ">Equatorial Guinea</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[15]"
                                             id="countries_GQ"
@@ -1337,6 +1489,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_ER">Eritrea</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[16]"
                                             id="countries_ER"
@@ -1346,6 +1499,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_ET">Ethiopia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[17]"
                                             id="countries_ET"
@@ -1355,6 +1509,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GA">Gabon</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[18]"
                                             id="countries_GA"
@@ -1364,6 +1519,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GM">Gambia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[19]"
                                             id="countries_GM"
@@ -1373,6 +1529,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GH">Ghana</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[20]"
                                             id="countries_GH"
@@ -1382,6 +1539,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GN">Guinea</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[21]"
                                             id="countries_GN"
@@ -1391,6 +1549,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GW">Guinea-Bissau</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[22]"
                                             id="countries_GW"
@@ -1400,6 +1559,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CI">Ivory Coast</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[23]"
                                             id="countries_CI"
@@ -1409,6 +1569,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_KE">Kenya</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[24]"
                                             id="countries_KE"
@@ -1418,6 +1579,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_LS">Lesotho</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[25]"
                                             id="countries_LS"
@@ -1427,6 +1589,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_LR">Liberia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[26]"
                                             id="countries_LR"
@@ -1436,6 +1599,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MG">Madagascar</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[27]"
                                             id="countries_MG"
@@ -1445,6 +1609,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MW">Malawi</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[28]"
                                             id="countries_MW"
@@ -1454,6 +1619,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_ML">Mali</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[29]"
                                             id="countries_ML"
@@ -1463,6 +1629,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MR">Mauritania</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[30]"
                                             id="countries_MR"
@@ -1472,6 +1639,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MU">Mauritius</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[31]"
                                             id="countries_MU"
@@ -1481,6 +1649,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_YT">Mayotte</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[32]"
                                             id="countries_YT"
@@ -1490,6 +1659,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MA">Morocco</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[33]"
                                             id="countries_MA"
@@ -1499,6 +1669,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MZ">Mozambique</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[34]"
                                             id="countries_MZ"
@@ -1508,6 +1679,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NA">Namibia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[35]"
                                             id="countries_NA"
@@ -1517,6 +1689,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NE">Niger</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[36]"
                                             id="countries_NE"
@@ -1526,6 +1699,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NG">Nigeria</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[37]"
                                             id="countries_NG"
@@ -1535,6 +1709,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_ST">Sao Tome &amp; Principe</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[38]"
                                             id="countries_ST"
@@ -1544,6 +1719,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SN">Senegal</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[39]"
                                             id="countries_SN"
@@ -1553,6 +1729,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SL">Sierra Leone</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[40]"
                                             id="countries_SL"
@@ -1562,6 +1739,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SO">Somalia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[41]"
                                             id="countries_SO"
@@ -1571,6 +1749,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_ZA">South Africa</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[42]"
                                             id="countries_ZA"
@@ -1580,6 +1759,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SZ">Swaziland</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[43]"
                                             id="countries_SZ"
@@ -1589,6 +1769,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TZ">Tanzania</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[44]"
                                             id="countries_TZ"
@@ -1598,6 +1779,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TG">Togo</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[45]"
                                             id="countries_TG"
@@ -1607,6 +1789,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TN">Tunisia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[46]"
                                             id="countries_TN"
@@ -1616,6 +1799,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_UG">Uganda</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[47]"
                                             id="countries_UG"
@@ -1625,6 +1809,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_EH">Western Sahara</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[48]"
                                             id="countries_EH"
@@ -1634,6 +1819,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_ZM">Zambia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[49]"
                                             id="countries_ZM"
@@ -1643,6 +1829,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_ZW">Zimbabwe</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[50]"
                                             id="countries_ZW"
@@ -1666,6 +1853,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AR">Argentina</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[1]"
                                             id="countries_AR"
@@ -1675,6 +1863,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BO">Bolivia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[2]"
                                             id="countries_BO"
@@ -1684,6 +1873,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BR">Brazil</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[3]"
                                             id="countries_BR"
@@ -1693,6 +1883,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CL">Chile</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[4]"
                                             id="countries_CL"
@@ -1702,6 +1893,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CO">Colombia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[5]"
                                             id="countries_CO"
@@ -1711,6 +1903,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_EC">Ecuador</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[6]"
                                             id="countries_EC"
@@ -1720,6 +1913,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_FK">Falkland Islands</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[7]"
                                             id="countries_FK"
@@ -1729,6 +1923,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GF">French Guiana</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[8]"
                                             id="countries_GF"
@@ -1738,6 +1933,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_PY">Paraguay</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[9]"
                                             id="countries_PY"
@@ -1747,6 +1943,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_PE">Peru</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[10]"
                                             id="countries_PE"
@@ -1756,6 +1953,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_UY">Uruguay</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[11]"
                                             id="countries_UY"
@@ -1765,6 +1963,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_VE">Venezuela</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[12]"
                                             id="countries_VE"
@@ -1782,6 +1981,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AG">Antigua &amp; Barduba</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[1]"
                                             id="countries_AG"
@@ -1791,6 +1991,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AW">Aruba</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[2]"
                                             id="countries_AW"
@@ -1800,6 +2001,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BS">Bahamas</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[3]"
                                             id="countries_BS"
@@ -1809,6 +2011,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BB">Barbados</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[4]"
                                             id="countries_BB"
@@ -1818,6 +2021,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BZ">Belize</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[5]"
                                             id="countries_BZ"
@@ -1827,6 +2031,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_BM">Bermuda</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[6]"
                                             id="countries_BM"
@@ -1836,6 +2041,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_VG">British Virgin Islands</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[7]"
                                             id="countries_VG"
@@ -1845,6 +2051,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_KY">Cayman Islands</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[8]"
                                             id="countries_KY"
@@ -1854,6 +2061,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_CR">Costa Rica</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[9]"
                                             id="countries_CR"
@@ -1863,6 +2071,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_DM">Dominica</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[10]"
                                             id="countries_DM"
@@ -1872,6 +2081,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_DO">Dominican Republic</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[11]"
                                             id="countries_DO"
@@ -1881,6 +2091,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SV">El Salvador</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[12]"
                                             id="countries_SV"
@@ -1890,6 +2101,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GD">Grenada</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[13]"
                                             id="countries_GD"
@@ -1899,6 +2111,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GP">Guadeloupe</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[14]"
                                             id="countries_GP"
@@ -1908,6 +2121,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GT">Guatemala</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[15]"
                                             id="countries_GT"
@@ -1917,6 +2131,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_GY">Guyana</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[16]"
                                             id="countries_GY"
@@ -1926,6 +2141,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_HT">Haiti</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[17]"
                                             id="countries_HT"
@@ -1935,6 +2151,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_HN">Honduras</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[18]"
                                             id="countries_HN"
@@ -1944,6 +2161,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_JM">Jamaica</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[19]"
                                             id="countries_JM"
@@ -1953,6 +2171,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MQ">Martinique</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[20]"
                                             id="countries_MQ"
@@ -1962,6 +2181,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_ME">Mexico</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[21]"
                                             id="countries_ME"
@@ -1971,6 +2191,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_MS">Montserrat</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[22]"
                                             id="countries_MS"
@@ -1980,6 +2201,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_AN">Netherlands Antilles</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[23]"
                                             id="countries_AN"
@@ -1989,6 +2211,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_NI">Nicaragua</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[24]"
                                             id="countries_NI"
@@ -1998,6 +2221,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_PA">Panama</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[25]"
                                             id="countries_PA"
@@ -2007,6 +2231,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_LC">Saint Lucia</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[26]"
                                             id="countries_LC"
@@ -2016,6 +2241,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_VC">St Vincent And Grenadines</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[27]"
                                             id="countries_VC"
@@ -2025,6 +2251,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SH">St. Helena</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[28]"
                                             id="countries_SH"
@@ -2034,6 +2261,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_KN">St. Kitts &amp; Nevis</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[29]"
                                             id="countries_KN"
@@ -2043,6 +2271,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_PM">St. Pierre And Miquelon</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[30]"
                                             id="countries_PM"
@@ -2052,6 +2281,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_SR">Suriname</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[31]"
                                             id="countries_SR"
@@ -2061,6 +2291,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TT">Trinidad And Tobago</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[32]"
                                             id="countries_TT"
@@ -2070,6 +2301,7 @@ const RestWorld = () => {
                                     <div>
                                         <label htmlFor="countries_TC">Turks And Caicos Islands</label>{" "}
                                         <input
+                                            onChange={handleCheckChange}
                                             type="checkbox"
                                             name="countries[33]"
                                             id="countries_TC"
@@ -2090,6 +2322,7 @@ const RestWorld = () => {
                         Country for the Best Results
                     </div>
                     <textarea
+                        onChange={handleChange}
                         name="taCities"
                         id="taCities"
                         style={{height: "165px", width:"90%"}}
@@ -2100,6 +2333,7 @@ const RestWorld = () => {
                     <legend>Search By Postal Codes</legend>
                     <div align="center">Enter Your Postal Codes, SEPARATED BY COMMAS</div>
                     <textarea
+                        onChange={handleChange}
                         name="taPOSTALCODES"
                         id="taPOSTALCODES"
                         style={{height:"165px", width:"90%"}}
@@ -2114,6 +2348,7 @@ const RestWorld = () => {
                     </span>
                     <hr />
                     <textarea
+                    onChange={handleChange}
                         name="taPhones"
                         id="taPhones"
                         style={{width:"90%", height:"130px"}}

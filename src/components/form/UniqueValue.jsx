@@ -68,10 +68,6 @@ const UniqueValue = () => {
                         <td>
                             <label htmlFor="optEmails">Unique Email Addresses</label>
                         </td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
                     </tr>
                     </tbody>
                 </table>

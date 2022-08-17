@@ -1,8 +1,16 @@
 import React from "react";
+import { useStateContext } from "../context/StateContext";
 
 const UniqueWebfax = () => {
-    const handleChange = (e) => { };
-    const handleCheckChange = (e) => { };
+    const {setUniqueWebFax, uniqueWebFax} = useStateContext()
+    const handleChange = (e) => {
+        const {name, checked, value} = e.target
+        setUniqueWebFax({...uniqueWebFax, [name] : checked ? value : ""})
+     };
+    const handleCheckChange = (e) => { 
+        setUniqueWebFax({...uniqueWebFax, [e.target.name]: e.target.value
+        })
+    };
     return (
         <>
             <fieldset id="fsUniques">
@@ -12,6 +20,7 @@ const UniqueWebfax = () => {
                         <tr align="center">
                             <td>
                                 <input
+                                    onChange={handleCheckChange}
                                     type="checkbox"
                                     name="chkFaxes"
                                     id="chkFaxes"
@@ -26,6 +35,7 @@ const UniqueWebfax = () => {
                             </td>
                             <td>
                                 <input
+                                    onChange={handleCheckChange}
                                     type="checkbox"
                                     name="chkPhone"
                                     id="chkPhone"
@@ -44,6 +54,7 @@ const UniqueWebfax = () => {
                         <tr align="center">
                             <td>
                                 <input
+                                    onChange={handleChange}
                                     type="radio"
                                     name="chkEmails"
                                     id="chkEmailsY"
@@ -58,6 +69,7 @@ const UniqueWebfax = () => {
                             </td>
                             <td>
                                 <input
+                                    onChange={handleChange}
                                     type="radio"
                                     name="chkEmails"
                                     id="chkEmailsN"
@@ -72,6 +84,7 @@ const UniqueWebfax = () => {
                             </td>
                             <td>
                                 <input
+                                    onChange={handleChange}
                                     type="radio"
                                     name="chkEmails"
                                     id="chkEmailsE"

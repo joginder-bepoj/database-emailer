@@ -256,7 +256,7 @@ export const cellPhoneData = {
 export const urlDatas = {
   optWorld: "USCAN",
   optSET: "Registrant",
-  selTLD: "",
+  selTLD: "Select a TLD",
   txtTLD: "",
 };
 
@@ -309,4 +309,10 @@ export const NACIcodeChangesData = {
   taNAICS: "",
   chkSICSfromNAICS: "",
   chkNAICS: "",
+};
+
+export const uniqueWebFaxData = {
+  chkFaxes: "",
+  chkPhone:"", 
+  chkEmails:"0"
 };
